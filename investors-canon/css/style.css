@@ -434,6 +434,61 @@ table.figures th {
 
 .chapter-nav a:hover { text-decoration: underline; }
 
+/* Framework overview page */
+.framework-page {
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 48px 24px 100px;
+}
+
+.framework-page .chapter-kicker {
+  font-family: var(--sans);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.framework-page h1 {
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 0 0 20px;
+  font-weight: 400;
+}
+
+.framework-page > p {
+  font-size: 17px;
+  color: var(--text-soft);
+  max-width: 720px;
+  margin: 0 0 20px;
+}
+
+.framework-figure {
+  margin: 0 0 60px;
+}
+
+.framework-figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid var(--rule);
+  display: block;
+  background: #fff;
+}
+
+.framework-figure figcaption {
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-top: 14px;
+  line-height: 1.5;
+}
+
+.framework-figure figcaption strong {
+  color: var(--text);
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--rule);
