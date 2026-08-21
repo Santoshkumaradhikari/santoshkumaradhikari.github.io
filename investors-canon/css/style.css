@@ -214,6 +214,102 @@ body {
   text-align: center;
 }
 
+/* Full roadmap: volumes, parts, chapters */
+.roadmap {
+  max-width: 920px;
+  margin: 0 auto 80px;
+  padding: 0 24px;
+}
+
+.volume-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  font-family: var(--sans);
+  font-size: 13px;
+  margin: 0 auto 48px;
+  max-width: 720px;
+  padding: 0 24px;
+}
+
+.volume-nav a {
+  color: var(--pill-text);
+  background: var(--pill-bg);
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: 999px;
+}
+
+.volume-nav a:hover { background: var(--accent-soft); color: var(--bg-card); }
+
+.volume-block { margin-bottom: 44px; }
+
+.volume-title {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent);
+  font-weight: 700;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+  padding-bottom: 6px;
+  margin: 0 0 22px;
+}
+
+.toc-part { margin-bottom: 28px; }
+
+.toc-part-head {
+  font-family: var(--sans);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-soft);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 8px;
+  margin-bottom: 2px;
+}
+
+.toc-part-head .part-roman { color: var(--accent); font-weight: 700; margin-right: 8px; }
+
+.chapter-row {
+  display: grid;
+  grid-template-columns: 46px 1fr auto;
+  gap: 14px;
+  align-items: baseline;
+  padding: 9px 4px;
+  border-bottom: 1px solid var(--rule);
+  text-decoration: none;
+  color: inherit;
+}
+
+a.chapter-row:hover .ch-title { color: var(--accent); }
+
+.chapter-row .ch-num {
+  font-family: var(--sans);
+  font-size: 12.5px;
+  color: var(--text-soft);
+}
+
+.chapter-row .ch-title {
+  font-size: 16.5px;
+  transition: color 0.15s ease;
+}
+
+.chapter-row .ch-status {
+  font-family: var(--sans);
+  font-size: 11px;
+  color: var(--text-soft);
+  white-space: nowrap;
+  justify-self: end;
+}
+
+.chapter-row .ch-status.ready { color: var(--accent); font-weight: 600; }
+
+.chapter-row.pending { cursor: default; }
+.chapter-row.pending .ch-title { color: var(--text-soft); }
+
 /* Chapter pages */
 .chapter {
   max-width: var(--max-width);
