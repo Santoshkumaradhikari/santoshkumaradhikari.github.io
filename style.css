@@ -281,6 +281,19 @@ a { color: var(--accent); }
   margin-bottom: 0;
 }
 
+.work-link {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--accent);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.work-link:hover {
+  text-decoration: underline;
+}
+
 /* Contact */
 
 .contact-card {
