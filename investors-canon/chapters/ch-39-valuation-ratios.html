@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Valuation Ratios in the NEPSE Context — The Investor's Canon</title>
+<meta name="description" content="Why P/E and P/B mean different things across NEPSE's sectors, the dividend-yield face-value trap, and how bonus and rights shares distort EPS if you don't adjust for them.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Investor's <span>Canon</span></a>
+    <nav class="header-links">
+      <a href="../index.html">Contents</a>
+      <a href="../framework.html">Framework</a>
+      <a href="https://santoshkumaradhikari.github.io/">Santosh Adhikari →</a>
+    </nav>
+  </div>
+</header>
+
+<article class="chapter">
+  <div class="chapter-kicker">Part VII · Chapter 39</div>
+  <h1>Valuation Ratios in the NEPSE Context</h1>
+
+  <h2>Lesson 39.1 — The P/E Ratio: How NEPSE Actually Reports It</h2>
+  <p>Open any counter's page on Sharesansar or Merolagani and the first number analysts quote is the P/E ratio — price divided by earnings per share. The formula never changes, but the way Nepal's market computes and displays the two halves of that fraction has enough local texture that a mechanical import of a foreign textbook definition will mislead you.</p>
+  <p>The price half is straightforward: the last traded price (LTP) on NEPSE at market close. The earnings half is where the local nuance sits. Nepali brokerage platforms typically quote P/E against the most recently reported annual EPS from audited financials, but during the fiscal year — between quarterly unaudited reports — many platforms switch to an "annualized EPS," taking the trailing four quarters or, for younger companies, multiplying the latest quarter's EPS by four. This second method is convenient but dangerous for any business with seasonal earnings, a point we return to in Lesson 39.2 when hydropower enters the discussion.</p>
+  <p>A worked example grounds this. Consider the second-quarter (Poush-end) results of fiscal year 2082/83 — the most recent full reporting cycle available at the time of writing — across a cross-section of Nepal's commercial banks.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Bank</th><th>P/E (x)</th><th>EPS (Rs)</th><th>Implied Price (Rs)</th></tr>
+    <tr><td>Nepal Bank Limited (NBL)</td><td>7.67</td><td>17.76</td><td>≈136</td></tr>
+    <tr><td>Prabhu Bank (PRVU)</td><td>8.46</td><td>8.62</td><td>≈73</td></tr>
+    <tr><td>Kumari Bank (KBL)</td><td>10.59</td><td>20.74</td><td>≈220</td></tr>
+    <tr><td>NMB Bank (NMB)</td><td>15.35</td><td>17.10</td><td>≈263</td></tr>
+    <tr><td>Sanima Bank (SANIMA)</td><td>16.18</td><td>20.48</td><td>≈331</td></tr>
+    <tr><td>Nabil Bank (NABIL)</td><td>18.40</td><td>29.69</td><td>≈546</td></tr>
+    <tr><td>Everest Bank (EBL)</td><td>18.53</td><td>30.86</td><td>≈572</td></tr>
+    <tr><td>Standard Chartered Nepal (SCB)</td><td>22.95</td><td>27.35</td><td>≈628</td></tr>
+    <tr><td>Himalayan Bank (HBL)</td><td>33.16</td><td>11.45</td><td>≈380</td></tr>
+    <tr><td>NIC Asia (NICA)</td><td>343.16</td><td>1.76</td><td>≈604</td></tr>
+  </table>
+  </div>
+  <p>("Implied price" is simply P/E × EPS, back-solved from the same source table, and is shown here to make the arithmetic transparent — treat it as an illustration of method, not a live quote.)</p>
+  <p>Two things should jump out. First, within a single sector — commercial banking, the most homogeneous, most heavily regulated corner of NEPSE — P/E multiples still range from under 8x to over 300x. Second, the outlier is not a growth story; it is an accounting artefact. NIC Asia's EPS of Rs 1.76 was compressed by a large capital base relative to a temporarily subdued profit quarter, and dividing a perfectly ordinary share price by a near-zero EPS manufactures a P/E of 343x that tells you nothing about value and everything about the denominator problem. A bank at Rs 604 is not "343 times more expensive" than Nepal Bank at Rs 136 trading on 7.67x — it is a warning that the ratio has broken down.</p>
+  <div class="callout">
+    <span class="callout-label">KEY CONCEPT</span>
+    P/E = Market Price per Share ÷ Earnings per Share. In Nepal, "Market Price" is the NEPSE last-traded price (LTP); "Earnings" is either the latest audited annual EPS or an annualized trailing figure, depending on the platform and the point in the fiscal year. Always check which EPS base a quoted P/E is built on before comparing two companies.
+  </div>
+  <p>A single-digit P/E does not automatically mean "cheap," and a triple-digit P/E does not automatically mean "expensive" — it means look at the denominator first.</p>
+  <div class="callout">
+    <span class="callout-label">PRACTICAL TOOL</span>
+    Before trusting any P/E figure pulled from a broker app or Sharesansar's counter page, click through to the EPS itself. If the EPS is below roughly Rs 5, or if the company reported a loss in any of the trailing four quarters, treat the P/E as unreliable and switch your primary lens to P/B or price-to-sales instead.
+  </div>
+  <h2>Lesson 39.2 — Why Sector P/E Differs Structurally</h2>
+  <p>It would be a mistake to treat NEPSE as one market with one "fair" P/E. NEPSE is really eleven-odd sub-markets bolted together under a single index, and each sub-market prices earnings differently for structural reasons that have nothing to do with mispricing.</p>
+  <p>The clearest illustration comes from a full sector-by-sector P/E survey Sharesansar ran across all listed NEPSE companies. Though the underlying data point is from an earlier period, the ranking of sectors it revealed — which sectors trade rich and which trade cheap, and why — has held up remarkably consistently in the years since, including in more recent data.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Sector</th><th>Average P/E (illustrative)</th><th>Range</th><th>Structural driver</th></tr>
+    <tr><td>Life Insurance</td><td>63.80</td><td>25.27 – 115.73</td><td>Actuarial reserve accounting, high embedded-growth expectations, thin free float</td></tr>
+    <tr><td>Microfinance</td><td>47.13</td><td>12.63 – 389.58</td><td>Small paid-up capital, merger and capital-adequacy driven EPS swings</td></tr>
+    <tr><td>Finance Companies</td><td>42.13</td><td>3.62 – 203.23</td><td>Legacy sub-sector, uneven asset quality, illiquid counters</td></tr>
+    <tr><td>General Insurance</td><td>40.24</td><td>19.27 – 124.48</td><td>Similar actuarial dynamics to life insurance, smaller scale</td></tr>
+    <tr><td>Hotels &amp; Tourism</td><td>38.05</td><td>25.55 – 58.45</td><td>Recovery narrative pricing, small float</td></tr>
+    <tr><td>Development Banks</td><td>36.19</td><td>1.81 – 302.09</td><td>Wide range of asset quality and scale</td></tr>
+    <tr><td>Hydropower</td><td>18.37</td><td>4 – 86</td><td>Rainfall-dependent output, early-life thin-earnings distortion</td></tr>
+    <tr><td>Commercial Banks</td><td>13.06</td><td>5.49 – 27.39</td><td>NRB-regulated capital and ROE ceilings, mature and comparable earnings</td></tr>
+    <tr><td>Manufacturing &amp; Processing</td><td>11.79</td><td>3.07 – 20.73</td><td>Mature, low-growth, commodity-like margins</td></tr>
+  </table>
+  </div>
+  <p>Absolute levels drift year to year — commercial banking, for instance, was averaging closer to 15.8x with a P/B near 1.51x in a late-2025 sector survey, still the "most rationally valued" segment of the market even as NEPSE's headline P/E pushed toward record territory. But the ordering — insurance and microfinance rich, hydropower volatile, banking and manufacturing comparatively grounded — has been remarkably stable across cycles. That ordering is the useful lesson, more than any single year's absolute number.</p>
+  <p>Why do banks anchor the cheap end? Nepal Rastra Bank's capital adequacy framework, single-obligor limits, and CD-ratio ceiling effectively cap how fast a bank's balance sheet — and therefore its earnings — can grow in any given year. Investors know this, so they refuse to pay insurance-sector multiples for bank-sector growth. Why does hydropower sprawl from 4x to over 100x? Because a run-of-river plant's output swings with monsoon rainfall, and a newly commissioned plant reports a tiny, almost accidental profit in its first full year before ramping toward normalized capacity utilization — dividing a normal share price by that accidental first-year profit produces an enormous, meaningless P/E.</p>
+  <p>Subhead: A live example of the hydropower trap</p>
+  <p>Upper Tamakoshi Hydropower, one of the country's flagship run-of-river plants, has traded at a P/E near 114x in recent periods — not because the market expects the company to grow earnings 114-fold, but because a specific reporting window caught unusually thin recent earnings relative to its installed capacity and asset base. Compare that to Chilime Hydropower, which has built a dividend track record stretching back to fiscal year 2060/61, with an average payout around 29% and a peak near 70% — a company old enough that its earnings have normalized into a steadier, more interpretable pattern. Same sector, wildly different reliability of the P/E signal, purely as a function of the company's age and monsoon-cycle position.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    Never annualize a single quarter's EPS for a hydropower company without checking which months that quarter covers. A plant earns the bulk of its annual revenue in the monsoon months (roughly Ashad through Ashwin); annualizing a dry-season quarter by simply multiplying by four will understate true annual EPS and overstate the P/E, sometimes by a factor of two or three.
+  </div>
+  <h2>Lesson 39.3 — P/B Ratio and Why It Matters Most for Banks</h2>
+  <p>Price-to-book compares the market price to the company's book value per share — shareholders' equity divided by shares outstanding. For most industrial or trading companies, book value is a poor proxy for what the business is actually worth, because plant, inventory, and goodwill are recorded at historical cost and say little about earning power. Banks are the exception, and this is worth understanding precisely rather than by rule of thumb.</p>
+  <p>A bank's balance sheet is, in an accounting sense, close to what it appears to be: loans, investments, and deposits are financial instruments carried at values Nepal Rastra Bank's prudential and disclosure regime forces the bank to mark reasonably close to reality, through loan-loss provisioning rules, capital adequacy reporting, and NRB-mandated disclosure formats. That regulatory transparency is precisely why P/B carries more information for a bank than it does for a hydropower company or a trading house — you can trust the denominator.</p>
+  <p>A recent cross-section of Nepali commercial banks makes the point:</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Bank</th><th>P/B (x)</th><th>NPL (%)</th><th>Reading</th></tr>
+    <tr><td>Everest Bank (EBL)</td><td>5.62</td><td>0.68</td><td>Premium book multiple, justified by pristine asset quality</td></tr>
+    <tr><td>Kumari Bank (KBL)</td><td>2.37</td><td>6.92</td><td>Mid-range multiple, weaker loan book explains the discount</td></tr>
+    <tr><td>Nepal Bank (NBL)</td><td>1.84</td><td>5.34</td><td>Legacy state-linked bank, has at times traded below book value</td></tr>
+  </table>
+  </div>
+  <p>The pattern is not random. A bank with a non-performing loan ratio under 1% (EBL) commands a materially higher price-to-book than one carrying an NPL ratio nearly seven times as high (KBL), because the market is, correctly, pricing in the probability that KBL's book value overstates the true collectible value of its loan portfolio. This is the single most useful application of P/B in the NEPSE context: use it to cross-check whether a bank's reported book value should be trusted at face value, by reading it alongside the NPL ratio, capital adequacy ratio, and provisioning coverage disclosed in the same quarterly report.</p>
+  <div class="callout">
+    <span class="callout-label">KEY CONCEPT</span>
+    P/B = Market Price per Share ÷ Book Value per Share, where Book Value per Share = (Total Shareholders' Equity − Preference Capital) ÷ Number of Ordinary Shares Outstanding. A reading below 1.0 signals the market prices the company below its accounting net worth — worth investigating, not automatically buying. A reading above roughly 3.0 without a clear, sustained growth or ROE story is a signal to check whether you are paying for hype rather than earning power.
+  </div>
+  <p>Subhead: The mechanics of book value per share</p>
+  <p>Suppose a commercial bank reports total shareholders' equity — paid-up capital plus reserves and retained earnings — of Rs 18 billion, against 120 million shares outstanding. Book value per share is Rs 18,000,000,000 ÷ 120,000,000 = Rs 150. If the share trades at Rs 270, the P/B is 1.8x. Compare that instantly to the bank's return on equity: a bank earning an ROE of 16-18% arguably deserves to trade above book, because it is compounding shareholder capital faster than a bank earning 8-10% ROE, all else equal. P/B divorced from ROE is an incomplete comparison — the two ratios are meant to be read together, not separately.</p>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    In the NRB-regulated banking sector, P/B below 1.0 combined with an NPL ratio above 4-5% and a capital adequacy ratio near the regulatory floor is a classic "value trap" signature — the stock looks statistically cheap on book value, but the book value itself is compromised by asset quality problems the ratio alone cannot see.
+  </div>
+  <h2>Lesson 39.4 — Dividend Yield, Nepal-Style: The Face-Value Trap</h2>
+  <p>Dividend yield, everywhere else in the world, means one thing: annual dividend per share divided by current market price. In Nepal's retail investment culture, however, the headline number that circulates — in AGM notices, in newspaper tables, in WhatsApp groups — is something else entirely: the dividend percentage declared on face value (par value), which for the overwhelming majority of NEPSE-listed companies is Rs 100 per share.</p>
+  <p>This distinction is not a technicality; it is the single most common source of confusion for a new NEPSE investor, and getting it wrong leads directly to overpaying for "high-yield" stocks that are nothing of the sort.</p>
+  <p>A recent ranking of NEPSE's highest dividend-declaring companies illustrates the headline numbers investors actually see:</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Company</th><th>Dividend Declared</th><th>Type</th></tr>
+    <tr><td>Unilever Nepal (UNL)</td><td>1,842%</td><td>Cash</td></tr>
+    <tr><td>Nepal Telecom (NTC)</td><td>30%</td><td>Cash</td></tr>
+    <tr><td>Nepal Life Insurance (NLIC)</td><td>21.05%</td><td>5% bonus + 16.05% cash</td></tr>
+    <tr><td>Standard Chartered Bank Nepal (SCB)</td><td>19%</td><td>Cash</td></tr>
+    <tr><td>Agricultural Development Bank (ADBL)</td><td>13%</td><td>3.25% bonus + 9.75% cash</td></tr>
+    <tr><td>Nabil Bank (NABIL)</td><td>12.5%</td><td>Cash</td></tr>
+  </table>
+  </div>
+  <p>Read literally, Unilever Nepal's "1,842%" looks absurd — and it is, until you remember it is 1,842% of Rs 100 face value, i.e., Rs 1,842 per share in cash, on a stock that trades in the tens of thousands of rupees because of its extremely small share count and near-total absence of bonus dilution over decades. The percentage on face value and the actual yield on market price can differ by an order of magnitude or more.</p>
+  <p>Subhead: Converting the headline into a real yield</p>
+  <p>Take Nabil Bank. It declared a 12.5% cash dividend, meaning Rs 12.50 per share on face value. From the same reporting period used in Lesson 39.1, Nabil's price was approximately Rs 546. The actual dividend yield an investor buying at that price would have earned is:</p>
+  <p>Rs 12.50 ÷ Rs 546 = 2.29%</p>
+  <p>Now take Standard Chartered Nepal, which declared 19% cash — Rs 19 per share — against an implied price of roughly Rs 628:</p>
+  <p>Rs 19 ÷ Rs 628 = 3.02%</p>
+  <p>Both look unremarkable once converted — squarely in the 2-3% range that characterizes yield on Nepal's larger, more mature bank counters, broadly consistent with NEPSE's market-wide dividend yield, which has hovered around just 1-2% during periods when the index itself has been expensive. That is a world away from the "12.5%" or "19%" a reader skims off a newspaper table.</p>
+  <div class="callout">
+    <span class="callout-label">CAUTION</span>
+    A dividend percentage quoted in an AGM notice, a newspaper business page, or a brokerage app is almost always calculated on Rs 100 face value, not on the market price you would actually pay. Before treating any "dividend %" as an income return, divide the rupee amount (percentage × Rs 100 ÷ 100) by the current market price — not by the face value — to get the true yield.
+  </div>
+  <p>The distortion cuts both ways. A thinly-traded, high-priced counter can declare a modest-looking face-value percentage and still deliver a respectable true yield, while a low-priced, heavily bonus-diluted counter can declare a large-looking face-value percentage and deliver a true yield under 2%. Bonus components compound the confusion further: when ADBL declares "13% (3.25% bonus + 9.75% cash)," the cash component alone is the income return; the bonus component is not income at all — it is additional shares, which dilutes future EPS and, mechanically, tends to pull the share price down roughly in proportion on the ex-dividend date. Treating a bonus percentage as if it were cash yield is a second, related error worth guarding against.</p>
+  <h2>Lesson 39.5 — EPS Mechanics: Weighted Average Shares and the Bonus Share Adjustment</h2>
+  <p>Every ratio covered so far in this chapter has EPS sitting in its denominator or, in P/B's case, a close cousin of it — shares outstanding. Get the share count wrong, and every ratio built on top of it is wrong. Nepal's heavy and recurring use of bonus shares makes this the single most important mechanical detail in the entire chapter.</p>
+  <p>Under the Nepal Financial Reporting Standards that NEPSE-listed companies follow (mirroring international EPS accounting), earnings per share must be computed on a weighted average number of shares outstanding during the period — not simply the share count at the balance sheet date. This matters because share capital does not sit still during a Nepali fiscal year: rights issues, bonus issues, and mergers all change the denominator mid-year.</p>
+  <p>The two most common events — rights shares and bonus shares — are treated completely differently, and conflating them is the most frequent analytical error retail investors make.</p>
+  <p>Subhead: Rights shares are time-weighted; bonus shares are retroactive</p>
+  <p>A rights issue brings new cash into the company in exchange for new shares, at a specific date. Because real resources entered the business only from that date forward, the new shares are time-weighted into the denominator — a rights issue completed with three months left in the fiscal year adds only a quarter's worth of dilution to that year's weighted average share count.</p>
+  <p>A bonus issue, by contrast, capitalizes existing reserves into new shares — no new cash comes in at all; shareholders simply receive more paper representing the same underlying company. Because nothing real changed on the date of issue, accounting standards require that bonus shares be treated as if they had always been outstanding — not just for the current year, but retroactively, restating the prior year's comparative EPS on the same enlarged share base, so that year-on-year EPS growth comparisons remain meaningful.</p>
+  <p>A worked numeric example: A company reports profit of Rs 400 million for the year and has 10,000,000 shares outstanding at the start of the year. Partway through the year it issues a 10% bonus (1,000,000 new shares). Two ways of computing EPS are possible, and only one is correct:</p>
+  <p>Incorrect (year-end share count only): Rs 400,000,000 ÷ 11,000,000 shares — but only applying this to the current year while leaving last year's comparative EPS on the old 10,000,000 share base overstates apparent earnings growth.</p>
+  <p>Correct (NFRS-compliant): Both this year's and last year's EPS are calculated on the post-bonus 11,000,000 shares. If last year's profit was Rs 350 million, restated prior-year EPS becomes Rs 350,000,000 ÷ 11,000,000 = Rs 31.82, and current-year EPS becomes Rs 400,000,000 ÷ 11,000,000 = Rs 36.36 — a genuine, comparable growth rate of roughly 14.3%, rather than a growth rate artificially inflated by comparing an unadjusted small prior-year denominator to a larger current one.</p>
+  <div class="callout">
+    <span class="callout-label">REGULATORY DETAIL</span>
+    Nepal Rastra Bank's 2015 directive raising minimum paid-up capital requirements for commercial banks (to Rs 8 billion) triggered a multi-year wave of bonus share issuances across the entire banking sector between roughly 2015 and 2018, as banks capitalized reserves rather than raise fresh cash to meet the new floor. Any historical EPS or P/E comparison for a Nepali bank that spans this period must confirm the data source has correctly restated pre-2015 EPS figures on a post-bonus share basis — many casual comparisons online do not, and will show a misleadingly steep "profit collapse" that is really just a denominator effect.
+  </div>
+  <p>The NIC Asia case from Lesson 39.1 — a P/E of 343x built on an EPS of just Rs 1.76 — is worth revisiting through this lens. Whenever you encounter an EPS that looks anomalously low relative to a company's history and peer set, the first three questions to ask are: was there a recent bonus or rights issue that enlarged the share base faster than profit grew; was there a merger or acquisition that reset the share count; and is the reporting period annualized correctly. Only once those three questions are answered should you conclude the low EPS reflects a genuine deterioration in the underlying business.</p>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    A P/E of 343x, as briefly appeared for NIC Asia in one reporting period, is not a signal that the market expects extraordinary growth — it is close to certainly a signal that the EPS denominator was temporarily and mechanically depressed. Cross-check any triple-digit P/E against the raw EPS figure before drawing any conclusion about valuation.
+  </div>
+  <h2>Lesson 39.6 — NEPSE's Market-Wide P/E as a Sentiment Barometer</h2>
+  <p>Every individual counter's P/E tells you something about that company. NEPSE's aggregate, market-wide P/E — the weighted average across all listed companies, published by NEPSE itself and tracked continuously by Sharesansar — tells you something different: where collective investor sentiment sits in the market's own historical range, and how Nepal compares to its regional peers.</p>
+  <p>The number has swung dramatically across cycles. During the speculative peak of 2021, NEPSE's market P/E reached roughly 42.28x — a level that, in hindsight, marked an unsustainable valuation extreme, followed by a multi-year correction that pulled the ratio down substantially before a subsequent recovery. As of a recent reading in early 2026, the market P/E had climbed back to approximately 38x, with the market's aggregate price-to-book near 2.78x, dividend yield compressed to just 1-2%, and market capitalization equal to roughly 72.6% of GDP — all readings clustered near the upper end of NEPSE's own historical range.</p>
+  <p>What makes this figure genuinely useful as a sentiment gauge is not its absolute level in isolation, but how it compares to other frontier and emerging markets facing broadly similar macro constraints:</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Market</th><th>P/E (x)</th><th>Dividend Yield</th></tr>
+    <tr><td>NEPSE (Nepal)</td><td>≈38</td><td>1-2%</td></tr>
+    <tr><td>MSCI Emerging Markets</td><td>18.8</td><td>—</td></tr>
+    <tr><td>Nifty 50 (India)</td><td>≈20</td><td>—</td></tr>
+    <tr><td>Vietnam</td><td>15-16.8</td><td>—</td></tr>
+    <tr><td>MSCI Frontier Markets</td><td>13.3</td><td>3.11%</td></tr>
+    <tr><td>Bangladesh (DSE)</td><td>10.1</td><td>3-4%</td></tr>
+    <tr><td>Sri Lanka (CSE)</td><td>10.6-11.3</td><td>3-3.2%</td></tr>
+    <tr><td>Pakistan (KSE-100)</td><td>8.7</td><td>~6.8%</td></tr>
+    <tr><td>Kenya (NSE)</td><td>7.3</td><td>4-6%</td></tr>
+  </table>
+  </div>
+  <p>The pattern is striking and worth sitting with. NEPSE, at roughly 38x, trades at nearly double the multiple of the MSCI Frontier Markets basket it structurally belongs to, and at two to five times the multiples of comparable South Asian peers — Bangladesh, Sri Lanka, and Pakistan — that share Nepal's broad emerging-market growth profile. Meanwhile NEPSE's dividend yield, at 1-2%, sits well below every one of those peer markets, several of which pay 3-7%. A market can be simultaneously expensive on earnings and stingy on income, and that combination is exactly what elevated valuation with compressed yield signals: a market being carried more by capital appreciation expectations and liquidity than by the cash generation investors are actually being paid today.</p>
+  <p>Why does NEPSE persistently command such a premium multiple relative to peers with arguably better growth and profitability fundamentals? Structural, not fundamental, reasons dominate the explanation: a chronically small free float relative to demand from a large domestic retail base with few alternative investment channels (real estate transaction friction, capital controls limiting outbound investment, low fixed-deposit rates during liquidity-surplus periods), combined with concentrated retail participation that trades on price momentum and rumor as much as on earnings. None of this means the multiple is "wrong" in a way that forces immediate correction — Nepal's market has sustained rich multiples for extended stretches before — but it does mean a NEPSE-wide P/E near 38x, at nearly the same level that preceded the 2021 correction, is information a disciplined investor should not ignore, even while continuing to buy selectively into individual counters that screen cheap on the sector-relative and company-specific metrics covered earlier in this chapter.</p>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    Reading NEPSE's aggregate P/E against its own history (roughly 38x now, versus a 2021 bubble peak of 42.28x) and against regional peers (Bangladesh 10.1x, Sri Lanka ~11x, Pakistan 8.7x) simultaneously gives a fuller sentiment read than either comparison alone — the historical comparison flags where Nepal stands relative to its own past excess, and the peer comparison flags how much of that valuation is Nepal-specific enthusiasm rather than a shared emerging-market re-rating.
+  </div>
+  <p>The practical takeaway for a retail investor is not to sell everything the moment the market-wide P/E crosses some magic threshold — no such precise trigger exists — but to treat a rising aggregate multiple as a reason to demand a higher margin of safety on new purchases, to lean more heavily on the sector-relative and company-specific tools from Lessons 39.1 through 39.5 rather than on market momentum, and to remember that the last time NEPSE's P/E sat this high, it was followed by years of underperformance for anyone who bought at the peak on faith in continued re-rating rather than on earnings.</p>
+  <div class="recap">
+    <h3>Chapter recap</h3>
+  <p>This chapter built a working toolkit for the four valuation ratios that dominate how NEPSE-listed companies are actually discussed, screened, and traded in Nepal — P/E, P/B, dividend yield, and the EPS mechanics underneath all of them — and, critically, showed where each one behaves differently in the Nepali market than a generic finance textbook would lead you to expect. The P/E ratio remains the most quoted and most misused number on any counter's Sharesansar page: useful for comparing mature, comparably-regulated businesses like commercial banks against each other, and actively misleading whenever the EPS denominator has been distorted by a recent bonus issue, a merger, or a seasonal earnings pattern, as the NIC Asia and Upper Tamakoshi examples in this chapter demonstrated concretely.</p>
+  <p>Sector context is not optional color; it is structural information. Banking's tight 8x-to-33x range reflects Nepal Rastra Bank's regulatory ceiling on growth and risk-taking, while insurance and microfinance's far wider and generally richer ranges reflect actuarial accounting quirks, thinner floats, and merger-driven earnings volatility. Comparing a hydropower counter's P/E to a bank's P/E without adjusting for this structural difference is comparing two different kinds of instrument, not two mispriced versions of the same one.</p>
+  <p>P/B earns a privileged place in this toolkit specifically for banks and insurers, because Nepal Rastra Bank's disclosure regime makes their balance sheets unusually trustworthy inputs for the ratio — but P/B is only informative when read alongside the NPL ratio and capital adequacy ratio that reveal whether the reported book value itself deserves to be trusted, as the EBL-versus-KBL comparison in Lesson 39.3 illustrated.</p>
+  <p>Dividend yield carries the single most consequential Nepal-specific trap in this chapter: the near-universal practice of quoting dividends as a percentage of Rs 100 face value rather than as a percentage of market price. Every headline dividend percentage an investor encounters — whether Unilever Nepal's startling 1,842% or Nabil Bank's modest-sounding 12.5% — must be converted to a true yield on market price before it means anything as an income measure, and bonus components within a declared dividend must be mentally separated from cash components, since only the cash portion is actual income.</p>
+  <p>Underneath all three ratios sits EPS, and underneath EPS sits the weighted-average-share mechanics that Nepal's recurring bonus-share culture makes unavoidable: rights shares dilute prospectively from their issue date, while bonus shares — because they represent no new capital — must be applied retroactively, restating prior-year comparatives so that reported earnings growth is real growth rather than a denominator artifact. The 2015-era NRB capital directive that triggered years of sector-wide bonus issuances across Nepali banks is the clearest historical illustration of why this restatement discipline matters for anyone doing multi-year comparisons.</p>
+  <p>Finally, NEPSE's own aggregate P/E functions as a market-wide sentiment gauge distinct from any individual company's valuation — currently sitting near 38x, within reach of the 42.28x reached at the 2021 bubble peak, and running at roughly two to five times the multiples of comparable regional peers like Bangladesh, Sri Lanka, and Pakistan while paying out a comparatively thin 1-2% dividend yield. None of the individual-counter analysis in this chapter is invalidated by an expensive overall market, but a rising market-wide multiple is a signal to raise your required margin of safety, lean harder on sector-relative and balance-sheet-grounded metrics like P/B and NPL ratios, and resist mistaking broad market momentum for company-specific value — the discipline this entire chapter has been building toward, one ratio at a time.</p>
+  </div>
+
+  <div class="chapter-nav">
+    <a href="ch-38-tax-planning.html">← Tax Planning for the Long-Term NEPSE Investor</a>
+    <a href="ch-40-profitability-ratios.html">Profitability Ratios — Sector by Sector →</a>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap" style="max-width:920px;">
+    The Investor's Canon is written and updated over time.
+    <a href="https://santoshkumaradhikari.github.io/">santoshkumaradhikari.github.io</a>
+  </div>
+</footer>
+
+</body>
+</html>
