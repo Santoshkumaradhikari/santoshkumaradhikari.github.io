@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Seven-Dimension Company Quality Score (0–100) — The Investor's Canon</title>
+<meta name="description" content="The full Canon Score rubric — seven weighted dimensions, Nepal-calibrated point bands, and a fully worked example scoring an illustrative NEPSE company from raw filings to a single 0-100 number.">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Investor's <span>Canon</span></a>
+    <nav class="header-links">
+      <a href="../index.html">Contents</a>
+      <a href="../framework.html">Framework</a>
+      <a href="https://santoshkumaradhikari.github.io/">Santosh Adhikari →</a>
+    </nav>
+  </div>
+</header>
+
+<article class="chapter">
+  <div class="chapter-kicker">Part XIII · Chapter 64</div>
+  <h1>The Seven-Dimension Company Quality Score (0–100)</h1>
+
+  <p>The report card came home in Kavita's schoolbag on a Friday in Falgun, the way it did every trimester. Her father, Suman, a taxi driver in Biratnagar, sat with her at the kitchen table and opened it slowly. Seven subjects were listed down the left side: Nepali, English, Mathematics, Science, Social Studies, Computer, and Health. Next to each subject sat a grade — some As, one B, one C in Mathematics that made Suman sigh. At the bottom of the page was a single number: her overall GPA, the average that combined all seven subjects into one figure the school used to rank her class.</p>
+  <p>Suman did not need seven separate report cards to understand his daughter's year. He needed one page that showed him both things at once — the overall picture, and exactly which subject needed a tutor before the next exam.</p>
+  <p>A listed company on NEPSE, the Nepal Stock Exchange, deserves the same kind of report card. A company is not "good" or "bad" in one dimension. It can have brilliant profits and terrible governance. It can have a wonderful business model and dangerously thin trading volume. It can pay generous dividends while quietly diluting shareholders through excessive bonus shares. Chapter 63 explained why a Nepali investor needs a structured, repeatable scoring system rather than a gut feeling formed over tea at a Thamel brokerage counter. This chapter builds that report card. It names the seven subjects, assigns the points to each, and shows exactly how to grade a real company against real Nepali thresholds — not thresholds borrowed from Wall Street or Mumbai, but numbers calibrated to how NEPSE-listed companies actually behave.</p>
+  <p>By the end of this chapter, you will be able to open a company's annual report, its SEBON (Securities Board of Nepal) filings, and its NEPSE disclosures, and turn them into a single number between 0 and 100 — the Canon Quality Score.</p>
+  <h2>Lesson 64.1 — The Seven Dimensions at a Glance</h2>
+  <p>Think of the Canon Quality Score as Kavita's report card, redesigned for a company instead of a child. Instead of Nepali, English, and Mathematics, the seven "subjects" are seven dimensions of company quality. Each dimension is scored on its own point scale. The seven scores are added together, never averaged, so that the maximum possible score is exactly 100 points — a familiar percentage that any Nepali investor, from a first-time DEMAT account holder in Pokhara to a portfolio manager in Kathmandu, can interpret instantly.</p>
+  <div class="callout">
+    <span class="callout-label">KEY CONCEPT</span>
+    A "dimension" here means one distinct angle of company quality that cannot be judged by looking at any other dimension. A bank can have excellent Financial Strength and terrible Governance at the same time — think of a promoter who reports strong profits while quietly pledging most of his shareholding to a private lender. The seven dimensions exist precisely because no single ratio, and no single chapter of this book, can catch every kind of risk on its own.
+  </div>
+  <p>The seven dimensions, and the reasoning behind each one's weight, are as follows.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>#</th><th>Dimension</th><th>Points</th><th>What it captures</th></tr>
+    <tr><td>1</td><td>Financial Strength &amp; Profitability</td><td>20</td><td>Is the company actually making money safely, with capital to absorb shocks?</td></tr>
+    <tr><td>2</td><td>Governance &amp; Promoter Behavior</td><td>15</td><td>Can you trust the people running the company to treat minority shareholders fairly?</td></tr>
+    <tr><td>3</td><td>Liquidity &amp; Tradability</td><td>10</td><td>Can you actually buy and sell this stock at a fair price when you need to?</td></tr>
+    <tr><td>4</td><td>Valuation Reasonableness</td><td>15</td><td>Are you being asked to overpay for the quality you are buying?</td></tr>
+    <tr><td>5</td><td>Sector &amp; Business Model Durability</td><td>15</td><td>Will this business still matter in ten years, and does regulation protect or threaten it?</td></tr>
+    <tr><td>6</td><td>Growth Trajectory</td><td>15</td><td>Is the company's income growing, and is that growth genuine or manufactured?</td></tr>
+    <tr><td>7</td><td>Dividend &amp; Capital Return Discipline</td><td>10</td><td>Does the company actually share profit with shareholders, consistently?</td></tr>
+    <tr><td>Total</td><td>100</td><td></td><td></td></tr>
+  </table>
+  </div>
+  <p>Notice the weighting is not equal. Financial Strength &amp; Profitability carries the largest single weight, 20 points, because a company that cannot generate safe profit eventually fails at everything else — a weak bank cannot sustain dividends, cannot survive a bad loan cycle, and cannot protect minority shareholders when capital gets scarce. Governance sits second at 15 points, reflecting a truth this book has repeated since Part IV: in a market with concentrated promoter ownership and comparatively young disclosure norms, a dishonest management can destroy a fundamentally sound business faster than a bad quarter ever could. Liquidity, at only 10 points, matters less to the underlying business but matters enormously to you personally — a brilliant company you cannot sell at a fair price when you need cash is a brilliant company that has failed you specifically.</p>
+  <p>Where does the raw data for all seven dimensions come from? Three sources, used together:</p>
+  <ul>
+      <li>SEBON filings — the regulatory disclosures every listed company must make to the Securities Board of Nepal, including material event disclosures, related-party transaction reports, and promoter shareholding changes.</li>
+      <li>NEPSE disclosures and trading data — daily price, volume, and circuit data published on the exchange, used heavily in the Liquidity dimension.</li>
+      <li>Annual reports and unaudited quarterly financial statements — published by the company itself, and the primary source for the Financial Strength, Growth, and Dividend dimensions.</li>
+      <li>CDSC (Central Depository System and Clearing Limited) — the depository that tracks actual shareholding registers, useful for confirming promoter holding percentages and detecting pledged shares.</li>
+  </ul>
+  <p>Every point band in this chapter tells you, explicitly, which of these four sources to open.</p>
+  <h2>Lesson 64.2 — Financial Strength &amp; Profitability (20 points)</h2>
+  <p>Financial Strength &amp; Profitability asks one plain question: is this company making real, sustainable money, and does it have enough of a capital cushion to survive a bad year? This dimension draws directly on the ratio chapters in Part IX and the financial-statement chapters in Part VI. It splits into three sub-components.</p>
+  <p>Sub-component A: Profitability trend, measured by ROE (8 points). ROE, Return on Equity, tells you how many rupees of profit a company generates for every 100 rupees of shareholder equity it holds. It is the single most useful profitability ratio for a Nepali investor because it accounts for how efficiently a company is using the capital shareholders have already committed.</p>
+  <p>Here the Canon rubric must be calibrated to NEPSE reality, not to a textbook ideal. Nepali commercial banks' average ROE has fallen sharply in recent years — from roughly 13% in the third quarter of fiscal year 2022/23 to under 8% in the same period of fiscal year 2024/25, as high provisioning and slow credit growth squeezed the whole sector. In that same period, the best-run banks still posted ROE above 15%, while the weakest posted barely above zero. That spread is exactly what the point bands are built to separate.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>3-year average ROE</th><th>Points (out of 8)</th></tr>
+    <tr><td>15% or higher, with no single year below 10%</td><td>8</td></tr>
+    <tr><td>10% – 15%</td><td>6</td></tr>
+    <tr><td>7% – 10% (near current system average)</td><td>4</td></tr>
+    <tr><td>Below 7%, or negative in any of the last 3 years</td><td>1</td></tr>
+  </table>
+  </div>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    In the nine months to Q3 FY2024/25, Nepal's commercial banks averaged roughly 7.73% ROE system-wide. Individual results ranged from about 15.8% at the strongest bank to under 1% at the weakest. That is not a small gap — it is the difference between a bank compounding shareholder wealth and a bank barely covering its cost of capital. This is why ROE alone, without a peer comparison, tells you almost nothing.
+  </div>
+  <p>Sub-component B: Capital adequacy or leverage discipline (7 points). For banks and financial institutions, this uses CAR, the Capital Adequacy Ratio — the proportion of a bank's risk-weighted assets that is backed by its own capital rather than borrowed deposits. For non-financial companies, this sub-component instead uses Debt-to-Equity and interest coverage, since CAR does not apply outside banking.</p>
+  <div class="callout">
+    <span class="callout-label">REGULATORY DETAIL</span>
+    Nepal Rastra Bank (NRB) requires commercial banks to maintain a minimum total Capital Adequacy Ratio of 11%, including a minimum Tier 1 (core capital) component. A bank sitting exactly at 11% has no real cushion — a single bad loan cycle can push it into regulatory breach, forcing a rights issue that dilutes existing shareholders. A bank running comfortably above the minimum, by contrast, can absorb losses and still keep lending.
+  </div>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Capital adequacy / leverage position</th><th>Points (out of 7)</th></tr>
+    <tr><td>CAR 13% or higher (BFIs), or D/E under 1.0x with interest coverage over 5x (non-BFIs)</td><td>7</td></tr>
+    <tr><td>CAR 11.5% – 13%, or moderate leverage with adequate coverage</td><td>5</td></tr>
+    <tr><td>CAR 11.0% – 11.5% (barely above NRB minimum)</td><td>3</td></tr>
+    <tr><td>CAR below 11% at any point in the last 3 years, or high leverage with weak coverage</td><td>0</td></tr>
+  </table>
+  </div>
+  <p>Sub-component C: Earnings quality and consistency (5 points). This checks whether the company's profit history is a smooth, believable line or a jagged one full of one-off gains, sudden losses, or restated numbers.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>5-year profit history</th><th>Points (out of 5)</th></tr>
+    <tr><td>No net loss year; profit grew in at least 4 of the last 5 years</td><td>5</td></tr>
+    <tr><td>One loss year, or two flat/declining years</td><td>3</td></tr>
+    <tr><td>Two or more loss years, or highly erratic year-to-year swings</td><td>1</td></tr>
+  </table>
+  </div>
+  <p>Financial Strength &amp; Profitability = ROE score (0–8) + Capital adequacy score (0–7) + Earnings quality score (0–5), out of 20. Source this dimension from the company's audited annual reports (for the 5-year and 3-year trends) and its unaudited quarterly disclosures on the NEPSE website (for the most recent CAR figure, which banks must disclose every quarter).</p>
+  <h2>Lesson 64.3 — Governance, Liquidity, and Valuation</h2>
+  <p>Dimension 2: Governance &amp; Promoter Behavior (15 points). Part IV of this book built the case that governance risk in Nepal is not a side issue — it is often the deciding factor in whether a minority shareholder's investment survives. This dimension translates that philosophy into points, split across three checks.</p>
+  <p>Promoter shareholding stability and pledging (6 points). A promoter is a founder or controlling shareholder, typically holding a large block of shares and effective control of the board. When promoters pledge their shares — using them as collateral for a personal or business loan — a forced sale by the lender can crash the stock with no warning to ordinary shareholders, regardless of how the underlying business is performing.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Promoter shareholding pattern (CDSC records, last 3 years)</th><th>Points (out of 6)</th></tr>
+    <tr><td>Holding stable or increasing; less than 10% of promoter shares pledged</td><td>6</td></tr>
+    <tr><td>Holding broadly stable; 10% – 25% pledged</td><td>4</td></tr>
+    <tr><td>Holding declining, or 25% – 50% pledged</td><td>2</td></tr>
+    <tr><td>Holding sharply declining, or more than 50% pledged, or repeated insider selling</td><td>0</td></tr>
+  </table>
+  </div>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    A large pledged-share position is one of the least visible risks on NEPSE because it does not show up in the profit and loss statement at all. It only shows up in CDSC shareholding disclosures and SEBON material-event filings. A company can report a perfectly healthy quarter while its promoter is one margin call away from a forced share sale. Always check pledging before you check profit.
+  </div>
+  <p>Related-party transactions and audit opinion (5 points). This checks the annual report's related-party disclosure note and the auditor's opinion page. A clean, unqualified audit opinion with modest, well-disclosed related-party dealings scores near full marks; a qualified opinion, an auditor's going-concern note, or large undisclosed related-party loans score near zero.</p>
+  <p>Disclosure timeliness and board independence (4 points). This checks whether the company files its quarterly reports and material-event disclosures on time with SEBON and NEPSE, and whether its board meets the minimum independent-director requirement rather than being stacked entirely with promoter nominees.</p>
+  <p>Dimension 3: Liquidity &amp; Tradability (10 points). Part XI introduced the ADV rule — that your position size in any single stock should stay small relative to its Average Daily Volume, the typical rupee value traded on a normal day, so that buying in or exiting does not itself move the price against you. It also introduced the danger of the circuit trap: a stock that hits its daily price limit (its "circuit," the maximum percentage move NEPSE allows in one session) with almost no volume, leaving sellers unable to exit for days.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Sub-component</th><th>Points</th></tr>
+    <tr><td>Average Daily Volume (value traded, 6-month average)</td><td>5</td></tr>
+    <tr><td>Free float (% of shares not held by promoters, available to the public)</td><td>5</td></tr>
+  </table>
+  </div>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Average Daily Volume</th><th>Points (out of 5)</th></tr>
+    <tr><td>NPR 5 million or more</td><td>5</td></tr>
+    <tr><td>NPR 1 million – 5 million</td><td>3</td></tr>
+    <tr><td>NPR 200,000 – 1 million</td><td>1</td></tr>
+    <tr><td>Below NPR 200,000</td><td>0</td></tr>
+  </table>
+  </div>
+  <div class="callout">
+    <span class="callout-label">PRACTICAL TOOL</span>
+    NEPSE's own daily trading reports and the "Today's Price" and turnover pages on the exchange website give you the volume data directly. For free float, cross-check the company's annual report shareholding pattern (promoter versus public split) against CDSC records — the two should agree, and if they do not, treat the mismatch itself as a small governance flag.
+  </div>
+  <p>Free float uses the same 5-point structure: 40% or higher free float scores full marks, because more shares in public hands means deeper, more resilient trading; below 10% free float scores zero, because such a stock is structurally prone to circuit-trap behavior no matter how good the underlying business is.</p>
+  <p>Dimension 4: Valuation Reasonableness (15 points). Part IX's valuation chapters warned against judging P/E (Price-to-Earnings, the share price divided by annual earnings per share) or P/B (Price-to-Book, the share price divided by book value per share) in isolation. NEPSE as a whole has, at times, traded at elevated valuations — the exchange's overall P/E has approached the high 30s, well above the 15–20x range considered reasonable in most developed markets — while the banking sector specifically has often traded far cheaper than the broader index, closer to 15–16x earnings and around 1.5x book value. A generic "P/E below 15 is cheap" rule would misjudge almost every NEPSE sector simultaneously.</p>
+  <div class="callout">
+    <span class="callout-label">CAUTION</span>
+    Absolute P/E thresholds imported from other markets do not work on NEPSE. When the overall exchange trades near 38x earnings while its banking sector trades near 16x, a "reasonable" P/E for a hydropower or insurance stock looks nothing like a "reasonable" P/E for a bank. The Canon rubric therefore always scores valuation relative to the company's own sector median and its own 5-year historical median — never against a fixed number pulled from an American or Indian textbook.
+  </div>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Current P/E vs. sector median P/E</th><th>Points (out of 8)</th></tr>
+    <tr><td>0.8x sector median or below</td><td>8</td></tr>
+    <tr><td>0.8x – 1.1x sector median (in line)</td><td>6</td></tr>
+    <tr><td>1.1x – 1.5x sector median</td><td>3</td></tr>
+    <tr><td>Above 1.5x sector median, or P/E undefined due to losses</td><td>1</td></tr>
+  </table>
+  </div>
+  <p>The P/B sub-component (7 points) follows the identical relative logic against sector and historical median book multiples. Source both from NEPSE's published sector indices and the company's own 5-year price history, which most Nepali brokerage terminals and financial portals maintain.</p>
+  <h2>Lesson 64.4 — Sector Durability, Growth, and Capital Return Discipline</h2>
+  <p>Dimension 5: Sector &amp; Business Model Durability (15 points). This dimension asks a longer-horizon question than the others: will this business still be relevant, protected, and competitively sound in ten years? It draws on the sector-specific accounting chapters in Part VI, which showed that a bank, a hydropower company, an insurer, and a manufacturer must each be read through a different lens.</p>
+  <p>Regulatory and competitive moat (8 points). A moat is a durable barrier that keeps competitors from eroding a company's profits — named after the water-filled ditch that protected old fortresses.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Business model position</th><th>Points (out of 8)</th></tr>
+    <tr><td>Licensed, regulated sector with high entry barriers and a defensible position (e.g., an established commercial bank, a hydropower company with a signed PPA)</td><td>8</td></tr>
+    <tr><td>Moderate barriers, meaningful but not dominant market position</td><td>5</td></tr>
+    <tr><td>Low barriers, commodity-like business, intense competition</td><td>2</td></tr>
+    <tr><td>Structural regulatory or technological threat to the business model</td><td>0</td></tr>
+  </table>
+  </div>
+  <p>A PPA, Power Purchase Agreement, is the long-term contract between a hydropower company and its buyer — usually the Nepal Electricity Authority (NEA) — fixing the price at which electricity will be bought for a set number of years. A signed PPA is what converts a hydropower project from a construction gamble into a predictable cash-flow business, which is why this factor belongs squarely inside the durability dimension.</p>
+  <p>Revenue concentration and dependency risk (7 points). A business dependent on a single customer, single geography, or single input supplier carries risk that does not show up in a single year's income statement but shows up eventually.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Revenue concentration</th><th>Points (out of 7)</th></tr>
+    <tr><td>Diversified; no single customer or segment exceeds 20% of revenue</td><td>7</td></tr>
+    <tr><td>Moderate concentration, 20% – 40% from one segment or counterparty</td><td>4</td></tr>
+    <tr><td>High concentration, above 40% from one counterparty</td><td>2</td></tr>
+  </table>
+  </div>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    Most run-of-river hydropower companies in Nepal sell effectively all of their output to a single buyer, NEA, under a single PPA. Under the generic rubric above, that would score poorly on revenue concentration even though it is structurally unavoidable for the sector — every hydropower company has this same "problem." Chapter 65 exists precisely to fix mismatches like this one, replacing the generic band with a sector-appropriate version.
+  </div>
+  <p>Dimension 6: Growth Trajectory (15 points). This dimension measures whether the company's revenue and earnings are actually growing, and whether that growth is genuine or manufactured through accounting choices, asset revaluations, or one-off gains.</p>
+  <p>Revenue CAGR (8 points). CAGR, Compound Annual Growth Rate, is the smoothed annual growth rate that would take a starting number to an ending number over several years, accounting for compounding rather than a simple average.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>5-year revenue CAGR</th><th>Points (out of 8)</th></tr>
+    <tr><td>15% or higher, positive in at least 4 of 5 years</td><td>8</td></tr>
+    <tr><td>8% – 15%</td><td>6</td></tr>
+    <tr><td>0% – 8%</td><td>3</td></tr>
+    <tr><td>Negative, or highly volatile year to year</td><td>0</td></tr>
+  </table>
+  </div>
+  <p>Earnings consistency (7 points). EPS, Earnings Per Share, is net profit divided by the number of outstanding shares — the metric that actually matters to you as a shareholder, since it accounts for dilution from bonus shares and rights issues that revenue growth alone ignores.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>EPS growth pattern, last 5 years</th><th>Points (out of 7)</th></tr>
+    <tr><td>Positive in at least 4 of 5 years, no swing greater than 50% in a single year</td><td>7</td></tr>
+    <tr><td>Positive in 3 of 5 years, moderate swings</td><td>4</td></tr>
+    <tr><td>Positive in 2 of 5 years, or high volatility</td><td>2</td></tr>
+    <tr><td>Declining trend, or negative in 3 or more years</td><td>0</td></tr>
+  </table>
+  </div>
+  <p>Dimension 7: Dividend &amp; Capital Return Discipline (10 points). Part VII's dividend and taxation chapters explained that a Nepali company can return capital to shareholders through cash dividends, bonus shares, or a combination of both — and that the mix matters as much as the amount, since bonus shares dilute future EPS even as they feel generous in the moment.</p>
+  <p>Consistency of payout (6 points). A company that pays every single year, at a sensible payout ratio, is behaving predictably. A company that skips dividends erratically — often because it breached a capital or liquidity requirement — is signaling underlying stress.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Dividend record, last 5 years</th><th>Points (out of 6)</th></tr>
+    <tr><td>Paid every year; payout ratio consistently 30% – 70% of distributable profit</td><td>6</td></tr>
+    <tr><td>Paid in 4 of 5 years, or payout ratio consistently very low or very high</td><td>4</td></tr>
+    <tr><td>Paid in 2 or 3 of 5 years, erratic</td><td>2</td></tr>
+    <tr><td>Skipped in 3 or more of the last 5 years</td><td>0</td></tr>
+  </table>
+  </div>
+  <p>Sustainability of the payout (4 points). This checks whether dividends were funded by genuine distributable profit or by drawing down reserves and one-off gains — a distinction that separates a company sharing real wealth from one manufacturing a good headline.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Funding source of dividends</th><th>Points (out of 4)</th></tr>
+    <tr><td>Genuine distributable profit, reserves intact or growing</td><td>4</td></tr>
+    <tr><td>Partially funded by one-off or revaluation gains</td><td>2</td></tr>
+    <tr><td>Funded by drawing down capital or reserves</td><td>0</td></tr>
+  </table>
+  </div>
+  <h2>Lesson 64.5 — Combining the Seven Scores Into a Single 0–100 Number</h2>
+  <p>Return to Kavita's report card. The school did not average her seven subject grades by picking the best one, or ignore Mathematics because English was strong. It added every subject's contribution into one GPA that reflected the whole child. The Canon Quality Score works the same way: you simply add the seven dimension scores together.</p>
+  <p>Financial Strength (0–20) + Governance (0–15) + Liquidity (0–10) + Valuation (0–15) + Sector Durability (0–15) + Growth (0–15) + Dividend Discipline (0–10) = Canon Quality Score (0–100)</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Score band</th><th>Interpretation</th></tr>
+    <tr><td>85 – 100</td><td>Exceptional — a top-tier compounder candidate for core, long-term holding</td></tr>
+    <tr><td>70 – 84</td><td>Strong — a solid long-term holding candidate, worth owning with normal monitoring</td></tr>
+    <tr><td>55 – 69</td><td>Adequate — investable, but size the position carefully and watch the weak dimensions</td></tr>
+    <tr><td>Below 55</td><td>Weak / Avoid — high risk; needs an unusually strong specific justification to hold</td></tr>
+  </table>
+  </div>
+  <div class="callout">
+    <span class="callout-label">CAUTION</span>
+    The Canon rubric includes one override rule, and it exists because of how governance failures actually unfold in Nepal: if the Governance &amp; Promoter Behavior sub-score falls below 5 out of 15 — meaning serious pledging, audit qualifications, or disclosure failures — the overall score is automatically capped in the Weak/Avoid band, regardless of how high the other six dimensions score. A brilliant income statement cannot outvote a dishonest promoter. This is the one place in the rubric where a single dimension is allowed to override the arithmetic sum.
+  </div>
+  <p>A score is a starting point for judgment, not a replacement for it. Two companies can both score 75 for very different reasons — one strong everywhere and merely adequate on valuation, another spectacular on growth but only middling on governance. Always read the seven sub-scores before you read the total, exactly as Suman read Kavita's Mathematics grade before he looked at her GPA.</p>
+  <h2>Lesson 64.6 — A Fully Worked Example: Scoring an Illustrative NEPSE Company</h2>
+  <p>The company below, "Himalaya Unnati Bank Ltd" (HUBL), is an illustrative composite built for teaching purposes — it is not a real listed company, and no real bank's data was used. Its numbers are calibrated to sit near the realistic range for a solidly-run but unspectacular Nepali commercial bank, based on the sector figures discussed earlier in this chapter.</p>
+  <p>HUBL's raw data, gathered from its annual reports, SEBON filings, CDSC records, and NEPSE trading data:</p>
+  <ul>
+      <li>3-year average ROE: 14.2%, with the weakest year at 11.0%</li>
+      <li>Capital Adequacy Ratio: 12.8%, stable for 3 years</li>
+      <li>Profit grew in 4 of the last 5 years, with one flat year during a provisioning cycle</li>
+      <li>Promoter shareholding: stable at 51% for 5 years, under 10% pledged</li>
+      <li>Unqualified audit opinion; related-party loans modest and fully disclosed</li>
+      <li>Quarterly filings on time; 2 of 7 board seats independent</li>
+      <li>Average Daily Volume: NPR 3.2 million over the last 6 months</li>
+      <li>Free float: 49%</li>
+      <li>Current P/E: 13.5x, versus a banking-sector median of roughly 15.8x</li>
+      <li>Current P/B: 1.3x, versus a banking-sector median of roughly 1.5x</li>
+      <li>Licensed, NRB-regulated moat; loan book moderately concentrated in one regional corporate segment (roughly 30% of the book)</li>
+      <li>Loan book 5-year CAGR: 11%; EPS positive in 4 of the last 5 years</li>
+      <li>Cash-plus-bonus dividend paid every year for 5 years; payout ratio within the 30–70% band; dividends funded from genuine distributable profit</li>
+  </ul>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Dimension</th><th>Points possible</th><th>Points awarded</th><th>Reasoning</th></tr>
+    <tr><td>Financial Strength &amp; Profitability</td><td>20</td><td>16</td><td>ROE 14.2% avg → 6/8 (10–15% band); CAR 12.8% → 5/7 (11.5–13% band); earnings grew 4 of 5 years → 5/5</td></tr>
+    <tr><td>Governance &amp; Promoter Behavior</td><td>15</td><td>13</td><td>Stable, unpledged promoter holding → 6/6; clean audit, modest related-party dealings → 4/5; on-time filings, minimum board independence → 3/4</td></tr>
+    <tr><td>Liquidity &amp; Tradability</td><td>10</td><td>8</td><td>ADV NPR 3.2m → 3/5 (NPR 1–5m band); free float 49% → 5/5</td></tr>
+    <tr><td>Valuation Reasonableness</td><td>15</td><td>11</td><td>P/E at 0.85x sector median → 6/8 (in-line band); P/B at 0.86x sector median → 5/7 (in-line band)</td></tr>
+    <tr><td>Sector &amp; Business Model Durability</td><td>15</td><td>12</td><td>Regulated banking moat → 8/8; 30% loan-book concentration in one segment → 4/7</td></tr>
+    <tr><td>Growth Trajectory</td><td>15</td><td>13</td><td>Loan book CAGR 11% → 6/8 (8–15% band); EPS positive 4 of 5 years → 7/7</td></tr>
+    <tr><td>Dividend &amp; Capital Return Discipline</td><td>10</td><td>10</td><td>Paid every year, sensible payout ratio → 6/6; funded from genuine profit → 4/4</td></tr>
+    <tr><td>Canon Quality Score</td><td>100</td><td>83</td><td>Band: Strong (70–84)</td></tr>
+  </table>
+  </div>
+  <p>HUBL lands at 83 out of 100 — comfortably inside the Strong band, and within striking distance of Exceptional. Reading the sub-scores tells you exactly where the remaining 17 points went: a thinner-than-ideal capital cushion above the NRB minimum, moderate corporate lending concentration, and average trading liquidity. None of these is a red flag on its own — none triggers the governance override — but together they explain precisely why HUBL is "strong" rather than "exceptional," and precisely which two or three metrics an investor should watch in the following year's annual report to see whether the score improves.</p>
+  <p>This is the entire purpose of scoring in seven parts instead of one: not to produce a verdict, but to produce a diagnosis.</p>
+  <div class="recap">
+    <h3>Chapter recap</h3>
+  <p>This chapter built the concrete rubric that Chapter 63 promised. The Canon Quality Score adds seven independently scored dimensions into a single 0–100 figure, in exact parallel to a school report card combining seven subject grades into one GPA: Financial Strength &amp; Profitability (20 points), Governance &amp; Promoter Behavior (15 points), Liquidity &amp; Tradability (10 points), Valuation Reasonableness (15 points), Sector &amp; Business Model Durability (15 points), Growth Trajectory (15 points), and Dividend &amp; Capital Return Discipline (10 points).</p>
+  <p>Each dimension was given specific, Nepal-calibrated point bands rather than imported rules of thumb — ROE bands built around the real spread of Nepali bank returns (roughly 8% system average, with top performers above 15%), CAR bands anchored to NRB's 11% regulatory minimum, and valuation bands measured relative to sector and historical medians rather than fixed multiples, since NEPSE's overall P/E and individual sector P/Es can differ by a factor of two or more. Every band pointed to a specific data source: SEBON filings for related-party and governance disclosures, CDSC records for promoter shareholding and pledging, NEPSE trading data for volume and free float, and annual reports for the multi-year financial trends.</p>
+  <p>The chapter also introduced the one deliberate exception to simple addition: the governance override, which caps any company's total score in the Weak/Avoid band if its Governance &amp; Promoter Behavior sub-score falls too low, no matter how strong the other six dimensions look. This reflects a hard lesson repeated throughout this book — a dishonest or overleveraged promoter can destroy shareholder value faster than any operating metric can compensate for.</p>
+  <p>The fully worked example scored an illustrative bank, Himalaya Unnati Bank Ltd, at 83 out of 100 — a Strong score — and showed how reading the seven sub-scores, not just the total, tells an investor exactly where a company's remaining weaknesses lie and what to monitor going forward.</p>
+  <p>But the rubric in this chapter was deliberately generic. It was built to be applied to any NEPSE company, from a commercial bank to a hydropower developer to a manufacturer, using the same seven dimensions and the same general point logic. Real Nepali sectors do not behave identically, however. A hydropower company's Growth Trajectory looks completely different before its Commercial Operation Date (COD) — the day it starts generating and selling electricity — than after it, when a single PPA-driven revenue stream replaces years of pure construction spending. A bank's Financial Strength dimension leans on CAR and NPL (non-performing loan) ratios that simply do not exist on a manufacturer's balance sheet. A microfinance institution's Governance dimension needs to weigh over-indebtedness risk in ways a hotel company never will.</p>
+  <p>Chapter 65, "Sector-Specific Sub-Score Adjustments," takes this generic seven-dimension framework and shows exactly how each dimension must be reshaped for Nepal's major listed sectors — banking and financial institutions, hydropower, insurance, microfinance, manufacturing, and hospitality — so that the same report-card structure produces fair, comparable grades for very different kinds of businesses.</p>
+  </div>
+
+  <div class="chapter-nav">
+    <a href="ch-63-canon-scoring-philosophy.html">← Philosophy of the Canon Scoring System</a>
+    <a href="ch-65-sector-subscore-adjustments.html">Sector-Specific Sub-Score Adjustments →</a>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap" style="max-width:920px;">
+    The Investor's Canon is written and updated over time.
+    <a href="https://santoshkumaradhikari.github.io/">santoshkumaradhikari.github.io</a>
+  </div>
+</footer>
+
+</body>
+</html>
