@@ -15,6 +15,16 @@
      existing warm palette so nothing else shifts. */
   --gradient-accent: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
   --shadow-hover: 0 14px 28px -12px rgba(28, 32, 36, 0.18);
+
+  /* Category accent colors — used only for icon badges, so individual
+     cards read as distinct at a glance while the rest of the page keeps
+     its existing warm cream/brown identity. */
+  --accent-rose: #c0355a;
+  --accent-blue: #2563eb;
+  --accent-violet: #7c3aed;
+  --accent-gold: #b3821a;
+  --accent-green: #1f7a4d;
+  --accent-teal: #0f7a8c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -29,6 +39,13 @@
 
     --gradient-accent: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
     --shadow-hover: 0 16px 32px -12px rgba(0, 0, 0, 0.55);
+
+    --accent-rose: #f094ac;
+    --accent-blue: #7bacf7;
+    --accent-violet: #b79cf2;
+    --accent-gold: #e8c168;
+    --accent-green: #6cca97;
+    --accent-teal: #5fc4d6;
   }
 }
 
@@ -306,12 +323,43 @@ a { color: var(--accent); }
   height: 20px;
 }
 
+/* Color variants: each card gets a distinct accent on its icon badge
+   only — background, borders, and text stay in the site's base palette. */
+.icon-badge.rose {
+  background: color-mix(in srgb, var(--accent-rose) 16%, var(--paper-alt));
+  color: var(--accent-rose);
+}
+.icon-badge.blue {
+  background: color-mix(in srgb, var(--accent-blue) 16%, var(--paper-alt));
+  color: var(--accent-blue);
+}
+.icon-badge.violet {
+  background: color-mix(in srgb, var(--accent-violet) 16%, var(--paper-alt));
+  color: var(--accent-violet);
+}
+.icon-badge.gold {
+  background: color-mix(in srgb, var(--accent-gold) 16%, var(--paper-alt));
+  color: var(--accent-gold);
+}
+.icon-badge.green {
+  background: color-mix(in srgb, var(--accent-green) 16%, var(--paper-alt));
+  color: var(--accent-green);
+}
+.icon-badge.teal {
+  background: color-mix(in srgb, var(--accent-teal) 16%, var(--paper-alt));
+  color: var(--accent-teal);
+}
+
 /* Background cards */
 
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
+}
+
+.cards-3 {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .card {
