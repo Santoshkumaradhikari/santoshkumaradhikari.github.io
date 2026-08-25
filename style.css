@@ -9,6 +9,12 @@
   --radius: 10px;
   --serif: "Source Serif 4", Georgia, "Times New Roman", serif;
   --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Accent gradient (blue/violet) used only for the gradient-text
+     highlight and the badge dot — the rest of the site keeps its
+     existing warm palette so nothing else shifts. */
+  --gradient-accent: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  --shadow-hover: 0 14px 28px -12px rgba(28, 32, 36, 0.18);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,6 +26,9 @@
     --line: #322f2a;
     --accent: #d3a463;
     --accent-ink: #171614;
+
+    --gradient-accent: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    --shadow-hover: 0 16px 32px -12px rgba(0, 0, 0, 0.55);
   }
 }
 
@@ -153,17 +162,47 @@ a { color: var(--accent); }
 }
 
 .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-size: 0.78rem;
   font-weight: 600;
   color: var(--accent);
-  margin-bottom: 16px;
+  background: var(--paper-alt);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 6px 16px;
+  margin-bottom: 20px;
+}
+
+.eyebrow-dot {
+  width: 7px;
+  height: 7px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--gradient-accent);
 }
 
 .hero h1 {
   font-size: clamp(2.1rem, 5vw, 3.1rem);
   margin-bottom: 16px;
+}
+
+.gradient-text {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--accent); /* fallback if background-clip:text isn't supported */
+}
+
+@supports not ((-webkit-background-clip: text) or (background-clip: text)) {
+  .gradient-text {
+    -webkit-text-fill-color: unset;
+    color: var(--accent);
+  }
 }
 
 .lede {
@@ -280,6 +319,13 @@ a { color: var(--accent); }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 22px 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
 }
 
 .card .tag {
@@ -312,6 +358,13 @@ a { color: var(--accent); }
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 24px 28px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.work-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent);
+  box-shadow: var(--shadow-hover);
 }
 
 .work-item h3 {
