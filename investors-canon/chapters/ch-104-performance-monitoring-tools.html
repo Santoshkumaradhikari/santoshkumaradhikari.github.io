@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Performance Monitoring Tools — The Investor's Canon</title>
+<meta name="description" content="Why a portfolio's percentage growth misleads once rights payments and deposits enter the picture, and how to calculate XIRR to find the real, honest annualized return.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="reading-progress-container">
+  <div class="reading-progress-bar" id="reading-progress"></div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Investor's <span>Canon</span></a>
+    <nav class="header-links">
+      <a href="../index.html">Contents</a>
+      <a href="../framework.html">Framework</a>
+      <a href="https://santoshkumaradhikari.github.io/">Santosh Adhikari →</a>
+    </nav>
+  </div>
+</header>
+
+<article class="chapter">
+  <div class="chapter-kicker">Part XVIII · Chapter 104</div>
+  <h1>Performance Monitoring Tools</h1>
+
+  <h3>Performance Monitoring Tools</h3>
+  <p>Sunil Maharjan had a number in his head, and for three years he was proud of it. A civil engineer supervising sub-contracts on a run-of-river hydropower project in Kathmandu, Sunil kept his investing simple: check the portfolio value in Meroshare once a month, compare it to what he remembered depositing, and feel good or bad accordingly. By the middle of 2026 his mental arithmetic told him something spectacular — his account had gone from roughly five lakh rupees to well over eleven lakh. More than doubled. At a family gathering during Dashain he said as much, a little proudly, to his brother-in-law, who happened to manage a small SACCOS branch in Lalitpur and asked one plain question: "Doubled from when, and did you only ever put in that five lakh?"</p>
+  <p>Sunil hadn't. Between that first deposit and the present moment he had paid for two rights share calls, added fresh cash twice after bonus announcements freed up demat space, and pulled out one dividend payment in cash rather than reinvesting it. When his brother-in-law sat down with him and actually listed every rupee that had moved in and out of the account, with dates, the "doubled my money" story fell apart. Sunil had not made a 130 percent return. He had made something much smaller, and it took a proper calculation to find out what it actually was.</p>
+  <p>This chapter is about that calculation, and about the habits that keep an investor from fooling themselves the way Sunil nearly did. It is not abstract finance theory. It is the specific arithmetic of tracking a real Nepali portfolio — one with rights issue payments, IPO allotments, dividend choices, and deposits made at irregular, inconvenient times — so that the number in your head matches the number that is actually true.</p>
+  <h2>Lesson 104.1 — Why "My Portfolio Is Up" Is Not an Answer</h2>
+  <p>Ask any ten NEPSE investors how they are doing and most will give you a version of Sunil's answer: a comparison between what the account is worth now and what they remember putting in, expressed as a percentage. This works fine in the one situation where nobody actually invests — a single lump sum on day one, left untouched, with the ending value checked on a single day at the end. The moment you add money, remove money, or receive shares outside of a normal purchase, that simple percentage stops measuring your return and starts measuring something else: a mixture of your return, the amount of money you had exposed to the market at various times, and pure luck of timing.</p>
+  <p>Nepali retail portfolios are almost never the single-lump-sum case. Rights issues are one of the biggest sources of irregular cash flow unique to this market. A company you already hold announces a 1:1 or 1:2 rights offering, and unless you let your entitlement lapse, you are expected to pay in fresh cash on a specific date to receive the new shares — cash that has nothing to do with market performance and everything to do with your own decision to keep your ownership percentage intact. Add to that IPO applications through ASBA, where money is blocked and then either allotted or refunded depending on the lottery result; dividend elections, where a company might pay partly in bonus shares and partly in cash, and you must decide whether to reinvest that cash or spend it; and ordinary deposits made whenever salary allows. Every one of these events changes how much money you have "at risk" in the market at a given time, and none of them should be counted as investment gain.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    A portfolio value that has grown mostly because you deposited more money, not because your holdings appreciated, will still feel like success. The feeling is real. The return is not. Before you compare this year to last year, or compare yourself to a friend, separate what you put in from what the market gave you.
+  </div>
+  <p>The practical failure mode is this: an investor sees the account balance rise from Rs 5,00,000 to Rs 11,50,000 and mentally computes a 130 percent gain, when in fact Rs 2,90,000 of that increase came from rights payments and fresh deposits — money that was never "returned," it was simply added. Confusing contributed capital with investment profit is the single most common performance-tracking error among Nepali retail investors, and it compounds every year an investor keeps adding cash without correcting for it. The fix is not complicated, but it does require abandoning mental arithmetic in favor of two specific tools: the time-weighted return and the money-weighted return, better known by its common calculation method, XIRR.</p>
+  <h2>Lesson 104.2 — Two Kinds of "Return," and Why You Need Both</h2>
+  <p>Professional fund managers and individual investors face a subtly different measurement problem, and the industry has settled on two different tools because of it.</p>
+  <p>A mutual fund manager does not control when investors add or withdraw money from the fund. Someone might invest a large lump sum the day before a market crash, and someone else might invest the day after — neither event is the fund manager's doing, and it would be unfair to judge the manager's skill by the accident of when other people's money happened to arrive. So funds are judged by the time-weighted return, or TWR: a method that breaks the investment period into sub-periods bounded by each cash flow, calculates the return of each sub-period in isolation, and geometrically chains those sub-period returns together. The formula for chaining n sub-periods looks like this: TWR = [(1+R1) x (1+R2) x ... x (1+Rn)] - 1, where each Rn is calculated from the start and end value of that sub-period, with the cash flow itself excluded from the gain calculation. TWR answers the question: how good were the actual investment decisions and stock selections, independent of the size or timing of money moving in and out?</p>
+  <p>You, as an individual investor, control both things — the stock selection and the timing of your deposits and withdrawals. Both are your decisions, and both affect your actual lived financial outcome. So while TWR tells you whether you are a good stock-picker, it does not tell you whether you are managing your own cash flow well — whether, for instance, you kept adding money into an overheating market at the top, or whether your rights share payments happened to land at good or bad moments. The tool that captures your actual, lived experience — factoring in every rupee you put in and when — is the money-weighted return, most commonly computed as XIRR (the extended internal rate of return, so named because it works with cash flows on irregular, real calendar dates rather than assuming neat annual intervals).</p>
+  <div class="callout">
+    <span class="callout-label">KEY CONCEPT</span>
+    Time-weighted return (TWR) measures how well the portfolio's holdings performed, stripped of the effect of your deposits and withdrawals — the fair way to judge whether your stock selection has skill. Money-weighted return (XIRR) measures the actual annualized return you personally experienced, given exactly how much money you had in the market and when. A serious investor tracks both, because they answer different questions, and the gap between them tells its own story.
+  </div>
+  <p>For most individual Nepali investors, XIRR is the more urgent number to get right, because it is the one that answers "was this actually worth my money and my years," and it is the one almost nobody calculates correctly by hand. TWR matters more once you start comparing your stock selection to a benchmark like the NEPSE index — which we come to in Lesson 104.4 — because a benchmark comparison that ignores your cash flow timing will blame or credit you for the market's mood on the days you happened to deposit money, rather than for the quality of the shares you chose.</p>
+  <h2>Lesson 104.3 — Calculating XIRR for a Real Portfolio</h2>
+  <p>Here is the actual calculation Sunil's brother-in-law walked him through, using Sunil's real transaction history pulled from his broker's TMS statement and his Meroshare portfolio record. The mechanics generalize to any portfolio with irregular cash flows, which in Nepal means almost every portfolio.</p>
+  <p>XIRR works from a simple rule: every cash flow the investor makes into the portfolio is entered as a negative number (money leaving your pocket), and every cash flow out of the portfolio — including the current value of the portfolio, treated as if you liquidated it today — is entered as a positive number (money that would return to your pocket). Each cash flow gets a specific calendar date, not a rounded quarter or year. The XIRR is the single annualized rate of return that makes the net present value of every one of those cash flows equal exactly zero. It is solved by iteration — try a rate, see if the present values balance, adjust, try again — which is why nobody does this by hand in practice. Both Excel and Google Sheets have a built-in =XIRR(values, dates) function that does the iteration for you.</p>
+  <p>table</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Date</th><th>Description</th><th>Cash Flow (NPR)</th></tr>
+    <tr><td>2023-01-15</td><td>Initial lump sum deposit into demat/trading account</td><td>-500,000</td></tr>
+    <tr><td>2023-07-10</td><td>Rights share payment, 1:1 rights call, hydropower holding</td><td>-150,000</td></tr>
+    <tr><td>2024-02-05</td><td>Fresh deposit after bonus shares freed up cash for new positions</td><td>-80,000</td></tr>
+    <tr><td>2024-08-20</td><td>Second rights call, separate listed company</td><td>-60,000</td></tr>
+    <tr><td>2025-03-12</td><td>Cash dividend received and withdrawn to bank (not reinvested)</td><td>+40,000</td></tr>
+    <tr><td>2026-08-25</td><td>Current portfolio value, treated as if sold today</td><td>+1,150,000</td></tr>
+  </table>
+  </div>
+  <p>Feed those six rows into the XIRR function and the answer comes out to approximately 13.4 percent per year. That is Sunil's real, honest, money-weighted annual return across the roughly three years and seven months the account has existed.</p>
+  <p>Compare that to what Sunil's mental arithmetic was telling him. If you take only the first and last numbers — Rs 5,00,000 growing to Rs 11,50,000 over 3.61 years — and annualize that as a simple compound growth rate, you get a headline figure above 25 percent a year, nearly double the true return. The gap exists entirely because the naive calculation credits Sunil's own Rs 2,90,000 of rights payments and fresh deposits as if they were investment gains rather than contributed capital. XIRR, by treating each of those payments as a dated outflow in its own right, correctly recognizes them as money he put in, not money the market gave him.</p>
+  <div class="callout">
+    <span class="callout-label">PRACTICAL TOOL</span>
+    Build a running XIRR log in a spreadsheet with two columns: date and amount. Every deposit, every rights payment, every IPO application that gets allotted (the allotted amount, not the applied amount — refunds from unsuccessful ASBA applications are not investment cash flows and should never enter the log), and every withdrawal or cash dividend taken out, gets its own row with its own exact date. Add one final row today with today's date and your current total portfolio value as a positive number. Run =XIRR(range of amounts, range of dates) and that is your real annualized return, updated in minutes any time you want to check it.
+  </div>
+  <p>Two details matter enough to flag before you build this for yourself. First, how you treat dividends changes the answer, and you must be consistent. A cash dividend you withdraw is an inflow on the day you receive it. A cash dividend you use to buy more shares should not appear as a separate row at all if the money never left your demat-linked account — but if you manually withdrew it and then manually redeposited it to buy something else, treat that as a wash and skip both entries, since including one side without the other will distort the calculation. Bonus shares and stock dividends are not cash flows at all — no cash moved, so nothing goes in the log; the increased number of shares just becomes part of your ending portfolio value, which is already captured by the final row.</p>
+  <p>Second, be honest about the ending value. If you are tracking XIRR quarterly, the "current value" row should reflect actual market prices from that day's NEPSE closing data on your holdings, not book cost, and it should be the only row you delete and re-add each time you update the calculation — every historical cash flow stays untouched.</p>
+  <div class="callout">
+    <span class="callout-label">REGULATORY DETAIL</span>
+    Under Nepal's capital gains tax regime for listed shares, tax on realized gains is deducted at source by CDSC through your broker at the time of sale — currently 5 percent of the gain for shares held over 365 days and 7.5 percent for shares held less than a year, with the net proceeds credited to your bank account. If you are computing XIRR only on realized sales rather than treating your holdings as if liquidated today, use the net-of-tax proceeds you actually received, not the gross sale value — otherwise your calculated return will overstate what you actually kept.
+  </div>
+  <div class="callout">
+    <span class="callout-label">CAUTION</span>
+    XIRR assumes a single, consistent internal rate of return exists for your cash flow pattern. In the overwhelming majority of retail portfolios — one initial investment followed by a mix of additions and one final valuation — this holds fine. But a pattern with several large sign changes back and forth (heavy withdrawals followed by heavy deposits followed by more withdrawals) can mathematically produce more than one rate that satisfies the equation, and your spreadsheet function may return a result that looks plausible but is not the only valid answer. If your XIRR result seems wildly out of line with what a rough sanity check suggests, try supplying a different "guess" value to the function (its optional second argument) and see if the answer changes — if it does, treat the result with suspicion and simplify your cash flow log before trusting the number.
+  </div>
+  <h2>Lesson 104.4 — Building the Personal Performance Dashboard</h2>
+  <p>Once you can calculate XIRR reliably, the next step is turning it from an occasional exercise into a standing dashboard — a single sheet you update every quarter that shows four things side by side: your time-weighted return, your money-weighted return, how both compare to the NEPSE index over the same period, and which sectors or holdings actually drove the result. Looking at these four together is what prevents any one of them from telling a misleading story on its own.</p>
+  <p>The time-weighted return tells you whether your specific stock selections are earning their keep, independent of your cash flow timing. The money-weighted return (XIRR) tells you the actual annualized rate your money experienced, given both your picks and your timing. The NEPSE benchmark comparison tells you whether either of those numbers is actually impressive, or just a reflection of a market that went up regardless of what you held. And the sector or per-position contribution breakdown tells you where the return actually came from — which is where uncomfortable truths tend to surface, as Lesson 104.5 shows.</p>
+  <p>table</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Period</th><th>Time-Weighted Return</th><th>XIRR (Money-Weighted)</th><th>NEPSE Benchmark Return</th><th>Alpha vs NEPSE</th><th>Top Contributing Position</th></tr>
+    <tr><td>Q1 2025</td><td>4.2%</td><td>3.9%</td><td>3.1%</td><td>+1.1 pts</td><td>Hydropower sector, broad</td></tr>
+    <tr><td>Q2 2025</td><td>1.8%</td><td>1.6%</td><td>2.4%</td><td>-0.8 pts</td><td>Banking sector holdings</td></tr>
+    <tr><td>Q3 2025</td><td>6.5%</td><td>5.2%</td><td>4.8%</td><td>+1.7 pts</td><td>Microfinance holding</td></tr>
+    <tr><td>Q4 2025</td><td>-2.1%</td><td>-3.4%</td><td>-1.5%</td><td>-0.6 pts</td><td>Hydropower sector, broad</td></tr>
+    <tr><td>Q1 2026</td><td>3.3%</td><td>2.9%</td><td>3.0%</td><td>+0.3 pts</td><td>Insurance holding</td></tr>
+    <tr><td>Q2 2026</td><td>2.7%</td><td>2.4%</td><td>2.8%</td><td>-0.4 pts</td><td>Banking sector holdings</td></tr>
+  </table>
+  </div>
+  <p>Notice that TWR and XIRR track each other closely quarter to quarter in this table but are never identical — the small gaps are exactly the effect of when Sunil's deposits or rights payments happened to land within that particular quarter relative to market movement. The NEPSE benchmark column uses the index's own percentage change over the identical calendar dates, calculated the same simple way the index itself is quoted, so the comparison is apples to apples. Alpha is just the XIRR column minus the benchmark column for that period, and it is this column, tracked over many quarters rather than any single one, that starts to answer the real question of the chapter: is there skill here, or not.</p>
+  <p>Per-sector or per-position contribution is best built as its own supporting worksheet, not crammed into the main dashboard row. For any period, contribution to return for a given holding is calculated as that holding's rupee gain or loss during the period, divided by the portfolio's total starting value for the period — not divided by the holding's own size. This is the detail that trips people up: a small position with a spectacular percentage gain contributes only a little to the overall portfolio return if it was a small slice of capital, while a large position with a modest percentage gain can dominate the total. Calculating it the right way is what exposes concentration in your return, which brings us to Sunil's actual reckoning.</p>
+  <h2>Lesson 104.5 — The IPO Allotment That Wasn't Skill</h2>
+  <p>Sunil's brother-in-law didn't stop at correcting the headline number. He asked Sunil to break 2024 down by position, because that year's XIRR — 42.6 percent — was so far above every other year that it deserved scrutiny before Sunil built any confidence around it.</p>
+  <p>table</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Year</th><th>Sunil's XIRR</th><th>NEPSE Annual Return</th><th>Alpha vs NEPSE</th><th>Primary Driver</th></tr>
+    <tr><td>2023</td><td>11.2%</td><td>9.8%</td><td>+1.4 pts</td><td>Broad portfolio, ordinary stock-picking</td></tr>
+    <tr><td>2024</td><td>42.6%</td><td>14.3%</td><td>+28.3 pts</td><td>One hydropower IPO allotment</td></tr>
+    <tr><td>2025</td><td>8.1%</td><td>10.5%</td><td>-2.4 pts</td><td>Broad portfolio, underperformed market</td></tr>
+    <tr><td>2026 (YTD)</td><td>6.9%</td><td>7.4%</td><td>-0.5 pts</td><td>Broad portfolio, roughly tracking market</td></tr>
+  </table>
+  </div>
+  <p>The 2024 figure came from a single event: Sunil had applied through ASBA for the IPO of a small hydropower company, applying for 100 kitta at the par value of Rs 100 — a total application, and eventual allotment, of Rs 10,000. It listed on NEPSE at more than four times its issue price within weeks amid strong retail demand for hydropower issues that year, and Sunil's Rs 10,000 position became worth roughly Rs 42,000 almost overnight — a gain that had nothing to do with analysis, patience, or any skill Sunil could take credit for. It was a lottery result. SEBON's ASBA allotment process distributes shares by random draw among applicants when an issue is oversubscribed, and Sunil's name simply came up.</p>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    When Sunil ran the per-position contribution breakdown for 2024, the hydropower IPO allotment — a position that represented less than 1 percent of his total portfolio value at the start of the year — had contributed roughly two-thirds of his entire annual gain in rupee terms. The remaining, carefully chosen positions he had actually researched and held with conviction returned close to 14 percent for the year, essentially identical to the NEPSE index itself. Stripped of the lottery win, 2024 was not a year of skill. It was an ordinary, market-tracking year wearing a lucky costume.
+  </div>
+  <p>This is the trap that catches investors who look at only one good year, or who look at cumulative return without breaking down where it came from. Sunil's multi-year XIRR across 2023 through mid-2026 works out to approximately 13.4 percent, comfortably above the NEPSE's annualized return of roughly 10.5 to 10.6 percent over the same window — a genuinely respectable-looking record on the surface. But adjust that same multi-year figure by removing the one-time IPO allotment gain from 2024 — treating that Rs 10,000 position as if it had simply matched the market that year instead of quadrupling — and Sunil's adjusted multi-year XIRR falls to somewhere close to 9.5 to 10 percent, statistically indistinguishable from the NEPSE benchmark itself, and arguably trailing it once the small remaining variance is considered.</p>
+  <div class="callout">
+    <span class="callout-label">CAUTION</span>
+    A single standout year, especially one built on an IPO allotment, a rumor-driven spike, or a rights entitlement you happened to hold before a favorable announcement, tells you almost nothing about your skill as an investor. Skill only shows up as a pattern that survives across several years and several different market conditions — a rising market, a falling one, and a flat one. One lucky draw dressed up as a strategy is how retail investors talk themselves into concentrating more money into speculative IPO applications and low-quality rights entitlements, believing a pattern exists where there is only a single coin flip that came up heads.
+  </div>
+  <p>The honest reassessment changed how Sunil operated. He stopped describing himself, even privately, as someone who "beats the market." He stopped treating his 2024 result as evidence that his stock-picking process was unusually good, and instead treated his broad-portfolio returns — the ones excluding lottery-based IPO windfalls — as the only fair measure of his actual process. He kept applying for IPOs, because a free lottery ticket with government-mandated fair allotment odds is still worth entering, but he stopped increasing his ASBA application sizes on the theory that he had some special insight into which issues would perform, since the 2024 result had made clear that the outcome was allotment luck, not selection skill. And he began running the sector and position-level contribution breakdown every single quarter going forward, specifically so that the next lucky or unlucky outlier would be caught immediately rather than three years later at a family gathering.</p>
+  <h2>Lesson 104.6 — The Quarterly Review, Tied to the Canon Score</h2>
+  <p>None of this is worth building if it lives in a spreadsheet nobody opens after the first excited weekend. The dashboard from Lesson 104.4 needs a fixed cadence, and it needs to connect to the self-assessment discipline this book has already established, rather than existing as a separate, disconnected exercise.</p>
+  <p>The quarterly review is deliberately lightweight — thirty to forty-five minutes, four times a year, ideally on a fixed date like the close of each Nepali fiscal quarter so it does not get pushed aside. It has five steps, in order.</p>
+  <p>First, update the cash flow log with every deposit, rights payment, IPO allotment, and withdrawal from the quarter, and recompute XIRR. Second, recompute the time-weighted return for the same period using your broker's or your own sub-period valuations. Third, pull the NEPSE index's percentage change over the identical dates and compute your alpha. Fourth, run the per-position contribution breakdown and flag anything that contributed more than, say, 20 percent of the quarter's total return from a single holding — that is your early warning for exactly the kind of concentrated-luck outcome that fooled Sunil in 2024. Fifth, write down, in one or two sentences, what actually drove the quarter's result — not a feeling, a specific cause: a sector rotation, an earnings announcement, a rights entitlement, an IPO allotment, or ordinary market drift.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    A quarterly alpha number in isolation is nearly useless and can push you toward overconfidence or panic on the strength of a single three-month window. Never make a decision to increase risk, concentrate a position, or abandon a strategy based on one quarter's alpha reading alone. The number only earns your trust once you can look back across at least four to six consecutive quarters and see a pattern, not a blip.
+  </div>
+  <p>This quarterly habit is not a new, separate obligation — it is the evidence base for the constitution review protocol and Canon Score discipline already established in Chapters 63 through 66 and revisited in Chapter 98. The constitution review asks whether you are still behaving in line with the investment rules you set for yourself; the performance dashboard is what tells you, in hard numbers rather than impressions, whether those rules are actually producing results worth keeping. A Canon Score review that only asks "did I follow my process" without also asking "and did that process's actual money-weighted return hold up against NEPSE over multiple periods" is checking your discipline but not your outcomes — you need both halves to know whether the constitution itself needs revision or simply needs more patience.</p>
+  <div class="callout">
+    <span class="callout-label">PRACTICAL TOOL</span>
+    Keep a single tab in your Canon tracking sheet labeled "Quarterly Performance Log," with one row per quarter holding: TWR, XIRR, NEPSE return, alpha, top contributing position, and a one-line cause note. At your annual constitution review, this becomes the primary evidence exhibit — four rows of hard data rather than a year of vague impressions about how the portfolio "felt."
+  </div>
+  <p>This quarterly rhythm feeds directly into the annual cadence established in Chapter 94. The four quarterly entries roll up into a single annual review, where the real question is not "was this quarter good" but "across the full year, and ideally across the several years the Canon Score process asks you to track, did the discipline actually produce a money-weighted return that justified the effort, relative to simply holding an NEPSE index-tracking allocation." An investor who cannot answer that question with a number, sourced from an actual XIRR calculation rather than a gut feeling, is in exactly the position Sunil was in before Dashain 2026 — proud of a number that was never real.</p>
+  <div class="recap">
+    <h3>Chapter recap</h3>
+  <p>This chapter built the specific arithmetic that separates a true investment return from the misleading gut-check most Nepali retail investors rely on. Simple percentage tracking breaks down the moment real cash flows enter the picture — rights share payments, IPO allotments, dividend elections, and irregular deposits — because it silently counts contributed capital as if it were investment profit, the way Sunil Maharjan's mental arithmetic turned Rs 2,90,000 of his own rights payments and deposits into an imagined 130 percent gain. The fix is XIRR: a dated log of every cash flow in and out of the portfolio, solved through a spreadsheet's built-in function, that produces the honest annualized return actually experienced — 13.4 percent in Sunil's worked example, against a naive headline figure nearly double that.</p>
+  <p>Alongside XIRR sits the time-weighted return, which strips out cash flow timing to judge stock selection on its own merits, and together they populate a quarterly personal performance dashboard with four columns worth tracking side by side: TWR, XIRR, the NEPSE benchmark return over the identical period, and a per-sector or per-position breakdown of exactly where the return came from. That last column is what caught Sunil's real lesson — his standout 2024 result, an apparent 28-point outperformance of NEPSE, traced back almost entirely to a single Rs 10,000 IPO lottery allotment, not to any skill in his broader, carefully researched holdings, which had simply tracked the market. Multi-year comparison against the NEPSE benchmark, not any single good year, is the only honest way to tell skill from luck — and the quarterly review habit, feeding into the Canon Score and constitution review protocol from Chapters 63 through 66 and 98, and rolling up into the annual cadence from Chapter 94, is what keeps that distinction from being forgotten the next time a lucky year arrives.</p>
+  <p>Chapter 105, "The Canon Data Pipeline," picks up exactly where this leaves off: the tools in this chapter are only as good as the transaction dates, cash flow amounts, and price data you feed into them, and the next chapter covers how to systematically collect, record, and organize that underlying data — from broker statements and Meroshare transaction histories to NEPSE index records — so that the XIRR log, the dashboard, and the quarterly review never depend on memory or guesswork again.</p>
+  </div>
+
+  <div class="chapter-nav">
+    <a href="ch-103-position-sizing-portfolio-tools.html">← Position Sizing and Portfolio Management Tools</a>
+    <a href="../index.html">Back to Contents →</a>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap" style="max-width:920px;">
+    The Investor's Canon is written and updated over time.
+    <a href="https://santoshkumaradhikari.github.io/">santoshkumaradhikari.github.io</a>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollTop = document.documentElement.scrollTop;
+    const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    const bar = document.getElementById('reading-progress');
+    if (bar) { bar.style.width = pct + '%'; }
+  }, { passive: true });
+</script>
+
+</body>
+</html>

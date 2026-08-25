@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Position Sizing and Portfolio Management Tools — The Investor's Canon</title>
+<meta name="description" content="A four-tool weekly system — position-size calculator, running tracker, sector-concentration dashboard, and rebalancing triggers — for catching concentration risk before it becomes a breach.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="reading-progress-container">
+  <div class="reading-progress-bar" id="reading-progress"></div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Investor's <span>Canon</span></a>
+    <nav class="header-links">
+      <a href="../index.html">Contents</a>
+      <a href="../framework.html">Framework</a>
+      <a href="https://santoshkumaradhikari.github.io/">Santosh Adhikari →</a>
+    </nav>
+  </div>
+</header>
+
+<article class="chapter">
+  <div class="chapter-kicker">Part XVIII · Chapter 103</div>
+  <h1>Position Sizing and Portfolio Management Tools</h1>
+
+  <p>Suresh Gurung keeps his portfolio in a Google Sheet he built himself in 2019, and he has never once opened it on his phone. Every Saturday morning, before the vegetable vendor comes around his lane in Pokhara's Lakeside ward, he makes a cup of tea, opens his laptop, and spends forty minutes updating eleven columns of numbers. Suresh is a civil engineer who supervises concrete work for a hydropower contractor upriver from the city, not a finance professional, and he has never paid for portfolio software in his life. His entire risk-management system is a spreadsheet, a calculator, and a set of rules he wrote down for himself after a bad year in 2021 taught him that having opinions about stocks is not the same as having a system for owning them. This chapter builds that system in the open, using Suresh's numbers, so that any investor running a self-directed NEPSE portfolio can copy the same four tools into their own sheet by Monday morning.</p>
+  <p>The tools in this chapter are deliberately unglamorous. They do not predict prices, they do not rank sectors by momentum, and they will not make anyone feel clever. What they do is take the position-sizing formula and drawdown-budget logic from Chapter 97, and the allocation ceilings set out in Chapters 59 through 62, and turn them into something you actually check before you click "buy" in your TMS window. A rule you cannot apply in ninety seconds on a Saturday morning is a rule you will eventually stop applying. Everything here is built to survive contact with an ordinary week.</p>
+  <h2>Lesson 103.1 — Building the Position-Size Calculator</h2>
+  <p>Chapter 97 established the core discipline: before you buy anything, you decide how much of your total capital you are willing to lose if this specific position goes badly wrong, and you size the purchase so that even the worst realistic outcome stays inside that tolerance. The formula from that chapter was simple on paper — drawdown budget divided by worst-case single-stock decline equals maximum position size — but simple on paper and simple in a spreadsheet cell are two different things. This lesson turns it into the second.</p>
+  <p>Start with the two inputs the formula needs. The first is your single-position drawdown budget: the slice of your total portfolio value you are prepared to lose to any one holding, drawn from the overall drawdown budget you set for your whole portfolio in Chapter 97. Suresh's overall portfolio drawdown budget, based on his income stability, his age, and his family's other assets, is 18 percent — he can absorb an 18 percent NAV decline in a bad year without changing his life. Out of that, he has decided that no single stock disaster should be allowed to cost him more than 3 percentage points of total portfolio value. That 3 percent is his single-position budget, and it does not change stock to stock. It is a constant in his formula.</p>
+  <p>The second input does change stock to stock: the worst-case decline you should plan for in that particular holding. This is not the average correction, and it is not what happened to the stock last year. It is the realistic floor — what a Class A commercial bank might lose if NRB tightened capital adequacy rules sharply and NEPSE sold off financials across the board, versus what a thinly traded Class B development bank might lose if a promoter dispute or a governance scandal broke, versus what a small hydropower counter with a narrow public float might lose if a single large holder needed to exit and there were no buyers waiting. Suresh keeps a short reference table in his sheet for this, updated whenever something in the regulatory or company-specific picture changes.</p>
+  <p>table</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Stock Category</th><th>Worst-Case Decline Assumption</th><th>Reasoning</th></tr>
+    <tr><td>Class A commercial bank, established, NRB-regulated, high disclosure</td><td>35 percent</td><td>Sector-wide correction plus company-specific bad quarter, but capital adequacy floors and NRB oversight limit tail risk</td></tr>
+    <tr><td>Class B development bank, smaller, thinner disclosure</td><td>45 percent</td><td>Same regulatory floor as commercial banks but less analyst coverage, less liquidity, promoter concentration more common</td></tr>
+    <tr><td>Hydropower or hospitality counter with narrow public float</td><td>70 percent</td><td>Thin trading volume, single-project earnings risk, limited buyer depth in a forced-sale scenario</td></tr>
+  </table>
+  </div>
+  <p>Once the reference table exists, the calculator itself is one line of arithmetic per stock: single-position budget divided by worst-case decline assumption equals maximum position size, expressed as a percentage of total portfolio value. For a commercial bank, that is 3 percent divided by 35 percent, which comes out to roughly 8.6 percent — Suresh rounds down to 8 percent as his ceiling for any single commercial bank holding. For a development bank, 3 percent divided by 45 percent gives roughly 6.7 percent, rounded to 6 percent. For a narrow-float hydropower counter, 3 percent divided by 70 percent gives about 4.3 percent, rounded to 4 percent.</p>
+  <div class="callout">
+    <span class="callout-label">KEY CONCEPT</span>
+    The position-size calculator is not a valuation tool and does not tell you whether a stock is cheap or expensive. It tells you how much of it you can survive owning if you turn out to be wrong. Those are separate questions, and conflating them is how investors end up holding oversized positions in stocks they were right to like but wrong to own so much of.
+  </div>
+  <p>Notice what this produces automatically: riskier categories of stock get smaller position-size ceilings without Suresh having to make a separate judgment call every time. He does not have to remember, in the middle of feeling excited about a hydropower IPO, that hydropower deserves a smaller allocation — the formula already encodes that discipline before he opens the trading window. This is the entire value of building the calculator into the spreadsheet rather than keeping the logic in his head: a spreadsheet cell does not get talked into an exception at ten in the morning when the price is moving.</p>
+  <p>The calculator needs one more row: converting the percentage ceiling into rupees against his actual portfolio value, which he updates weekly. If his portfolio stands at NPR 11,00,000 this week, his 8 percent commercial bank ceiling is NPR 88,000, his 6 percent development bank ceiling is NPR 66,000, and his 4 percent hydropower ceiling is NPR 44,000. Those are the numbers he actually checks against a proposed purchase order — not the abstract percentages, but the rupee figures for that week, because portfolio value moves and the ceiling should move with it.</p>
+  <div class="callout">
+    <span class="callout-label">PRACTICAL TOOL</span>
+    Build the calculator as three cells: single-position budget (a fixed percentage you set once), worst-case decline assumption (looked up from your reference table by stock category, updated when facts change), and portfolio value (pulled live from your tracker). The formula cell is budget divided by decline, multiplied by portfolio value. Update the portfolio value cell weekly and the ceiling in rupees updates itself.
+  </div>
+  <p>One caution belongs here. The worst-case decline assumption is a judgment call, and judgment calls drift toward optimism over time, especially after a stock has performed well for a year or two. Suresh reviews his reference table every six months, not because the categories change often, but because his own confidence in them does, and a stale assumption made two years ago during a bull run is exactly the kind of thing that quietly stops protecting you.</p>
+  <h2>Lesson 103.2 — The Running Portfolio Tracker</h2>
+  <p>The position-size calculator tells you what to buy. The running tracker tells you what you actually own, and whether what you own still matches what you decided to own. Without this second tool, position sizing is a decision you make once at purchase and never revisit — which defeats the purpose, because prices move, positions drift, and a holding that was 6 percent of your portfolio at cost can become 11 percent after eighteen months of share price appreciation without you buying a single additional share.</p>
+  <p>The tracker needs eight columns, no more and no fewer for a retail investor running this alone. More columns get skipped under time pressure; fewer columns hide the information you need to catch problems early.</p>
+  <p>table</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Column</th><th>What It Captures</th><th>Why It Matters</th></tr>
+    <tr><td>Holding</td><td>Company name and ticker</td><td>Basic identification</td></tr>
+    <tr><td>Sector</td><td>NRB/SEBON sector classification (commercial bank, development bank, hydropower, hotel, insurance, etc.)</td><td>Feeds the sector-concentration dashboard in Lesson 103.3</td></tr>
+    <tr><td>Cost Basis</td><td>Total rupees invested, adjusted for any bonus shares received</td><td>Baseline for gain/loss and for capital gains tax planning</td></tr>
+    <tr><td>Current Price</td><td>Latest NEPSE closing price for that counter</td><td>Basis for current market value</td></tr>
+    <tr><td>Weight</td><td>Current market value divided by total portfolio value</td><td>Compares against the position-size ceiling from 103.1</td></tr>
+    <tr><td>Sector-Cap Headroom</td><td>Combined sector exposure versus the cap set in Chapter 61</td><td>Feeds the dashboard in 103.3, flags creeping concentration</td></tr>
+    <tr><td>Canon Score</td><td>The composite score from your fundamentals-and-governance framework</td><td>Tracks whether the original investment case still holds</td></tr>
+    <tr><td>Last Review Date</td><td>The date you last actually looked at the company's disclosures</td><td>Forces periodic re-examination instead of passive holding</td></tr>
+  </table>
+  </div>
+  <p>Suresh's version of this sheet has fourteen rows this year — fourteen distinct holdings across seven sectors — and updating it every Saturday takes him about twenty-five minutes once he has downloaded the week's closing prices. The weight column is the one that does the real work day to day: it is a straightforward formula, current market value for that row divided by the sum of all current market values, and it recalculates automatically every time he updates prices. The moment a stock's weight crosses the ceiling he calculated in 103.1 — say, his development bank position drifting above 6 percent — the cell turns red through simple conditional formatting. He does not have to remember to check; the sheet tells him.</p>
+  <p>The Canon Score column deserves a specific caution, because it is the column investors most often let go stale. A score calculated at purchase time, based on that quarter's disclosures, that quarter's governance picture, and that quarter's valuation, is not a permanent verdict on the company. It is a snapshot, and snapshots age.</p>
+  <div class="callout">
+    <span class="callout-label">CAUTION</span>
+    A Canon Score you calculated eighteen months ago and never revisited is worse than no score at all, because it gives you false confidence that you have done the analytical work when you have only done it once. Recalculate the score at every quarterly disclosure at minimum, and note the recalculation date in the Last Review Date column so you can see at a glance which holdings you have actually re-examined recently and which you have been holding on autopilot.
+  </div>
+  <p>The Last Review Date column is what turns the tracker from a passive record into an active discipline. Suresh sorts his sheet by this column every month and asks a simple question about whichever holding sits at the top of the list, oldest review first: have I actually looked at this company's last disclosure, or have I just been watching the price move? A holding that has gone six months without a genuine review — reading the quarterly report, checking the Canon Score inputs, confirming the original investment thesis still holds — gets moved to the top of his weekend reading list regardless of how the price has performed.</p>
+  <p>There is a temptation, once you have built a tracker like this, to add more columns: target price, analyst notes, dividend yield history, a running notes field for every rumor you hear. Resist it. Every column you add is a column you have to fill in every week, and the tracker's entire value depends on it actually getting updated. An eight-column sheet updated every Saturday is a functioning risk-management system. A twenty-two-column sheet updated every third Saturday because it takes ninety minutes is not.</p>
+  <div class="callout">
+    <span class="callout-label">PRACTICAL TOOL</span>
+    Keep the tracker to exactly these eight columns and resist every urge to expand it. If you find yourself wanting to track something else — a stop-loss level, a target allocation, a note about a rumor — put it in a separate sheet or a separate document, not in the row that has to survive weekly updates for years.
+  </div>
+  <h2>Lesson 103.3 — The Sector-Concentration Dashboard</h2>
+  <p>Chapters 59 through 62 built the case for sector allocation ceilings on NEPSE specifically, because the exchange's sector composition is unusually top-heavy in bank, financial institution, and life insurance counters compared to more diversified markets. Chapter 61 set the specific numbers most investors following this book use as defaults: no single sector above 25 percent of portfolio value, and — because commercial banks and development banks are both NRB-regulated deposit-taking institutions whose fortunes move together during a monetary tightening cycle or a liquidity crunch — a combined ceiling of 35 percent across the two sectors together, treated as one correlated risk bucket rather than two independent ones.</p>
+  <p>The problem this lesson solves is that no single purchase ever looks like the one that breaches a combined cap. You buy a development bank stock that is 2 percent of your portfolio, well under any individual position ceiling, and it looks completely reasonable in isolation. The danger is never any one purchase — it is the sum of several reasonable-looking purchases made over months, none of which individually triggers alarm, that together cross a line nobody was watching for because nobody was adding them up.</p>
+  <p>The dashboard is not a separate spreadsheet from the tracker — it is two summary rows sitting above the tracker's main table, built from the same sector column already in every row. The first summary row sums the weight column for every holding classified as a commercial bank. The second sums every holding classified as a development bank. A third row adds those two together and compares the total against the 35 percent combined ceiling, with the difference shown as headroom — how many more percentage points of portfolio value could go into this combined sector before the cap is reached.</p>
+  <div class="callout">
+    <span class="callout-label">REGULATORY DETAIL</span>
+    NRB's institutional classification — Class A for commercial banks, Class B for development banks, Class C for finance companies, and Class D for microfinance institutions — is a convenient and consistent basis for the sector column, since every listed BFI already carries this classification and it rarely changes. Using NRB's own categories keeps your sector tags aligned with how the regulator itself groups correlated institutional risk, rather than inventing your own taxonomy that might miss the correlation NRB's classification is built to capture.
+  </div>
+  <p>Suresh's dashboard has four correlated buckets he watches this way, each with its own combined ceiling drawn from Chapter 61: banking plus development banking at 35 percent, hydropower plus other energy infrastructure at 30 percent given its own correlated exposure to monsoon-dependent generation and PPA rate risk, life and non-life insurance combined at 20 percent, and hotels plus other tourism-linked counters at 15 percent given their shared sensitivity to tourist arrival numbers. Every one of his fourteen holdings falls into exactly one of these buckets or stands alone in a bucket of one.</p>
+  <p>table</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Sector Bucket</th><th>Combined Cap</th><th>Current Exposure</th><th>Headroom</th></tr>
+    <tr><td>Commercial banks + development banks</td><td>35 percent</td><td>27 percent</td><td>8 points</td></tr>
+    <tr><td>Hydropower + energy infrastructure</td><td>30 percent</td><td>24 percent</td><td>6 points</td></tr>
+    <tr><td>Life + non-life insurance</td><td>20 percent</td><td>11 percent</td><td>9 points</td></tr>
+    <tr><td>Hotels + tourism-linked</td><td>15 percent</td><td>6 percent</td><td>9 points</td></tr>
+  </table>
+  </div>
+  <p>The dashboard's value is entirely in the headroom column, because headroom is what should govern every new purchase decision in a way that the individual position-size ceiling alone cannot. Suresh's position-size calculator might tell him he could put another NPR 66,000 into a specific development bank stock without breaching his single-position ceiling for that category. But if his banking-plus-development-banking headroom is down to 2 points rather than 8, that purchase would breach the combined sector cap even though it clears the individual position check comfortably. Both tools have to say yes before he places the order — the position-size ceiling and the sector-cap headroom are independent checks, and a purchase that fails either one gets vetoed regardless of how attractive the stock looks on its own.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    A position-size ceiling that passes and a sector-cap headroom that fails is not a tie you resolve in favor of the trade you want to make. The sector cap exists precisely because individually reasonable positions can combine into an unreasonable concentration, which is the exact failure mode this dashboard is built to catch. Overriding it because "this one purchase is still small" is how the cap gets breached one small purchase at a time — which is the subject of the next lesson.
+  </div>
+  <h2>Lesson 103.4 — Rebalancing Triggers: Rules for When to Act</h2>
+  <p>A tracker and a dashboard tell you where you stand. They do not tell you when to act on what they show you, and without a clear trigger rule, drift gets rationalized indefinitely — "it's only two points over," "I'll wait for a better exit price," "it's still a good company." This lesson sets the specific thresholds that convert observation into action, because a rule that only fires when you feel like it fires is not actually a rule.</p>
+  <p>There are two distinct triggers worth separating, because they call for different responses. The first is position drift: a single holding's weight has moved meaningfully away from where you intended it to sit, almost always because it has performed well and grown as a share of the portfolio rather than because you bought more of it. The second is cap breach: a position-size ceiling or a sector-cap headroom has actually been crossed, not just drifted toward.</p>
+  <p>For position drift, Suresh uses a simple band rule borrowed from institutional rebalancing practice and scaled down to retail size: if a holding's actual weight moves more than 30 percent away from its target weight — not 30 percentage points, but 30 percent of the target itself — it triggers a review, not necessarily an automatic sale. A stock he sized at a 6 percent target weight that has drifted to 8 percent has moved up by a third relative to its target, which crosses the 30 percent band and triggers a look. A stock at the same 6 percent target that has drifted to 6.8 percent has moved by roughly 13 percent relative to target, which stays inside the band and gets left alone. This proportional band matters more than a flat percentage-point rule would, because a two-point drift means something very different for a position targeted at 4 percent than for one targeted at 15 percent.</p>
+  <p>table</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Trigger Type</th><th>Threshold</th><th>Response</th></tr>
+    <tr><td>Position drift (proportional band)</td><td>Actual weight moves more than 30 percent away from target weight</td><td>Scheduled review within the week — decide to trim, hold, or raise the target deliberately</td></tr>
+    <tr><td>Individual position-size ceiling breach</td><td>Weight exceeds the ceiling from the 103.1 calculator</td><td>Trim to bring weight back under ceiling within two weeks, barring an explicit documented decision to raise the ceiling</td></tr>
+    <tr><td>Sector-cap headroom exhausted</td><td>Combined sector exposure exceeds the Chapter 61 cap</td><td>No new purchases in that sector bucket until exposure is back under cap; consider trimming the largest holding in the bucket</td></tr>
+    <tr><td>Canon Score deterioration</td><td>Score falls by more than 15 points from the score at purchase</td><td>Full re-review of the investment thesis within the week, independent of price action</td></tr>
+  </table>
+  </div>
+  <p>The response to a drift trigger is a review, not an automatic sale, because drift caused by strong performance is not itself a problem — it might simply mean the target was set conservatively and deserves to be raised deliberately, which is a legitimate outcome of the review. The response to an actual ceiling or cap breach is firmer, because those thresholds were set with the worst-case decline assumption already built in, and every day a breach persists is a day the portfolio is carrying more single-stock or single-sector risk than the drawdown budget from Chapter 97 was designed to tolerate.</p>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    Suresh's largest single holding, a commercial bank he bought in 2020 at a modest position size, grew through a combination of share price appreciation and two bonus share issues to nearly 12 percent of his portfolio by late 2024 — well above his 8 percent ceiling for that category. He did not sell in a panic. He trimmed it back to 8 percent over three tranches across six weeks, partly to manage the tax consequence of a large single-year gain and partly because a NEPSE counter that size can move on its own selling pressure if dumped at once. The ceiling told him what his end state needed to be; it did not dictate that he had to get there in one transaction.
+  </div>
+  <p>Rebalancing triggers need one further discipline layered on top, because acting on every trigger the instant it fires generates a cost that a slower, more deliberate response avoids. Every sale to trim a position is a taxable event under Nepal's capital gains framework — the Inland Revenue Department currently applies a lower rate to shares held more than 365 days and a higher rate to shares sold within a year of purchase — and every trade also carries SEBON-mandated broker commission on both the buy and the eventual sell leg. A trigger that fires and gets acted on within days, purely because a threshold was technically crossed by half a point, can cost more in avoidable short-term capital gains tax and commission than the risk it was managing.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    Treat every trigger threshold as the start of a decision, not the decision itself. A position that has drifted past its band or a sector that has edged past its cap deserves a deliberate, unhurried trim executed over one to three weeks — not a same-day sale that pushes a long-term holding into short-term capital gains territory for the sake of correcting a two-point overshoot. The goal is to get back inside the discipline, not to prove you reacted instantly.
+  </div>
+  <h2>Lesson 103.5 — How Small Purchases Build a Big Problem: A Worked Example</h2>
+  <p>This is the scenario every tool in this chapter exists to catch, and it is worth walking through with Suresh's actual numbers because it never announces itself as a single bad decision. It arrives as a series of individually sensible ones.</p>
+  <p>In January of a given year, Suresh's banking-plus-development-banking bucket stood at 27 percent against his 35 percent combined ceiling — eight points of headroom, comfortably inside the cap, exactly as shown in the dashboard table in Lesson 103.3. Over the following seven months, four separate opportunities came across his radar, each involving a development bank paying an attractive dividend during a period when NEPSE's financial sector was recovering from a liquidity squeeze.</p>
+  <p>table</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Month</th><th>Purchase</th><th>Amount</th><th>Position Weight Added</th><th>Bucket Total After Purchase</th></tr>
+    <tr><td>January (starting point)</td><td>—</td><td>—</td><td>—</td><td>27 percent</td></tr>
+    <tr><td>March</td><td>Development bank A, additional tranche</td><td>NPR 18,000</td><td>1.6 percent</td><td>28.6 percent</td></tr>
+    <tr><td>May</td><td>Development bank B, new position</td><td>NPR 22,000</td><td>2.0 percent</td><td>30.6 percent</td></tr>
+    <tr><td>June</td><td>Commercial bank C, bonus shares received (no cash outlay, price appreciation)</td><td>—</td><td>1.4 percent</td><td>32.0 percent</td></tr>
+    <tr><td>August</td><td>Development bank D, new position</td><td>NPR 24,000</td><td>2.1 percent</td><td>34.1 percent</td></tr>
+  </table>
+  </div>
+  <p>Every one of these four events, examined on its own on the day it happened, passed every check Suresh had. Each cash purchase was well under his individual position-size ceiling for development banks — the March tranche was 1.6 percent against a 6 percent ceiling, the May position was 2.0 percent against the same ceiling, the August position was 2.1 percent. None of them looked remotely aggressive. The June entry was not even a purchase decision at all — it was a bonus share allotment on an existing commercial bank holding, the kind of passive increase that is easy to forget counts as new exposure at all, because no order was placed and no cash left his account.</p>
+  <p>By August, the combined bucket sat at 34.1 percent, still technically under the 35 percent cap but with headroom down to under one point — meaning a single further bonus allotment, or even ordinary price appreciation across a strong quarter for financials, would push the bucket over the line without Suresh doing anything at all. He caught this not because any one purchase alarmed him, but because his Saturday morning update in early September showed the dashboard's headroom column reading 0.9 percent, a number small enough to stop him mid-review.</p>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    What made this catchable was not vigilance at the moment of each purchase — Suresh genuinely did not notice the cumulative effect while it was building, and said afterward that each individual decision felt completely disconnected from the others because they were made months apart for different reasons. What made it catchable was that the dashboard aggregated sector exposure automatically every single week regardless of what he was paying attention to that day, so the creeping total was visible the first Saturday he happened to look at that row, rather than remaining invisible until a much larger breach forced the issue.
+  </div>
+  <p>His response followed the rebalancing trigger rules from Lesson 103.4 exactly as designed. Because headroom had not yet been breached — the bucket sat at 34.1 percent against a 35 percent cap, technically still inside the line — the trigger was a review, not a mandatory sale. But because headroom was down to under one point, meaning any further passive drift would cause a breach with no purchase decision involved at all, Suresh chose to trim the smallest and lowest-conviction of the four development bank positions, the May purchase, by about half, bringing the bucket back down to roughly 32 percent and restoring three points of headroom as a buffer against exactly the kind of passive bonus-share drift that had contributed to the problem in the first place.</p>
+  <p>The lesson generalizes past this specific bucket and this specific investor. Concentration risk on NEPSE rarely arrives through one oversized purchase, because most investors who have read Chapters 59 through 62 already know not to make one oversized purchase. It arrives through several purchases spread over enough months that no single one triggers memory of the others, compounded by bonus shares and price appreciation that add exposure with no purchase decision to notice at all. A tool that only checks concentration at the moment of a new purchase order will miss the bonus-share and price-appreciation contribution entirely. A tool that recalculates the full combined-sector total every week, regardless of whether anything was bought that week, is the only version that catches this pattern before it becomes a genuine breach rather than a near miss.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    Bonus shares and price appreciation add to sector concentration exactly as much as cash purchases do, and they are far easier to overlook because no buy order marks the moment they happened. Any concentration dashboard that only recalculates when you execute a trade will systematically understate your real exposure. Recalculate the dashboard on a fixed weekly schedule regardless of trading activity, precisely so that passive drift gets caught on the same footing as active purchases.
+  </div>
+  <h2>Lesson 103.6 — Designing Tools You Will Actually Maintain</h2>
+  <p>Every tool in this chapter can be built to a far higher level of sophistication than what has been described here. You could track intraday price movements instead of weekly closes. You could build a Canon Score that updates automatically from scraped disclosure data rather than manual quarterly review. You could add a Monte Carlo simulation layer to the position-size calculator instead of a fixed worst-case decline assumption. Investors with the technical background to build these things sometimes do, and there is nothing wrong with more sophistication if it is genuinely sustained.</p>
+  <p>The far more common outcome, and the one this closing lesson is written to prevent, is that an elaborate system gets built with enthusiasm over one long weekend and abandoned within six weeks because keeping it updated turns out to require more time than the investor actually has to give it on an ordinary Tuesday. A drawdown-budget discipline that runs for one quarter and then quietly lapses because the tracker became too tedious to update protects you for one quarter and then stops protecting you at all, usually without you noticing the exact week it stopped, which is worse in some ways than never having built it, because it creates a false sense that the discipline is still active when it is not.</p>
+  <div class="callout">
+    <span class="callout-label">KEY CONCEPT</span>
+    The correct standard for any personal portfolio tool is not "the most sophisticated version I could build." It is "the simplest version that captures the discipline, updated on a schedule I will actually keep for years, not months." A four-tool system this chapter describes, updated for twenty-five minutes every Saturday, that runs continuously for a decade will catch more real problems than a far more elaborate system that runs brilliantly for two months and then sits untouched.
+  </div>
+  <p>Suresh's version of all four tools fits on a single Google Sheet with four tabs, none of them using anything more complex than SUMIF and basic conditional formatting — no macros, no external data feeds, nothing that would break if Google changed something or a formula reference shifted. He chose this deliberately after his first attempt, built in 2019, involved a more ambitious tracker with live price feeds pulled through a script that broke twice in its first year and sat unrepaired for months each time, during which he was effectively flying blind on the exact concentration risk this chapter is built to catch. The current version pulls closing prices he types in by hand from NEPSE's own published data once a week, which takes an extra five minutes over an automated feed but has never once broken.</p>
+  <div class="callout">
+    <span class="callout-label">PRACTICAL TOOL</span>
+    Before adopting any addition to your portfolio tools — a new column, an automated data feed, a more granular sector taxonomy — ask a single question: will I still be updating this the same way in eighteen months? If the honest answer is uncertain, build the simpler version instead. You can always add sophistication later once a simple version has proven it survives contact with an ordinary year. You cannot easily recover the months of missed reviews that follow from an elaborate system you quietly stopped maintaining.
+  </div>
+  <p>The four tools in this chapter — the position-size calculator, the running tracker, the sector-concentration dashboard, and the rebalancing triggers — are designed to work together as one weekly routine rather than as four separate obligations. The calculator sets the ceiling before you buy. The tracker records what you actually hold and flags drift through its weight column. The dashboard aggregates sector exposure across every holding and catches the kind of gradual concentration that no single purchase would reveal. The triggers convert what the tracker and dashboard show into a scheduled, unhurried response rather than either panic or neglect. None of the four pieces does much on its own. Run together, every Saturday, for years, they do the entire job that Chapters 59 through 62 and Chapter 97 set out to accomplish — turning allocation principles and a drawdown formula into something that actually governs a real portfolio through real weeks, rather than remaining a good idea that lived only in the earlier chapters of this book.</p>
+  <div class="recap">
+    <h3>Chapter recap</h3>
+  <p>This chapter turned the position-sizing formula and drawdown-budget logic from Chapter 97, together with the allocation ceilings from Chapters 59 through 62, into four concrete tools built around Suresh Gurung's own working spreadsheet. The position-size calculator divides a fixed single-position drawdown budget by a category-specific worst-case decline assumption to produce a rupee ceiling for any new purchase, with commercial banks, development banks, and thinly traded counters each getting a different, appropriately conservative ceiling. The eight-column running tracker — holding, sector, cost basis, current price, weight, sector-cap headroom, Canon Score, and last review date — keeps that ceiling visible against every actual holding every week, rather than only at the moment of purchase. The sector-concentration dashboard sums correlated sector buckets, such as commercial banks plus development banks, against the combined caps set in Chapter 61, and the worked example showed exactly how four individually reasonable purchases and one bonus share allotment, spread across seven months, pushed that bucket from 27 percent to 34.1 percent without any single decision ever looking aggressive. The rebalancing triggers convert what the tracker and dashboard reveal into scheduled, deliberate action — a proportional drift band for ordinary review, and firmer but still unhurried responses for an actual ceiling or cap breach — while staying mindful of the real capital gains tax and brokerage commission cost of reacting too quickly to a small overshoot. The closing lesson made the case for keeping every one of these tools simple enough to survive years of ordinary Saturdays, on the grounds that a modest system maintained for a decade outperforms an elaborate one abandoned after two months.</p>
+  <p>Chapter 104, Performance Monitoring Tools, picks up where this chapter leaves off, moving from what you own and how much of it you own into how well the whole portfolio is actually performing. It will build an XIRR tracking template suited to a NEPSE portfolio with irregular cash flows — additional purchases, bonus shares, rights issues, and dividend receipts all landing at different times — and a portfolio performance dashboard that lets you judge your results against a realistic benchmark rather than against vague impressions of a good or bad year.</p>
+  </div>
+
+  <div class="chapter-nav">
+    <a href="ch-102-financial-model-templates.html">← Financial Model Templates</a>
+    <a href="ch-104-performance-monitoring-tools.html">Performance Monitoring Tools →</a>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap" style="max-width:920px;">
+    The Investor's Canon is written and updated over time.
+    <a href="https://santoshkumaradhikari.github.io/">santoshkumaradhikari.github.io</a>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollTop = document.documentElement.scrollTop;
+    const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    const bar = document.getElementById('reading-progress');
+    if (bar) { bar.style.width = pct + '%'; }
+  }, { passive: true });
+</script>
+
+</body>
+</html>

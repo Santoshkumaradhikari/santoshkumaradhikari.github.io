@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Financial Model Templates — The Investor's Canon</title>
+<meta name="description" content="The actual row-by-row spreadsheet structure for valuing a commercial bank, a hydropower company, and a microfinance institution — including the P50-versus-nameplate mistake that overstates hydropower value by 80 percent.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="reading-progress-container">
+  <div class="reading-progress-bar" id="reading-progress"></div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Investor's <span>Canon</span></a>
+    <nav class="header-links">
+      <a href="../index.html">Contents</a>
+      <a href="../framework.html">Framework</a>
+      <a href="https://santoshkumaradhikari.github.io/">Santosh Adhikari →</a>
+    </nav>
+  </div>
+</header>
+
+<article class="chapter">
+  <div class="chapter-kicker">Part XVIII · Chapter 102</div>
+  <h1>Financial Model Templates</h1>
+
+  <p>Kabita Sunuwar keeps twelve tabs open on her laptop most evenings, and none of them are broker research PDFs. She is a structural engineer by training, employed by a mid-sized hydropower EPC contractor in Kathmandu, and she has never once put money into a NEPSE-listed company without first building her own model for it in a spreadsheet. Her colleagues tease her about this. Her brother-in-law, who trades on tips from a Facebook group, has made more money on individual calls than she has in some years. But Kabita has a simple rule, one she repeats to anyone who asks: a broker's target price tells you what someone else assumed, not what you should assume. If you cannot open the workbook and see where every number came from, you do not actually own an investment thesis. You own somebody else's opinion, wearing your money.</p>
+  <p>This chapter is about the models themselves — the actual row-by-row structure Kabita and investors like her build for the three company types that dominate the productive end of NEPSE: commercial banks, hydropower companies, and microfinance institutions (MFIs). Everything here draws on ground already covered in this book — the sector accounting in Chapters 29 through 34, the project finance mechanics in Chapters 42 through 44, and the valuation methods in Chapters 45 through 49. What follows is not theory restated. It is the spreadsheet.</p>
+  <h2>Lesson 102.1 — Why Build Your Own Model</h2>
+  <p>Before the line items, a word on why this exercise is worth the hours it takes.</p>
+  <p>Nepali retail investors are, on the whole, badly served by third-party research. Brokerage houses publish notes, but coverage is thin, update frequency is irregular, and the incentive structure of a brokerage — which earns commission on turnover, not on the accuracy of its price targets — does not reward the kind of conservative, assumption-transparent modelling an investor actually needs. SEBON has pushed for better disclosure standards over the years, and NEPSE's own filing requirements have improved, but the raw material — quarterly reports, annual reports, PPA documents, NRB circulars — still has to be assembled and interpreted by someone. That someone should be you.</p>
+  <p>A model is not a prediction machine. It is a structured way of making your assumptions visible to yourself, so that when the assumptions turn out to be wrong — and some will — you can see exactly which one broke and adjust it, rather than throwing out the whole thesis in a panic or, worse, not noticing the assumption broke at all.</p>
+  <p>Kabita's own approach, which she has refined over roughly eight years of holding NEPSE positions, has three habits underneath it that apply to any of the three template types below.</p>
+  <p>First, she draws a hard line between numbers that come from audited financial statements and numbers that are her own assumption. In her workbooks these are literally colour-coded — black font for anything traceable to an audited balance sheet, income statement, or regulatory filing, blue font for anything she has assumed (growth rates, future tariffs, provisioning ratios, generation estimates). This sounds trivial until you have tried to defend a valuation to yourself six months later and cannot remember which numbers were facts and which were guesses.</p>
+  <p>Second, every model rolls up to a single number: value per share, on a fully diluted basis, that she can compare directly to the NEPSE quote. A model that produces "the company looks healthy" is not a model. A model produces a number you can act on.</p>
+  <p>Third, she never builds a model once. Every template below is a living document, rebuilt — not just tweaked — each quarter when new disclosures land. Lesson 102.6 covers that discipline in detail, because it is where most retail modelling efforts actually die.</p>
+  <div class="callout">
+    <span class="callout-label">KEY CONCEPT</span>
+    Every usable financial model for a NEPSE company does three things: separates audited fact from assumption by source, carries the assumptions through a valuation method appropriate to the sector, and rolls the result up to a single per-share figure comparable to the market price. If your spreadsheet cannot show a reader which of those three jobs each cell is doing, it is not yet a model — it is a collection of numbers.
+  </div>
+  <p>The three templates that follow are structured the same way in this chapter: the line items in build order, which figures come from the audited financial statements versus management guidance or your own assumption, how the model rolls up to per-share value, and the mistakes retail investors most often make with each.</p>
+  <h2>Lesson 102.2 — The Commercial Bank Model Template</h2>
+  <p>Banks are the most heavily disclosed companies on NEPSE, which makes them easier to model than hydropower or microfinance in one sense — audited data is abundant — and harder in another, because the accounting choices banks make (loan loss provisioning above all) can hide as much as they reveal. Chapters 29 through 31 covered bank accounting in depth; this section turns that into a build sequence.</p>
+  <p>Start with the income statement, reconstructed from the audited annual report and the unaudited quarterly disclosures the bank files with NEPSE and SEBON.</p>
+  <p>Interest income is your first line, broken down by loan portfolio segment if the bank discloses it (retail, SME, corporate, deprived sector) but at minimum as a single audited figure. Interest expense follows, likewise from audited figures — deposits by category (current, savings, fixed, call) if disclosed, since the mix drives your cost-of-funds assumption. Net interest income is the audited difference. From there you compute net interest margin (NIM) as net interest income over average interest-earning assets — a ratio you calculate yourself from audited figures, not an assumption.</p>
+  <p>Below net interest income comes fee and commission income (audited), other operating income (audited, but watch for one-off items like foreign exchange gains or asset revaluation that should not be projected forward at the same rate), and total operating income as the sum.</p>
+  <p>Now the line that decides most of the model: impairment charge for loans and advances, i.e., loan loss provisioning. This is where audited history ends and your judgement begins. NRB's directive on loan classification and provisioning sets minimum provisioning rates by category — pass, watchlist, substandard, doubtful, and loss — and the audited figure tells you what the bank actually provisioned last year. But the forward provisioning line in your model is an assumption you must build, not copy forward. Provisioning is cyclical: it falls in good years (when non-performing loan ratios are low and the bank may even write back provisions, boosting reported profit) and rises sharply in downturns. A model that assumes last year's provisioning rate continues indefinitely will systematically overvalue the bank at the top of a credit cycle and undervalue it at the bottom.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    The single most common modelling mistake with bank stocks is treating the provisioning line as a smooth, low, stable expense because that is what the last two or three quarters showed. Provisioning follows the credit cycle, not a trend line. If credit growth in the broader banking sector has been running above 15 to 20 percent for several years — a pattern NEPSE has seen more than once — build a scenario where non-performing loans rise and provisioning normalises upward, and see what that does to your per-share value before you decide the stock is cheap.
+  </div>
+  <p>Below operating income you build operating expenses (audited: staff costs, which are usually the largest single line and disclosed separately; premises and establishment costs; other operating expenses), giving you operating profit before tax. Apply the tax rate — banks in Nepal are taxed at the standard corporate rate applicable to banking and financial institutions, higher than the general corporate rate, and this is a fact you look up rather than assume — to reach net profit after tax.</p>
+  <p>From net profit, the model needs three more steps to become a valuation tool rather than just a restated income statement.</p>
+  <p>First, return on equity (ROE), computed from audited net profit and audited shareholders' equity. This is your primary cross-check figure — a bank sustainably earning ROE below its cost of equity is not creating value regardless of how the growth story is pitched.</p>
+  <p>Second, capital adequacy. NRB's capital adequacy framework, built on Basel III principles, requires minimum Tier 1 and total capital ratios. Pull the bank's disclosed capital adequacy ratio (CAR) from its quarterly filings. If the bank is running close to the regulatory minimum, this constrains future loan growth unless it raises fresh capital — through a rights issue, which dilutes existing shareholders, or retained earnings, which caps the dividend payout ratio. A model that projects 20 percent loan book growth for a bank with CAR at 11.2 percent against a minimum requirement without also modelling a capital raise is quietly assuming something it never stated out loud.</p>
+  <p>Third, the valuation rollup itself. For banks, the workhorse method — covered in Chapters 45 through 47 — is the dividend discount model (DDM) or, where a bank retains most of its earnings for growth, the residual income (excess return) model: value per share equals current book value per share plus the present value of future ROE in excess of cost of equity, applied to a growing equity base. Both methods need a cost of equity assumption (built from a risk-free rate anchored to Nepal government bond and treasury bill yields, plus an equity risk premium) and a terminal growth assumption tied to realistic long-run loan book growth, not the growth rate of the last two boom years.</p>
+  <p>table</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Line item</th><th>Source</th><th>Modelling note</th></tr>
+    <tr><td>Interest income</td><td>Audited financial statements</td><td>Segment if disclosed; else single line</td></tr>
+    <tr><td>Interest expense</td><td>Audited financial statements</td><td>Track deposit mix if disclosed</td></tr>
+    <tr><td>Net interest income / NIM</td><td>Calculated from audited figures</td><td>NIM is a ratio you compute, not a stated line</td></tr>
+    <tr><td>Fee and commission income</td><td>Audited financial statements</td><td>Recurring; separate from one-off gains</td></tr>
+    <tr><td>Other operating income</td><td>Audited financial statements</td><td>Strip out one-off FX or revaluation gains</td></tr>
+    <tr><td>Loan loss provisioning</td><td>Assumption, anchored to NRB minimums and cycle stage</td><td>The single most consequential forward assumption</td></tr>
+    <tr><td>Operating expenses</td><td>Audited financial statements</td><td>Staff cost usually the largest component</td></tr>
+    <tr><td>Tax</td><td>Statutory rate for banking and financial institutions</td><td>Look up current rate, do not assume</td></tr>
+    <tr><td>Net profit after tax</td><td>Calculated</td><td>Rolls into ROE</td></tr>
+    <tr><td>Capital adequacy ratio</td><td>Audited / quarterly disclosure</td><td>Flags whether growth needs a capital raise</td></tr>
+    <tr><td>Cost of equity</td><td>Assumption</td><td>Risk-free rate plus equity risk premium</td></tr>
+    <tr><td>Terminal growth rate</td><td>Assumption</td><td>Anchor to realistic long-run loan growth, not recent peak years</td></tr>
+  </table>
+  </div>
+  <div class="callout">
+    <span class="callout-label">REGULATORY DETAIL</span>
+    NRB's loan classification and provisioning directive sets minimum provisioning percentages that rise sharply as a loan moves from pass to watchlist to substandard to doubtful to loss category. A bank can be profitable and still be building risk if the proportion of its book in the pass category is falling quarter over quarter — a trend visible in the loan classification disclosure in the notes to the financial statements, not in the headline profit figure. Pull this table every quarter; it usually leads reported provisioning by two to three quarters.
+  </div>
+  <h2>Lesson 102.3 — The Hydropower Company Model Template</h2>
+  <p>Hydropower is the sector where retail investors most often build models that look sophisticated and are quietly wrong, because the project finance mechanics covered in Chapters 42 through 44 have several places where an intuitive assumption is the incorrect one.</p>
+  <p>Start, as with a bank, by separating the audited past from the assumed future — but for a hydropower company the audited past is often short (many are recently listed, post-commissioning) and the forward model does most of the work.</p>
+  <p>The first structural decision is generation. This is the assumption that determines almost everything downstream, and it is the one retail investors get wrong most often.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    Do not build a hydropower model on nameplate capacity. A 30 megawatt run-of-river plant does not generate at 30 megawatts around the clock, because river flow varies by season and the plant is a run-of-river design without large storage. The correct inputs are P50 and P90 generation estimates — P50 being the long-term average annual generation a hydrology study expects to be exceeded in half of all years, and P90 being the more conservative figure expected to be exceeded nine years in ten, the figure lenders typically size debt against. Using nameplate capacity times 8,760 hours, even discounted by a rough load factor guess, routinely overstates achievable generation and therefore revenue, cash flow, and per-share value, sometimes drastically.
+  </div>
+  <p>Pull the P50 and P90 figures from the company's feasibility study or, once operating, from actual multi-year generation history disclosed in the annual report, cross-checked against the hydrology study if it is available (many prospectuses include it). Build both figures into the model as separate scenario columns — P50 for your base case, P90 as a stress case — rather than a single blended guess.</p>
+  <p>Next comes tariff. Nepali hydropower projects sell power under a power purchase agreement (PPA) with Nepal Electricity Authority, and the PPA sets a two-season tariff structure — a higher dry-season rate and a lower wet-season rate — that historically escalates annually for a set number of years before flattening for the remainder of the agreement term. Pull the actual PPA tariff schedule from the company's disclosure; do not assume a flat tariff across the project life, and do not assume the escalation continues beyond the contractually specified years.</p>
+  <p>Revenue for each modelled year is then generation (by season, if you have seasonal PPA rates and seasonal generation splits) multiplied by the applicable tariff.</p>
+  <p>Below revenue: operations and maintenance cost, typically modelled as a percentage of project cost or a per-unit figure escalating with inflation, and government royalty. Royalty on hydropower generation in Nepal is structured under the Electricity Act as a capacity-based charge plus an energy-based charge, with the energy-based component increasing after the initial years of operation — build this step-up into the model rather than holding royalty flat for the project's life.</p>
+  <p>This gives you EBITDA. Below EBITDA, debt service is the item that most distinguishes a hydropower model from a bank or MFI model, because these are project-financed structures with debt-to-equity ratios often near 70:30 or 80:20 and long amortisation schedules matched to the PPA term. Build a full debt schedule — opening balance, interest, principal repayment, closing balance — for every year of the loan tenor, not a single average figure. Lenders in Nepal, often a syndicate of commercial banks or development financiers such as the Hydroelectricity Investment and Development Company, size the loan against a minimum debt service coverage ratio (DSCR), commonly in the 1.2 to 1.4 times range calculated on the P90 generation case. If your own DSCR calculation on P90 generation falls below the covenant level implied by the loan documents, that is a signal the company's cash available for dividends could be swept into debt service ahead of schedule in a bad hydrology year — a real constraint on the income you can expect as a shareholder.</p>
+  <div class="callout">
+    <span class="callout-label">REGULATORY DETAIL</span>
+    Interest during construction (IDC) — interest accrued on drawn project debt before the plant reaches commercial operation date — is capitalised into the project cost under Nepal Financial Reporting Standards (the equivalent of NAS 23 on borrowing costs), not expensed as incurred. This means IDC shows up as part of the asset base being depreciated after commissioning, not as a construction-period loss. A model that expenses IDC as incurred will show years of large accounting losses during construction that never actually happened on the balance sheet, and will misstate the depreciation base afterward if it is not added back into the capitalised cost. Separately, Nepal's Income Tax Act has historically granted hydropower plants meeting certain commissioning-date conditions a substantial income tax exemption for an initial period and a partial concession for a further period — confirm the specific holiday your company qualifies for from its own disclosure, since this materially changes the cash tax line for a decade or more of the model.
+  </div>
+  <p>Once debt is fully modelled and the applicable tax treatment applied, you reach free cash flow to equity (FCFE) for each year of the remaining licence and PPA term. The rollup to per-share value is a discounted cash flow of FCFE at the cost of equity appropriate to project finance risk (higher than a bank's, given construction, hydrology, and regulatory risk layered in), summed across the remaining useful life of the PPA and licence. Because hydropower generation licences in Nepal are issued for a fixed term under a build-own-operate-transfer type structure, the terminal value at licence expiry is typically not a growing perpetuity — it should be modelled as reverting to the government (a residual value near zero) or, if renewal is a realistic prospect the company itself discloses, as a separate, clearly-labelled renewal scenario rather than folded silently into the base case.</p>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    A pattern seen more than once among run-of-river IPOs on NEPSE: a prospectus quotes plant load factor and nameplate capacity prominently, while the P90 figure sits in an annex few retail investors open. Analysts who build models straight off the headline capacity number arrive at per-share values well above what a P50-and-P90-anchored model produces. When the first dry monsoon year arrives and actual generation lands closer to the P90 case, the gap between the optimistic model and reality shows up directly in a lower-than-expected dividend, and often in a share price correction that the naive model gave no warning of.
+  </div>
+  <p>The second common mistake is on debt: assuming a flat, blended interest rate and an even amortisation schedule rather than the actual drawn-down and repayment schedule in the loan documents, which typically has a grace period during construction and then a fixed tenor matched (imperfectly) to the PPA. Getting this wrong understates how front-loaded the debt burden is relative to cash flow in the early operating years — precisely when hydrology risk is also least proven, since the plant has the shortest operating history.</p>
+  <h2>Lesson 102.4 — The Microfinance Institution Model Template</h2>
+  <p>Microfinance institutions listed on NEPSE combine features of a bank model (a lending book funded partly by borrowed money, subject to NRB provisioning norms) with a distinct risk profile driven by small-ticket, often group-guaranteed lending to borrowers with thin credit histories. Chapters 32 through 34 covered the sector accounting; here is the build sequence.</p>
+  <p>Start with the loan portfolio itself, since portfolio quality drives everything else in an MFI model more directly than in a bank model. Pull portfolio outstanding, portfolio yield (interest and fee income over average portfolio), and — critically — portfolio at risk (PAR), typically disclosed at the 30-day and sometimes 90-day overdue thresholds, from the audited financial statements and the notes.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    The single most common mistake retail investors make modelling an MFI is projecting portfolio growth as an independent assumption while treating portfolio quality as fixed or improving. In practice the two are connected: an MFI growing its loan book rapidly by pushing into new districts or relaxing group-lending discipline to hit growth targets very often sees PAR rise with a lag of two to four quarters, as the newer, less-seasoned loans season into delinquency. If your growth assumption does not carry a corresponding PAR assumption forward, and PAR is already trending upward in the disclosed quarterly figures, the model is assuming away the exact risk the trend is showing you.
+  </div>
+  <p>From portfolio outstanding and yield, build interest income (audited). Cost of funds follows — MFIs fund their lending through a mix of member savings (where permitted), wholesale borrowing from commercial banks (partly satisfying those banks' deprived sector lending requirement under NRB directives), and their own capital; pull the effective cost of borrowed funds from the audited figures, and note that NRB directives on microfinance also cap the effective interest rate MFIs may charge borrowers, which limits how far portfolio yield can rise even as cost of funds moves.</p>
+  <p>Net interest income (interest income less cost of funds) is your equivalent of a bank's NIM line. Below it, loan loss provisioning follows NRB's classification norms for microfinance loans — generally with shorter overdue thresholds triggering classification into watchlist and substandard categories than for commercial bank loans, reflecting the shorter tenor and higher observed volatility of microloans. As with banks, the audited provisioning figure for the past is a fact; the forward provisioning assumption must move with your PAR assumption, not sit flat.</p>
+  <p>Operating expenses for an MFI are proportionally much larger relative to portfolio size than for a bank, because group lending and door-step collection are labour-intensive. Pull the operating expense ratio (opex over average portfolio) from audited figures — this ratio, more than almost any other line, separates well-run MFIs from weaker ones, and it tends to be sticky, so extrapolate it rather than assuming rapid efficiency gains without evidence of the company actually restructuring its collection model.</p>
+  <p>table</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Line item</th><th>Source</th><th>Modelling note</th></tr>
+    <tr><td>Portfolio outstanding and yield</td><td>Audited financial statements</td><td>Base for interest income projection</td></tr>
+    <tr><td>Portfolio at risk, PAR30/PAR90</td><td>Audited / quarterly disclosure</td><td>Leading indicator; link to your growth assumption</td></tr>
+    <tr><td>Cost of funds</td><td>Audited financial statements</td><td>Includes wholesale bank borrowing under deprived sector lending</td></tr>
+    <tr><td>Loan loss provisioning</td><td>Assumption, anchored to NRB microfinance classification norms</td><td>Must move with PAR trend, not held flat</td></tr>
+    <tr><td>Operating expense ratio</td><td>Audited financial statements</td><td>Sticky; verify before assuming improvement</td></tr>
+    <tr><td>Leverage / debt-to-equity</td><td>Audited / regulatory disclosure</td><td>NRB caps constrain growth funding</td></tr>
+    <tr><td>Return on equity</td><td>Calculated</td><td>Compare against cost of equity for MFI risk</td></tr>
+    <tr><td>Terminal growth rate</td><td>Assumption</td><td>Anchor to realistic branch and portfolio expansion, not peak years</td></tr>
+  </table>
+  </div>
+  <p>Below operating expenses and tax, net profit rolls into return on equity as your primary sanity check, exactly as with a bank. Leverage matters distinctly here: NRB sets debt-to-equity or capital adequacy style constraints on microfinance institutions, and an MFI running close to its leverage ceiling cannot fund continued rapid portfolio growth from borrowed money alone — it needs a capital raise, diluting existing shareholders, or must slow growth. A model projecting continued 25 to 30 percent annual portfolio growth without checking whether the company's equity base can support the leverage that growth requires is, again, assuming a capital raise it never stated.</p>
+  <p>The valuation rollup for an MFI typically follows the same residual income or dividend discount approach used for banks, given the comparable equity-funded, spread-based business model, with the cost of equity set higher to reflect the sector's greater credit and concentration risk, and the terminal growth assumption anchored to realistic long-run branch and portfolio expansion rather than the growth rates seen during a sector-wide credit boom.</p>
+  <h2>Lesson 102.5 — Worked Mini-Example: Valuing a Hydropower Company Share by Share</h2>
+  <p>The numbers below are invented for illustration. No real NEPSE-listed company is being described. But the structure is exactly what Kabita would build for an actual holding, and it is worth walking through in full because hydropower is where the nameplate-versus-P50 mistake does the most damage to an unwary model.</p>
+  <p>Call the company Sunkoshi Urja Ltd, a fictional 30 megawatt run-of-river plant. Total project cost is NRs 6,000 million, including NRs 550 million of interest during construction capitalised over a three-year build. The project is financed 70:30 debt to equity: debt of NRs 4,200 million at 10.5 percent, equity of NRs 1,800 million. Paid-up capital is NRs 100 per share, giving 18,000,000 shares outstanding.</p>
+  <p>The company's hydrology study gives a P50 annual generation estimate of 130 gigawatt-hours (a plant load factor of about 49.5 percent — a realistic figure for a mid-hills run-of-river plant) and a P90 estimate of 112 gigawatt-hours used by the lending banks to size debt service coverage.</p>
+  <p>The PPA with Nepal Electricity Authority sets a blended tariff of NRs 7.20 per unit in year one of commercial operation, escalating 8 percent annually for the first eight years and flat thereafter, consistent with the standard NEA PPA template's escalation structure.</p>
+  <p>Year one revenue, P50 case: 130,000,000 units multiplied by NRs 7.20 equals NRs 936 million.</p>
+  <p>Operating cost is modelled at NRs 90 million for operations and maintenance plus NRs 60 million for government royalty (capacity and energy components combined) in year one, giving EBITDA of NRs 786 million.</p>
+  <p>Debt service in the early operating years, on the NRs 4,200 million loan at 10.5 percent over a 15-year door-to-door tenor, runs at approximately NRs 620 million a year in principal and interest combined. Because Sunkoshi Urja qualifies for the income tax exemption available to hydropower plants commissioned within the qualifying window, cash tax in these early years is zero.</p>
+  <p>Year one FCFE, P50 case: NRs 786 million EBITDA less NRs 620 million debt service equals NRs 166 million.</p>
+  <p>Debt amortises down over the loan's 15-year tenor, and once it is retired, FCFE rises toward the EBITDA level (further escalated by the tariff step-ups through year eight). Rather than build all 25-plus remaining years of the licence term row by row here — which is exactly what the real workbook should do, with one column per year — this worked example uses a single normalised average annual FCFE across the remaining licence life of NRs 340 million, to keep the illustration readable.</p>
+  <div class="callout">
+    <span class="callout-label">CAUTION</span>
+    The single averaged FCFE figure used here is a simplification for this worked example only. A real model for a holding this size should carry a full year-by-year schedule — debt balance, interest, principal, tariff escalation, and tax status — for every year remaining on the PPA and licence, because the averaging step hides exactly the early-years cash flow shortfall that matters most for near-term dividend expectations.
+  </div>
+  <p>Discounting that normalised NRs 340 million annual FCFE at a cost of equity of 13 percent (reflecting project finance and hydrology risk) over the remaining 25 years of the licence term, with terminal value treated as reverting to zero at licence expiry under the build-own-operate-transfer structure, gives a present value annuity factor of approximately 7.33.</p>
+  <p>Equity value: NRs 340 million multiplied by 7.33 equals approximately NRs 2,492 million.</p>
+  <p>Value per share: NRs 2,492 million divided by 18,000,000 shares equals approximately NRs 138 per share.</p>
+  <p>Now the mistake demonstration. Suppose an analyst instead assumes the plant runs at 90 percent of nameplate capacity around the clock — a number that sounds conservative because it is not 100 percent, but is nowhere close to how a run-of-river plant with strong seasonal flow variation actually behaves. That gives generation of 30,000 kilowatts multiplied by 8,760 hours multiplied by 0.90, or roughly 236.5 gigawatt-hours — 82 percent higher than the correct P50 figure.</p>
+  <p>Carried through the same model, that generation figure very nearly doubles revenue, more than doubles EBITDA (since operating costs are largely fixed and do not scale with the overstated generation), and — because debt service does not change — multiplies FCFE by a much larger factor in the early years and a smaller but still substantial factor once averaged across the licence life. Working through the same steps, the nameplate-based model produces a normalised average FCFE of roughly NRs 612 million a year, an equity value near NRs 4,486 million, and a per-share value near NRs 249 — an overstatement of roughly 80 percent against the P50-anchored figure of NRs 138.</p>
+  <p>That is the entire difference between a defensible hydropower model and an indefensible one: one assumption, generation, carried through identical arithmetic everywhere else. If Sunkoshi Urja were trading on NEPSE at, say, NRs 175 a share, the P50 model would flag it as expensive relative to the base case and worth checking against the P90 downside case before buying; the nameplate model would wrongly flag the same price as a bargain.</p>
+  <h2>Lesson 102.6 — Maintaining the Model: Quarterly Discipline</h2>
+  <p>A model built once and never revisited is, within a year or two, actively worse than no model at all, because it gives false confidence in numbers that no longer describe the company. The discipline that separates investors like Kabita from the majority who build a model, admire it, and never open the file again is a quarterly maintenance habit, and it is worth being specific about what that habit actually involves.</p>
+  <p>Every commercial bank, hydropower company, and MFI listed on NEPSE files quarterly financial disclosures, typically within the timelines SEBON and NEPSE require. The moment those disclosures are published, the maintenance routine has four steps.</p>
+  <p>First, update every black-font, audited-source cell in the model with the new quarterly figures: interest income, provisioning, NIM, generation for the quarter, PAR, opex ratio, whichever apply to the company type. This is mechanical but non-negotiable — it is the only way to know whether last quarter's assumptions were close to reality.</p>
+  <p>Second, compare actual to assumption for every blue-font, assumed cell from the prior quarter's model. Did provisioning come in above or below what you assumed? Did generation track closer to the P50 or the P90 case? Did PAR move the direction your growth assumption implied it should? This comparison, run consistently every quarter, is where a model earns its keep — it tells you which of your assumptions are drifting and by how much, long before the drift shows up as a surprising headline number.</p>
+  <p>Third, revise the forward assumptions in light of that comparison, and only in light of that comparison — not in light of a broker note, a rumour, or a feeling about the stock. If provisioning has been running consistently above your assumed rate for three straight quarters, raise the forward assumption; do not wait for a fourth confirmation while telling yourself the last quarter was a one-off.</p>
+  <p>Fourth, re-run the rollup to per-share value and compare it against the current NEPSE quote. This is the only step that actually matters for a buy, hold, or sell decision, and it should never be skipped even when the first three steps feel like they produced no surprises — a model that hasn't moved the per-share value is itself informative, confirming the thesis rather than assuming it still holds.</p>
+  <div class="callout">
+    <span class="callout-label">PRACTICAL TOOL</span>
+    Keep one worksheet tab per quarter inside the same workbook rather than overwriting the previous quarter's tab. Label them plainly — 2082 Q1, 2082 Q2, and so on — and duplicate the prior tab as the starting point for the new one before updating it. This costs nothing in effort and gives you, over a few years, a complete audit trail of how your own assumptions evolved against what the company actually delivered — the single most useful thing a retail investor can build for improving their own modelling judgement over time.
+  </div>
+  <p>This quarterly rhythm is also where the three templates in this chapter earn back the hours spent building them. A model built once, however carefully, decays into decoration. A model rebuilt every quarter against fresh audited disclosure becomes, over several years, a genuinely better forecasting tool than anything a brokerage note can offer you — not because the underlying arithmetic is more sophisticated, but because it is disciplined by real feedback in a way a one-off research note never is.</p>
+  <div class="recap">
+    <h3>Chapter recap</h3>
+  <p>This chapter set out the actual spreadsheet structure for three financial model templates central to investing in NEPSE-listed companies. For a commercial bank, the build runs from audited interest income and expense through net interest margin, an assumption-driven provisioning line anchored to the credit cycle and NRB's minimum provisioning norms, operating expenses, capital adequacy, and a dividend discount or residual income rollup to per-share value — with mismodelled provisioning cycles the most common retail error. For a hydropower company, the build runs from P50 and P90 generation estimates (never nameplate capacity), through PPA tariff schedules with their contractual escalation and flattening, capitalised interest during construction, a full year-by-year debt schedule sized against debt service coverage covenants, and a discounted cash flow to equity rollup that respects the finite term of the licence and PPA — with nameplate-based generation assumptions the most damaging and most common retail error, as the worked example in Lesson 102.5 demonstrated with an 80 percent overstatement of per-share value from that single mistake. For a microfinance institution, the build runs from portfolio yield and cost of funds through a provisioning assumption tied explicitly to the trend in portfolio at risk, a sticky operating expense ratio, leverage constraints set by NRB, and a residual income rollup — with growth assumptions that ignore rising PAR the most common retail error.</p>
+  <p>Across all three templates, the same discipline applies: separate audited fact from assumption visibly in the workbook itself, and treat the model as a quarterly-maintained instrument rather than a one-time exercise, updating every assumption against fresh disclosure and re-running the rollup to per-share value each time new financial statements are published.</p>
+  <p>Chapter 103, Position Sizing and Portfolio Management Tools, moves from valuing individual holdings to managing a portfolio of them — concrete position-sizing calculators and portfolio tracking tools for deciding not just what a share is worth, but how much of it, if any, belongs in your portfolio alongside everything else you hold.</p>
+  </div>
+
+  <div class="chapter-nav">
+    <a href="ch-101-pre-buy-checklists.html">← Pre-Buy Checklists</a>
+    <a href="ch-103-position-sizing-portfolio-tools.html">Position Sizing and Portfolio Management Tools →</a>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap" style="max-width:920px;">
+    The Investor's Canon is written and updated over time.
+    <a href="https://santoshkumaradhikari.github.io/">santoshkumaradhikari.github.io</a>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollTop = document.documentElement.scrollTop;
+    const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    const bar = document.getElementById('reading-progress');
+    if (bar) { bar.style.width = pct + '%'; }
+  }, { passive: true });
+</script>
+
+</body>
+</html>
