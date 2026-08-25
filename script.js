@@ -1,3 +1,7 @@
+// Progressive enhancement marker: CSS only hides .fade-in elements once
+// this class is present, so content stays visible if this script fails.
+document.documentElement.classList.add('js-enabled');
+
 // Mobile nav toggle
 const navToggle = document.getElementById('navToggle');
 const siteNav = document.getElementById('siteNav');
@@ -68,4 +72,22 @@ if (skipLink && mainContent) {
 const yearEl = document.getElementById('year');
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
+}
+
+// Scroll-reveal: fade sections up into view as they enter the viewport.
+// Guarded so a browser without IntersectionObserver just shows everything.
+const fadeEls = document.querySelectorAll('.fade-in');
+if (fadeEls.length && 'IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+  fadeEls.forEach((el) => revealObserver.observe(el));
+} else {
+  fadeEls.forEach((el) => el.classList.add('visible'));
 }

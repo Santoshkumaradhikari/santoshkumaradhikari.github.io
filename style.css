@@ -466,4 +466,26 @@ a { color: var(--accent); }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
+
+  .js-enabled .fade-in {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ==========================================================================
+   SCROLL-REVEAL FADE-IN
+   Only takes effect once script.js confirms it has loaded (see the
+   .js-enabled class added at the top of that file). If JavaScript never
+   runs, .fade-in elements are never hidden in the first place.
+   ========================================================================== */
+.js-enabled .fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+}
+
+.js-enabled .fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
