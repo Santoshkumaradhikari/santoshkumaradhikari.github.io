@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Study 5 — A Rights Issue Decision — The Investor's Canon</title>
+<meta name="description" content="A real Api Power Company rights issue worked end to end — the four doors of exercise, partial exercise, renounce, or lapse, and the tax and dilution math behind each one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<div class="reading-progress-container">
+  <div class="reading-progress-bar" id="reading-progress"></div>
+</div>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">The Investor's <span>Canon</span></a>
+    <nav class="header-links">
+      <a href="../index.html">Contents</a>
+      <a href="../framework.html">Framework</a>
+      <a href="https://santoshkumaradhikari.github.io/">Santosh Adhikari →</a>
+    </nav>
+  </div>
+</header>
+
+<article class="chapter">
+  <div class="chapter-kicker">Part XVI · Chapter 87</div>
+  <h1>Case Study 5 — A Rights Issue Decision</h1>
+
+  <p>Case Study 5 — A Rights Issue Decision</p>
+  <p>Suman Gurung teaches mathematics at a secondary school in Damak, in Jhapa district, in Nepal's eastern tarai. He is not a big investor by Kathmandu standards. His demat account holds shares in eleven companies, most bought in small lots over eight years, funded by his teaching salary and by the occasional remittance his younger brother sends home from Doha. One evening in Shrawan 2080 (July 2023), he opened his Mero Share account — the online portal most Nepali investors use to see their share holdings and apply for new issues — and found a new line waiting for him: an entitlement to buy new shares of Api Power Company Limited, a hydropower company he had held for three years.</p>
+  <p>This chapter follows Suman through that decision, using the same tools this book has built since Chapter 15. It is a true story in its bones — the company, the ratio, the price, and the dates are all real and can be checked against Api Power's own disclosures and NEPSE's public records. Suman's personal numbers — his exact holding, his cash position, his family's finances — are illustrative, built to teach the math cleanly. But the corporate action itself, and the arithmetic it forces on every shareholder who receives it, is not invented. It happened, in the middle of 2023, to tens of thousands of real Api Power shareholders across Nepal.</p>
+  <h2>Lesson 87.1 — Meet the Investor and the Notice</h2>
+  <p>A rights issue is an offer a company makes to its own existing shareholders, giving them the first chance to buy new shares before anyone else gets the opportunity. Chapter 15 introduced this idea with a simple analogy: think of a company as a pie, and shareholders as people who each own a slice. When the company issues new shares, the pie gets cut into more slices. A rights issue is the company's way of saying, "before we let new people buy slices, you — the people who already own a piece of this pie — get the first right to buy more, at a price we are fixing today, in proportion to what you already hold." That is where the word "rights" comes from: it is a right, not an obligation. You can use it, use part of it, hand it to someone else, or ignore it. What you cannot do is stop the company from issuing the new shares altogether — that decision belongs to the company's board and its shareholders' general meeting, not to any one individual shareholder.</p>
+  <p>Api Power Company Limited, traded on NEPSE under the symbol API, is a hydropower company — one of the many firms that build and operate small and mid-sized hydroelectric plants across Nepal's rivers and sell the electricity they generate to the Nepal Electricity Authority (NEA) under long-term power purchase agreements. Hydropower is arguably the single most important growth sector in the Nepali capital market, tracking Nepal's chronic need for more electricity generation, its abundant river gradient, and the political ambition — repeated in budget speech after budget speech — of exporting surplus power to India and Bangladesh. By 2023, Api Power was already an established operator, and it was in the middle of building a new plant, the Upper Chameliya hydroelectric project, rated at 40 megawatts.</p>
+  <p>Building a hydropower plant is expensive, and almost none of that expense is paid up front by shareholders in one go. Companies borrow heavily from Nepali banks during construction, then repay as the plant starts earning revenue. But bank borrowing in Nepal is not always cheap, and it is never limitless — Nepal Rastra Bank (NRB), the central bank, sets rules on how much of their deposits banks can lend out, and when liquidity in the banking system tightens, as it did sharply in 2022 and into 2023, lending rates for companies like Api Power can climb into the mid-teens. A company sitting on expensive project debt has two ways to lighten that load: earn more, or borrow less. A rights issue is one of the standard ways Nepali companies choose the second path — raising equity from their own shareholders and using part of the proceeds to pay down loans, cutting the interest bill for good.</p>
+  <p>That is the backdrop Suman was reading into, without necessarily using those words, when the entitlement notice appeared in his Mero Share account. The number in front of him was simple enough: for every 10 shares he held, he was entitled to buy 4 new ones. But a plain-English number is not a decision. Chapter 78 built a playbook precisely for this moment, and this chapter is where we walk that playbook against a real filing instead of a hypothetical one.</p>
+  <div class="callout">
+    <span class="callout-label">KEY CONCEPT</span>
+    An entitlement ratio, often written as something like 10:4 or 1:0.40, tells you how many new shares you may buy for every share you already hold. A 10:4 ratio means a shareholder with 1,000 shares is entitled to buy 400 new ones — no more, no less, unless the leftover shares from other people's non-participation are later auctioned off to anyone willing to bid.
+  </div>
+  <h2>Lesson 87.2 — Reading the Fine Print</h2>
+  <p>Before any decision can be made well, the facts have to be assembled in one place. This is the least glamorous step in the entire rights-issue playbook, and it is also the one investors skip most often — scrolling past the notice, noting only "oh, rights shares," and moving on without ever reading the numbers that actually determine whether participating makes sense.</p>
+  <p>Api Power's rights issue, once assembled from the company's own disclosures and NEPSE's listing notices, looked like this.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Item</th><th>Detail</th></tr>
+    <tr><td>Company / Symbol</td><td>Api Power Company Limited (API)</td></tr>
+    <tr><td>Sector</td><td>Hydropower generation</td></tr>
+    <tr><td>Rights ratio</td><td>10:4 — four new shares for every ten held (40 percent of existing paid-up capital)</td></tr>
+    <tr><td>Issue price</td><td>Rs 100 per share (par value)</td></tr>
+    <tr><td>SEBON approval</td><td>Ashad 6, 2080 BS (on or about June 20, 2023)</td></tr>
+    <tr><td>Book closure (entitlement date)</td><td>Ashad 22, 2080 BS (on or about July 7, 2023)</td></tr>
+    <tr><td>Subscription window</td><td>Shrawan 31 to Bhadra 19, 2080 BS (August 16 to September 5, 2023)</td></tr>
+    <tr><td>New shares to be issued</td><td>16,533,137 units</td></tr>
+    <tr><td>Paid-up capital before issue</td><td>approximately Rs 4.13 arba</td></tr>
+    <tr><td>Paid-up capital after issue</td><td>approximately Rs 5.78 arba</td></tr>
+    <tr><td>Stated use of proceeds</td><td>Substantially for repayment of project-related bank loans</td></tr>
+    <tr><td>Issue and sales manager</td><td>Muktinath Capital Limited</td></tr>
+    <tr><td>Issuer credit rating</td><td>CareNP Double B Plus (BB+), CARE Ratings Nepal</td></tr>
+  </table>
+  </div>
+  <p>A few of these lines need unpacking, because each one carries a decision-relevant fact, not just a piece of trivia.</p>
+  <p>The book closure date is the single most important date on the whole notice, and Chapter 15 already explained why: it is the cut-off day the company uses to freeze its shareholder register and decide who counts as an "existing shareholder" for this offer. If you owned Api Power shares on that date (in practice, you needed to have bought and had the trade settle by Ashad 21, one day before closure), you received the entitlement. Buy the shares even one trading day after book closure, and you get nothing from this particular rights issue, even though you now own the stock. This is exactly the kind of detail that trips up investors who buy a stock because they heard "rights are coming" without checking whether they are still in time to qualify.</p>
+  <p>The subscription window is the period during which entitled shareholders must actually act — submit their application, and pay for the shares they want, either through their bank via the C-ASBA system (Centralized Applications Supported by Blocked Amount, where your bank temporarily locks the required cash in your account rather than transferring it immediately) or, increasingly, directly through the Mero Share portal. Miss this window entirely, and your entitlement is treated exactly like a "no" — it lapses.</p>
+  <p>The issue price of Rs 100 deserves its own callout, because it is one of the most consistent and most criticized features of the Nepali market.</p>
+  <div class="callout">
+    <span class="callout-label">REGULATORY DETAIL</span>
+    Nepali rights issues are almost always priced at par value — commonly Rs 100 per share — regardless of where the stock is actually trading on NEPSE at the time. This is different from many other markets, where rights are priced at a discount to the market price but still well above the shares' original face value. In Nepal, if a stock is trading at three or four times its par value, as many hydropower and finance shares do, a rights issue at par is effectively an invitation to buy shares far below market price — which is exactly why nearly every entitled shareholder who can find the cash chooses to subscribe.
+  </div>
+  <p>Finally, the stated use of proceeds matters more than most investors give it credit for. Api Power's own disclosures pointed to loan repayment as the primary use of the roughly Rs 1.65 arba raised. That is not automatically a red flag — a company under construction, carrying project debt at double-digit interest rates during a tight-liquidity year, can meaningfully strengthen its balance sheet by swapping expensive debt for equity. But it is also not the same story as "we are raising fresh capital to build an entirely new plant we could not otherwise afford." Chapter 78's playbook asks you to separate these two motives clearly, because they carry different implications for how soon the money translates into higher future earnings.</p>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    Api Power's rights issue was not a rescue rights issue — the company was not raising money to survive a crisis. Nor was it a pure growth rights issue funding a brand-new project from scratch. It sat in the middle: an established, operating company using a large slice of shareholder capital mainly to delever a balance sheet stretched by financing an already-committed hydropower project. That middle ground is where a majority of Nepali rights issues actually sit, and it is why the Canon Score framework treats "use of proceeds" as a spectrum, not a yes/no test.
+  </div>
+  <h2>Lesson 87.3 — The Four Doors: Exercise, Partial, Renounce, Lapse</h2>
+  <p>Chapter 78 laid out four doors that stand in front of every shareholder who receives a rights entitlement. Walking through Api Power's real notice is the clearest way to show what each door actually costs and delivers.</p>
+  <p>The first door is full exercise: apply for every share you are entitled to, and pay for all of it. For Suman, holding 500 Api Power shares, a 10:4 ratio entitled him to 200 new shares at Rs 100 each — a cash outlay of Rs 20,000. Full exercise preserves his percentage ownership of the company exactly as it was before the issue; if he owned 0.001 percent of Api Power before, he owns 0.001 percent after, because his share count grew by the same 40 percent that the total share count grew by.</p>
+  <p>The second door is partial exercise: apply for some of the shares, but not all — say, 100 of his 200 entitled shares, paying Rs 10,000. This preserves some but not all of his proportional ownership. It is the door investors use most often when the arithmetic clearly favors subscribing but the household budget genuinely cannot stretch to the full amount that month — a common and entirely reasonable position for a schoolteacher with a fixed monthly salary and a fixed subscription deadline that does not care whether that month also brought a large medical bill or a dashain expense.</p>
+  <p>The third door is renunciation: transferring your entitlement to someone else, who then applies and pays in your place.</p>
+  <div class="callout">
+    <span class="callout-label">REGULATORY DETAIL</span>
+    Nepali law does permit shareholders to transfer, or "renounce," their rights entitlement to another person before the subscription deadline, through a transfer process involving the company's share registrar. In practice, this mechanism is used far less often in Nepal than full exercise or simple non-participation, for a plain reason: unlike markets such as India, where "rights entitlements" trade as a separate listed instrument on the stock exchange with a live, visible market price, Nepal has no organized public market for buying and selling someone else's rights entitlement. A shareholder who wants to renounce has to find their own counterparty, agree a price privately, and complete registrar paperwork — a process with real friction for a retail holding of a few hundred shares, even though it is entirely legal.
+  </div>
+  <p>For Suman, the practical version of renunciation was much simpler than finding a stranger to negotiate with: he could transfer his entitlement to his wife, who held her own demat account and had more free cash that month from a small inheritance. Renouncing within a family does not create or destroy any household wealth by itself — the shares simply end up registered under a different name inside the same family's holdings — but it is a legitimate way to route a cash call toward whichever household member actually has the liquidity, without leaving money on the table.</p>
+  <p>The fourth door is doing nothing at all, and letting the entitlement lapse. This is the door that costs the most and is chosen the most casually, usually by investors who simply forget the deadline, cannot raise the cash, or have lost confidence in the company.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    A lapsed rights entitlement in Nepal is not a neutral non-event — it is a forfeiture. Shares nobody subscribes for are pooled together and sold at auction to whichever investor bids the highest price, and the difference between that auction price and the original Rs 100 issue price goes to the company, not to the shareholder who let the entitlement lapse. If you do nothing, you do not merely miss an opportunity; you hand real, calculable value to other bidders and to the company itself, and you receive nothing in exchange.
+  </div>
+  <p>Api Power's own numbers show this playing out at scale: of the 16,533,137 rights shares on offer, 1,194,934 units were not subscribed for by existing shareholders and went to a public auction in early October 2023. Every one of those unsubscribed shares represented a shareholder — or several thousand of them — who let real, quantifiable value slip away, usually without ever calculating what it was worth.</p>
+  <h2>Lesson 87.4 — Running the Canon Score on a Dilution Event</h2>
+  <p>This book's Canon Score exists to keep an investor from making decisions on vibes — sector excitement, a friend's tip, or a headline about hydropower's bright future. It scores a company across five categories, each worth 20 points, for a maximum of 100: business quality, financial health, growth outlook, valuation, and governance and track record. Above 85 signals a strong buy; 70 to 84 signals accumulate — a company worth adding to steadily rather than chasing; 50 to 69 signals hold and watch; below 50 signals avoid or exit. Chapter 78 added one instruction specific to corporate actions like this one: run the Canon Score twice, once as the company stood before the rights issue, and once imagining the company after the new capital and the new debt profile — because a rights issue can genuinely move a company's score, for better or worse.</p>
+  <p>Applying this to Api Power as Suman would have in mid-2023 produces a picture worth walking through slowly, because it is more nuanced than a simple "buy" or "avoid."</p>
+  <p>Business quality scored respectably but not perfectly — around 16 of 20. Hydropower in Nepal sells into a single dominant buyer, the Nepal Electricity Authority, under fixed-term power purchase agreements that guarantee revenue once a plant is generating, which is a real strength; but generation itself is hostage to the monsoon, river flow, and silt damage during flood season, which caps the score below the very top band.</p>
+  <p>Financial health was the weakest link, scoring around 12 of 20 before the rights issue — a company mid-construction, carrying meaningful project debt in a year when Nepali lending rates were unusually high, is inherently more fragile than a company with a clean balance sheet. This is precisely the category the rights issue was designed to improve: after the roughly Rs 1.65 arba was raised and directed mainly at loan repayment, this score could reasonably be marked up to around 15 of 20, reflecting a lighter interest burden and reduced refinancing risk.</p>
+  <p>Growth outlook scored strongly, around 17 of 20, carried by the 40-megawatt Upper Chameliya project under construction — a real, tangible addition to installed capacity that existing shareholders could look forward to, even though it was not yet generating revenue at the time of the rights issue.</p>
+  <p>Valuation scored only middlingly, around 11 of 20, because Api Power's shares — like most hydropower counters on NEPSE in 2023 — traded at a rich premium to their par value and book value, reflecting sector enthusiasm as much as company-specific fundamentals.</p>
+  <p>Governance and track record scored around 14 of 20 — an established, operating promoter group with a real history of completed projects, backed by a BB+ issuer rating from CARE Ratings Nepal, which is a workmanlike, investment-relevant rating rather than a top-tier one.</p>
+  <p>Add those five together and Api Power landed around 70 out of 100 — squarely at the boundary between hold-and-watch and accumulate. That is not a spectacular score, and it is not meant to be read as one. It is meant to be read honestly: a decent, self-funding hydropower operator, moderately leveraged, with real growth ahead of it but nothing that justifies chasing the stock at any price.</p>
+  <div class="callout">
+    <span class="callout-label">PRACTICAL TOOL</span>
+    Before applying for any rights issue, run this five-question version of the Canon Score corporate-action check: (1) What is the money actually for — survival, deleveraging, or growth? (2) How large is the discount between the issue price and the market price, in rupees per share? (3) What happens to my ownership percentage, and my portfolio's concentration in this sector, if I do nothing? (4) Can I fund my full entitlement without touching money earmarked for something else? (5) Does the company's Canon Score, recalculated for the post-issue balance sheet, still clear my personal minimum bar to hold the stock at all? A rights issue in a company that fails question five is a strong signal to let the entitlement lapse rather than reflexively subscribing.
+  </div>
+  <p>A Canon Score of 70 does not answer the exercise-versus-lapse question by itself, though. It clears the bar for "worth continuing to hold" comfortably, and it clears the bar for "worth adding to on a heavy discount" reasonably, but it is nowhere near strong enough to justify borrowing money or selling a better holding purely to chase this one. That distinction — good enough to defend, not good enough to load up on — is exactly the kind of middle-ground verdict the Canon Score is built to produce, and exactly the kind of verdict that a simple "rights issues are always good" or "rights issues are always dilutive and bad" rule of thumb would miss entirely.</p>
+  <div class="callout">
+    <span class="callout-label">CAUTION</span>
+    A rights issue used mainly to repay debt improves a company's balance sheet immediately, but it does not immediately improve its earnings. If the new project the debt was originally financing is not yet generating revenue — as Upper Chameliya was not, in mid-2023 — then the company's share count grows by 40 percent before its profit has grown at all. Earnings per share, the profit attributable to each individual share, mechanically drops in the short run. This is not a sign anything has gone wrong; it is simply the arithmetic of a growth company raising capital ahead of the earnings that capital will eventually produce. The investor's job is to judge whether that future earnings growth, once the new plant is generating, is likely to outpace the dilution — not to panic at a lower per-share profit figure in the interim.
+  </div>
+  <h2>Lesson 87.5 — The Tax Math Nobody Reads Until It's Too Late</h2>
+  <p>Chapter 37 covered the tax treatment of rights and bonus shares in detail, and two of its rules matter enormously here, because they change the real, after-tax value of each of the four doors.</p>
+  <p>The first rule is about cost basis — the number the tax office treats as what you "paid" for a share, used later to calculate your taxable gain when you sell. When you exercise a rights entitlement, your cost basis for those new shares is the issue price you actually paid, not the market price the shares happened to be worth on the day you received them. For Api Power, that meant a cost basis of Rs 100 per new share, regardless of how much higher the stock was trading. Since almost the entire market value of a deeply discounted rights share sits above that Rs 100 cost basis, nearly all of it becomes taxable capital gain whenever the shares are eventually sold.</p>
+  <p>The second rule is about the holding period clock, which determines whether a sale qualifies for the lower long-term capital gains rate or the higher short-term one. As this book's tax chapters have set out, individual resident investors in Nepal pay a lower rate — commonly cited at 5 percent — on gains from shares held more than 365 days, and a higher rate — commonly cited at 7.5 percent — on shares held 365 days or less. For newly issued rights shares, that 365-day clock starts running from the date the new shares are allotted and listed, not from whenever the parent shares were originally bought. A shareholder who has held the underlying stock for a decade still starts a brand-new holding-period clock for every batch of rights shares they take up.</p>
+  <div class="callout">
+    <span class="callout-label">REGULATORY DETAIL</span>
+    Cost basis for rights shares is fixed at the issue price actually paid, and the long-term/short-term holding-period clock restarts separately for each batch of rights shares from the date of allotment — it does not inherit the holding period of the original shares that generated the entitlement. An investor who sells rights shares within a year of allotment, even if they have owned the underlying company for many years, pays the short-term rate on that batch.
+  </div>
+  <p>Putting the corporate-action math and the tax math together side by side makes the four doors easier to compare directly. Using illustrative numbers close to Api Power's actual position — a cum-rights market price of roughly Rs 350 in the weeks before book closure, and the real ratio and issue price from the notice — the theoretical ex-rights price, the price the stock should mathematically settle at once the new shares are absorbed into the market, works out to a little under Rs 280. That is a useful benchmark, because it lets an investor calculate the entitlement's true value: roughly Rs 178 of embedded value on every new share bought at Rs 100, or equivalently around Rs 71 of value attached to every existing share held, whether or not that shareholder chooses to act on it.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th>Path</th><th>Cash required (200-share entitlement)</th><th>Shares held afterward</th><th>Entitlement value captured</th><th>Entitlement value lost to others</th></tr>
+    <tr><td>Full exercise</td><td>Rs 20,000</td><td>700</td><td>approximately Rs 35,700</td><td>None</td></tr>
+    <tr><td>Partial exercise (half)</td><td>Rs 10,000</td><td>600</td><td>approximately Rs 17,850</td><td>approximately Rs 17,850</td></tr>
+    <tr><td>Renounce to a family member</td><td>Rs 0 (paid by the family member)</td><td>500 (family total: 700)</td><td>approximately Rs 35,700 (kept within the family)</td><td>None</td></tr>
+    <tr><td>Let the entitlement lapse</td><td>Rs 0</td><td>500</td><td>None</td><td>approximately Rs 35,700</td></tr>
+  </table>
+  </div>
+  <p>Reading this table plainly: doing nothing does not mean standing still financially. It means actively forfeiting roughly the same amount of value that full exercise would have captured — value that instead flows to whoever wins the unsubscribed shares at auction, and to the company itself, which collects any auction premium above Rs 100. The only door that costs zero value while still keeping every rupee inside the same household is renunciation to a family member with spare cash — which is precisely why Suman, after running these numbers, seriously weighed asking his wife to take up a portion of the entitlement in her own name rather than simply skipping it.</p>
+  <div class="callout">
+    <span class="callout-label">WARNING</span>
+    Because the market mechanically re-prices a stock downward around a rights issue's book closure to reflect the coming dilution, a shareholder who does nothing does not merely "miss a discount" — they experience an actual, calculable drop in the value of the shares they already own, with no compensating gain. Passivity in a rights issue is not a safe default; it is itself a financial decision, and usually the most expensive one available.
+  </div>
+  <h2>Lesson 87.6 — The Decision and What Happened Next</h2>
+  <p>Suman's actual decision, once the Canon Score and the tax and dilution math were laid out side by side, was to fully exercise his entitlement — but to fund it deliberately rather than by scraping together whatever cash was lying around. His Canon Score of roughly 70 told him Api Power was a company worth continuing to own and worth defending his position in, but not one worth stretching for. So rather than dipping into the emergency fund this book's earlier chapters insist on keeping untouched, he sold a small, long-underperforming holding in a finance company whose own Canon Score had drifted down toward the "avoid" band over the preceding year — freeing up almost exactly the Rs 20,000 his 200-share entitlement required, without disturbing either his emergency fund or his family's other financial commitments. This is the "cash-neutral rights strategy" Chapter 78 recommends whenever an investor's overall Canon Score checklist flags a weaker holding elsewhere in the same portfolio: fund a good rights issue by exiting a weaker position, rather than by adding fresh financial stress.</p>
+  <p>He applied through the C-ASBA system at his local bank branch in Damak during the second week of the subscription window, which ran from Shrawan 31 to Bhadra 19, 2080 BS — mid-August to early September 2023 in the standard calendar. He did not renounce any portion to his wife in the end; once he had confirmed the sale proceeds from the finance-company shares would clear his bank account before the subscription deadline, funding the full entitlement himself was simpler than arranging a formal transfer, and it kept his own percentage ownership of Api Power exactly where it had been.</p>
+  <p>Not every Api Power shareholder made the same call. Real market data shows that 1,194,934 of the 16,533,137 rights shares on offer — a little over 7 percent — went unclaimed by existing shareholders and were sold at a public auction held from October 4 to 11, 2023. Some of those shareholders no doubt made a considered decision that the company's Canon Score, or their own cash position, argued against participating. Many more, in all likelihood, simply missed the deadline, misplaced the notice, or never ran the numbers at all — forfeiting real value to auction bidders for no better reason than inattention.</p>
+  <div class="callout">
+    <span class="callout-label">CASE IN POINT</span>
+    The new shares from Api Power's rights issue were formally listed for trading on NEPSE on November 10, 2023, alongside a 35 percent rights issue from Multipurpose Finance completing on the same day — a reminder that rights issues, far from being rare events, are a routine and constant feature of the Nepali market, especially in the hydropower and financial sectors, and that the skills in this chapter are ones an active NEPSE investor will use again and again, not just once.
+  </div>
+  <p>Looking back from several years later, the credit-and-cash-flow logic behind Api Power's 2023 rights issue held up reasonably well. By the 2081/82 fiscal year, the company was declaring both a bonus share distribution and a cash dividend to shareholders — a sign of a business that had moved past its heaviest construction financing needs and into a more normal, profit-distributing phase. None of that outcome was guaranteed back in 2023; it was simply the direction the Canon Score's growth-outlook and financial-health categories had pointed toward, and it is the kind of multi-year follow-through that separates a rights-issue decision made on a clear framework from one made on a coin flip.</p>
+  <p>The broader lesson of Suman's story is not "always subscribe to rights issues" or "hydropower is always a good bet." It is that a rights issue notice is not paperwork to be glanced at and filed away — it is a live financial decision with a real cash amount, a real deadline, a real tax consequence, and a real cost to inaction, and every one of those elements can be read directly off the company's own disclosure if an investor takes the time to assemble them, exactly as Table 1 in this chapter did. The four doors — exercise, partial exercise, renounce, lapse — are always open during a subscription window. Only one of them, chosen deliberately and for a clear reason, is the right one for any given investor's actual circumstances; the other three are not wrong by definition, but walking through the wrong door by default, simply because the notice sat unread in an inbox, is the single most common and most avoidable mistake this book has catalogued.</p>
+  <div class="recap">
+    <h3>Chapter recap</h3>
+  <p>This chapter took the rights-issue rules from Chapters 15, 37, and 78 and ran them against a real, verifiable NEPSE corporate action: Api Power Company Limited's 2023 rights issue, offering four new shares for every ten held, at Rs 100 per share, with subscriptions running from Shrawan 31 to Bhadra 19, 2080 BS. Using the Canon Score framework, this chapter showed how to judge whether a rights issue improves or weakens a company's underlying case, how to calculate the theoretical ex-rights price and the real rupee value embedded in an entitlement, how Nepal's tax rules on cost basis and holding periods change the after-tax picture, and why letting an entitlement lapse is a forfeiture of real value rather than a neutral non-decision. Suman Gurung's choice — fully exercising his entitlement, funded by exiting a weaker holding rather than by fresh cash strain — illustrated one reasonable path among the four doors available to every Nepali shareholder who receives a rights notice.</p>
+  <p>Chapter 88, Case Study 6 — An IPO Analysis, turns from a company already listed and already known to one arriving fresh on NEPSE for the very first time. It follows the same disciplined, plain-numbers approach into the very different territory of an initial public offering: reading a prospectus instead of a rights notice, judging a company with a much shorter public track record, and applying the Canon Score to a business the market has not yet had years to argue about.</p>
+  </div>
+
+  <div class="chapter-nav">
+    <a href="ch-86-case-study-manufacturing-company.html">← Case Study 4 — A Manufacturing Company</a>
+    <a href="ch-88-case-study-ipo-analysis.html">Case Study 6 — An IPO Analysis →</a>
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="wrap" style="max-width:920px;">
+    The Investor's Canon is written and updated over time.
+    <a href="https://santoshkumaradhikari.github.io/">santoshkumaradhikari.github.io</a>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollTop = document.documentElement.scrollTop;
+    const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    const bar = document.getElementById('reading-progress');
+    if (bar) { bar.style.width = pct + '%'; }
+  }, { passive: true });
+</script>
+
+</body>
+</html>
