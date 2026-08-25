@@ -12,6 +12,10 @@
 </head>
 <body>
 
+<div class="reading-progress-container">
+  <div class="reading-progress-bar" id="reading-progress"></div>
+</div>
+
 <header class="site-header">
   <div class="wrap">
     <a class="brand" href="../index.html">The Investor's <span>Canon</span></a>
@@ -143,6 +147,16 @@
     <a href="https://santoshkumaradhikari.github.io/">santoshkumaradhikari.github.io</a>
   </div>
 </footer>
+
+<script>
+  document.addEventListener('scroll', function() {
+    const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrollTop = document.documentElement.scrollTop;
+    const pct = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+    const bar = document.getElementById('reading-progress');
+    if (bar) { bar.style.width = pct + '%'; }
+  }, { passive: true });
+</script>
 
 </body>
 </html>

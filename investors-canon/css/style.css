@@ -54,6 +54,31 @@ html { scroll-behavior: smooth; }
 
 ::selection { background: var(--gold); color: #fffdf8; }
 
+/* ---------- Accessibility ---------- */
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+
+/* ---------- Reading progress bar (chapter pages) ---------- */
+.reading-progress-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 3px;
+  background: transparent;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.reading-progress-bar {
+  height: 100%; width: 0%;
+  background: var(--gold-line);
+  border-radius: 0 2px 2px 0;
+  will-change: width;
+  transition: width 0.1s ease-out;
+}
+
 body {
   margin: 0;
   background: var(--bg);
@@ -692,4 +717,178 @@ table.figures tr:last-child td { border-bottom: none; }
   .chapter-nav { flex-direction: column; }
   .chapter-nav a:last-child { text-align: left; }
   body { font-size: 17px; }
+}
+
+/* ---------- Drop caps (first paragraph of chapter / framework pages) ---------- */
+.chapter > p:first-of-type::first-letter,
+.framework-page > p:first-of-type::first-letter {
+  float: left;
+  font-family: var(--display);
+  font-size: 68px;
+  line-height: 56px;
+  padding: 8px 14px 4px 0;
+  color: var(--gold);
+  font-weight: 500;
+}
+
+/* ---------- Editorial toolkit (opt-in — apply by hand where useful) ---------- */
+
+/* Wrap a phrase in <span class="highlight">...</span> for a soft marker-pen accent. */
+.highlight {
+  background-image: linear-gradient(transparent 60%, color-mix(in srgb, var(--gold) 35%, transparent) 40%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Wrap a term in <span class="jargon" data-definition="...">...</span> for a hover tooltip. */
+.jargon {
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--gold);
+  text-underline-offset: 4px;
+  cursor: help;
+  position: relative;
+  font-weight: 500;
+}
+
+.jargon::after {
+  content: attr(data-definition);
+  position: absolute;
+  bottom: 100%; left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  width: max-content; max-width: 240px;
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 12.5px;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 8px 12px;
+  border-radius: 6px;
+  white-space: normal;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: var(--shadow-md);
+}
+
+.jargon::before {
+  content: "";
+  position: absolute;
+  bottom: 100%; left: 50%;
+  transform: translateX(-50%) translateY(0);
+  border-width: 6px;
+  border-style: solid;
+  border-color: var(--navy) transparent transparent transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.jargon:hover::after, .jargon:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-2px);
+}
+
+/* Pull-quotes: <blockquote>...<cite>Source</cite></blockquote> */
+.chapter blockquote {
+  position: relative;
+  margin: 48px 0;
+  padding: 0 0 0 32px;
+  border-left: 3px solid var(--gold);
+  font-family: var(--display);
+  font-size: 22px;
+  line-height: 1.5;
+  color: var(--ink);
+  font-style: italic;
+}
+
+.chapter blockquote cite {
+  display: block;
+  font-family: var(--sans);
+  font-size: 13.5px;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink-faint);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-top: 16px;
+}
+
+.chapter blockquote cite::before { content: "— "; color: var(--gold); }
+
+/* Metric callouts: <div class="metrics-grid"><div class="metric-card"><span class="metric-value">18%</span><span class="metric-label">CAR</span></div>...</div> */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.metric-card {
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--rule-strong);
+}
+
+.metric-value {
+  display: block;
+  font-family: var(--display);
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--gold);
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+
+.metric-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--ink-soft);
+}
+
+/* ---------- Print / PDF export ---------- */
+@media print {
+  .site-header, .progress-pill, .volume-nav, .chapter-nav, .site-footer, .toc, .reading-progress-container {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    background-image: none !important;
+    color: #000000 !important;
+    font-size: 11pt !important;
+  }
+  h1, h2, h3, p, li, strong, .chapter-kicker, .callout-label, .recap h3 { color: #000000 !important; }
+  .chapter h2 { border-top: 2px solid #000000 !important; }
+  .wrap, .chapter, .framework-page { max-width: 100% !important; margin: 0 !important; padding: 0 !important; }
+  .callout, .recap, table.figures { background: transparent !important; box-shadow: none !important; border: 1px solid #cccccc !important; }
+  .callout::before, .recap::before { background: #666666 !important; }
+  table.figures th { background: #eeeeee !important; color: #000000 !important; border-bottom: 2px solid #000000 !important; }
+  table.figures tr:nth-child(even) td { background: transparent !important; }
+  h1, h2, h3 { page-break-after: avoid; break-after: avoid; }
+  p, h2, h3, li { orphans: 3; widows: 3; }
+  .callout, .recap, table.figures, .framework-figure img { page-break-inside: avoid; break-inside: avoid; }
+  .chapter a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; word-break: break-all; color: #333333; }
 }
