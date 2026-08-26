@@ -2,7 +2,39 @@
 // this class is present, so content stays visible if this script fails.
 document.documentElement.classList.add('js-enabled');
 
-// Mobile nav toggle
+// ---------------------------------------------------------------------------
+// Theme toggle (manual override on top of the FOUC-safe inline script in
+// index.html's <head>, which already set data-theme before first paint).
+// ---------------------------------------------------------------------------
+const themeToggle = document.getElementById('themeToggle');
+const iconSun = document.getElementById('iconSun');
+const iconMoon = document.getElementById('iconMoon');
+const htmlRoot = document.documentElement;
+
+function syncThemeIcon(theme) {
+  if (!iconSun || !iconMoon) return;
+  iconSun.style.display = theme === 'dark' ? 'block' : 'none';
+  iconMoon.style.display = theme === 'dark' ? 'none' : 'block';
+}
+
+syncThemeIcon(htmlRoot.getAttribute('data-theme'));
+
+if (themeToggle) {
+  themeToggle.addEventListener('click', () => {
+    const next = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    htmlRoot.setAttribute('data-theme', next);
+    syncThemeIcon(next);
+    try {
+      localStorage.setItem('theme', next);
+    } catch (e) {
+      // Private browsing / storage disabled — theme just won't persist.
+    }
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Mobile nav: toggle, focus trap, Escape key, resize-safe close.
+// ---------------------------------------------------------------------------
 const navToggle = document.getElementById('navToggle');
 const siteNav = document.getElementById('siteNav');
 
@@ -23,7 +55,6 @@ if (navToggle && siteNav) {
     link.addEventListener('click', () => setNavOpen(false));
   });
 
-  // Escape closes the menu and returns focus to the toggle button
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && siteNav.classList.contains('open')) {
       setNavOpen(false);
@@ -31,7 +62,6 @@ if (navToggle && siteNav) {
     }
   });
 
-  // Keep Tab focus cycling inside the open mobile menu
   siteNav.addEventListener('keydown', (e) => {
     if (e.key !== 'Tab' || !siteNav.classList.contains('open')) return;
 
@@ -49,8 +79,6 @@ if (navToggle && siteNav) {
     }
   });
 
-  // If the window is resized past the mobile breakpoint while the menu
-  // is open, close it so it can't get stuck open behind desktop styles.
   const desktopQuery = window.matchMedia('(min-width: 721px)');
   desktopQuery.addEventListener('change', (e) => {
     if (e.matches && siteNav.classList.contains('open')) {
@@ -59,7 +87,9 @@ if (navToggle && siteNav) {
   });
 }
 
-// Skip link: move keyboard focus to main content, not just scroll to it
+// ---------------------------------------------------------------------------
+// Skip link: move keyboard focus to main content, not just scroll to it.
+// ---------------------------------------------------------------------------
 const skipLink = document.querySelector('.skip-link');
 const mainContent = document.getElementById('main');
 if (skipLink && mainContent) {
@@ -68,14 +98,18 @@ if (skipLink && mainContent) {
   });
 }
 
+// ---------------------------------------------------------------------------
 // Footer year
+// ---------------------------------------------------------------------------
 const yearEl = document.getElementById('year');
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
 
-// Scroll-reveal: fade sections up into view as they enter the viewport.
-// Guarded so a browser without IntersectionObserver just shows everything.
+// ---------------------------------------------------------------------------
+// Scroll-reveal fade-in. Guarded so a browser without IntersectionObserver
+// just shows everything immediately instead of staying hidden.
+// ---------------------------------------------------------------------------
 const fadeEls = document.querySelectorAll('.fade-in');
 if (fadeEls.length && 'IntersectionObserver' in window) {
   const revealObserver = new IntersectionObserver((entries, observer) => {
@@ -90,4 +124,55 @@ if (fadeEls.length && 'IntersectionObserver' in window) {
   fadeEls.forEach((el) => revealObserver.observe(el));
 } else {
   fadeEls.forEach((el) => el.classList.add('visible'));
+}
+
+// ---------------------------------------------------------------------------
+// Scrollspy: highlight the nav link matching whichever section is in view.
+// Uses a scroll-position check (the section whose top has crossed a fixed
+// line near the top of the viewport) rather than IntersectionObserver —
+// simpler to reason about and avoids edge cases when a section is taller
+// than the observer's margin-shrunk root. Nav still works as plain anchor
+// links even if any of this fails.
+// ---------------------------------------------------------------------------
+const navLinks = document.querySelectorAll('[data-nav-link]');
+if (navLinks.length) {
+  const linksBySection = new Map();
+  navLinks.forEach((link) => {
+    const id = link.getAttribute('href').slice(1);
+    const section = document.getElementById(id);
+    if (section) linksBySection.set(section, link);
+  });
+  const sections = Array.from(linksBySection.keys());
+
+  const setActiveLink = (activeLink) => {
+    navLinks.forEach((link) => link.classList.toggle('is-active', link === activeLink));
+  };
+
+  const ACTIVE_LINE = 120; // px from the top of the viewport
+
+  const updateActiveSection = () => {
+    // Walk sections top-to-bottom; the active one is the last whose top has
+    // already crossed above the active line (i.e. it's the section we're
+    // currently "inside" while scrolling down).
+    let current = sections[0];
+    for (const section of sections) {
+      if (section.getBoundingClientRect().top - ACTIVE_LINE <= 0) {
+        current = section;
+      }
+    }
+    const activeLink = linksBySection.get(current);
+    if (activeLink) setActiveLink(activeLink);
+  };
+
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(() => {
+      updateActiveSection();
+      ticking = false;
+    });
+  }, { passive: true });
+
+  updateActiveSection();
 }
