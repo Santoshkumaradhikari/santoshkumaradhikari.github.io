@@ -718,3 +718,45 @@ main[tabindex="-1"]:focus {
     transform: none !important;
   }
 }
+
+/* ---------- Print / Download button ---------- */
+.print-toggle {
+  background: var(--bg-elevated);
+  border: 1px solid var(--line);
+  color: var(--ink);
+  width: 38px;
+  height: 38px;
+  border-radius: var(--r-full);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+
+.print-toggle:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+}
+
+.print-toggle svg { width: 17px; height: 17px; }
+
+.print-bar {
+  display: flex;
+  justify-content: center;
+  padding: 8px 0 48px;
+}
+
+.print-bar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  cursor: pointer;
+}
+
+.print-bar-btn svg { width: 16px; height: 16px; }
+
+@media print {
+  .print-toggle, .print-bar, .nav-toggle { display: none !important; }
+}

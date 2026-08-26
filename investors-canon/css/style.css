@@ -1234,3 +1234,66 @@ table.figures tr:last-child td { border-bottom: none; }
 
 .term-entry p { margin: 0 0 6px; }
 .term-entry p:last-child { margin-bottom: 0; }
+
+/* ---------- Print / Download button ---------- */
+.nav-print-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  margin-left: 2px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nav-print-btn:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: var(--bg-card);
+}
+
+.nav-print-btn svg { width: 17px; height: 17px; }
+
+.print-bar {
+  display: flex;
+  justify-content: center;
+  max-width: var(--max-width);
+  margin: 0 auto 30px;
+  padding: 0 24px;
+}
+
+.print-bar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 12px 22px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+}
+
+.print-bar-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.print-bar-btn svg { width: 16px; height: 16px; }
+
+@media print {
+  .print-bar { display: none !important; }
+}
