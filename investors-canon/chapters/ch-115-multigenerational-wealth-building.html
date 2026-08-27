@@ -28,6 +28,10 @@
       <button type="button" class="nav-print-btn" onclick="window.print()" aria-label="Print or save this page as PDF" title="Print / Save as PDF">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
       </button>
+      <button type="button" class="nav-audio-btn" aria-label="Read this page aloud" title="Read this page aloud">
+        <svg class="audio-icon-idle" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"></path><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+        <svg class="audio-icon-playing" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg>
+      </button>
     </nav>
   </div>
 </header>
@@ -177,6 +181,14 @@
   </button>
 </div>
 
+<div class="audio-bar">
+  <button type="button" class="audio-bar-btn" aria-label="Read this page aloud" title="Read this page aloud">
+    <svg class="audio-icon-idle" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"></path><path d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3z"></path><path d="M3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z"></path></svg>
+    <svg class="audio-icon-playing" aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="5" width="4" height="14" rx="1"></rect><rect x="14" y="5" width="4" height="14" rx="1"></rect></svg>
+    <span class="audio-btn-label">Listen to this Page</span>
+  </button>
+</div>
+
 <footer class="site-footer">
   <div class="wrap" style="max-width:920px;">
     The Investor's Canon is written and updated over time.
@@ -194,5 +206,6 @@
   }, { passive: true });
 </script>
 
+<script src="../js/audio-reader.js" defer></script>
 </body>
 </html>

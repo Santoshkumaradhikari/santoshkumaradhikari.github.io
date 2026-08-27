@@ -1297,3 +1297,63 @@ table.figures tr:last-child td { border-bottom: none; }
 @media print {
   .print-bar { display: none !important; }
 }
+
+/* ---------- Audio / text-to-speech button ---------- */
+.nav-audio-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  margin-left: 2px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.nav-audio-btn:hover { color: var(--gold); border-color: var(--gold); background: var(--bg-card); }
+.nav-audio-btn.is-playing { color: var(--gold); border-color: var(--gold); background: var(--bg-card); }
+.nav-audio-btn svg { width: 17px; height: 17px; }
+.nav-audio-btn .audio-icon-playing { display: none; }
+.nav-audio-btn.is-playing .audio-icon-idle { display: none; }
+.nav-audio-btn.is-playing .audio-icon-playing { display: inline-flex; }
+
+.audio-bar {
+  display: flex;
+  justify-content: center;
+  max-width: var(--max-width);
+  margin: 0 auto 14px;
+  padding: 0 24px;
+}
+
+.audio-bar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--bg-card);
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  padding: 12px 22px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.15s ease;
+}
+
+.audio-bar-btn:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); box-shadow: var(--shadow-md); }
+.audio-bar-btn.is-playing { border-color: var(--gold); color: var(--gold); }
+.audio-bar-btn svg { width: 16px; height: 16px; }
+.audio-bar-btn .audio-icon-playing { display: none; }
+.audio-bar-btn.is-playing .audio-icon-idle { display: none; }
+.audio-bar-btn.is-playing .audio-icon-playing { display: inline-flex; }
+
+@media print {
+  .audio-bar { display: none !important; }
+}
