@@ -1,3 +1,14 @@
+(function injectCopyright() {
+  var footer = document.querySelector('.site-footer .wrap');
+  if (!footer || footer.querySelector('.copyright-line')) { return; }
+  var p = document.createElement('p');
+  p.className = 'copyright-line';
+  p.innerHTML = '© <span class="copyright-year"></span> Santosh Kumar Adhikari. All rights reserved.';
+  footer.appendChild(p);
+  var yearEl = p.querySelector('.copyright-year');
+  if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+})();
+
 (function () {
   if (!('speechSynthesis' in window)) {
     var hideEls = document.querySelectorAll('.nav-audio-btn, .audio-bar');

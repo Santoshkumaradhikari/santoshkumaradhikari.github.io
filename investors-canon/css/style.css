@@ -1450,3 +1450,10 @@ table.figures tr:last-child td { border-bottom: none; }
 @media print {
   .audio-player-bar { display: none !important; }
 }
+
+/* ---------- Copyright line (auto-injected into every page's footer) ---------- */
+.copyright-line {
+  margin: 10px 0 0;
+  font-size: 12px;
+  opacity: 0.85;
+}
