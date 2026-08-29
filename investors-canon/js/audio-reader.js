@@ -47,6 +47,80 @@
     try { window.localStorage.setItem('canon-audio-voice', uri); } catch (e) { /* ignore */ }
   }
 
+
+  /* ---------- pronunciation ----------
+     Speech engines mangle the shorthand this book uses constantly. Left
+     untouched, "NRB" becomes a word, "2081/82" becomes "two thousand and
+     eighty-one slash eighty-two", and an em-dash gets no pause at all, which
+     is a large part of why synthetic reading sounds mechanical. This rewrites
+     the *spoken* string only; nothing on the page changes. */
+
+  var SPOKEN = {
+    'NEPSE': 'NEP-see',
+    'NRB': 'N R B',
+    'SEBON': 'SEE-bon',
+    'CDSC': 'C D S C',
+    'ASBA': 'AZ-buh',
+    'BOID': 'B O I D',
+    'TMS': 'T M S',
+    'IPO': 'I P O',
+    'FPO': 'F P O',
+    'AGM': 'A G M',
+    'NAV': 'N A V',
+    'EPS': 'E P S',
+    'ROE': 'R O E',
+    'ROA': 'R O A',
+    'NPL': 'N P L',
+    'CAR': 'C A R',
+    'CASA': 'CAH-suh',
+    'NIM': 'N I M',
+    'DCF': 'D C F',
+    'DDM': 'D D M',
+    'XIRR': 'X I R R',
+    'TWR': 'T W R',
+    'PPA': 'P P A',
+    'COD': 'C O D',
+    'NEA': 'N E A',
+    'MFI': 'M F I',
+    'CGT': 'C G T',
+    'GDP': 'G D P',
+    'CPI': 'C P I',
+    'CRR': 'C R R',
+    'SLR': 'S L R',
+    'NFRS': 'N F R S',
+    'EDIS': 'E D I S',
+    'GLOF': 'glof'
+  };
+
+  function speechify(text) {
+    var s = text;
+
+    // Fiscal years: 2081/82 -> "2081 to 82" (engines say "slash" otherwise)
+    s = s.replace(/\b(\d{4})\/(\d{2})\b/g, '$1 to $2');
+
+    // Ratios: 1:1 -> "1 to 1"
+    s = s.replace(/\b(\d+)\s*:\s*(\d+)\b/g, '$1 to $2');
+
+    // Valuation multiples: 2.19x -> "2.19 times"
+    s = s.replace(/\b(\d+(?:\.\d+)?)x\b/g, '$1 times');
+
+    // Currency and symbols
+    s = s.replace(/\bRs\.?\s?(?=\d)/g, 'rupees ');
+    s = s.replace(/\bNPR\s?(?=\d)/g, 'rupees ');
+    s = s.replace(/(\d)\s?%/g, '$1 percent');
+
+    // Acronyms, whole-word only so "CAR" inside "CARE" is untouched
+    for (var key in SPOKEN) {
+      if (!Object.prototype.hasOwnProperty.call(SPOKEN, key)) { continue; }
+      s = s.replace(new RegExp('\\b' + key + '\\b', 'g'), SPOKEN[key]);
+    }
+
+    // Dashes become real pauses rather than being swallowed silently
+    s = s.replace(/\s*[\u2014\u2013]\s*/g, ', ');
+
+    return s;
+  }
+
   /* ---------- content extraction ---------- */
   function getReadableChunks() {
     var root = document.querySelector('.chapter, .framework-page');
@@ -61,7 +135,7 @@
     var out = [];
     for (var j = 0; j < nodes.length; j++) {
       var t = (nodes[j].textContent || '').replace(/\s+/g, ' ').trim();
-      if (t) { out.push(t); }
+      if (t) { out.push(speechify(t)); }
     }
     if (!out.length) {
       var whole = (container.textContent || '').replace(/\s+/g, ' ').trim();
@@ -165,12 +239,75 @@
     synth.onvoiceschanged = populateVoices;
   }
 
-  function getSelectedVoice() {
-    if (!currentVoiceURI || !voicesList.length) { return null; }
-    for (var i = 0; i < voicesList.length; i++) {
-      if (voicesList[i].voiceURI === currentVoiceURI) { return voicesList[i]; }
+  /* Voices the platforms ship that actually sound human, best first. The
+     browser's own default is frequently a legacy formant-synth voice, which
+     is what produces the "robot" impression, so we pick deliberately rather
+     than letting it choose. Matched case-insensitively on substrings. */
+  var PREFERRED_VOICES = [
+    'microsoft aria online',      // Edge neural, excellent
+    'microsoft guy online',
+    'microsoft libby online',
+    'microsoft sonia online',
+    'google uk english female',   // Chrome, natural
+    'google uk english male',
+    'google us english',
+    'ava (premium)',              // macOS high quality
+    'ava (enhanced)',
+    'samantha (enhanced)',
+    'serena (premium)',
+    'daniel (enhanced)',
+    'samantha',                   // macOS default-but-decent
+    'daniel',
+    'karen',
+    'moira',
+    'tessa'
+  ];
+
+  /* Voices to actively avoid: novelty and legacy formant voices that some
+     browsers still return first. */
+  var POOR_VOICES = ['albert', 'bad news', 'bahh', 'bells', 'boing', 'bubbles',
+    'cellos', 'deranged', 'fred', 'good news', 'jester', 'junior', 'kathy',
+    'organ', 'ralph', 'superstar', 'trinoids', 'whisper', 'wobble', 'zarvox'];
+
+  function scoreVoice(v) {
+    var name = (v.name || '').toLowerCase();
+    for (var p = 0; p < POOR_VOICES.length; p++) {
+      if (name.indexOf(POOR_VOICES[p]) !== -1) { return -1; }
     }
-    return null;
+    for (var i = 0; i < PREFERRED_VOICES.length; i++) {
+      if (name.indexOf(PREFERRED_VOICES[i]) !== -1) {
+        return 1000 - i;                       // earlier in list = better
+      }
+    }
+    var s = 0;
+    if (/en[-_]GB/i.test(v.lang)) { s += 40; } // book is British-spelled
+    else if (/^en/i.test(v.lang)) { s += 30; }
+    if (/natural|neural|premium|enhanced/i.test(name)) { s += 50; }
+    if (v.localService === false) { s += 10; } // cloud voices usually better
+    return s;
+  }
+
+  /* Best available English voice, used when the reader has not chosen one. */
+  function pickBestVoice() {
+    if (!voicesList.length) { return null; }
+    var best = null, bestScore = -1;
+    for (var i = 0; i < voicesList.length; i++) {
+      var v = voicesList[i];
+      if (!/^en/i.test(v.lang || '')) { continue; }
+      var s = scoreVoice(v);
+      if (s > bestScore) { bestScore = s; best = v; }
+    }
+    return bestScore > 0 ? best : null;
+  }
+
+  function getSelectedVoice() {
+    if (currentVoiceURI && voicesList.length) {
+      for (var i = 0; i < voicesList.length; i++) {
+        if (voicesList[i].voiceURI === currentVoiceURI) { return voicesList[i]; }
+      }
+    }
+    // No explicit choice: pick the best available rather than the browser default.
+    return pickBestVoice();
   }
 
   /* ---------- old trigger buttons (nav icon + bottom labeled button) ---------- */
@@ -221,6 +358,11 @@
     var myGen = gen;
     var utterance = new SpeechSynthesisUtterance(chunks[index]);
     utterance.rate = currentRate;
+    /* Slightly below the engine default: long-form prose read at pitch 1.0
+       sounds clipped and mechanical. 0.95 is noticeably warmer without
+       sounding slowed down. */
+    utterance.pitch = 0.95;
+    utterance.volume = 1;
     var voice = getSelectedVoice();
     if (voice) {
       try { utterance.voice = voice; } catch (e) { /* invalid/stale voice reference; fall back to default */ }
