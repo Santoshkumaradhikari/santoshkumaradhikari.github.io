@@ -1425,3 +1425,23 @@ table.figures tr:last-child td { border-bottom: none; }
 main[tabindex="-1"]:focus {
   outline: none;
 }
+
+/* ==========================================================================
+   ACCESSIBILITY: REDUCED MOTION
+   Honours the OS-level "reduce motion" setting. Mirrors the rule already in
+   the root site stylesheet so both halves of the site behave the same way.
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -12,9 +12,18 @@ const iconMoon = document.getElementById('iconMoon');
 const htmlRoot = document.documentElement;
 
 function syncThemeIcon(theme) {
+  const isDark = theme === 'dark';
+  // Announce both the current state and what activating the control will do.
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+    themeToggle.setAttribute(
+      'aria-label',
+      isDark ? 'Switch to light theme' : 'Switch to dark theme'
+    );
+  }
   if (!iconSun || !iconMoon) return;
-  iconSun.style.display = theme === 'dark' ? 'block' : 'none';
-  iconMoon.style.display = theme === 'dark' ? 'none' : 'block';
+  iconSun.style.display = isDark ? 'block' : 'none';
+  iconMoon.style.display = isDark ? 'none' : 'block';
 }
 
 syncThemeIcon(htmlRoot.getAttribute('data-theme'));
@@ -39,25 +48,40 @@ const navToggle = document.getElementById('navToggle');
 const siteNav = document.getElementById('siteNav');
 
 if (navToggle && siteNav) {
+  const desktopQuery = window.matchMedia('(min-width: 721px)');
+
   const getFocusableEls = () =>
     siteNav.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
 
-  const setNavOpen = (isOpen) => {
+  const setNavOpen = (isOpen, moveFocus) => {
     siteNav.classList.toggle('open', isOpen);
     navToggle.setAttribute('aria-expanded', String(isOpen));
+    // Hide the panel from assistive tech when it is visually closed, but only
+    // in the mobile layout — on desktop the nav is always on screen.
+    if (!desktopQuery.matches) {
+      siteNav.setAttribute('aria-hidden', String(!isOpen));
+    } else {
+      siteNav.removeAttribute('aria-hidden');
+    }
+    // Opening a menu should put the user inside it, otherwise a keyboard user
+    // has to tab back through the header to reach what they just opened.
+    if (isOpen && moveFocus) {
+      const focusable = getFocusableEls();
+      if (focusable.length) { focusable[0].focus(); }
+    }
   };
 
   navToggle.addEventListener('click', () => {
-    setNavOpen(!siteNav.classList.contains('open'));
+    setNavOpen(!siteNav.classList.contains('open'), true);
   });
 
   siteNav.querySelectorAll('a').forEach((link) => {
-    link.addEventListener('click', () => setNavOpen(false));
+    link.addEventListener('click', () => setNavOpen(false, false));
   });
 
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && siteNav.classList.contains('open')) {
-      setNavOpen(false);
+      setNavOpen(false, false);
       navToggle.focus();
     }
   });
@@ -79,10 +103,12 @@ if (navToggle && siteNav) {
     }
   });
 
-  const desktopQuery = window.matchMedia('(min-width: 721px)');
   desktopQuery.addEventListener('change', (e) => {
-    if (e.matches && siteNav.classList.contains('open')) {
-      setNavOpen(false);
+    if (e.matches) {
+      siteNav.removeAttribute('aria-hidden');
+      if (siteNav.classList.contains('open')) { setNavOpen(false); }
+    } else {
+      siteNav.setAttribute('aria-hidden', String(!siteNav.classList.contains('open')));
     }
   });
 }
