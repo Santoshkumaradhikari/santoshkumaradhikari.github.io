@@ -1015,62 +1015,6 @@ table.figures tr:last-child td { border-bottom: none; }
   border-radius: 2px;
 }
 
-/* Wrap a term in <span class="jargon" data-definition="...">...</span> for a hover tooltip. */
-.jargon {
-  text-decoration: underline;
-  text-decoration-style: dotted;
-  text-decoration-color: var(--gold);
-  text-underline-offset: 4px;
-  cursor: help;
-  position: relative;
-  font-weight: 500;
-}
-
-.jargon::after {
-  content: attr(data-definition);
-  position: absolute;
-  bottom: 100%; left: 50%;
-  transform: translateX(-50%) translateY(-8px);
-  width: max-content; max-width: 240px;
-  background: var(--navy);
-  color: #fff;
-  font-family: var(--sans);
-  font-size: 12.5px;
-  font-weight: 400;
-  line-height: 1.4;
-  padding: 8px 12px;
-  border-radius: 6px;
-  white-space: normal;
-  text-align: center;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  pointer-events: none;
-  z-index: 10;
-  box-shadow: var(--shadow-md);
-}
-
-.jargon::before {
-  content: "";
-  position: absolute;
-  bottom: 100%; left: 50%;
-  transform: translateX(-50%) translateY(0);
-  border-width: 6px;
-  border-style: solid;
-  border-color: var(--navy) transparent transparent transparent;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s ease, transform 0.2s ease;
-  pointer-events: none;
-  z-index: 10;
-}
-
-.jargon:hover::after, .jargon:hover::before {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(-2px);
-}
-
 /* Pull-quotes: <blockquote>...<cite>Source</cite></blockquote> */
 .chapter blockquote {
   position: relative;
