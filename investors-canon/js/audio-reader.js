@@ -14,6 +14,18 @@
   if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
 })();
 
+(function wirePrintButtons() {
+  // Print buttons use data-print instead of inline onclick, so the site can
+  // run under a strict Content-Security-Policy.
+  document.addEventListener('click', function (e) {
+    var el = e.target;
+    while (el && el !== document) {
+      if (el.hasAttribute && el.hasAttribute('data-print')) { window.print(); return; }
+      el = el.parentNode;
+    }
+  });
+})();
+
 (function () {
   if (!('speechSynthesis' in window)) {
     var hideEls = document.querySelectorAll('.nav-audio-btn, .audio-bar');
@@ -178,7 +190,10 @@
         '</select>' +
         '<select class="ap-voice" title="Voice" aria-label="Voice"><option value="">Default voice</option></select>' +
         '<button type="button" class="ap-btn ap-close" title="Close player" aria-label="Close player">' + ICON_CLOSE + '</button>' +
-      '</div>';
+      '</div>' +
+      // Announces state changes ("Reading started", "Paused"…) to screen
+      // readers without echoing every paragraph-count update.
+      '<div class="ap-sr-status visually-hidden" role="status" aria-live="polite"></div>';
     document.body.appendChild(el);
 
     bar = {
@@ -190,7 +205,8 @@
       progressFill: el.querySelector('.ap-progress-fill'),
       speed: el.querySelector('.ap-speed'),
       voice: el.querySelector('.ap-voice'),
-      close: el.querySelector('.ap-close')
+      close: el.querySelector('.ap-close'),
+      srStatus: el.querySelector('.ap-sr-status')
     };
 
     bar.back.addEventListener('click', function () { speak(currentIndex - 1); });
@@ -320,6 +336,7 @@
       var btn = buttons[i];
       if (isActive) { btn.classList.add('is-playing'); } else { btn.classList.remove('is-playing'); }
       btn.setAttribute('aria-label', aria);
+      btn.setAttribute('aria-pressed', state === 'playing' ? 'true' : 'false');
       btn.setAttribute('title', aria);
       var labelEl = btn.querySelector('.audio-btn-label');
       if (labelEl) { labelEl.textContent = label; }
@@ -343,9 +360,17 @@
     if (currentVoiceURI) { b.voice.value = currentVoiceURI; }
   }
 
+  var lastAnnounced = '';
   function updateAll() {
     updateTriggerButtons();
     updateBarUI();
+    // Announce state changes to assistive technology (once per change).
+    if (bar && bar.srStatus && state !== lastAnnounced) {
+      lastAnnounced = state;
+      bar.srStatus.textContent =
+        state === 'playing' ? 'Reading aloud started' :
+        state === 'paused' ? 'Reading paused' : 'Reading stopped';
+    }
   }
 
   /* ---------- playback core ---------- */

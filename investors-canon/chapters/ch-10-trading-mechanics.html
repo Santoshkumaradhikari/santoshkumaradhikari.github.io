@@ -10,18 +10,28 @@
 <meta property="og:title" content="Trading Mechanics in NEPSE — The Investor&#x27;s Canon">
 <meta property="og:description" content="How TNET order matching, trading hours, circuit limits, settlement, and Meroshare actually work — the operational mechanics every NEPSE investor must know.">
 <meta property="og:url" content="https://santoshkumaradhikari.com.np/investors-canon/chapters/ch-10-trading-mechanics.html">
+<meta property="og:image" content="https://santoshkumaradhikari.com.np/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Investor&#x27;s Canon — Nepal Edition, by Santosh Kumar Adhikari">
 <meta property="og:site_name" content="Santosh Kumar Adhikari">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://santoshkumaradhikari.com.np/og-image.png">
 <meta name="twitter:title" content="Trading Mechanics in NEPSE — The Investor&#x27;s Canon">
 <meta name="twitter:description" content="How TNET order matching, trading hours, circuit limits, settlement, and Meroshare actually work — the operational mechanics every NEPSE investor must know.">
 <meta name="author" content="Santosh Kumar Adhikari">
 <meta name="robots" content="index, follow">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Trading Mechanics in NEPSE — The Investor's Canon","description":"How TNET order matching, trading hours, circuit limits, settlement, and Meroshare actually work — the operational mechanics every NEPSE investor must know.","url":"https://santoshkumaradhikari.com.np/investors-canon/chapters/ch-10-trading-mechanics.html","inLanguage":"en","author":{"@type":"Person","name":"Santosh Kumar Adhikari","url":"https://santoshkumaradhikari.com.np/"},"publisher":{"@type":"Person","name":"Santosh Kumar Adhikari"},"isPartOf":{"@type":"Book","name":"The Investor's Canon","url":"https://santoshkumaradhikari.com.np/investors-canon/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Trading Mechanics in NEPSE — The Investor's Canon", "description": "How TNET order matching, trading hours, circuit limits, settlement, and Meroshare actually work — the operational mechanics every NEPSE investor must know.", "url": "https://santoshkumaradhikari.com.np/investors-canon/chapters/ch-10-trading-mechanics.html", "inLanguage": "en", "author": {"@type": "Person", "name": "Santosh Kumar Adhikari", "url": "https://santoshkumaradhikari.com.np/"}, "publisher": {"@type": "Person", "name": "Santosh Kumar Adhikari"}, "isPartOf": {"@type": "Book", "name": "The Investor's Canon", "url": "https://santoshkumaradhikari.com.np/investors-canon/"}, "datePublished": "2026-08-21", "dateModified": "2026-08-29", "image": "https://santoshkumaradhikari.com.np/og-image.png", "mainEntityOfPage": "https://santoshkumaradhikari.com.np/investors-canon/chapters/ch-10-trading-mechanics.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Investor's Canon", "item": "https://santoshkumaradhikari.com.np/investors-canon/"}, {"@type": "ListItem", "position": 2, "name": "Trading Mechanics in NEPSE", "item": "https://santoshkumaradhikari.com.np/investors-canon/chapters/ch-10-trading-mechanics.html"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#16233d">
 <link rel="stylesheet" href="../css/style.css">
+<noscript><style>.nav-audio-btn,.audio-bar{display:none}</style></noscript>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -39,7 +49,7 @@
       <a href="../study-guide.html">Study Guide</a>
       <a href="../glossary.html">Glossary</a>
       <a href="https://santoshkumaradhikari.com.np/">Santosh Adhikari →</a>
-      <button type="button" class="nav-print-btn" onclick="window.print()" aria-label="Print or save this page as PDF" title="Print / Save as PDF">
+      <button type="button" class="nav-print-btn" data-print="" aria-label="Print or save this page as PDF" title="Print / Save as PDF">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
       </button>
       <button type="button" class="nav-audio-btn" aria-label="Read this page aloud" title="Read this page aloud">
@@ -55,9 +65,11 @@
 <article class="chapter">
   <div class="chapter-kicker">Part II · Chapter 10</div>
   <h1>Trading Mechanics in NEPSE</h1>
+  <p class="chapter-dates">First published 21 Aug 2026 · Last verified 29 Aug 2026</p>
+  <nav class="chapter-toc" aria-label="In this chapter"><span class="chapter-toc-label">In this chapter</span><ol><li><a href="#lesson-10-1-the-tnet-platform-how-orders-are-placed-matched">Lesson 10.1 — The TNET Platform: How Orders Are Placed, Matched, and Executed</a></li><li><a href="#lesson-10-2-trading-hours-pre-open-session-and-market-timing">Lesson 10.2 — Trading Hours, Pre-Open Session, and Market Timing</a></li><li><a href="#lesson-10-3-order-types-available-market-orders-limit-orders">Lesson 10.3 — Order Types Available: Market Orders, Limit Orders — What Exists and What Does Not</a></li><li><a href="#lesson-10-4-the-order-book-bids-asks-spread-and-market-depth">Lesson 10.4 — The Order Book: Bids, Asks, Spread, and Market Depth in a Thin Market</a></li><li><a href="#lesson-10-5-price-circuit-limits-upper-and-lower-circuits-da">Lesson 10.5 — Price Circuit Limits: Upper and Lower Circuits — Daily Bands and Their Purpose</a></li><li><a href="#lesson-10-6-t-2-settlement-why-it-is-slower-and-what-it-mean">Lesson 10.6 — T+2 Settlement: Why It Is Slower and What It Means for Cash Management</a></li><li><a href="#lesson-10-7-meroshare-demat-system-edis-online-ipo-applicati">Lesson 10.7 — MEROSHARE: Demat System, EDIS, Online IPO Application, and Portfolio View</a></li><li><a href="#lesson-10-8-broker-assisted-trading-vs-self-trading-via-tms">Lesson 10.8 — Broker-Assisted Trading vs. Self-Trading via TMS</a></li><li><a href="#lesson-10-9-short-selling-why-it-does-not-exist-on-nepse-and">Lesson 10.9 — Short Selling: Why It Does Not Exist on NEPSE and the Consequences for Price Discovery</a></li><li><a href="#lesson-10-10-dividends-bonus-shares-and-rights-process-timel">Lesson 10.10 — Dividends, Bonus Shares, and Rights: Process, Timelines, and NEPSE Announcements</a></li></ol></nav>
 
   <p>Nepal's stock exchange, the Nepal Stock Exchange — universally abbreviated as NEPSE — operates under a distinct set of mechanical rules that differ substantially from exchanges such as the BSE, NSE, NYSE, or LSE. For the serious investor, understanding these mechanics is not optional. It is foundational. The way orders are placed, the way prices move, the way trades settle, and the instruments available (or pointedly absent) all shape what a rational strategy must look like in this market. This chapter systematically examines each element of NEPSE's trading infrastructure, from the electronic trading platform to dividend processing, explaining not only what the rules are but why they exist and what their consequences are for your money.</p>
-  <h2>Lesson 10.1 — The TNET Platform: How Orders Are Placed, Matched, and Executed</h2>
+  <h2 id="lesson-10-1-the-tnet-platform-how-orders-are-placed-matched">Lesson 10.1 — The TNET Platform: How Orders Are Placed, Matched, and Executed</h2>
   <p>What is TNET?</p>
   <p>TNET — short for Trading Network — is the electronic order-matching system that powers NEPSE. Introduced as part of NEPSE's technology modernisation drive, TNET replaced the earlier, slower system and made screen-based trading the standard. Before TNET, trades were conducted through open-outcry or manual matching, a process prone to inefficiency, human error, and opportunities for manipulation. The shift to TNET was a watershed moment for the Nepalese capital market.</p>
   <p>TNET is an order-driven market. This is a critically important concept. In a quote-driven market — such as those operated by many market makers in Western financial systems — dealers post firm buy and sell prices and stand ready to trade at those prices. In an order-driven market like NEPSE, there are no dedicated market makers. Every transaction requires a matching of a buyer's order with a seller's order. The price you get depends entirely on what other participants have placed in the order book. This distinction has profound implications for liquidity, especially in a market as thinly traded as NEPSE.</p>
@@ -71,12 +83,12 @@
   </div>
   <h3>Market Surveillance and TNET</h3>
   <p>TNET also serves as the surveillance backbone for NEPSE's regulatory function. Unusual trading patterns — sudden price spikes, abnormally large orders, repetitive transactions between related parties — can be flagged for investigation. The Securities Board of Nepal (SEBON) relies on the data generated by TNET to monitor market integrity. For the investor, this means that all electronic orders leave a traceable record, an important deterrent against market manipulation that nonetheless remains a concern in the market.</p>
-  <h2>Lesson 10.2 — Trading Hours, Pre-Open Session, and Market Timing</h2>
+  <h2 id="lesson-10-2-trading-hours-pre-open-session-and-market-timing">Lesson 10.2 — Trading Hours, Pre-Open Session, and Market Timing</h2>
   <h3>The Standard Trading Day</h3>
   <p>NEPSE operates on Nepal Standard Time (NST), which is UTC+5:45 — one of the few time zones in the world not aligned to a full or half hour, a quirk of Nepal's geography relative to India. The trading day is shorter than that of most major international exchanges, running from Sunday through Thursday (Nepal's working week), reflecting the country's official five-day working schedule.</p>
   <div style="overflow-x:auto;">
   <table class="figures">
-    <tr><th>Session</th><th>Description</th></tr>
+    <tr><th scope="col">Session</th><th scope="col">Description</th></tr>
     <tr><td>Pre-Open Session</td><td>10:00 AM – 11:00 AM NST. Order entry, modification, and cancellation allowed. No trades execute.</td></tr>
     <tr><td>Open Auction / Call</td><td>11:00 AM NST. Pre-open orders are matched at a single equilibrium price.</td></tr>
     <tr><td>Continuous Trading</td><td>11:00 AM – 3:00 PM NST. Orders match continuously in real time.</td></tr>
@@ -94,7 +106,7 @@
     <span class="callout-label">PRACTICAL NOTE</span>
     Set your orders during the pre-open session. Entering limit orders between 10:00 and 10:55 AM gives you time to think clearly. Reacting emotionally at 11:05 AM to opening prints is how retail money is lost.
   </div>
-  <h2>Lesson 10.3 — Order Types Available: Market Orders, Limit Orders — What Exists and What Does Not</h2>
+  <h2 id="lesson-10-3-order-types-available-market-orders-limit-orders">Lesson 10.3 — Order Types Available: Market Orders, Limit Orders — What Exists and What Does Not</h2>
   <h3>The Core Order Types</h3>
   <p>An order type is the instruction you give the market about the conditions under which your trade should be executed. Different order types offer different trade-offs between certainty of execution and certainty of price. In mature markets, investors have access to a broad toolkit: market orders, limit orders, stop-loss orders, stop-limit orders, trailing stops, fill-or-kill, immediate-or-cancel, good-till-cancel, and more. In NEPSE, the toolkit is considerably more limited, and understanding this limitation is essential to constructing a sound execution strategy.</p>
   <h3>Market Orders</h3>
@@ -111,7 +123,7 @@
   <p>The absence of certain order types on NEPSE has significant consequences for risk management. Stop-loss orders — orders that trigger a sale when a stock drops below a specified price — do not exist as native order types on TNET. Investors cannot set an automatic downside protection order. If you own shares in a company and you want to exit if the price falls to a certain level, you must manually monitor the market and place a sell order yourself during trading hours. This requires discipline, attention, and availability that many retail investors do not have.</p>
   <p>Similarly, Good-Till-Cancel (GTC) orders — orders that remain active until they are filled or you cancel them — are not available. Orders in NEPSE are typically day orders only, expiring at the close of the trading session in which they are placed. This means that every day you wish to maintain an unexecuted order in the market, you must re-enter it. This creates unnecessary friction and favours those with regular access to trading terminals.</p>
   <p>The absence of conditional and derivative order types also means that sophisticated hedging strategies common in developed markets are structurally impossible to execute via the exchange mechanism alone. Investors must compensate through position sizing, cash management, and pre-commitment to rules — the behavioural and fundamental disciplines that form the foundation of this book.</p>
-  <h2>Lesson 10.4 — The Order Book: Bids, Asks, Spread, and Market Depth in a Thin Market</h2>
+  <h2 id="lesson-10-4-the-order-book-bids-asks-spread-and-market-depth">Lesson 10.4 — The Order Book: Bids, Asks, Spread, and Market Depth in a Thin Market</h2>
   <h3>Anatomy of an Order Book</h3>
   <p>The order book is the live, continuously updated record of all unexecuted buy and sell orders currently resting in the market for a given security. The buy side, called the bid side, lists all pending purchase orders ranked from highest price to lowest. The sell side, called the ask or offer side, lists all pending sell orders ranked from lowest price to highest. The best bid is the highest price a buyer is willing to pay right now. The best ask is the lowest price a seller is willing to accept right now.</p>
   <p>The spread is the difference between the best bid and the best ask. In highly liquid markets like large-cap stocks on the NYSE, spreads can be fractions of a paisa equivalent. In NEPSE, especially for smaller-cap or less actively traded stocks, spreads can be Rs 5, Rs 20, or even larger — sometimes several percent of the stock price. Every time you buy at the ask and would need to sell at the bid, the spread represents an immediate loss. Understanding the spread is the first lesson in trading cost awareness.</p>
@@ -120,7 +132,7 @@
   <p>NEPSE is characteristically shallow. It is common to view the order book of a NEPSE-listed company and find that the entire visible depth consists of a handful of orders, often placed by a small number of participants. This shallowness has several consequences. First, a single large order can move the price significantly — what traders call market impact. Second, in times of stress, the order book can empty almost entirely on the buy side, making it impossible to exit a position without accepting a dramatically lower price. Third, prices can appear to recover quickly after a dip, but only because a single buyer re-entered the book — not because genuine buying pressure has returned.</p>
   <div style="overflow-x:auto;">
   <table class="figures">
-    <tr><th>Concept</th><th>Implications for NEPSE Investors</th></tr>
+    <tr><th scope="col">Concept</th><th scope="col">Implications for NEPSE Investors</th></tr>
     <tr><td>Wide Spread</td><td>Transaction costs are higher per round-trip. Factor this into your required return.</td></tr>
     <tr><td>Thin Depth</td><td>Large orders move prices adversely. Break large positions into smaller tranches.</td></tr>
     <tr><td>Few Participants</td><td>A single participant's exit can crater a stock. Be cautious of stocks with very few active traders.</td></tr>
@@ -130,7 +142,7 @@
   </div>
   <h3>Reading the Order Book as an Investor</h3>
   <p>Many retail investors ignore the order book entirely, looking only at the last traded price. This is a mistake. Before placing any order in NEPSE, examine the order book for the security you wish to trade. Ask yourself: how many shares are available at or near the current price? If you want to buy 1,000 shares and there are only 200 shares offered in the entire book within a reasonable range, a market order will fill at escalating prices, some far above your intended purchase level. A limit order will fill only what is available at your price, leaving the rest unfilled — which in this case is the correct outcome. Patience and limit orders are the investor's primary defences against thin-market execution risk.</p>
-  <h2>Lesson 10.5 — Price Circuit Limits: Upper and Lower Circuits — Daily Bands and Their Purpose</h2>
+  <h2 id="lesson-10-5-price-circuit-limits-upper-and-lower-circuits-da">Lesson 10.5 — Price Circuit Limits: Upper and Lower Circuits — Daily Bands and Their Purpose</h2>
   <p>What Are Circuit Limits?</p>
   <p>A circuit limit — also called a circuit breaker or price band — is a regulatory mechanism that prevents a stock's price from moving beyond a specified percentage in a single trading day. NEPSE applies circuit limits to all listed securities. The bands define a floor (lower circuit) and a ceiling (upper circuit) beyond which no trades can be executed on that day.</p>
   <p>NEPSE historically applied a daily circuit limit of ten percent in each direction for most ordinary shares. Since April 2026 that band has been widened to fifteen percent, meaning a stock cannot rise more than fifteen percent above the previous day's closing price, nor fall more than fifteen percent below it, within a single trading session. The specific percentages may vary for certain categories of securities — newly listed stocks, securities under special surveillance, or those with elevated volatility — and investors should always verify current SEBON and NEPSE circulars for precise limits applicable to specific instruments.</p>
@@ -146,7 +158,7 @@
   </div>
   <h3>Index-Level Circuit Breakers</h3>
   <p>Beyond individual stock circuits, NEPSE also applies market-wide circuit breakers that halt all trading if the NEPSE index falls by a significant percentage in a single session. These index-level halts are modelled on similar mechanisms in India's NSE and BSE and are designed to prevent systemic panic. The precise thresholds and halt durations are specified in NEPSE's trading regulations and are subject to periodic revision by SEBON.</p>
-  <h2>Lesson 10.6 — T+2 Settlement: Why It Is Slower and What It Means for Cash Management</h2>
+  <h2 id="lesson-10-6-t-2-settlement-why-it-is-slower-and-what-it-mean">Lesson 10.6 — T+2 Settlement: Why It Is Slower and What It Means for Cash Management</h2>
   <h3>What Settlement Means</h3>
   <p>When a trade is executed on NEPSE, the transaction is not immediately complete. The buyer does not instantly receive shares and the seller does not instantly receive cash. Settlement is the process by which these obligations are formally fulfilled — shares transferred to the buyer's demat account and cash transferred to the seller's account. The time between the trade date (T) and the settlement date is the settlement cycle.</p>
   <p>NEPSE operates on a T+2 settlement cycle. This means that if you execute a trade on Sunday (day T), settlement — the actual transfer of shares and funds — occurs on Tuesday (T+2, counting only business days). Compare this with India's SEBI-mandated T+1 settlement, introduced in 2023, or international standards moving toward T+1 and even real-time settlement. Nepal's T+2 cycle is slower and carries practical implications that every investor must understand.</p>
@@ -158,7 +170,7 @@
   <p>The practical implication of T+2 is that your effective available capital is often less than your account balance suggests. At any given time, you may have cash that is committed to settling prior purchases (and therefore not truly free), and proceeds from sales that have not yet arrived. Sound cash management in NEPSE requires maintaining a buffer: do not commit 100% of your available cash to open buy orders simultaneously, because if multiple orders fill on the same day, your settlement obligations could exceed your immediately available balance. Maintain a float — a reserve of readily available cash — that gives you flexibility and prevents settlement fails, which carry penalties and reputational consequences with your broker.</p>
   <div style="overflow-x:auto;">
   <table class="figures">
-    <tr><th>Settlement Day (from Trade)</th><th>Scenario</th></tr>
+    <tr><th scope="col">Settlement Day (from Trade)</th><th scope="col">Scenario</th></tr>
     <tr><td>T (Sunday)</td><td>Trade executed. Commitment established.</td></tr>
     <tr><td>T+1 (Monday)</td><td>Buyer's payment arranged through broker; seller delivers shares via EDIS. No shares in demat yet.</td></tr>
     <tr><td>T+2 (Tuesday)</td><td>Shares transferred to buyer. Cash received by seller.</td></tr>
@@ -167,7 +179,7 @@
   </div>
   <p>Why T+2 Persists in Nepal</p>
   <p>The persistence of T+2 in NEPSE is partly infrastructural and partly institutional. The Nepalese capital market ecosystem — brokers, clearing houses, depository systems, and banks — has not yet been upgraded to support the faster data reconciliation and fund movement required by T+1. The Central Depository System and Clearing Limited (CDSC) is the entity responsible for clearing and settlement, and its capacity is constrained by the overall state of Nepal's financial infrastructure. SEBON has expressed intent to modernise settlement timelines, but change requires coordinated upgrades across multiple institutions. Until then, T+2 is the operative reality.</p>
-  <h2>Lesson 10.7 — MEROSHARE: Demat System, EDIS, Online IPO Application, and Portfolio View</h2>
+  <h2 id="lesson-10-7-meroshare-demat-system-edis-online-ipo-applicati">Lesson 10.7 — MEROSHARE: Demat System, EDIS, Online IPO Application, and Portfolio View</h2>
   <h3>The Role of MEROSHARE</h3>
   <p>MEROSHARE is the investor-facing online portal operated by CDSC (Central Depository System and Clearing Limited). It is, in practical terms, the digital infrastructure through which most Nepalese retail investors interact with the formal aspects of capital market ownership — not the trading itself, but the ownership records, IPO applications, dividend history, and share transfer processes. If you are a serious investor in Nepal, MEROSHARE is not optional. Understanding it fully is part of your operational competence.</p>
   <h3>The Demat Account</h3>
@@ -185,7 +197,7 @@
     <span class="callout-label">BEST PRACTICE</span>
     Treat your MEROSHARE account as the ground truth of your ownership. Never rely solely on your broker's statement. Check MEROSHARE after every trade settlement, every IPO allotment, and every bonus share or rights credit to ensure your BOID reflects the correct balances.
   </div>
-  <h2>Lesson 10.8 — Broker-Assisted Trading vs. Self-Trading via TMS</h2>
+  <h2 id="lesson-10-8-broker-assisted-trading-vs-self-trading-via-tms">Lesson 10.8 — Broker-Assisted Trading vs. Self-Trading via TMS</h2>
   <h3>The Traditional Broker-Assisted Model</h3>
   <p>For most of NEPSE's history, all trading required the intermediation of a licensed broker. Investors would call, visit, or message their broker with instructions: buy this many shares of this company at this price, or sell this holding. The broker's trading terminal — connected to TNET — would then execute the order on the investor's behalf. The broker charges a commission on every transaction, which in Nepal is regulated by SEBON and currently structured as a tiered percentage of transaction value.</p>
   <p>The broker-assisted model has genuine advantages for certain investors, particularly those who value personal guidance, who deal in large enough positions to warrant a relationship, or who are not comfortable with self-directed digital platforms. A good broker can provide market intelligence, assist with IPO applications and EDIS procedures, and help navigate procedural complexities. A poor broker, however, can be a source of conflicted advice — encouraging excessive trading to generate commissions, a practice known as churning — and slow execution.</p>
@@ -194,7 +206,7 @@
   <p>TMS provides access to the live order book for all listed securities, a trade history dashboard, your current open orders, and market-wide data including sector indices and individual scrip summaries. For the self-directed investor who has done their fundamental research and knows what they want to buy and at what price, TMS is the superior execution environment. It removes the latency of broker communication, eliminates the risk of order miscommunication (which in fast-moving markets can be costly), and gives you direct, real-time visibility of market conditions.</p>
   <h3>Choosing Between the Two</h3>
   <p>The choice between broker-assisted and self-directed trading is ultimately one of knowledge, discipline, and comfort with technology. If you are new to markets, broker assistance during the learning phase is entirely reasonable — but be conscious of commission costs and always verify that the advice you receive is in your interest rather than your broker's. As you build competence, migrating to TMS for execution while using your broker relationship for broader support is a mature strategy. The investor who understands both systems and can use them strategically is in a stronger position than one who defaults entirely to either.</p>
-  <h2>Lesson 10.9 — Short Selling: Why It Does Not Exist on NEPSE and the Consequences for Price Discovery</h2>
+  <h2 id="lesson-10-9-short-selling-why-it-does-not-exist-on-nepse-and">Lesson 10.9 — Short Selling: Why It Does Not Exist on NEPSE and the Consequences for Price Discovery</h2>
   <h3>What Short Selling Is</h3>
   <p>Short selling is the practice of selling shares you do not currently own, with the obligation to buy them back later. The mechanics work through a securities borrowing framework: you borrow shares from a willing lender (typically an institutional holder), sell them in the market at the current price, and later repurchase them — ideally at a lower price — to return to the lender. Your profit is the difference between the price at which you sold and the price at which you repurchased, minus borrowing costs. Your loss, if the stock rises after your short, is theoretically unlimited.</p>
   <p>Short selling serves two broad functions in markets. First, it allows investors who believe a stock is overvalued to profit from that belief. This has an information function: short sellers have strong incentives to conduct rigorous negative research on companies, and their trading activity communicates bearish information to the market. Second, it provides liquidity by creating additional sellers in the market, widening the pool of participants on each side.</p>
@@ -209,7 +221,7 @@
   </div>
   <h3>Practical Implications for the Long-Only Investor</h3>
   <p>For the retail investor who is, by definition, a long-only participant (you can only buy or sell what you already own), the absence of short selling means you operate in a market where prices can remain elevated for extended periods. This raises your risk of entering positions at overvalued prices. The discipline of fundamental valuation — understanding what a company is genuinely worth and refusing to pay materially more — becomes not just a preference but a survival requirement in a market where price signals are structurally incomplete.</p>
-  <h2>Lesson 10.10 — Dividends, Bonus Shares, and Rights: Process, Timelines, and NEPSE Announcements</h2>
+  <h2 id="lesson-10-10-dividends-bonus-shares-and-rights-process-timel">Lesson 10.10 — Dividends, Bonus Shares, and Rights: Process, Timelines, and NEPSE Announcements</h2>
   <h3>How Companies Distribute Value to Shareholders</h3>
   <p>When a listed company generates profits, it has several options for returning value to shareholders. In the Nepalese context, the three primary mechanisms are cash dividends, bonus shares (stock dividends), and rights issues. Each has distinct characteristics, timelines, and implications for the investor's portfolio value and tax position.</p>
   <h3>Cash Dividends</h3>
@@ -228,7 +240,7 @@
   <p>MEROSHARE's notification system provides some automated alerts for corporate actions affecting your holdings, but it is not infallible — relying solely on automated notifications is inadequate. Develop a weekly discipline of reviewing NEPSE's announcement page for each company in your portfolio. Additionally, following the financial press — the Annapurna Post's business section, Karobar daily, and online portals such as Sharesansar and Merolagani — ensures you receive timely, interpreted information about corporate actions alongside the raw regulatory announcements.</p>
   <div style="overflow-x:auto;">
   <table class="figures">
-    <tr><th>Corporate Action</th><th>Key Investor Action Required</th></tr>
+    <tr><th scope="col">Corporate Action</th><th scope="col">Key Investor Action Required</th></tr>
     <tr><td>Cash Dividend Announced</td><td>Verify book closure date; ensure shares are held in BOID before record date.</td></tr>
     <tr><td>Bonus Share Announced</td><td>Await BOID credit; adjust cost basis calculations after credit.</td></tr>
     <tr><td>Rights Issue Announced</td><td>Decide: exercise, sell, or let expire. Submit application before deadline.</td></tr>
@@ -243,6 +255,18 @@
   <p>Finally, you understand how value is distributed through dividends, bonus shares, and rights issues — the timelines, the processes, and the actions required of you as an investor to protect and exercise your entitlements. These mechanics are not bureaucratic tedium. They are the terrain on which your money operates. Master the terrain.</p>
   </div>
 
+  <div class="sources-note">
+    <span class="sources-label">Primary data sources</span>
+    Figures, rates and rules referenced in this chapter can be verified against the primary sources:
+    <a href="https://www.nrb.org.np/" rel="noopener">Nepal Rastra Bank</a> (monetary policy, credit and BFI data),
+    <a href="https://www.sebon.gov.np/" rel="noopener">SEBON</a> (regulation and issue approvals),
+    <a href="https://www.nepalstock.com/" rel="noopener">NEPSE</a> (prices, indices and turnover),
+    <a href="https://www.cdsc.com.np/" rel="noopener">CDSC</a> (settlement and demat data) and
+    <a href="https://ird.gov.np/" rel="noopener">Inland Revenue Department</a> (tax rates and rulings).
+    If a figure here disagrees with the primary source, trust the primary source and
+    <a href="https://santoshkumaradhikari.com.np/">tell me</a>.
+  </div>
+
   <div class="chapter-nav">
     <a href="ch-09-market-participants.html">← Market Participants in NEPSE</a>
     <a href="ch-11-liquidity-problem.html">The Liquidity Problem — NEPSE's Most Critical Structural Characteristic →</a>
@@ -250,7 +274,7 @@
 </article>
 
 <div class="print-bar">
-  <button type="button" class="print-bar-btn" onclick="window.print()">
+  <button type="button" class="print-bar-btn" data-print="">
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
     Print or Save as PDF
   </button>
@@ -268,8 +292,12 @@
 
 <footer class="site-footer">
   <div class="wrap" style="max-width:920px;">
-    The Investor's Canon is written and updated over time.
-    <a href="https://santoshkumaradhikari.com.np/">santoshkumaradhikari.com.np</a>
+    The Canon is complete and is revised as Nepal's rules and data change. Have a question, correction, or a
+    topic you want covered? Reach out via
+    <a href="https://santoshkumaradhikari.com.np/">santoshkumaradhikari.com.np</a>.
+    <p class="footer-disclaimer">Educational material only. Nothing on this site is investment advice, a solicitation, or a
+    recommendation to buy or sell any security. Markets carry risk — always do your own research and consult a
+    licensed professional before acting.</p>
     <p class="copyright-line">&copy; <span class="copyright-year">2026</span> Santosh Kumar Adhikari. All rights reserved.</p>
   </div>
 </footer>

@@ -62,6 +62,12 @@ def extract_article(path):
     body = m.group(1)
     # prev/next navigation is meaningless in a single continuous document
     body = re.sub(r'<div class="chapter-nav">.*?</div>', "", body, flags=re.S)
+    # the per-chapter mini-TOC links to heading ids that are not unique once
+    # 121 chapters share one page, so drop it and the ids it points at
+    body = re.sub(r'<nav class="chapter-toc".*?</nav>', "", body, flags=re.S)
+    body = re.sub(r'<h2 id="[^"]*">', "<h2>", body)
+    # a document has one <h1>; chapter titles become styled <h2>s here
+    body = re.sub(r"<h1>(.*?)</h1>", r'<h2 class="bk-ch-title">\1</h2>', body, flags=re.S)
     # Chapters link to each other by filename. Inside the merged book those
     # relative paths do not resolve, so point them at the in-page anchors.
     body = re.sub(
@@ -87,7 +93,7 @@ def main():
             title = html.unescape(item[1])
             pieces.append(
                 '<section class="bk-volume">\n'
-                f"  <h1>{html.escape(title)}</h1>\n"
+                f'  <h2 class="bk-volume-title">{html.escape(title)}</h2>\n'
                 "</section>"
             )
             toc.append(f'<li class="bk-toc-vol">{html.escape(title)}</li>')
@@ -151,16 +157,24 @@ TEMPLATE = """<!DOCTYPE html>
 <meta property="og:title" content="The Investor's Canon &mdash; Complete Book (Print Edition)">
 <meta property="og:description" content="The complete Investor's Canon on a single page: all 118 chapters across four volumes, formatted for printing or saving as one PDF.">
 <meta property="og:url" content="{domain}/investors-canon/book.html">
+<meta property="og:image" content="{domain}/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Investor's Canon &mdash; Nepal Edition, by Santosh Kumar Adhikari">
 <meta property="og:site_name" content="Santosh Kumar Adhikari">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="{domain}/og-image.png">
 <meta name="twitter:title" content="The Investor's Canon &mdash; Complete Book (Print Edition)">
 <meta name="twitter:description" content="The complete Investor's Canon on a single page: all 118 chapters across four volumes, formatted for printing or saving as one PDF.">
 <meta name="author" content="Santosh Kumar Adhikari">
 <meta name="robots" content="noindex, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#16233d">
 <link rel="stylesheet" href="css/style.css">
 <style>
   /* ---- single-document layout, screen ---- */
@@ -180,8 +194,12 @@ TEMPLATE = """<!DOCTYPE html>
   .bk-toc-num {{ min-width: 42px; color: var(--ink-faint); font-variant-numeric: tabular-nums; }}
 
   .bk-volume {{ max-width: 820px; margin: 0 auto; padding: 56px 24px 8px; text-align: center; }}
-  .bk-volume h1 {{ font-family: var(--display); font-size: 34px; font-weight: 500; margin: 0;
+  .bk-volume .bk-volume-title {{ font-family: var(--display); font-size: 34px; font-weight: 500; margin: 0;
                   border-top: 2px solid var(--gold); border-bottom: 2px solid var(--gold); padding: 18px 0; }}
+  .bk-chapter .bk-ch-title {{ font-family: var(--display); font-size: 38px; line-height: 1.22;
+                  margin: 0 0 34px; font-weight: 500; letter-spacing: -0.01em; border: 0; padding: 0; }}
+  /* the merged page repeats each chapter's dates + sources note; keep them,
+     they are correct per chapter */
   .bk-part {{ max-width: 820px; margin: 0 auto; padding: 34px 24px 4px; }}
   .bk-part-roman {{ font-family: var(--sans); font-size: 12px; font-weight: 700;
                    letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); margin: 0 0 6px; }}
@@ -238,7 +256,7 @@ TEMPLATE = """<!DOCTYPE html>
       <strong>Save as PDF</strong> to get the whole Canon as a single file.
     </p>
     <p class="bk-actions">
-      <button type="button" class="btn btn-primary" onclick="window.print()">Save the whole book as PDF</button>
+      <button type="button" class="btn btn-primary" data-print="">Save the whole book as PDF</button>
       <a class="btn btn-ghost" href="index.html">Back to Contents</a>
     </p>
     <p class="bk-note">
@@ -259,9 +277,13 @@ TEMPLATE = """<!DOCTYPE html>
 </main>
 
 <footer class="site-footer">
-  <div class="wrap">
-    The Investor's Canon is written and updated over time.
-    <a href="{domain}/">santoshkumaradhikari.com.np</a>
+  <div class="wrap" style="max-width:920px;">
+    The Canon is complete and is revised as Nepal's rules and data change. Have a question, correction, or a
+    topic you want covered? Reach out via
+    <a href="{domain}/">santoshkumaradhikari.com.np</a>.
+    <p class="footer-disclaimer">Educational material only. Nothing on this site is investment advice, a solicitation, or a
+    recommendation to buy or sell any security. Markets carry risk &mdash; always do your own research and consult a
+    licensed professional before acting.</p>
     <p class="copyright-line">&copy; <span class="copyright-year">2026</span> Santosh Kumar Adhikari. All rights reserved.</p>
   </div>
 </footer>
@@ -270,6 +292,13 @@ TEMPLATE = """<!DOCTYPE html>
   (function () {{
     var y = document.querySelector('.copyright-year');
     if (y) {{ y.textContent = new Date().getFullYear(); }}
+    document.addEventListener('click', function (e) {{
+      var el = e.target;
+      while (el && el !== document) {{
+        if (el.hasAttribute && el.hasAttribute('data-print')) {{ window.print(); return; }}
+        el = el.parentNode;
+      }}
+    }});
   }})();
 </script>
 

@@ -10,18 +10,28 @@
 <meta property="og:title" content="Measuring and Managing Model Drift — The Investor&#x27;s Canon">
 <meta property="og:description" content="Why a properly calibrated score decays as NRB regulation, sector mix, and the investor base change, and the quarterly scorecards and 90-day review cadence that catch decay before it costs you.">
 <meta property="og:url" content="https://santoshkumaradhikari.com.np/investors-canon/chapters/ch-82-measuring-managing-model-drift.html">
+<meta property="og:image" content="https://santoshkumaradhikari.com.np/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Investor&#x27;s Canon — Nepal Edition, by Santosh Kumar Adhikari">
 <meta property="og:site_name" content="Santosh Kumar Adhikari">
-<meta property="og:locale" content="en_US">
-<meta name="twitter:card" content="summary">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://santoshkumaradhikari.com.np/og-image.png">
 <meta name="twitter:title" content="Measuring and Managing Model Drift — The Investor&#x27;s Canon">
 <meta name="twitter:description" content="Why a properly calibrated score decays as NRB regulation, sector mix, and the investor base change, and the quarterly scorecards and 90-day review cadence that catch decay before it costs you.">
 <meta name="author" content="Santosh Kumar Adhikari">
 <meta name="robots" content="index, follow">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Measuring and Managing Model Drift — The Investor's Canon","description":"Why a properly calibrated score decays as NRB regulation, sector mix, and the investor base change, and the quarterly scorecards and 90-day review cadence that catch decay before it costs you.","url":"https://santoshkumaradhikari.com.np/investors-canon/chapters/ch-82-measuring-managing-model-drift.html","inLanguage":"en","author":{"@type":"Person","name":"Santosh Kumar Adhikari","url":"https://santoshkumaradhikari.com.np/"},"publisher":{"@type":"Person","name":"Santosh Kumar Adhikari"},"isPartOf":{"@type":"Book","name":"The Investor's Canon","url":"https://santoshkumaradhikari.com.np/investors-canon/"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Measuring and Managing Model Drift — The Investor's Canon", "description": "Why a properly calibrated score decays as NRB regulation, sector mix, and the investor base change, and the quarterly scorecards and 90-day review cadence that catch decay before it costs you.", "url": "https://santoshkumaradhikari.com.np/investors-canon/chapters/ch-82-measuring-managing-model-drift.html", "inLanguage": "en", "author": {"@type": "Person", "name": "Santosh Kumar Adhikari", "url": "https://santoshkumaradhikari.com.np/"}, "publisher": {"@type": "Person", "name": "Santosh Kumar Adhikari"}, "isPartOf": {"@type": "Book", "name": "The Investor's Canon", "url": "https://santoshkumaradhikari.com.np/investors-canon/"}, "datePublished": "2026-08-25", "dateModified": "2026-08-29", "image": "https://santoshkumaradhikari.com.np/og-image.png", "mainEntityOfPage": "https://santoshkumaradhikari.com.np/investors-canon/chapters/ch-82-measuring-managing-model-drift.html"}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "The Investor's Canon", "item": "https://santoshkumaradhikari.com.np/investors-canon/"}, {"@type": "ListItem", "position": 2, "name": "Measuring and Managing Model Drift", "item": "https://santoshkumaradhikari.com.np/investors-canon/chapters/ch-82-measuring-managing-model-drift.html"}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Source+Serif+4:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#16233d">
 <link rel="stylesheet" href="../css/style.css">
+<noscript><style>.nav-audio-btn,.audio-bar{display:none}</style></noscript>
 </head>
 <body>
 <a href="#main" class="skip-link">Skip to main content</a>
@@ -39,7 +49,7 @@
       <a href="../study-guide.html">Study Guide</a>
       <a href="../glossary.html">Glossary</a>
       <a href="https://santoshkumaradhikari.com.np/">Santosh Adhikari →</a>
-      <button type="button" class="nav-print-btn" onclick="window.print()" aria-label="Print or save this page as PDF" title="Print / Save as PDF">
+      <button type="button" class="nav-print-btn" data-print="" aria-label="Print or save this page as PDF" title="Print / Save as PDF">
         <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
       </button>
       <button type="button" class="nav-audio-btn" aria-label="Read this page aloud" title="Read this page aloud">
@@ -55,11 +65,13 @@
 <article class="chapter">
   <div class="chapter-kicker">Part XV · Chapter 82</div>
   <h1>Measuring and Managing Model Drift</h1>
+  <p class="chapter-dates">First published 25 Aug 2026 · Last verified 29 Aug 2026</p>
+  <nav class="chapter-toc" aria-label="In this chapter"><span class="chapter-toc-label">In this chapter</span><ol><li><a href="#lesson-82-1-what-model-drift-actually-means">Lesson 82.1 — What "Model Drift" Actually Means</a></li><li><a href="#lesson-82-2-four-ways-nepse-changes-under-your-feet">Lesson 82.2 — Four Ways NEPSE Changes Under Your Feet</a></li><li><a href="#lesson-82-3-catching-drift-before-it-costs-you">Lesson 82.3 — Catching Drift Before It Costs You</a></li><li><a href="#lesson-82-4-the-90-day-review-cadence">Lesson 82.4 — The 90-Day Review Cadence</a></li><li><a href="#lesson-82-5-signal-vs-noise-not-every-bad-quarter-is-drift">Lesson 82.5 — Signal vs Noise: Not Every Bad Quarter Is Drift</a></li><li><a href="#lesson-82-6-conviction-and-humility-closing-part-xv">Lesson 82.6 — Conviction and Humility: Closing Part XV</a></li></ol></nav>
 
   <p>Rukmini Thapa had not touched the Canon Score's weightings in fourteen months. That was, in itself, unusual for her. She had spent thirty-one years at Nepal Rastra Bank reviewing bank balance sheets, and the habit of a supervisor is to tinker — to tighten a ratio here, flag an exception there, never quite leave a rule alone. But when she retired and turned to building her own scoring system for NEPSE stocks, she had made herself a promise: calibrate it properly once, using the discipline she had learned two chapters ago, and then leave it alone unless she had real evidence, not a hunch, that it needed to change.</p>
   <p>It was July 2026, and she was looking at a chart that made her deeply uncomfortable. The chart tracked something simple: every quarter for the last three years, she had ranked NEPSE stocks by their Canon Score and checked whether the top-scoring group actually went on to outperform the bottom-scoring group over the following ninety days. For most of that stretch, the gap between the two groups — what she'd started calling the "spread" — had hovered in a healthy, reassuring band. In the most recent two quarters, it had nearly vanished. Her score was still producing numbers. It had simply stopped telling her anything useful.</p>
   <p>This chapter is about what Rukmini was looking at, and what she did next. It is the closing chapter of Part XV, and it exists because of an uncomfortable truth the last three chapters have been building toward: a properly backtested score and a properly calibrated set of exit rules are not permanent achievements. They are perishable. They decay. The market you calibrated against in 2021 is not the market you are trading in 2026, and a tool that does not get checked against that fact will quietly go stale while still looking, on the surface, exactly as confident as the day you built it.</p>
-  <h2>Lesson 82.1 — What "Model Drift" Actually Means</h2>
+  <h2 id="lesson-82-1-what-model-drift-actually-means">Lesson 82.1 — What "Model Drift" Actually Means</h2>
   <p>Start with the plainest possible definition. Model drift is what happens when a rule that used to work well keeps running exactly as designed, while the world it was designed for changes underneath it — so the rule's outputs slowly stop matching reality, even though nothing about the rule itself has "broken."</p>
   <p>Think of a tailor who takes your measurements once and cuts every shirt from that pattern for the next ten years. The pattern was not wrong the day it was made — it fit you perfectly then. But you do not stay the same size forever. Somewhere along the way, the shirts stop fitting, not because the tailor made a mistake, but because you changed and the pattern didn't. Nobody notices the exact day it stopped fitting; it happens gradually, one shirt at a time, until eventually every shirt in the closet feels slightly wrong and you can't say when that started.</p>
   <p>A backtested investing rule is a pattern cut to fit a particular market at a particular time. The Canon Score, as calibrated in Chapter 80, was cut to fit NEPSE roughly as it behaved across 2018 to 2021 data — a market with a certain mix of banks, hydropower companies, microfinance institutions, and manufacturing firms; a certain size and temperament of retail investor base; a certain regulatory backdrop. The exit rules calibrated in Chapter 81 were cut to fit NEPSE's circuit-breaker mechanics and liquidity patterns as they existed when that testing was done. Neither of those things is fixed in stone. NEPSE in 2026 is not the same market, and pretending the pattern still fits because it fit once is exactly the kind of complacency this book has tried to train out of you since Part XV began.</p>
@@ -69,7 +81,7 @@
   </div>
   <p>It helps to separate drift from two things it is often confused with. It is not the same as a single bad quarter, which can happen to a perfectly sound rule simply through ordinary variance — more on that distinction in Lesson 82.5. And it is not the same as the rule being poorly built in the first place, which is a calibration failure Chapter 80 already dealt with. Drift specifically describes decay over time in a rule that was sound when built. The tailor's pattern was cut correctly; you grew.</p>
   <p>The uncomfortable part, and the reason this chapter exists at all, is that drift is invisible from the inside of any single decision. Rukmini's Canon Score, on any given day, still produced a number between 0 and 100 for any stock she typed in. It still felt authoritative. Nothing about using it that day would have told her the number meant less than it used to. Drift only becomes visible when you deliberately step back and measure performance over time — which is precisely the discipline the rest of this chapter builds.</p>
-  <h2>Lesson 82.2 — Four Ways NEPSE Changes Under Your Feet</h2>
+  <h2 id="lesson-82-2-four-ways-nepse-changes-under-your-feet">Lesson 82.2 — Four Ways NEPSE Changes Under Your Feet</h2>
   <p>Drift does not happen for mysterious reasons. It happens because specific, identifiable things about a market change. On NEPSE, four sources of change matter most, and a Canon Score user should be able to name all four without hesitation.</p>
   <p>The first is a regulatory shock — a rule change from Nepal Rastra Bank (NRB, the central bank) or the Securities Board of Nepal (SEBON, the capital markets regulator) that changes what "good" looks like almost overnight. The textbook example, and one worth knowing in real detail because it will recur in this book's case studies, is NRB's paid-up capital mandate for commercial banks. In 2015, NRB directed commercial banks to raise their minimum paid-up capital — the base equity cushion a bank must hold before it can call itself a "class A" commercial bank — roughly fourfold, from Rs 2 billion to Rs 8 billion, with a deadline of mid-2017 (the end of the Nepali fiscal year 2073/74). Banks that could not raise that capital organically were pushed into mergers, rights issues, and bonus-share issuances at a scale NEPSE had never seen. The number of listed commercial banks fell sharply as weaker institutions were absorbed into stronger ones, and every surviving bank's balance sheet looked structurally different on the other side of that deadline than it had before it.</p>
   <div class="callout">
@@ -88,7 +100,7 @@
     <span class="callout-label">WARNING</span>
     None of these four sources of drift show up as a single dramatic event you can circle on a calendar and say "the model broke here." They accumulate quietly. The only way to catch them is to measure performance on a schedule, not to wait until you feel that something is wrong.
   </div>
-  <h2>Lesson 82.3 — Catching Drift Before It Costs You</h2>
+  <h2 id="lesson-82-3-catching-drift-before-it-costs-you">Lesson 82.3 — Catching Drift Before It Costs You</h2>
   <p>The instinct many investors have is to wait for pain — to notice drift only after a string of losses forces the question. That is the most expensive way to find out. By the time a decayed model has cost you real money, it has usually been decayed for a while. The alternative is to track a small number of honest, boring scorecards on a fixed schedule, so that decay shows up as a number moving in the wrong direction long before it shows up as a loss.</p>
   <p>Three scorecards do most of the work.</p>
   <p>The first is quintile spread. Take every quarter's Canon Score rankings, split the scored universe into five equal groups (quintiles) from highest score to lowest, and track the actual subsequent-quarter return of the top quintile against the bottom quintile. A healthy score produces a meaningful, persistent gap — the top quintile should meaningfully outperform the bottom quintile more quarters than not. When that gap narrows quarter after quarter, the score is losing its ability to discriminate between good and bad stocks, which is the entire point of having a score.</p>
@@ -97,7 +109,7 @@
   <p>Table 82.1 shows the kind of scorecard Rukmini had actually been keeping, quarter by quarter, for three years — the exact data that let her catch her drift problem before it cost her a bad year rather than after.</p>
   <div style="overflow-x:auto;">
   <table class="figures">
-    <tr><th>Quarter</th><th>Top-quintile avg return</th><th>Bottom-quintile avg return</th><th>Spread</th><th>Score hit rate</th><th>Exit-rule trigger rate</th></tr>
+    <tr><th scope="col">Quarter</th><th scope="col">Top-quintile avg return</th><th scope="col">Bottom-quintile avg return</th><th scope="col">Spread</th><th scope="col">Score hit rate</th><th scope="col">Exit-rule trigger rate</th></tr>
     <tr><td>2023 Q3</td><td>11.2%</td><td>2.1%</td><td>9.1 pts</td><td>68%</td><td>1 per 14 trading days</td></tr>
     <tr><td>2024 Q1</td><td>10.4%</td><td>1.8%</td><td>8.6 pts</td><td>65%</td><td>1 per 13 trading days</td></tr>
     <tr><td>2024 Q3</td><td>9.8%</td><td>3.0%</td><td>6.8 pts</td><td>63%</td><td>1 per 12 trading days</td></tr>
@@ -112,7 +124,7 @@
     Keep exactly three numbers on a running spreadsheet, updated every quarter: quintile spread, hit rate, and exit-rule trigger rate relative to trading days. Three honest numbers, tracked consistently, will tell you more about drift than any amount of "the market feels different lately" intuition.
   </div>
   <p>None of these three numbers requires sophisticated statistics or expensive data. They require the same discipline Chapter 79 first introduced: writing down what you expected in advance, and then checking the actual result against it, quarter after quarter, without skipping the quarters where the answer is inconvenient.</p>
-  <h2>Lesson 82.4 — The 90-Day Review Cadence</h2>
+  <h2 id="lesson-82-4-the-90-day-review-cadence">Lesson 82.4 — The 90-Day Review Cadence</h2>
   <p>Measuring is only half the job. The other half is having a fixed process for acting on what you measure — one that runs on a schedule rather than on emotion. This book's broader framework calls for a 90-day feedback loop, and Part XV's closing lesson on process is simply this: apply that same cadence to the Canon Score and the exit rules themselves, not only to your individual trades.</p>
   <p>A proper 90-day model review has four steps, done in order, every quarter, whether or not anything feels wrong.</p>
   <p>First, update the three scorecards from Lesson 82.3 with the latest quarter's data. This step is mechanical and should take under an hour if you've kept the spreadsheet current. Resist the temptation to skip it in a quarter where you suspect the numbers will look bad — those are exactly the quarters the review exists for.</p>
@@ -124,12 +136,12 @@
     A 90-day model review is not a chance to redesign your system. It is a chance to check three numbers, ask four questions, and make a small number of narrow decisions — then close the file until the next quarter.
   </div>
   <p>Rukmini's own review, the one that opened this chapter, followed exactly this process. Her scorecards had already flagged the declining spread. Her point-in-time backtest of the most recent quarter confirmed the capital-adequacy dimension of her score was assigning nearly every commercial bank a score between 82 and 96 — a range so narrow it was barely distinguishing anything. Working through the four drift-source questions, the regulatory answer jumped out immediately: the Rs 8 billion paid-up capital mandate, a full decade old by 2026, had done its work so thoroughly that virtually every surviving commercial bank now cleared it comfortably. A dimension designed to reward banks for clearing a bar that used to separate the strong from the weak was now rewarding everyone roughly equally, because the bar itself had become the industry floor rather than a meaningful hurdle.</p>
-  <h2>Lesson 82.5 — Signal vs Noise: Not Every Bad Quarter Is Drift</h2>
+  <h2 id="lesson-82-5-signal-vs-noise-not-every-bad-quarter-is-drift">Lesson 82.5 — Signal vs Noise: Not Every Bad Quarter Is Drift</h2>
   <p>Here is where the discipline gets genuinely difficult, and where this chapter connects directly back to the overfitting warning Chapter 80 spent an entire lesson on. A single disappointing quarter is not, by itself, evidence of drift. Markets have ordinary bad stretches for reasons no reasonable scoring model was ever built to predict — a one-off political disruption, a monsoon shock that hits hydropower generation unevenly, a temporary liquidity squeeze around a major festival period, a single large institutional seller distorting one sector's prices for a few weeks. Treating every such episode as proof the model is broken, and re-tuning weights in response, is not model maintenance. It is overfitting in slow motion — the exact trap Chapter 80 warned against, just spread across quarters instead of concentrated in one backtest.</p>
   <p>The practical challenge is telling the two apart in real time, and it comes down to persistence and mechanism. Genuine structural drift shows up as a trend across several consecutive quarters and can usually be traced to an identifiable, permanent change in what a dimension measures — a regulatory bar that has become universal, a sector shift that has permanently changed the composition of what gets scored. Ordinary noise shows up as a single bad quarter with an identifiable one-off cause, followed by a return to the prior pattern once that cause passes.</p>
   <div style="overflow-x:auto;">
   <table class="figures">
-    <tr><th>Signal (genuine drift)</th><th>Noise (ordinary variance)</th></tr>
+    <tr><th scope="col">Signal (genuine drift)</th><th scope="col">Noise (ordinary variance)</th></tr>
     <tr><td>Trend persists three or more consecutive quarters</td><td>Confined to a single quarter, then reverts</td></tr>
     <tr><td>Traceable to a specific, permanent structural change (regulatory mandate, sector shift, participant base shift)</td><td>Traceable to a one-off event (political disruption, weather shock, single large seller) with no lasting mechanism</td></tr>
     <tr><td>Affects a specific dimension in a way consistent with the identified cause (capital-adequacy scores compress after a capital mandate saturates the industry)</td><td>Affects returns broadly and indiscriminately, without a clean link to any one scoring dimension</td></tr>
@@ -143,7 +155,7 @@
   </div>
   <p>This is precisely why Rukmini did not touch her score the first time the spread narrowed slightly, back in early 2025. One soft quarter told her nothing. It was the trend across six consecutive quarters, combined with a specific and traceable regulatory mechanism a decade in the making, that gave her confidence she was looking at genuine drift rather than noise. She also checked the mechanism specifically against her exit-rule trigger data, and found a second, independent piece of corroborating evidence: the exit rule firing roughly twice as often relative to trading days lined up with the demat-account growth and retail participation surge discussed in Lesson 82.2 — not with any single news event she could point to for one bad month.</p>
   <p>Her actual adjustment, once she was confident it was warranted, was narrow. She did not rebuild the Canon Score from scratch. She replaced the capital-adequacy dimension's binary "does this bank clear Rs 8 billion" threshold — now nearly meaningless since almost every surviving bank clears it — with a relative measure comparing each bank's capital adequacy ratio (a bank's capital as a percentage of its risk-weighted assets, a standard regulatory soundness measure) against its peers today, restoring some spread to a dimension that had flattened out. She left every other dimension of the score untouched, and she made a small, explicit note to revisit the sentiment-weighting dimension's calibration at her next scheduled review rather than acting on a single quarter's signal from the retail-base data.</p>
-  <h2>Lesson 82.6 — Conviction and Humility: Closing Part XV</h2>
+  <h2 id="lesson-82-6-conviction-and-humility-closing-part-xv">Lesson 82.6 — Conviction and Humility: Closing Part XV</h2>
   <p>Four chapters ago, Part XV opened with a promise: that a stock-picking system built on hope and gut feeling is worse than useless, and that discipline — testing, calibrating, checking your work against reality rather than your memory of reality — is what separates a durable investing process from a lucky streak that eventually runs out. Chapter 79 taught you how to test a rule honestly. Chapter 80 applied that testing to the Canon Score itself. Chapter 81 applied it to the exit rules that protect you on the way out. This chapter closes the loop: even a properly tested rule is not a finished object. It is a living tool, and living tools need periodic, honest re-examination or they quietly decay into shapes that no longer fit the market wearing them.</p>
   <p>The discipline this chapter asks of you is really the ability to hold two things at once, in some tension with each other, without letting either one win outright. The first is conviction: enough confidence in a properly calibrated Canon Score and a properly tested exit rule to actually use them consistently, quarter after quarter, without abandoning them the moment a single result disappoints you. A tool you redesign every time it has a bad month is not a tool at all — it is an excuse to keep chasing whatever happened most recently, which Chapter 80 already showed you is just overfitting wearing a different hat. The second is humility: enough honesty to keep measuring, on a fixed schedule, whether the tool still deserves that confidence — and enough willingness to make a narrow, well-evidenced adjustment when the scorecards, not your gut, say the ground has genuinely shifted.</p>
   <p>Rukmini's year illustrates both halves. She did not touch her score for fourteen months despite plenty of ordinary quarterly noise along the way — that was conviction, and it kept her from overfitting to every rough patch. But when six consecutive quarters of narrowing spread lined up with a specific, traceable, decade-old regulatory mandate finally saturating an entire industry, she did not simply keep the faith and hope the pattern reversed on its own — that would have been complacency dressed up as discipline. She measured, she distinguished signal from noise using the table in Lesson 82.5, and she made one narrow, well-justified change to one dimension of her score, leaving the rest alone. That is what a mature relationship with a calibrated model looks like: not blind loyalty, and not constant tinkering, but a fixed process for occasionally, deliberately, earning the right to change your mind.</p>
@@ -161,6 +173,18 @@
   <p>With that, Part XV — Calibration and Backtesting — comes to a close. The book now turns from the machinery of building and testing models to the work of actually using them. Part XVI, Mastery, opens with eight full worked case studies that take everything built across Parts XIII through XV — the seven-dimension Canon Score, its calibration discipline, its exit rules, and now its drift-management process — and apply all of it, start to finish, to real company archetypes an investor will actually encounter on NEPSE. Chapter 83, Case Study 1 — A Commercial Bank, is the first of those eight studies, and it will put the very capital-adequacy dimension this chapter just revisited under the microscope: scoring a real commercial bank archetype end to end, showing exactly how a decade of NRB capital mandates, the merger wave that followed, and the drift-adjusted scoring approach from this chapter all come together in a single live decision.</p>
   </div>
 
+  <div class="sources-note">
+    <span class="sources-label">Primary data sources</span>
+    Figures, rates and rules referenced in this chapter can be verified against the primary sources:
+    <a href="https://www.nrb.org.np/" rel="noopener">Nepal Rastra Bank</a> (monetary policy, credit and BFI data),
+    <a href="https://www.sebon.gov.np/" rel="noopener">SEBON</a> (regulation and issue approvals),
+    <a href="https://www.nepalstock.com/" rel="noopener">NEPSE</a> (prices, indices and turnover),
+    <a href="https://www.cdsc.com.np/" rel="noopener">CDSC</a> (settlement and demat data) and
+    <a href="https://ird.gov.np/" rel="noopener">Inland Revenue Department</a> (tax rates and rulings).
+    If a figure here disagrees with the primary source, trust the primary source and
+    <a href="https://santoshkumaradhikari.com.np/">tell me</a>.
+  </div>
+
   <div class="chapter-nav">
     <a href="ch-81-testing-refining-exit-rules.html">← Testing and Refining Exit Rules</a>
     <a href="ch-83-case-study-commercial-bank.html">Case Study 1 — A Commercial Bank →</a>
@@ -168,7 +192,7 @@
 </article>
 
 <div class="print-bar">
-  <button type="button" class="print-bar-btn" onclick="window.print()">
+  <button type="button" class="print-bar-btn" data-print="">
     <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
     Print or Save as PDF
   </button>
@@ -186,8 +210,12 @@
 
 <footer class="site-footer">
   <div class="wrap" style="max-width:920px;">
-    The Investor's Canon is written and updated over time.
-    <a href="https://santoshkumaradhikari.com.np/">santoshkumaradhikari.com.np</a>
+    The Canon is complete and is revised as Nepal's rules and data change. Have a question, correction, or a
+    topic you want covered? Reach out via
+    <a href="https://santoshkumaradhikari.com.np/">santoshkumaradhikari.com.np</a>.
+    <p class="footer-disclaimer">Educational material only. Nothing on this site is investment advice, a solicitation, or a
+    recommendation to buy or sell any security. Markets carry risk — always do your own research and consult a
+    licensed professional before acting.</p>
     <p class="copyright-line">&copy; <span class="copyright-year">2026</span> Santosh Kumar Adhikari. All rights reserved.</p>
   </div>
 </footer>
