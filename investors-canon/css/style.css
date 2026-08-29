@@ -1088,7 +1088,8 @@ table.figures tr:last-child td { border-bottom: none; }
 
 /* ---------- Print / PDF export ---------- */
 @media print {
-  .site-header, .progress-pill, .volume-nav, .chapter-nav, .site-footer, .toc, .reading-progress-container {
+  .skip-link, .site-header, .progress-pill, .volume-nav, .chapter-nav, .site-footer,
+  .toc, .reading-progress-container, .nav-audio-btn, .nav-print-btn {
     display: none !important;
   }
   body {
@@ -1108,6 +1109,23 @@ table.figures tr:last-child td { border-bottom: none; }
   p, h2, h3, li { orphans: 3; widows: 3; }
   .callout, .recap, table.figures, .framework-figure img { page-break-inside: avoid; break-inside: avoid; }
   .chapter a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 0.85em; word-break: break-all; color: #333333; }
+
+  /* The site footer is hidden above, which would otherwise strip the copyright
+     from every printed chapter. Re-attach attribution and the source URL after
+     the chapter text so a printed or PDF'd page still says where it came from. */
+  .chapter::after {
+    content: "The Investor\2019s Canon \2014 Santosh Kumar Adhikari \2014 santoshkumaradhikari.com.np";
+    display: block;
+    margin-top: 24pt;
+    padding-top: 8pt;
+    border-top: 1px solid #cccccc;
+    font-size: 8.5pt;
+    color: #444444;
+  }
+}
+
+@page {
+  margin: 18mm 16mm;
 }
 
 /* ---------- Framework diagrams: dark-mode heading fix ---------- */

@@ -758,5 +758,6 @@ main[tabindex="-1"]:focus {
 .print-bar-btn svg { width: 16px; height: 16px; }
 
 @media print {
-  .print-toggle, .print-bar, .nav-toggle { display: none !important; }
+  .skip-link, .print-toggle, .print-bar, .nav-toggle, .theme-toggle,
+  .site-nav { display: none !important; }
 }
