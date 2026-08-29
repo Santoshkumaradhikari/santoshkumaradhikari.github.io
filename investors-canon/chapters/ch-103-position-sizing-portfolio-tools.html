@@ -62,7 +62,6 @@
   <p>Chapter 97 established the core discipline: before you buy anything, you decide how much of your total capital you are willing to lose if this specific position goes badly wrong, and you size the purchase so that even the worst realistic outcome stays inside that tolerance. The formula from that chapter was simple on paper — drawdown budget divided by worst-case single-stock decline equals maximum position size — but simple on paper and simple in a spreadsheet cell are two different things. This lesson turns it into the second.</p>
   <p>Start with the two inputs the formula needs. The first is your single-position drawdown budget: the slice of your total portfolio value you are prepared to lose to any one holding, drawn from the overall drawdown budget you set for your whole portfolio in Chapter 97. Suresh's overall portfolio drawdown budget, based on his income stability, his age, and his family's other assets, is 18 percent — he can absorb an 18 percent NAV decline in a bad year without changing his life. Out of that, he has decided that no single stock disaster should be allowed to cost him more than 3 percentage points of total portfolio value. That 3 percent is his single-position budget, and it does not change stock to stock. It is a constant in his formula.</p>
   <p>The second input does change stock to stock: the worst-case decline you should plan for in that particular holding. This is not the average correction, and it is not what happened to the stock last year. It is the realistic floor — what a Class A commercial bank might lose if NRB tightened capital adequacy rules sharply and NEPSE sold off financials across the board, versus what a thinly traded Class B development bank might lose if a promoter dispute or a governance scandal broke, versus what a small hydropower counter with a narrow public float might lose if a single large holder needed to exit and there were no buyers waiting. Suresh keeps a short reference table in his sheet for this, updated whenever something in the regulatory or company-specific picture changes.</p>
-  <p>table</p>
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th>Stock Category</th><th>Worst-Case Decline Assumption</th><th>Reasoning</th></tr>
@@ -86,7 +85,6 @@
   <h2>Lesson 103.2 — The Running Portfolio Tracker</h2>
   <p>The position-size calculator tells you what to buy. The running tracker tells you what you actually own, and whether what you own still matches what you decided to own. Without this second tool, position sizing is a decision you make once at purchase and never revisit — which defeats the purpose, because prices move, positions drift, and a holding that was 6 percent of your portfolio at cost can become 11 percent after eighteen months of share price appreciation without you buying a single additional share.</p>
   <p>The tracker needs eight columns, no more and no fewer for a retail investor running this alone. More columns get skipped under time pressure; fewer columns hide the information you need to catch problems early.</p>
-  <p>table</p>
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th>Column</th><th>What It Captures</th><th>Why It Matters</th></tr>
@@ -121,7 +119,6 @@
     NRB's institutional classification — Class A for commercial banks, Class B for development banks, Class C for finance companies, and Class D for microfinance institutions — is a convenient and consistent basis for the sector column, since every listed BFI already carries this classification and it rarely changes. Using NRB's own categories keeps your sector tags aligned with how the regulator itself groups correlated institutional risk, rather than inventing your own taxonomy that might miss the correlation NRB's classification is built to capture.
   </div>
   <p>Suresh's dashboard has four correlated buckets he watches this way, each with its own combined ceiling drawn from Chapter 61: banking plus development banking at 35 percent, hydropower plus other energy infrastructure at 30 percent given its own correlated exposure to monsoon-dependent generation and PPA rate risk, life and non-life insurance combined at 20 percent, and hotels plus other tourism-linked counters at 15 percent given their shared sensitivity to tourist arrival numbers. Every one of his fourteen holdings falls into exactly one of these buckets or stands alone in a bucket of one.</p>
-  <p>table</p>
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th>Sector Bucket</th><th>Combined Cap</th><th>Current Exposure</th><th>Headroom</th></tr>
@@ -140,7 +137,6 @@
   <p>A tracker and a dashboard tell you where you stand. They do not tell you when to act on what they show you, and without a clear trigger rule, drift gets rationalised indefinitely — "it's only two points over," "I'll wait for a better exit price," "it's still a good company." This lesson sets the specific thresholds that convert observation into action, because a rule that only fires when you feel like it fires is not actually a rule.</p>
   <p>There are two distinct triggers worth separating, because they call for different responses. The first is position drift: a single holding's weight has moved meaningfully away from where you intended it to sit, almost always because it has performed well and grown as a share of the portfolio rather than because you bought more of it. The second is cap breach: a position-size ceiling or a sector-cap headroom has actually been crossed, not just drifted toward.</p>
   <p>For position drift, Suresh uses a simple band rule borrowed from institutional rebalancing practice and scaled down to retail size: if a holding's actual weight moves more than 30 percent away from its target weight — not 30 percentage points, but 30 percent of the target itself — it triggers a review, not necessarily an automatic sale. A stock he sized at a 6 percent target weight that has drifted to 8 percent has moved up by a third relative to its target, which crosses the 30 percent band and triggers a look. A stock at the same 6 percent target that has drifted to 6.8 percent has moved by roughly 13 percent relative to target, which stays inside the band and gets left alone. This proportional band matters more than a flat percentage-point rule would, because a two-point drift means something very different for a position targeted at 4 percent than for one targeted at 15 percent.</p>
-  <p>table</p>
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th>Trigger Type</th><th>Threshold</th><th>Response</th></tr>
@@ -163,7 +159,6 @@
   <h2>Lesson 103.5 — How Small Purchases Build a Big Problem: A Worked Example</h2>
   <p>This is the scenario every tool in this chapter exists to catch, and it is worth walking through with Suresh's actual numbers because it never announces itself as a single bad decision. It arrives as a series of individually sensible ones.</p>
   <p>In January of a given year, Suresh's banking-plus-development-banking bucket stood at 27 percent against his 35 percent combined ceiling — eight points of headroom, comfortably inside the cap, exactly as shown in the dashboard table in Lesson 103.3. Over the following seven months, four separate opportunities came across his radar, each involving a development bank paying an attractive dividend during a period when NEPSE's financial sector was recovering from a liquidity squeeze.</p>
-  <p>table</p>
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th>Month</th><th>Purchase</th><th>Amount</th><th>Position Weight Added</th><th>Bucket Total After Purchase</th></tr>

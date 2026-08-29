@@ -79,7 +79,6 @@
   <h2>Lesson 104.3 — Calculating XIRR for a Real Portfolio</h2>
   <p>Here is the actual calculation Sunil's brother-in-law walked him through, using Sunil's real transaction history pulled from his broker's TMS statement and his Meroshare portfolio record. The mechanics generalise to any portfolio with irregular cash flows, which in Nepal means almost every portfolio.</p>
   <p>XIRR works from a simple rule: every cash flow the investor makes into the portfolio is entered as a negative number (money leaving your pocket), and every cash flow out of the portfolio — including the current value of the portfolio, treated as if you liquidated it today — is entered as a positive number (money that would return to your pocket). Each cash flow gets a specific calendar date, not a rounded quarter or year. The XIRR is the single annualized rate of return that makes the net present value of every one of those cash flows equal exactly zero. It is solved by iteration — try a rate, see if the present values balance, adjust, try again — which is why nobody does this by hand in practice. Both Excel and Google Sheets have a built-in =XIRR(values, dates) function that does the iteration for you.</p>
-  <p>table</p>
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th>Date</th><th>Description</th><th>Cash Flow (NPR)</th></tr>
@@ -110,7 +109,6 @@
   <h2>Lesson 104.4 — Building the Personal Performance Dashboard</h2>
   <p>Once you can calculate XIRR reliably, the next step is turning it from an occasional exercise into a standing dashboard — a single sheet you update every quarter that shows four things side by side: your time-weighted return, your money-weighted return, how both compare to the NEPSE index over the same period, and which sectors or holdings actually drove the result. Looking at these four together is what prevents any one of them from telling a misleading story on its own.</p>
   <p>The time-weighted return tells you whether your specific stock selections are earning their keep, independent of your cash flow timing. The money-weighted return (XIRR) tells you the actual annualized rate your money experienced, given both your picks and your timing. The NEPSE benchmark comparison tells you whether either of those numbers is actually impressive, or just a reflection of a market that went up regardless of what you held. And the sector or per-position contribution breakdown tells you where the return actually came from — which is where uncomfortable truths tend to surface, as Lesson 104.5 shows.</p>
-  <p>table</p>
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th>Period</th><th>Time-Weighted Return</th><th>XIRR (Money-Weighted)</th><th>NEPSE Benchmark Return</th><th>Alpha vs NEPSE</th><th>Top Contributing Position</th></tr>
@@ -126,7 +124,6 @@
   <p>Per-sector or per-position contribution is best built as its own supporting worksheet, not crammed into the main dashboard row. For any period, contribution to return for a given holding is calculated as that holding's rupee gain or loss during the period, divided by the portfolio's total starting value for the period — not divided by the holding's own size. This is the detail that trips people up: a small position with a spectacular percentage gain contributes only a little to the overall portfolio return if it was a small slice of capital, while a large position with a modest percentage gain can dominate the total. Calculating it the right way is what exposes concentration in your return, which brings us to Sunil's actual reckoning.</p>
   <h2>Lesson 104.5 — The IPO Allotment That Wasn't Skill</h2>
   <p>Sunil's brother-in-law didn't stop at correcting the headline number. He asked Sunil to break 2024 down by position, because that year's XIRR — 42.6 percent — was so far above every other year that it deserved scrutiny before Sunil built any confidence around it.</p>
-  <p>table</p>
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th>Year</th><th>Sunil's XIRR</th><th>NEPSE Annual Return</th><th>Alpha vs NEPSE</th><th>Primary Driver</th></tr>
