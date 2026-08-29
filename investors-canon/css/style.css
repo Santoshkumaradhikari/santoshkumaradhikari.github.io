@@ -1518,7 +1518,9 @@ main[tabindex="-1"]:focus {
   color: var(--gold);
   margin-bottom: 8px;
 }
-.chapter-toc ol { margin: 0; padding-left: 20px; }
+/* Headings carry their own numbering (0.1.1, Lesson 35.2…), so suppress the
+   list markers to avoid a double-numbered "1. Lesson 35.1 —" effect. */
+.chapter-toc ol { margin: 0; padding-left: 0; list-style: none; }
 .chapter-toc li { margin: 3px 0; }
 .chapter-toc a { color: var(--ink-soft); text-decoration: none; }
 .chapter-toc a:hover { color: var(--gold); text-decoration: underline; }

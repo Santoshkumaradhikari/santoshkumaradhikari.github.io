@@ -151,11 +151,11 @@ TEMPLATE = """<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>The Investor's Canon &mdash; Complete Book (Print Edition)</title>
-<meta name="description" content="The complete Investor's Canon on a single page: all 118 chapters across four volumes, formatted for printing or saving as one PDF.">
+<meta name="description" content="The complete Investor's Canon on a single page: all 121 chapters across four volumes, formatted for printing or saving as one PDF.">
 <link rel="canonical" href="{domain}/investors-canon/book.html">
 <meta property="og:type" content="book">
 <meta property="og:title" content="The Investor's Canon &mdash; Complete Book (Print Edition)">
-<meta property="og:description" content="The complete Investor's Canon on a single page: all 118 chapters across four volumes, formatted for printing or saving as one PDF.">
+<meta property="og:description" content="The complete Investor's Canon on a single page: all 121 chapters across four volumes, formatted for printing or saving as one PDF.">
 <meta property="og:url" content="{domain}/investors-canon/book.html">
 <meta property="og:image" content="{domain}/og-image.png">
 <meta property="og:image:width" content="1200">
@@ -166,7 +166,7 @@ TEMPLATE = """<!DOCTYPE html>
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="{domain}/og-image.png">
 <meta name="twitter:title" content="The Investor's Canon &mdash; Complete Book (Print Edition)">
-<meta name="twitter:description" content="The complete Investor's Canon on a single page: all 118 chapters across four volumes, formatted for printing or saving as one PDF.">
+<meta name="twitter:description" content="The complete Investor's Canon on a single page: all 121 chapters across four volumes, formatted for printing or saving as one PDF.">
 <meta name="author" content="Santosh Kumar Adhikari">
 <meta name="robots" content="noindex, follow">
 <link rel="preconnect" href="https://fonts.googleapis.com">

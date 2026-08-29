@@ -360,7 +360,7 @@
     if (currentVoiceURI) { b.voice.value = currentVoiceURI; }
   }
 
-  var lastAnnounced = '';
+  var lastAnnounced = 'idle'; // start equal to the initial state so nothing is announced on page load
   function updateAll() {
     updateTriggerButtons();
     updateBarUI();
