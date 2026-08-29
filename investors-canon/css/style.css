@@ -1586,3 +1586,39 @@ main[tabindex="-1"]:focus {
 .ch-status.ready { white-space: nowrap; }
 
 .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+
+/* ---------- Nepali translate toggle (Google Translate) ---------- */
+.nav-translate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 0 12px;
+  margin-left: 2px;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink-soft);
+  font: 600 12.5px/1 "Inter", system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.nav-translate-btn:hover,
+.nav-translate-btn.is-active {
+  color: var(--gold);
+  border-color: var(--gold);
+  background: var(--bg-card);
+}
+
+/* Hide Google Translate's own UI chrome; the nav button is the only control */
+.gt-hidden { position: absolute; left: -9999px; top: -9999px; height: 0; overflow: hidden; }
+.goog-te-banner-frame, #goog-gt-tt, .goog-te-balloon-frame, .skiptranslate iframe { display: none !important; }
+body { top: 0 !important; }
+font[style*="background-color"], font[style*="box-shadow"] { background: none !important; box-shadow: none !important; }
+
+@media print {
+  .nav-translate-btn { display: none !important; }
+}

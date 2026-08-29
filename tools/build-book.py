@@ -242,6 +242,7 @@ TEMPLATE = """<!DOCTYPE html>
       <a href="study-guide.html">Study Guide</a>
       <a href="glossary.html">Glossary</a>
       <a href="{domain}/">Santosh Adhikari &rarr;</a>
+      <button type="button" class="nav-translate-btn notranslate" aria-pressed="false" aria-label="Read this page in Nepali (Google Translate)" title="Read this page in Nepali (Google Translate)">नेपाली</button>
     </nav>
   </div>
 </header>
@@ -301,6 +302,7 @@ TEMPLATE = """<!DOCTYPE html>
     }});
   }})();
 </script>
+<script src="js/translate.js" defer></script>
 
 </body>
 </html>
