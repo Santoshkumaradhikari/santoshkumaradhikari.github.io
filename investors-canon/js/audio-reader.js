@@ -1,11 +1,16 @@
 (function injectCopyright() {
   var footer = document.querySelector('.site-footer .wrap');
-  if (!footer || footer.querySelector('.copyright-line')) { return; }
-  var p = document.createElement('p');
-  p.className = 'copyright-line';
-  p.innerHTML = '© <span class="copyright-year"></span> Santosh Kumar Adhikari. All rights reserved.';
-  footer.appendChild(p);
-  var yearEl = p.querySelector('.copyright-year');
+  if (!footer) { return; }
+  var line = footer.querySelector('.copyright-line');
+  if (!line) {
+    // No-JS fallback markup is absent on this page — build the line from scratch.
+    line = document.createElement('p');
+    line.className = 'copyright-line';
+    line.innerHTML = '© <span class="copyright-year"></span> Santosh Kumar Adhikari. All rights reserved.';
+    footer.appendChild(line);
+  }
+  // Keep the year current whether the line was server-rendered or injected here.
+  var yearEl = line.querySelector('.copyright-year');
   if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
 })();
 
