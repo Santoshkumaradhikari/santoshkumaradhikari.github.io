@@ -1,0 +1,36 @@
+name: Daily Market Data Refresh
+
+on:
+  schedule:
+    # GitHub cron is UTC. 10:45 UTC = 16:30 Nepal (UTC+5:45), Mon-Fri,
+    # i.e. after the NEPSE market close at 15:00 NPT.
+    - cron: "45 10 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Fetch market data and update data page
+        run: python3 scripts/refresh-market-data.py
+        # If this step fails (source unreachable, layout changed, value failed
+        # plausibility checks), the data page is left untouched and the run
+        # shows up as failed in the Actions tab.
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "Data page unchanged - nothing to commit."
+            exit 0
+          fi
+          git add investors-canon/data/live-market-data.html
+          git commit -m "Auto: daily NEPSE market data refresh ($(date -u +%Y-%m-%d))"
+          git push
