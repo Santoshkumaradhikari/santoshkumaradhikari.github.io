@@ -1,0 +1,33 @@
+name: Canon Build
+
+# Rebuilds prev/next nav, dateModified, feed.xml and sitemap.xml after every
+# push, and commits the result so GitHub Pages redeploys. Coexists with the
+# Daily Market Data workflow (GITHUB_TOKEN pushes never trigger this).
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild nav, dates, feed.xml and sitemap.xml
+        run: python3 build.py
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "Nothing regenerated - site already consistent."
+            exit 0
+          fi
+          git commit -m "Auto: canon build - refresh nav, dates, feed.xml, sitemap.xml"
+          git push

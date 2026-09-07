@@ -1,0 +1,680 @@
+site:
+  base_url: "https://santoshkumaradhikari.com.np"
+  base_path: "/investors-canon"
+  title: "The Investor's Canon — Nepal Edition"
+  author: "Santosh Kumar Adhikari"
+volumes:
+  - id: "volume-1"
+    label: "Volume 1: FOUNDATIONS"
+    parts:
+      - roman: "Part 0"
+        title: "THE FOUNDATIONAL FRAMEWORKS (READ BEFORE PART I)"
+        chapters:
+          - slug: "ch-0-1-credit-cycle.html"
+            num: "0.1"
+            title: "Nepal’s Credit Cycle: The Hidden Equity Cycle"
+            minutes: 16
+            date_published: "2026-08-21"
+          - slug: "ch-0-2-nrb-transmission.html"
+            num: "0.2"
+            title: "NRB Policy → Equity Price Transmission: The Central Causal Chain"
+            minutes: 16
+            date_published: "2026-08-21"
+          - slug: "ch-0-3-liquidity-regimes.html"
+            num: "0.3"
+            title: "Liquidity Regimes in Nepal: The Four-Phase Framework"
+            minutes: 20
+            date_published: "2026-08-21"
+      - roman: "Part I"
+        title: "THE MASTER VARIABLE: CREDIT, LIQUIDITY & POLICY TRANSMISSION"
+        chapters:
+          - slug: "ch-01-nrb-monetary-policy.html"
+            num: "1"
+            title: "NRB’s Monetary Policy Framework"
+            minutes: 24
+            date_published: "2026-08-22"
+          - slug: "ch-02-credit-policy-impact.html"
+            num: "2"
+            title: "Credit Policy and Its Direct Impact on NEPSE"
+            minutes: 29
+            date_published: "2026-08-22"
+          - slug: "ch-03-nrb-policy-transmission.html"
+            num: "3"
+            title: "NRB Policy Transmission — From Announcement to Share Price"
+            minutes: 27
+            date_published: "2026-08-22"
+          - slug: "ch-04-external-sector.html"
+            num: "4"
+            title: "Nepal’s External Sector and NEPSE Implications"
+            minutes: 28
+            date_published: "2026-08-22"
+          - slug: "ch-05-india-economy.html"
+            num: "5"
+            title: "How India’s Economy Affects NEPSE"
+            minutes: 25
+            date_published: "2026-08-22"
+          - slug: "ch-06-global-macro-risk.html"
+            num: "6"
+            title: "Global Macro and Event-Driven Risk"
+            minutes: 30
+            date_published: "2026-08-22"
+      - roman: "Part II"
+        title: "MARKET STRUCTURE (NEPSE REALITY FIRST)"
+        chapters:
+          - slug: "ch-07-nepse-reality.html"
+            num: "7"
+            title: "What Is NEPSE and Why It Behaves Differently"
+            minutes: 36
+            date_published: "2026-08-21"
+          - slug: "ch-08-regulatory-architecture.html"
+            num: "8"
+            title: "Regulatory Architecture of the Nepal Capital Market"
+            minutes: 45
+            date_published: "2026-08-21"
+          - slug: "ch-09-market-participants.html"
+            num: "9"
+            title: "Market Participants in NEPSE"
+            minutes: 41
+            date_published: "2026-08-21"
+          - slug: "ch-10-trading-mechanics.html"
+            num: "10"
+            title: "Trading Mechanics in NEPSE"
+            minutes: 31
+            date_published: "2026-08-21"
+          - slug: "ch-11-liquidity-problem.html"
+            num: "11"
+            title: "The Liquidity Problem — NEPSE’s Most Critical Structural Characteristic"
+            minutes: 34
+            date_published: "2026-08-21"
+          - slug: "ch-12-microstructure-failures.html"
+            num: "12"
+            title: "Market Microstructure Failures in NEPSE"
+            minutes: 29
+            date_published: "2026-08-21"
+      - roman: "Part III"
+        title: "INSTRUMENTS ACTUALLY AVAILABLE IN NEPAL"
+        chapters:
+          - slug: "ch-13-ordinary-shares.html"
+            num: "13"
+            title: "Ordinary Shares"
+            minutes: 24
+            date_published: "2026-08-21"
+          - slug: "ch-14-ipos.html"
+            num: "14"
+            title: "IPOs and the Primary Market"
+            minutes: 35
+            date_published: "2026-08-21"
+          - slug: "ch-15-rights-issues-fpos.html"
+            num: "15"
+            title: "Rights Issues and FPOs"
+            minutes: 27
+            date_published: "2026-08-21"
+          - slug: "ch-16-mutual-funds.html"
+            num: "16"
+            title: "Mutual Funds in Nepal"
+            minutes: 23
+            date_published: "2026-08-21"
+          - slug: "ch-17-debentures-bonds.html"
+            num: "17"
+            title: "Debentures and Bonds in Nepal"
+            minutes: 26
+            date_published: "2026-08-21"
+          - slug: "ch-18-what-doesnt-exist.html"
+            num: "18"
+            title: "What Does Not Yet Exist in Nepal"
+            minutes: 31
+            date_published: "2026-08-21"
+      - roman: "Part IV"
+        title: "CORPORATE GOVERNANCE AND PROMOTER BEHAVIOUR"
+        chapters:
+          - slug: "ch-19-governance-landscape.html"
+            num: "19"
+            title: "The Governance Landscape in Nepal"
+            minutes: 25
+            date_published: "2026-08-21"
+          - slug: "ch-20-promoter-behaviour.html"
+            num: "20"
+            title: "Promoter Behaviour — The Most Underanalysed Risk in NEPSE"
+            minutes: 23
+            date_published: "2026-08-21"
+          - slug: "ch-21-insider-trading.html"
+            num: "21"
+            title: "Insider Trading and Information Asymmetry in Nepal"
+            minutes: 20
+            date_published: "2026-08-21"
+          - slug: "ch-22-conglomerate-crossholdings.html"
+            num: "22"
+            title: "Conglomerate Cross-Holdings and Promoter Webs in Nepal"
+            minutes: 20
+            date_published: "2026-08-21"
+          - slug: "ch-23-governance-scoring.html"
+            num: "23"
+            title: "Governance Scoring for NEPSE Companies"
+            minutes: 20
+            date_published: "2026-08-21"
+  - id: "volume-2"
+    label: "Volume 2: ANALYSIS"
+    parts:
+      - roman: "Part V"
+        title: "FINANCIAL STATEMENTS & REPORTING STANDARDS"
+        chapters:
+          - slug: "ch-24-reading-financial-statements.html"
+            num: "24"
+            title: "Reading Financial Statements Under Nepal Standards"
+            minutes: 27
+            date_published: "2026-08-22"
+          - slug: "ch-25-balance-sheet.html"
+            num: "25"
+            title: "The Balance Sheet — Deep Reading"
+            minutes: 27
+            date_published: "2026-08-22"
+          - slug: "ch-26-income-statement.html"
+            num: "26"
+            title: "The Income Statement — Deep Reading"
+            minutes: 28
+            date_published: "2026-08-22"
+          - slug: "ch-27-cash-flow-statement.html"
+            num: "27"
+            title: "The Cash Flow Statement — The Truth Teller"
+            minutes: 30
+            date_published: "2026-08-22"
+          - slug: "ch-28-red-flags.html"
+            num: "28"
+            title: "Red Flags in Nepali Financial Statements"
+            minutes: 30
+            date_published: "2026-08-22"
+      - roman: "Part VI"
+        title: "SECTOR ACCOUNTING LOGIC"
+        chapters:
+          - slug: "ch-29-banking-accounting.html"
+            num: "29"
+            title: "Banking Sector Accounting Logic"
+            minutes: 22
+            date_published: "2026-08-22"
+          - slug: "ch-30-development-bank-finance.html"
+            num: "30"
+            title: "Development Bank and Finance Company Accounting"
+            minutes: 25
+            date_published: "2026-08-22"
+          - slug: "ch-31-microfinance-accounting.html"
+            num: "31"
+            title: "Microfinance (MFI) Accounting Logic"
+            minutes: 24
+            date_published: "2026-08-22"
+          - slug: "ch-32-hydropower-accounting.html"
+            num: "32"
+            title: "Hydropower Project Accounting Logic"
+            minutes: 28
+            date_published: "2026-08-22"
+          - slug: "ch-33-insurance-accounting.html"
+            num: "33"
+            title: "Insurance Sector Accounting"
+            minutes: 25
+            date_published: "2026-08-22"
+          - slug: "ch-34-manufacturing-trading-hotel.html"
+            num: "34"
+            title: "Manufacturing, Trading & Hotel Sector Accounting"
+            minutes: 26
+            date_published: "2026-08-22"
+      - roman: "Part VII"
+        title: "TAXATION & RATIOS"
+        chapters:
+          - slug: "ch-35-capital-gains-tax.html"
+            num: "35"
+            title: "Capital Gains Tax in Nepal"
+            minutes: 24
+            date_published: "2026-08-23"
+          - slug: "ch-36-dividend-interest-tax.html"
+            num: "36"
+            title: "Dividend and Interest Taxation"
+            minutes: 28
+            date_published: "2026-08-23"
+          - slug: "ch-37-rights-bonus-tax.html"
+            num: "37"
+            title: "Tax Treatment of Rights and Bonus Shares"
+            minutes: 23
+            date_published: "2026-08-23"
+          - slug: "ch-38-tax-planning.html"
+            num: "38"
+            title: "Tax Planning for the Long-Term NEPSE Investor"
+            minutes: 32
+            date_published: "2026-08-23"
+          - slug: "ch-39-valuation-ratios.html"
+            num: "39"
+            title: "Valuation Ratios in the NEPSE Context"
+            minutes: 21
+            date_published: "2026-08-23"
+          - slug: "ch-40-profitability-ratios.html"
+            num: "40"
+            title: "Profitability Ratios — Sector by Sector"
+            minutes: 27
+            date_published: "2026-08-23"
+          - slug: "ch-41-asset-quality-ratios.html"
+            num: "41"
+            title: "Asset Quality, Capital, Solvency & Efficiency Ratios"
+            minutes: 27
+            date_published: "2026-08-23"
+      - roman: "Part VIII"
+        title: "PROJECT FINANCE & HYDROPOWER MODELLING"
+        chapters:
+          - slug: "ch-42-project-finance.html"
+            num: "42"
+            title: "Understanding Project Finance"
+            minutes: 27
+            date_published: "2026-08-23"
+          - slug: "ch-43-hydropower-financial-model.html"
+            num: "43"
+            title: "The Hydropower Financial Model"
+            minutes: 31
+            date_published: "2026-08-23"
+          - slug: "ch-44-evaluating-hydropower-stock.html"
+            num: "44"
+            title: "Evaluating a Hydropower Stock on NEPSE"
+            minutes: 28
+            date_published: "2026-08-23"
+      - roman: "Part IX"
+        title: "VALUATION"
+        chapters:
+          - slug: "ch-45-philosophy-valuation.html"
+            num: "45"
+            title: "The Philosophy of Valuation"
+            minutes: 29
+            date_published: "2026-08-23"
+          - slug: "ch-46-dcf-valuation.html"
+            num: "46"
+            title: "Discounted Cash Flow (DCF) Valuation"
+            minutes: 35
+            date_published: "2026-08-23"
+          - slug: "ch-47-relative-valuation-comps.html"
+            num: "47"
+            title: "Relative Valuation (Comps)"
+            minutes: 36
+            date_published: "2026-08-23"
+          - slug: "ch-48-dividend-discount-model.html"
+            num: "48"
+            title: "Dividend Discount Model (DDM)"
+            minutes: 30
+            date_published: "2026-08-23"
+          - slug: "ch-49-book-value-nav.html"
+            num: "49"
+            title: "Book Value and Net Asset Value Approaches"
+            minutes: 32
+            date_published: "2026-08-23"
+  - id: "volume-3"
+    label: "Volume 3: EXECUTION"
+    parts:
+      - roman: "Part X"
+        title: "BEHAVIOUR AND INVESTOR PSYCHOLOGY"
+        chapters:
+          - slug: "ch-50-why-nepali-investors-lose.html"
+            num: "50"
+            title: "Why Nepali Investors Systematically Lose Money"
+            minutes: 30
+            date_published: "2026-08-23"
+          - slug: "ch-51-core-behavioural-biases.html"
+            num: "51"
+            title: "Core Behavioural Biases for the NEPSE Investor"
+            minutes: 29
+            date_published: "2026-08-23"
+          - slug: "ch-52-building-investor-temperament.html"
+            num: "52"
+            title: "Building Investor Temperament"
+            minutes: 42
+            date_published: "2026-08-23"
+          - slug: "ch-53-behavioural-training-exercises.html"
+            num: "53"
+            title: "Behavioural Training Exercises"
+            minutes: 32
+            date_published: "2026-08-23"
+      - roman: "Part XI"
+        title: "LIQUIDITY ENGINEERING & POSITION SIZING"
+        chapters:
+          - slug: "ch-54-liquidity-first-order-risk.html"
+            num: "54"
+            title: "Liquidity as a First-Order Investment Risk in NEPSE"
+            minutes: 30
+            date_published: "2026-08-23"
+          - slug: "ch-55-exit-risk.html"
+            num: "55"
+            title: "Exit Risk in NEPSE"
+            minutes: 30
+            date_published: "2026-08-23"
+          - slug: "ch-56-adv-rule.html"
+            num: "56"
+            title: "Position Size vs. ADV Rule: The Governing Law for NEPSE"
+            minutes: 33
+            date_published: "2026-08-23"
+          - slug: "ch-57-free-float-allocation-limits.html"
+            num: "57"
+            title: "Free Float-Based Allocation Limits"
+            minutes: 26
+            date_published: "2026-08-23"
+          - slug: "ch-58-circuit-trap-exit-modelling.html"
+            num: "58"
+            title: "Circuit Trap Exit Modelling"
+            minutes: 32
+            date_published: "2026-08-23"
+      - roman: "Part XII"
+        title: "PORTFOLIO CONSTRUCTION"
+        chapters:
+          - slug: "ch-59-asset-allocation.html"
+            num: "59"
+            title: "Asset Allocation Within Nepal’s Investment Universe"
+            minutes: 34
+            date_published: "2026-08-23"
+          - slug: "ch-60-equity-portfolio-construction.html"
+            num: "60"
+            title: "Equity Portfolio Construction for NEPSE"
+            minutes: 27
+            date_published: "2026-08-23"
+          - slug: "ch-61-portfolio-risk-management.html"
+            num: "61"
+            title: "Portfolio Risk Management"
+            minutes: 25
+            date_published: "2026-08-23"
+          - slug: "ch-62-systematic-disciplined-investing.html"
+            num: "62"
+            title: "Systematic and Disciplined Investing"
+            minutes: 29
+            date_published: "2026-08-23"
+      - roman: "Part XIII"
+        title: "THE CANON SCORING SYSTEM"
+        chapters:
+          - slug: "ch-63-canon-scoring-philosophy.html"
+            num: "63"
+            title: "Philosophy of the Canon Scoring System"
+            minutes: 32
+            date_published: "2026-08-23"
+          - slug: "ch-64-seven-dimension-score.html"
+            num: "64"
+            title: "The Seven-Dimension Company Quality Score (0–100)"
+            minutes: 22
+            date_published: "2026-08-23"
+          - slug: "ch-65-sector-subscore-adjustments.html"
+            num: "65"
+            title: "Sector-Specific Sub-Score Adjustments"
+            minutes: 30
+            date_published: "2026-08-23"
+          - slug: "ch-66-using-canon-score-portfolio.html"
+            num: "66"
+            title: "Using the Canon Score in Portfolio Decisions"
+            minutes: 31
+            date_published: "2026-08-23"
+      - roman: "Part XIV"
+        title: "STRATEGIES, PLAYBOOKS & DECISION FRAMEWORKS"
+        chapters:
+          - slug: "ch-67-long-term-value-investing.html"
+            num: "67"
+            title: "Long-Term Value Investing on NEPSE"
+            minutes: 29
+            date_published: "2026-08-23"
+          - slug: "ch-68-dividend-income-strategy.html"
+            num: "68"
+            title: "Dividend Income Strategy"
+            minutes: 32
+            date_published: "2026-08-23"
+          - slug: "ch-69-ipo-rights-sector-rotation.html"
+            num: "69"
+            title: "IPO, Rights Issue & Sector Rotation Strategies"
+            minutes: 28
+            date_published: "2026-08-23"
+          - slug: "ch-70-research-tracking-systems.html"
+            num: "70"
+            title: "Research and Tracking Systems for the Nepali Investor"
+            minutes: 27
+            date_published: "2026-08-23"
+          - slug: "ch-71-banking-sector-playbook.html"
+            num: "71"
+            title: "The Banking Sector Playbook"
+            minutes: 27
+            date_published: "2026-08-23"
+          - slug: "ch-72-hydropower-sector-playbook.html"
+            num: "72"
+            title: "The Hydropower Sector Playbook"
+            minutes: 27
+            date_published: "2026-08-23"
+          - slug: "ch-73-microfinance-sector-playbook.html"
+            num: "73"
+            title: "The Microfinance Sector Playbook"
+            minutes: 26
+            date_published: "2026-08-23"
+          - slug: "ch-74-insurance-sector-playbook.html"
+            num: "74"
+            title: "The Insurance Sector Playbook"
+            minutes: 26
+            date_published: "2026-08-23"
+          - slug: "ch-75-manufacturing-hotel-playbook.html"
+            num: "75"
+            title: "The Manufacturing & Hotel Sector Playbook"
+            minutes: 32
+            date_published: "2026-08-24"
+          - slug: "ch-76-liquidity-entry-exit-playbook.html"
+            num: "76"
+            title: "The Liquidity-Based Entry and Exit Playbook"
+            minutes: 33
+            date_published: "2026-08-24"
+          - slug: "ch-77-ipo-playbook.html"
+            num: "77"
+            title: "The IPO Playbook"
+            minutes: 27
+            date_published: "2026-08-24"
+          - slug: "ch-78-rights-issue-playbook.html"
+            num: "78"
+            title: "The Rights Issue Playbook"
+            minutes: 34
+            date_published: "2026-08-24"
+      - roman: "Part XV"
+        title: "CALIBRATION & BACKTESTING"
+        chapters:
+          - slug: "ch-79-backtesting-mindset.html"
+            num: "79"
+            title: "The Backtesting Mindset"
+            minutes: 24
+            date_published: "2026-08-25"
+          - slug: "ch-80-calibrating-scoring-model.html"
+            num: "80"
+            title: "Calibrating Your Scoring Model Against NEPSE History"
+            minutes: 28
+            date_published: "2026-08-25"
+          - slug: "ch-81-testing-refining-exit-rules.html"
+            num: "81"
+            title: "Testing and Refining Exit Rules"
+            minutes: 26
+            date_published: "2026-08-25"
+          - slug: "ch-82-measuring-managing-model-drift.html"
+            num: "82"
+            title: "Measuring and Managing Model Drift"
+            minutes: 23
+            date_published: "2026-08-25"
+  - id: "volume-4"
+    label: "Volume 4: MASTERY"
+    parts:
+      - roman: "Part XVI"
+        title: "FULL CASE STUDIES (WORKED END-TO-END)"
+        chapters:
+          - slug: "ch-83-case-study-commercial-bank.html"
+            num: "83"
+            title: "Case Study 1 — A Commercial Bank"
+            minutes: 32
+            date_published: "2026-08-26"
+          - slug: "ch-84-case-study-hydropower-plant.html"
+            num: "84"
+            title: "Case Study 2 — A Hydropower Plant"
+            minutes: 33
+            date_published: "2026-08-26"
+          - slug: "ch-85-case-study-microfinance-institution.html"
+            num: "85"
+            title: "Case Study 3 — A Microfinance Institution"
+            minutes: 25
+            date_published: "2026-08-26"
+          - slug: "ch-86-case-study-manufacturing-company.html"
+            num: "86"
+            title: "Case Study 4 — A Manufacturing Company"
+            minutes: 24
+            date_published: "2026-08-26"
+          - slug: "ch-87-case-study-rights-issue.html"
+            num: "87"
+            title: "Case Study 5 — A Rights Issue Decision"
+            minutes: 34
+            date_published: "2026-08-26"
+          - slug: "ch-88-case-study-ipo-analysis.html"
+            num: "88"
+            title: "Case Study 6 — An IPO Analysis"
+            minutes: 32
+            date_published: "2026-08-26"
+          - slug: "ch-89-case-study-bank-failure.html"
+            num: "89"
+            title: "Case Study 7 — A Bank Failure or Near-Failure"
+            minutes: 34
+            date_published: "2026-08-26"
+          - slug: "ch-90-case-study-nepse-mania.html"
+            num: "90"
+            title: "Case Study 8 — The 2021 NEPSE Mania"
+            minutes: 36
+            date_published: "2026-08-26"
+          - slug: "ch-91-case-study-hydropower-overrun.html"
+            num: "91"
+            title: "Case Study 9 — A Hydropower Overrun and Delay"
+            minutes: 35
+            date_published: "2026-08-26"
+          - slug: "ch-92-case-study-insurance-company.html"
+            num: "92"
+            title: "Case Study 10 — An Insurance Company"
+            minutes: 30
+            date_published: "2026-08-26"
+          - slug: "ch-93-case-study-hotel-investment.html"
+            num: "93"
+            title: "Case Study 11 — A Hotel Sector Investment"
+            minutes: 32
+            date_published: "2026-08-26"
+      - roman: "Part XVII"
+        title: "THE INVESTMENT CONSTITUTION & PERSONAL OPERATING SYSTEM"
+        chapters:
+          - slug: "ch-94-daily-weekly-monthly-annual-routines.html"
+            num: "94"
+            title: "The Daily, Weekly, Monthly, Quarterly & Annual Routines"
+            minutes: 28
+            date_published: "2026-08-26"
+          - slug: "ch-95-investment-constitution.html"
+            num: "95"
+            title: "Writing Your Personal Investment Constitution"
+            minutes: 31
+            date_published: "2026-08-26"
+          - slug: "ch-96-overriding-the-model.html"
+            num: "96"
+            title: "Rules for Overriding the Model"
+            minutes: 28
+            date_published: "2026-08-26"
+          - slug: "ch-97-drawdown-loss-rules.html"
+            num: "97"
+            title: "Maximum Drawdown and Loss Rules"
+            minutes: 32
+            date_published: "2026-08-26"
+          - slug: "ch-98-constitution-review-protocol.html"
+            num: "98"
+            title: "The Constitution Review and Update Protocol"
+            minutes: 28
+            date_published: "2026-08-26"
+          - slug: "ch-99-full-investment-memo.html"
+            num: "99"
+            title: "The Full Investment Memo — A Complete Worked Example"
+            minutes: 30
+            date_published: "2026-08-26"
+          - slug: "ch-100-portfolio-construction-walkthrough.html"
+            num: "100"
+            title: "The Full Portfolio Construction Walkthrough"
+            minutes: 26
+            date_published: "2026-08-26"
+      - roman: "Part XVIII"
+        title: "OPERATIONAL TOOLS, DATA REFERENCE & ALMANAC"
+        chapters:
+          - slug: "ch-101-pre-buy-checklists.html"
+            num: "101"
+            title: "Pre-Buy Checklists"
+            minutes: 27
+            date_published: "2026-08-26"
+          - slug: "ch-102-financial-model-templates.html"
+            num: "102"
+            title: "Financial Model Templates"
+            minutes: 26
+            date_published: "2026-08-26"
+          - slug: "ch-103-position-sizing-portfolio-tools.html"
+            num: "103"
+            title: "Position Sizing and Portfolio Management Tools"
+            minutes: 26
+            date_published: "2026-08-26"
+          - slug: "ch-104-performance-monitoring-tools.html"
+            num: "104"
+            title: "Performance Monitoring Tools"
+            minutes: 22
+            date_published: "2026-08-26"
+          - slug: "ch-105-canon-data-pipeline.html"
+            num: "105"
+            title: "The Canon Data Pipeline"
+            minutes: 24
+            date_published: "2026-08-26"
+          - slug: "ch-106-nepse-data-handbook-almanac.html"
+            num: "106"
+            title: "The NEPSE Data Handbook — Historical Almanac"
+            minutes: 27
+            date_published: "2026-08-26"
+          - slug: "ch-107-keeping-canon-current.html"
+            num: "107"
+            title: "Keeping the Canon Current"
+            minutes: 25
+            date_published: "2026-08-26"
+          - slug: "ch-108-adapting-to-market-evolution.html"
+            num: "108"
+            title: "Adapting to Market Evolution"
+            minutes: 32
+            date_published: "2026-08-26"
+          - slug: "ch-109-lifelong-investor-mindset.html"
+            num: "109"
+            title: "The Lifelong Investor’s Mindset"
+            minutes: 29
+            date_published: "2026-08-26"
+          - slug: "ch-110-nepse-regulatory-change-tracker.html"
+            num: "110"
+            title: "The NEPSE Regulatory Change Tracker"
+            minutes: 25
+            date_published: "2026-08-26"
+          - slug: "ch-111-personal-research-library.html"
+            num: "111"
+            title: "Building Your Personal Research Library"
+            minutes: 28
+            date_published: "2026-08-26"
+          - slug: "ch-112-technology-tools-nepse-investor.html"
+            num: "112"
+            title: "Technology Tools for the NEPSE Investor"
+            minutes: 31
+            date_published: "2026-08-26"
+          - slug: "ch-113-annual-financial-calendar.html"
+            num: "113"
+            title: "The Annual Financial Calendar for NEPSE"
+            minutes: 28
+            date_published: "2026-08-26"
+          - slug: "ch-114-communication-protocols.html"
+            num: "114"
+            title: "Communication Protocols — Broker, AGM, SEBON"
+            minutes: 25
+            date_published: "2026-08-26"
+          - slug: "ch-115-multigenerational-wealth-building.html"
+            num: "115"
+            title: "Multi-Generational Wealth Building Through NEPSE"
+            minutes: 29
+            date_published: "2026-08-26"
+          - slug: "ch-116-teaching-the-canon.html"
+            num: "116"
+            title: "Teaching the Canon — Sharing Knowledge Responsibly"
+            minutes: 24
+            date_published: "2026-08-26"
+          - slug: "ch-117-canon-audit.html"
+            num: "117"
+            title: "The Canon Audit — Annual Self-Assessment"
+            minutes: 32
+            date_published: "2026-08-26"
+          - slug: "ch-118-final-synthesis.html"
+            num: "118"
+            title: "Final Synthesis — The Complete Canon Investor"
+            minutes: 25
+            date_published: "2026-08-26"

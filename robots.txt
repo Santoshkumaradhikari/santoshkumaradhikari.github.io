@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://santoshkumaradhikari.com.np/sitemap.xml
+Sitemap: https://santoshkumaradhikari.com.np/investors-canon/sitemap.xml
