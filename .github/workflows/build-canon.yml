@@ -1,8 +1,9 @@
 name: Canon Build
 
-# Rebuilds prev/next nav, dateModified, feed.xml and sitemap.xml after every
-# push, and commits the result so GitHub Pages redeploys. Coexists with the
-# Daily Market Data workflow (GITHUB_TOKEN pushes never trigger this).
+# Rebuilds prev/next nav, dateModified, feed.xml, sitemap.xml, and the
+# Whole Book page (book.html) after every push, and commits the result so
+# GitHub Pages redeploys. Coexists with the Daily Market Data workflow
+# (GITHUB_TOKEN pushes never trigger this).
 
 on:
   push:
@@ -20,6 +21,9 @@ jobs:
       - name: Rebuild nav, dates, feed.xml and sitemap.xml
         run: python3 build.py
 
+      - name: Rebuild the Whole Book page
+        run: python3 tools/build-book.py
+
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
@@ -29,5 +33,5 @@ jobs:
             echo "Nothing regenerated - site already consistent."
             exit 0
           fi
-          git commit -m "Auto: canon build - refresh nav, dates, feed.xml, sitemap.xml"
+          git commit -m "Auto: canon build - refresh nav, dates, feed.xml, sitemap.xml, book.html"
           git push
