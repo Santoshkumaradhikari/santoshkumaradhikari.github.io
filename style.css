@@ -1,32 +1,39 @@
 /* ==========================================================================
    DESIGN TOKENS
-   New architecture: vivid violet/coral/teal system, explicit data-theme
-   switching (no reliance on prefers-color-scheme alone — see the inline
-   script in index.html's <head> for FOUC-free theme detection).
+   Vibrant-but-readable system shared with The Investor's Canon: a clean,
+   bright paper surface carries real text, and a set of distinct, saturated
+   accent colours (indigo, amber, teal, rose, violet, green) does the work
+   of colour — on buttons, links, icon badges and card accents — instead of
+   tinting the whole page. Explicit data-theme switching (no reliance on
+   prefers-color-scheme alone — see the inline script in index.html's
+   <head> for FOUC-free theme detection).
    ========================================================================== */
 :root {
   /* Surfaces & text */
-  --bg: #f5f6fb;
+  --bg: #fcfbf7;
   --bg-elevated: #ffffff;
-  --bg-subtle: #ebedf7;
-  --ink: #14141f;
-  --ink-soft: #5a5d72;
-  --line: #e1e2ee;
+  --bg-subtle: #f2efe6;
+  --ink: #16181c;
+  --ink-soft: #52554f;
+  --line: #e2ddc9;
 
-  /* Vivid accent palette */
-  --violet: #6d28d9;
-  --violet-strong: #5b21b6;
-  --coral: #ea580c;
-  --teal: #0891b2;
+  /* Brand accent palette — shared with the Canon */
+  --navy: #16233d;
+  --navy-soft: #24406b;
+  --indigo: #4f46e5;
+  --indigo-strong: #3c33c9;
+  --gold: #c9820f;
+  --gold-bright: #e0980f;
   --rose: #e11d48;
-  --gold: #b45309;
   --green: #15803d;
   --blue: #2563eb;
+  --violet: #7c3aed;
+  --teal: #0d9488;
 
-  --primary: var(--violet);
-  --primary-strong: var(--violet-strong);
+  --primary: var(--indigo);
+  --primary-strong: var(--indigo-strong);
   --on-primary: #ffffff;
-  --gradient-brand: linear-gradient(135deg, var(--violet) 0%, var(--coral) 100%);
+  --gradient-brand: linear-gradient(135deg, var(--indigo) 0%, var(--gold-bright) 100%);
 
   /* Spacing scale */
   --sp-1: 0.25rem;
@@ -46,38 +53,41 @@
   --r-full: 999px;
 
   /* Shadow scale */
-  --shadow-sm: 0 1px 2px rgba(20, 20, 31, 0.06);
-  --shadow-md: 0 10px 24px -8px rgba(20, 20, 31, 0.14);
-  --shadow-lg: 0 24px 48px -16px rgba(20, 20, 31, 0.22);
+  --shadow-sm: 0 1px 2px rgba(22, 28, 26, 0.06);
+  --shadow-md: 0 10px 24px -8px rgba(22, 28, 26, 0.14);
+  --shadow-lg: 0 24px 48px -16px rgba(22, 28, 26, 0.22);
 
   /* Motion */
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --dur: 0.25s;
 
-  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-serif: "Fraunces", "Source Serif 4", Georgia, serif;
   --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
 
 [data-theme="dark"] {
-  --bg: #0c0d14;
-  --bg-elevated: #14151f;
-  --bg-subtle: #191a26;
-  --ink: #f1f1f6;
-  --ink-soft: #a7aabf;
-  --line: #262838;
+  --bg: #11131a;
+  --bg-elevated: #191c25;
+  --bg-subtle: #1e222c;
+  --ink: #f0eee5;
+  --ink-soft: #aba896;
+  --line: #2b2f3a;
 
-  --violet: #a78bfa;
-  --violet-strong: #c4b5fd;
-  --coral: #fb923c;
-  --teal: #22d3ee;
+  --navy: #9fb0cf;
+  --navy-soft: #c3d0e6;
+  --indigo: #818cf8;
+  --indigo-strong: #a5b4fc;
+  --gold: #e0a537;
+  --gold-bright: #f2bb55;
   --rose: #fb7185;
-  --gold: #fbbf24;
   --green: #4ade80;
-  --blue: #7bacf7;
+  --blue: #60a5fa;
+  --violet: #a78bfa;
+  --teal: #2dd4bf;
 
-  --primary: var(--violet);
-  --primary-strong: var(--violet-strong);
-  --on-primary: #171827;
+  --primary: var(--indigo-strong);
+  --primary-strong: var(--indigo);
+  --on-primary: #11121b;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
   --shadow-md: 0 10px 24px -8px rgba(0, 0, 0, 0.5);
@@ -93,6 +103,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 17px;
 }
 
 body {
@@ -100,7 +111,7 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-family: var(--font-sans);
-  line-height: 1.6;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -395,7 +406,7 @@ main[tabindex="-1"]:focus {
 }
 
 .btn-primary {
-  background: var(--gradient-brand);
+  background: var(--primary);
   color: var(--on-primary);
   box-shadow: var(--shadow-sm);
 }
@@ -455,12 +466,12 @@ main[tabindex="-1"]:focus {
   height: 20px;
 }
 
-.icon-badge.rose   { background: color-mix(in srgb, var(--rose) 16%, var(--bg-subtle));   color: var(--rose); }
-.icon-badge.blue   { background: color-mix(in srgb, var(--blue) 16%, var(--bg-subtle));   color: var(--blue); }
-.icon-badge.violet { background: color-mix(in srgb, var(--violet) 16%, var(--bg-subtle)); color: var(--violet); }
-.icon-badge.gold   { background: color-mix(in srgb, var(--gold) 16%, var(--bg-subtle));   color: var(--gold); }
-.icon-badge.green  { background: color-mix(in srgb, var(--green) 16%, var(--bg-subtle));  color: var(--green); }
-.icon-badge.teal   { background: color-mix(in srgb, var(--teal) 16%, var(--bg-subtle));   color: var(--teal); }
+.icon-badge.rose   { background: color-mix(in srgb, var(--rose) 22%, var(--bg-subtle));   color: var(--rose); }
+.icon-badge.blue   { background: color-mix(in srgb, var(--blue) 22%, var(--bg-subtle));   color: var(--blue); }
+.icon-badge.violet { background: color-mix(in srgb, var(--violet) 22%, var(--bg-subtle)); color: var(--violet); }
+.icon-badge.gold   { background: color-mix(in srgb, var(--gold) 22%, var(--bg-subtle));   color: var(--gold); }
+.icon-badge.green  { background: color-mix(in srgb, var(--green) 22%, var(--bg-subtle));  color: var(--green); }
+.icon-badge.teal   { background: color-mix(in srgb, var(--teal) 22%, var(--bg-subtle));   color: var(--teal); }
 
 /* Cards */
 .cards {
@@ -605,13 +616,67 @@ main[tabindex="-1"]:focus {
 .contact-card {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  align-items: flex-start;
+  gap: 22px;
+  align-items: stretch;
   background: var(--bg-elevated);
   border: 1px solid var(--line);
   border-radius: var(--r-md);
   padding: 28px;
-  max-width: 420px;
+  max-width: 460px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.form-row input,
+.form-row textarea {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--r-sm);
+  padding: 10px 12px;
+  resize: vertical;
+}
+
+.form-row input:focus-visible,
+.form-row textarea:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+  border-color: var(--primary);
+}
+
+.contact-form .btn-primary {
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.form-hint {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.contact-card > .contact-row {
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
 }
 
 .contact-row {

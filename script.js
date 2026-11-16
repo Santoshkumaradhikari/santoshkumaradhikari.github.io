@@ -202,3 +202,34 @@ if (navLinks.length) {
 
   updateActiveSection();
 }
+
+// ---------------------------------------------------------------------------
+// Contact form: no backend and no account to sign up for — it builds a
+// mailto: link from the three fields and hands it to the visitor's own
+// email app. Reuses the same obfuscated-address pattern as the plain email
+// link above it, so the address still never sits in the page as plain text.
+// ---------------------------------------------------------------------------
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const emailLink = document.querySelector('.contact-email[data-e]');
+    if (!emailLink) return;
+    let address;
+    try {
+      address = atob(emailLink.getAttribute('data-e'));
+    } catch (err) {
+      return;
+    }
+
+    const name = contactForm.elements['name'].value.trim();
+    const fromEmail = contactForm.elements['email'].value.trim();
+    const message = contactForm.elements['message'].value.trim();
+    if (!name || !fromEmail || !message) return;
+
+    const subject = `Message from ${name} via santoshkumaradhikari.com.np`;
+    const body = `${message}\n\n— ${name} (${fromEmail})`;
+    const mailto = `mailto:${address}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+  });
+}
