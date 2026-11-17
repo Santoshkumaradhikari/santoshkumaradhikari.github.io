@@ -1006,6 +1006,27 @@ table.figures tr:last-child td { border-bottom: none; }
   font-weight: 500;
 }
 
+/* On chapter pages the "First published · Last verified" line is the first <p>,
+   so the drop cap skips it and lands on the opening paragraph instead. */
+.chapter > p.chapter-dates:first-of-type::first-letter {
+  float: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding: 0;
+  color: inherit;
+  font-weight: inherit;
+}
+.chapter > p.chapter-dates:first-of-type ~ p:nth-of-type(2)::first-letter {
+  float: left;
+  font-family: var(--display);
+  font-size: 68px;
+  line-height: 56px;
+  padding: 8px 14px 4px 0;
+  color: var(--gold);
+  font-weight: 500;
+}
+
 /* ---------- Editorial toolkit (opt-in — apply by hand where useful) ---------- */
 
 /* Wrap a phrase in <span class="highlight">...</span> for a soft marker-pen accent. */
