@@ -36,7 +36,7 @@ Then visit http://localhost:8000
 
 ### The Investor's Canon (`investors-canon/`)
 
-A 118-chapter guide to investing in Nepal, organised as four volumes covering
+A 121-chapter guide to investing in Nepal, organised as four volumes covering
 Part 0 plus Parts I–XVIII. 121 chapter files in total, because Part 0 is
 numbered `0.1`–`0.3`.
 
