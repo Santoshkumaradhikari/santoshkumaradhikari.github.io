@@ -2,31 +2,31 @@
  "chapters": {
   "ch-0-1-credit-cycle.html": {
    "content_date": "2026-11-18",
-   "hash": "da8bb38a9b6d92a74b2398405de52665"
+   "hash": "ba69ffeb50bbe8e6ac91c4dc1baccad9"
   },
   "ch-0-2-nrb-transmission.html": {
-   "content_date": "2026-11-16",
-   "hash": "6087c1b81bbbeed3528340cfe92662fe"
+   "content_date": "2026-11-18",
+   "hash": "92a99fe49b6c34462ba5f0fc2012e0ba"
   },
   "ch-0-3-liquidity-regimes.html": {
-   "content_date": "2026-11-17",
-   "hash": "56acdff3bbb1e81977bb1aec4f04273c"
+   "content_date": "2026-11-18",
+   "hash": "bdd59c5ebd69ba54867131474a22f403"
   },
   "ch-01-nrb-monetary-policy.html": {
    "content_date": "2026-11-16",
    "hash": "60aba1b11ec376b2f6d2ee3e851f0a8d"
   },
   "ch-02-credit-policy-impact.html": {
-   "content_date": "2026-11-16",
-   "hash": "380682aaa3ba197e03e8fb3d39fc66bf"
+   "content_date": "2026-11-18",
+   "hash": "93f4b86f7840fe026c57a1fea90a9ac6"
   },
   "ch-03-nrb-policy-transmission.html": {
-   "content_date": "2026-11-16",
-   "hash": "3f421312dcb3285358a02a45c0186a63"
+   "content_date": "2026-11-18",
+   "hash": "52286a5525024dc1f9fb24f840c98258"
   },
   "ch-04-external-sector.html": {
    "content_date": "2026-11-18",
-   "hash": "9e69ec463c35cfabd00137e85151277e"
+   "hash": "137cf0ce6764fb1f67dd6193abc73316"
   },
   "ch-05-india-economy.html": {
    "content_date": "2026-11-16",
@@ -38,7 +38,7 @@
   },
   "ch-07-nepse-reality.html": {
    "content_date": "2026-11-18",
-   "hash": "972a9f2be1790a65b4844e47af0e1c84"
+   "hash": "b165374159708c6980dc250a57219cca"
   },
   "ch-08-regulatory-architecture.html": {
    "content_date": "2026-11-18",
@@ -46,11 +46,11 @@
   },
   "ch-09-market-participants.html": {
    "content_date": "2026-11-18",
-   "hash": "ac426d732dabe5e2e9dd726130f7900b"
+   "hash": "5b443ae6991a09cacc46f2da1581ab2b"
   },
   "ch-10-trading-mechanics.html": {
    "content_date": "2026-11-18",
-   "hash": "d91b4adc7c99000c39018da5c471ca36"
+   "hash": "819d9052081d6279b86e5ac8f28e4e2e"
   },
   "ch-11-liquidity-problem.html": {
    "content_date": "2026-11-18",
@@ -66,7 +66,7 @@
   },
   "ch-14-ipos.html": {
    "content_date": "2026-11-18",
-   "hash": "c71e838ccf114341e27b5e59cb930d10"
+   "hash": "9e21812ba7fd905668f39df520cc9870"
   },
   "ch-15-rights-issues-fpos.html": {
    "content_date": "2026-11-18",
@@ -74,15 +74,15 @@
   },
   "ch-16-mutual-funds.html": {
    "content_date": "2026-11-18",
-   "hash": "5f259176e87c522362758535b3dcfb38"
+   "hash": "6a191c0347297a90b771901bef285449"
   },
   "ch-17-debentures-bonds.html": {
-   "content_date": "2026-08-29",
-   "hash": "ee6ab3c68d8cac66562752ef7e230068"
+   "content_date": "2026-11-18",
+   "hash": "9ca8afb967bb231c55809304b8bb741f"
   },
   "ch-18-what-doesnt-exist.html": {
    "content_date": "2026-11-18",
-   "hash": "b7cbb603001c0000c4423e6184a65523"
+   "hash": "7bef14a8bfd628913bc2cb227dfe26c3"
   },
   "ch-19-governance-landscape.html": {
    "content_date": "2026-08-29",
@@ -129,8 +129,8 @@
    "hash": "ff3f6dc6fed381d2b2f405b9be5596d4"
   },
   "ch-30-development-bank-finance.html": {
-   "content_date": "2026-08-29",
-   "hash": "d0828b13d37452160ac223e8b5245868"
+   "content_date": "2026-11-18",
+   "hash": "314d9f17a444dc1ba0274e957a864ad0"
   },
   "ch-31-microfinance-accounting.html": {
    "content_date": "2026-08-29",
@@ -158,7 +158,7 @@
   },
   "ch-37-rights-bonus-tax.html": {
    "content_date": "2026-11-18",
-   "hash": "c4f84c6d6292ba6fbbf83bebcc94c7cb"
+   "hash": "9f0946378ca4e797cdcf7859068d6fce"
   },
   "ch-38-tax-planning.html": {
    "content_date": "2026-11-18",
@@ -166,15 +166,15 @@
   },
   "ch-39-valuation-ratios.html": {
    "content_date": "2026-11-18",
-   "hash": "34f83944d525146070aa63acb75c8736"
+   "hash": "1ec1508aa2eee389223ddc93fe2a20ac"
   },
   "ch-40-profitability-ratios.html": {
    "content_date": "2026-08-29",
    "hash": "a9fdde1d8f21167e93d454a000dd2076"
   },
   "ch-41-asset-quality-ratios.html": {
-   "content_date": "2026-08-29",
-   "hash": "02f7ff9b934efe47004945a5832a4fce"
+   "content_date": "2026-11-18",
+   "hash": "ed53ac80dbb77ffbdceb64e51519d0d1"
   },
   "ch-42-project-finance.html": {
    "content_date": "2026-08-29",
@@ -197,32 +197,32 @@
    "hash": "12cad108b66851d93eb6c171f7b8627d"
   },
   "ch-47-relative-valuation-comps.html": {
-   "content_date": "2026-08-29",
-   "hash": "baaeb15399c30c283043d93bea4b29d7"
+   "content_date": "2026-11-18",
+   "hash": "85ce3f90edaab4ea5cf016c59946cc08"
   },
   "ch-48-dividend-discount-model.html": {
    "content_date": "2026-11-18",
-   "hash": "46268c12673379fb08c7a63f9d1dc050"
+   "hash": "876505a8573e88415f8520cab1e1092a"
   },
   "ch-49-book-value-nav.html": {
-   "content_date": "2026-08-29",
-   "hash": "9d96a7203a0b5d8b6f5db731f847a3b1"
+   "content_date": "2026-11-18",
+   "hash": "9c614bde64c7d8057fdcfcff9beaf587"
   },
   "ch-50-why-nepali-investors-lose.html": {
    "content_date": "2026-08-29",
    "hash": "4735d855ed69b732aaf97da40fadf4e5"
   },
   "ch-51-core-behavioural-biases.html": {
-   "content_date": "2026-08-29",
-   "hash": "e78950e08e7073e590b3c91aab4be3cb"
+   "content_date": "2026-11-18",
+   "hash": "83b7dc24ba49a50c78c9570ca562ee04"
   },
   "ch-52-building-investor-temperament.html": {
    "content_date": "2026-11-18",
    "hash": "6d4c0b587d340f962141660bab4a34c0"
   },
   "ch-53-behavioural-training-exercises.html": {
-   "content_date": "2026-08-29",
-   "hash": "ee7713d085e59da1933b9f30a3e36084"
+   "content_date": "2026-11-18",
+   "hash": "0b0a32a5341eb78771408116bd4b9028"
   },
   "ch-54-liquidity-first-order-risk.html": {
    "content_date": "2026-11-18",
@@ -234,31 +234,31 @@
   },
   "ch-56-adv-rule.html": {
    "content_date": "2026-11-18",
-   "hash": "2ac75d32d9c36aefffbb00ab0a237fc1"
+   "hash": "254ff919588cf0c8475da4c600abd012"
   },
   "ch-57-free-float-allocation-limits.html": {
    "content_date": "2026-11-18",
-   "hash": "355a4ac29931f2e5aa4aa58bd14b9ec9"
+   "hash": "1ea25c6fe20813ec2ecd3bb1484fc27b"
   },
   "ch-58-circuit-trap-exit-modelling.html": {
    "content_date": "2026-11-18",
-   "hash": "c95cfde0e675d2106c1d5242ab7cb484"
+   "hash": "23224b531ea3ffaee308e3855b22e88c"
   },
   "ch-59-asset-allocation.html": {
    "content_date": "2026-11-18",
-   "hash": "686ce709c977e7f550777aecc75f542a"
+   "hash": "14ea2b0b4123e1b21b21fdd343ab4cd7"
   },
   "ch-60-equity-portfolio-construction.html": {
    "content_date": "2026-11-18",
-   "hash": "995747e18f213e930c7292dce400af49"
+   "hash": "b4743d53b345dac7ca1353a9352de52b"
   },
   "ch-61-portfolio-risk-management.html": {
-   "content_date": "2026-08-29",
-   "hash": "77045aa5088bff11195356c3d219c5ac"
+   "content_date": "2026-11-18",
+   "hash": "a0c876c73ee471a9a32c54c89daa9b4b"
   },
   "ch-62-systematic-disciplined-investing.html": {
-   "content_date": "2026-11-17",
-   "hash": "a8fd41eabd9f69012fd4c0e97e7d4b77"
+   "content_date": "2026-11-18",
+   "hash": "ad14f96e1a1011f1f97d656bc02261fc"
   },
   "ch-63-canon-scoring-philosophy.html": {
    "content_date": "2026-08-29",
@@ -269,16 +269,16 @@
    "hash": "ab8349a1cdb2c8e97fd1bcc85669a495"
   },
   "ch-65-sector-subscore-adjustments.html": {
-   "content_date": "2026-11-17",
-   "hash": "4dedf5ffe9384d5fa51bad6234dfc16a"
+   "content_date": "2026-11-18",
+   "hash": "8b3065ab27219b4e5801283333ece289"
   },
   "ch-66-using-canon-score-portfolio.html": {
    "content_date": "2026-11-18",
-   "hash": "4b14c5383f46f258f1fd189f631a44b9"
+   "hash": "caa830c208064526e83dc02385b5ab59"
   },
   "ch-67-long-term-value-investing.html": {
    "content_date": "2026-11-18",
-   "hash": "632ea8aa0434aaacae2d2aa40d873afc"
+   "hash": "e0a57bac5afb35be64cb41911fb4fa53"
   },
   "ch-68-dividend-income-strategy.html": {
    "content_date": "2026-11-18",
@@ -289,24 +289,24 @@
    "hash": "8c78bebf079a8220e8b6fab474f165bc"
   },
   "ch-70-research-tracking-systems.html": {
-   "content_date": "2026-08-29",
-   "hash": "c0fabdc9148ea6f794b401d07285c15d"
+   "content_date": "2026-11-18",
+   "hash": "0f2cb3d4f8d1934fa3456e161a4e258b"
   },
   "ch-71-banking-sector-playbook.html": {
-   "content_date": "2026-08-29",
-   "hash": "68a6c47ddc3476c0331dabe5f5cee1d6"
+   "content_date": "2026-11-18",
+   "hash": "0e959c8fe3ea0525c11b684cd9dc1b33"
   },
   "ch-72-hydropower-sector-playbook.html": {
-   "content_date": "2026-08-29",
-   "hash": "8c491f0b4c8e60417f438da31cd7b094"
+   "content_date": "2026-11-18",
+   "hash": "5691e4ba36ca546f0e08823a40524a42"
   },
   "ch-73-microfinance-sector-playbook.html": {
    "content_date": "2026-08-29",
    "hash": "b8c659a4477f462e04d058fff3555a8c"
   },
   "ch-74-insurance-sector-playbook.html": {
-   "content_date": "2026-08-29",
-   "hash": "353922633c7a0731275b8fc909656dd7"
+   "content_date": "2026-11-18",
+   "hash": "7bdffd2d07175df9cfc31e64e1da4c0d"
   },
   "ch-75-manufacturing-hotel-playbook.html": {
    "content_date": "2026-08-29",
@@ -314,7 +314,7 @@
   },
   "ch-76-liquidity-entry-exit-playbook.html": {
    "content_date": "2026-11-18",
-   "hash": "b626e9cc7c8428eb6e3a1a406e9652e6"
+   "hash": "4ee38aa9cb5aba7a88287a30d4758bc3"
   },
   "ch-77-ipo-playbook.html": {
    "content_date": "2026-11-18",
@@ -326,7 +326,7 @@
   },
   "ch-79-backtesting-mindset.html": {
    "content_date": "2026-11-18",
-   "hash": "72b0427e0d57173ad73f427371971ce2"
+   "hash": "686a01dc5e6ba52d241d35fa0158ba8c"
   },
   "ch-80-calibrating-scoring-model.html": {
    "content_date": "2026-11-18",
@@ -334,23 +334,23 @@
   },
   "ch-81-testing-refining-exit-rules.html": {
    "content_date": "2026-11-18",
-   "hash": "ac096a542e6e9a6d40e795dc957b74da"
+   "hash": "1e943ad5fd0218a8bc3c6e964add3fe6"
   },
   "ch-82-measuring-managing-model-drift.html": {
    "content_date": "2026-11-18",
-   "hash": "6fbbf3dd1a8b1e11763ec608bebfc6c4"
+   "hash": "bc821a81afced7de49b48c1e367a1483"
   },
   "ch-83-case-study-commercial-bank.html": {
    "content_date": "2026-11-18",
-   "hash": "3d1a0c8c79d706cdbdef71e4b20134a0"
+   "hash": "212a9a8ce9ddc1a537d2fe4299044bcf"
   },
   "ch-84-case-study-hydropower-plant.html": {
-   "content_date": "2026-08-29",
-   "hash": "5e1b1b4a57b66daf1237f93849144a4e"
+   "content_date": "2026-11-18",
+   "hash": "657cb42df24fef2f8cd28678098063be"
   },
   "ch-85-case-study-microfinance-institution.html": {
    "content_date": "2026-11-18",
-   "hash": "307e069a7dfb9337e81eb4a88af92f0e"
+   "hash": "882cc280194e19856ec3d7158b42e5bf"
   },
   "ch-86-case-study-manufacturing-company.html": {
    "content_date": "2026-08-29",
@@ -361,24 +361,24 @@
    "hash": "95ff1a7ec466681127a846b650e14162"
   },
   "ch-88-case-study-ipo-analysis.html": {
-   "content_date": "2026-08-29",
-   "hash": "999aee789791989e633f9d1c7d910fa4"
+   "content_date": "2026-11-18",
+   "hash": "8dff3cde58b3eae5cfd3bdd81a0c215f"
   },
   "ch-89-case-study-bank-failure.html": {
-   "content_date": "2026-08-29",
-   "hash": "4f18598d455c17cec815bcf891f5d60a"
+   "content_date": "2026-11-18",
+   "hash": "64258f9fa5cb0f29646792a1faae9a22"
   },
   "ch-90-case-study-nepse-mania.html": {
    "content_date": "2026-11-18",
-   "hash": "69ddadf3326d782c56412f8c324f83d4"
+   "hash": "b7fb0cc5a70fc38eb6c85599bd91ab36"
   },
   "ch-91-case-study-hydropower-overrun.html": {
-   "content_date": "2026-08-29",
-   "hash": "4b5a26877242d6afd0a2db9a51011adb"
+   "content_date": "2026-11-18",
+   "hash": "70dea5a11f0599407b02decf9b7ed02a"
   },
   "ch-92-case-study-insurance-company.html": {
-   "content_date": "2026-08-29",
-   "hash": "236fb28e0dbe9e3a8b926498a2872b60"
+   "content_date": "2026-11-18",
+   "hash": "a59e9317d39740908212b2fa1e113e1b"
   },
   "ch-93-case-study-hotel-investment.html": {
    "content_date": "2026-08-29",
@@ -398,7 +398,7 @@
   },
   "ch-97-drawdown-loss-rules.html": {
    "content_date": "2026-11-18",
-   "hash": "722b1843342bef75377173cfe35ada7d"
+   "hash": "a9a31f0bdc6bcad489edcb3a50c9ec07"
   },
   "ch-98-constitution-review-protocol.html": {
    "content_date": "2026-08-29",
@@ -410,27 +410,27 @@
   },
   "ch-100-portfolio-construction-walkthrough.html": {
    "content_date": "2026-11-18",
-   "hash": "b4cfdcdcabaa8b04b631d4e5bf29b1f9"
+   "hash": "cf472eebf36cef566a0e62778e37f029"
   },
   "ch-101-pre-buy-checklists.html": {
    "content_date": "2026-11-18",
-   "hash": "d8545ff69552ae99d03fa5905eec8e9b"
+   "hash": "a2e365bc50451916c07a71368f947517"
   },
   "ch-102-financial-model-templates.html": {
-   "content_date": "2026-08-29",
-   "hash": "0f2d35ccf71864b0e77f574dca9e037c"
+   "content_date": "2026-11-18",
+   "hash": "e4dac874907e9182c03a8f49a40dc839"
   },
   "ch-103-position-sizing-portfolio-tools.html": {
    "content_date": "2026-11-18",
-   "hash": "35acfeb035306572c57f71c91c37a124"
+   "hash": "31df9eb610eac55574285b7cc5dd9108"
   },
   "ch-104-performance-monitoring-tools.html": {
    "content_date": "2026-11-18",
    "hash": "354c2081a80ce2de2019b11d66e8500b"
   },
   "ch-105-canon-data-pipeline.html": {
-   "content_date": "2026-08-29",
-   "hash": "eb0ee9168475eb4d5118635e119e37f1"
+   "content_date": "2026-11-18",
+   "hash": "dabec7e524178ed753f2faabefab1c5b"
   },
   "ch-106-nepse-data-handbook-almanac.html": {
    "content_date": "2026-11-18",
@@ -438,15 +438,15 @@
   },
   "ch-107-keeping-canon-current.html": {
    "content_date": "2026-11-18",
-   "hash": "e1f9dc6be7ceb685387e2b93fef628cc"
+   "hash": "c777ebcb75ff87b78d41a2d17cc67dba"
   },
   "ch-108-adapting-to-market-evolution.html": {
-   "content_date": "2026-08-29",
-   "hash": "6143cbdb16ff13f6d857cc248f6aa5be"
+   "content_date": "2026-11-18",
+   "hash": "c61a0117a4bb87a192e2dd5658bf0378"
   },
   "ch-109-lifelong-investor-mindset.html": {
    "content_date": "2026-11-18",
-   "hash": "5013f04a3b5112c61c94e971488a6ff2"
+   "hash": "1ae402f636fb66351365a8657525ae32"
   },
   "ch-110-nepse-regulatory-change-tracker.html": {
    "content_date": "2026-08-29",
@@ -461,8 +461,8 @@
    "hash": "f5f17a0680ed07115c1e36339ebb5dfa"
   },
   "ch-113-annual-financial-calendar.html": {
-   "content_date": "2026-08-29",
-   "hash": "2ebab85f1b9d833ba82c8112cb299c67"
+   "content_date": "2026-11-18",
+   "hash": "15b12c43fd26f811242e6d28cce6676f"
   },
   "ch-114-communication-protocols.html": {
    "content_date": "2026-08-29",
@@ -477,8 +477,8 @@
    "hash": "22faa1f4226d8fa715f1e99aa836f37a"
   },
   "ch-117-canon-audit.html": {
-   "content_date": "2026-08-29",
-   "hash": "b82c723af93e0a631dda163e40cb929a"
+   "content_date": "2026-11-18",
+   "hash": "262d8878cdec4ba52c4f6cdd4f4e78df"
   },
   "ch-118-final-synthesis.html": {
    "content_date": "2026-11-18",
