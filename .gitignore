@@ -1,2 +1,6 @@
 .DS_Store
 **/.DS_Store
+
+# Local working files, never published
+investors-canon/chapters/_to_delete/
+Claude outputs/
