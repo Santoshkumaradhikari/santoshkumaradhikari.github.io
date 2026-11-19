@@ -1,28 +1,28 @@
 {
  "chapters": {
   "ch-0-1-credit-cycle.html": {
-   "content_date": "2026-11-18",
-   "hash": "0fe4fa7f4249f64348510ec026e8934d"
+   "content_date": "2026-11-19",
+   "hash": "ba9e449defba0f6f64f3577439704701"
   },
   "ch-0-2-nrb-transmission.html": {
-   "content_date": "2026-11-18",
-   "hash": "bf322cff9b7fa46ac6ff3fc7a66c97c4"
+   "content_date": "2026-11-19",
+   "hash": "ad8f192a29e0ab428f413974f502c6b6"
   },
   "ch-0-3-liquidity-regimes.html": {
-   "content_date": "2026-11-18",
-   "hash": "81fffdde15e4b51e56b36a21c73160ba"
+   "content_date": "2026-11-19",
+   "hash": "9c9fe84b53f95605db5194e2ad53b337"
   },
   "ch-01-nrb-monetary-policy.html": {
    "content_date": "2026-11-18",
    "hash": "833bac02fb32b67202767ee55f783e09"
   },
   "ch-02-credit-policy-impact.html": {
-   "content_date": "2026-11-18",
-   "hash": "c4d291a4cb8e0bc033a6bc22961ceb28"
+   "content_date": "2026-11-19",
+   "hash": "306dbd2d98584a5a38abca16d0e17b12"
   },
   "ch-03-nrb-policy-transmission.html": {
-   "content_date": "2026-11-18",
-   "hash": "0f32badefe177beb7e8b43a2a785e065"
+   "content_date": "2026-11-19",
+   "hash": "925ffc68e2a0b915857bbb49d11083d5"
   },
   "ch-04-external-sector.html": {
    "content_date": "2026-11-18",
@@ -491,5 +491,5 @@
   "glossary.html": "2026-09-07",
   "study-guide.html": "2026-09-07"
  },
- "index_date": "2026-11-18"
+ "index_date": "2026-11-19"
 }
