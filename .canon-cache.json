@@ -1,88 +1,88 @@
 {
  "chapters": {
   "ch-0-1-credit-cycle.html": {
-   "content_date": "2026-11-19",
-   "hash": "e9162a02fcf1ab2a9b8687bc270b8872"
+   "content_date": "2026-11-21",
+   "hash": "7c3b65b64006b6b8fb6f6a69e03b6ff7"
   },
   "ch-0-2-nrb-transmission.html": {
-   "content_date": "2026-11-19",
-   "hash": "74e94ae0a4710bb5770c74b40069be61"
+   "content_date": "2026-11-21",
+   "hash": "286513c011ba85882d8b0a25bf3ec0ec"
   },
   "ch-0-3-liquidity-regimes.html": {
-   "content_date": "2026-11-19",
-   "hash": "b37d405ab7241395c773b4d0fe453488"
+   "content_date": "2026-11-21",
+   "hash": "59e28633f868c041342a09def602f8ce"
   },
   "ch-01-nrb-monetary-policy.html": {
-   "content_date": "2026-11-19",
-   "hash": "072a0715d553aebf653d0411fea2ab34"
+   "content_date": "2026-11-21",
+   "hash": "7dbf1506e8528370b4be4fe165ca376e"
   },
   "ch-02-credit-policy-impact.html": {
-   "content_date": "2026-11-19",
-   "hash": "df540dbdb933af4a7e15b57ec7f81880"
+   "content_date": "2026-11-21",
+   "hash": "c8937b91f985e917b5a021a1a8580c32"
   },
   "ch-03-nrb-policy-transmission.html": {
-   "content_date": "2026-11-19",
-   "hash": "d4133643ac7b6b7b6297077c5e3bc04a"
+   "content_date": "2026-11-21",
+   "hash": "6aa592b92d108ba3049822631c8e2510"
   },
   "ch-04-external-sector.html": {
-   "content_date": "2026-11-19",
-   "hash": "b69db552d016a803fedff6986d8ff9b2"
+   "content_date": "2026-11-21",
+   "hash": "70076b92cc7cb8f6d1ce91102ef741ec"
   },
   "ch-05-india-economy.html": {
-   "content_date": "2026-11-19",
-   "hash": "2d6687ed6101748a9b01b690d2a4d9dc"
+   "content_date": "2026-11-21",
+   "hash": "f2b8c81905b5776a17a6ebedf1602a76"
   },
   "ch-06-global-macro-risk.html": {
-   "content_date": "2026-11-19",
-   "hash": "00742958d9ea6a0529e178de3bb6beaa"
+   "content_date": "2026-11-21",
+   "hash": "b358d3f8ee0c07454c2971fc2e6ef7f7"
   },
   "ch-07-nepse-reality.html": {
-   "content_date": "2026-11-19",
-   "hash": "f179c323146450f1e08d0121bc2ea6fe"
+   "content_date": "2026-11-21",
+   "hash": "6877a3594485681695050e738acfa968"
   },
   "ch-08-regulatory-architecture.html": {
-   "content_date": "2026-11-20",
-   "hash": "de8847c04cef329e4d8b3ec654147e8b"
+   "content_date": "2026-11-21",
+   "hash": "14c106a0d2d63a04608c00b21dd3cfe3"
   },
   "ch-09-market-participants.html": {
-   "content_date": "2026-11-20",
-   "hash": "5916dc8125f89fa293fa199e8883976f"
+   "content_date": "2026-11-21",
+   "hash": "6430d176375956b3593a31ed465f5b16"
   },
   "ch-10-trading-mechanics.html": {
-   "content_date": "2026-11-20",
-   "hash": "11e5ed3e4d673f06723a0b78ff717187"
+   "content_date": "2026-11-21",
+   "hash": "61e79b83398a351c0ed4223c3182b996"
   },
   "ch-11-liquidity-problem.html": {
-   "content_date": "2026-11-20",
-   "hash": "89503891f14d177f269ae6b237349d7c"
+   "content_date": "2026-11-21",
+   "hash": "5432a5d9bc98ea4f9e42763d386ee579"
   },
   "ch-12-microstructure-failures.html": {
    "content_date": "2026-11-21",
-   "hash": "382c4d8f023d47bbf71c510057c0a470"
+   "hash": "0579c180b717f86a938c756ee776240c"
   },
   "ch-13-ordinary-shares.html": {
-   "content_date": "2026-11-20",
-   "hash": "bd144259eb567aef0b887f1a76513758"
+   "content_date": "2026-11-21",
+   "hash": "91c0cd3ce9fd5005a8a57e3057541877"
   },
   "ch-14-ipos.html": {
    "content_date": "2026-11-21",
-   "hash": "329d67f121085631d089908c004a31c2"
+   "hash": "03af4cb8dd67879945c0fbb8f48df6be"
   },
   "ch-15-rights-issues-fpos.html": {
    "content_date": "2026-11-21",
-   "hash": "c26bcda116e36dcaf1bf7c8daefaa3ed"
+   "hash": "aa9dfe02ecedce9d0a635fe7d1279f4d"
   },
   "ch-16-mutual-funds.html": {
    "content_date": "2026-11-21",
-   "hash": "8a9b88993e6e377b7e2270fc25398d2c"
+   "hash": "8c3362284f9c64823d85009293147c21"
   },
   "ch-17-debentures-bonds.html": {
    "content_date": "2026-11-21",
-   "hash": "f6a532c99bc05b883e2e4f8837652449"
+   "hash": "f3339059a1f1c448d7c8cb55b930b91d"
   },
   "ch-18-what-doesnt-exist.html": {
    "content_date": "2026-11-21",
-   "hash": "da2e466005f6ae5af572dbdb35761040"
+   "hash": "14c17ea8ae4187c23220e3bbfd89668a"
   },
   "ch-19-governance-landscape.html": {
    "content_date": "2026-11-18",
