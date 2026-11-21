@@ -2790,7 +2790,7 @@
   </div>
   <h2>Lesson 12.2 — Queue Priority Mechanics: How the Order Queue Works and Who Benefits</h2>
   <h3>The Basic Logic of Price-Time Priority</h3>
-  <p>NEPSE, like most electronic exchanges, operates on a price-time priority system. This means that among all orders at the same price, the one that arrived first gets executed first. If you and another buyer both place limit orders to buy at Rs. 400, and there is only one seller at Rs. 400, the buyer whose order was registered in the system earlier gets the shares. The later buyer waits.</p>
+  <p>NEPSE, like most electronic exchanges, operates on a price-time priority system. This means that among all orders at the same price, the one that arrived first gets executed first. If you and another buyer both place limit orders to buy at Rs 400, and there is only one seller at Rs 400, the buyer whose order was registered in the system earlier gets the shares. The later buyer waits.</p>
   <p>This system sounds perfectly fair, and in isolation it is. The problem is that 'time of arrival' is not simply 'the moment you pressed the buy button.' Time of arrival in an electronic exchange is the microsecond the order reaches the matching engine. The distance between you pressing a button and that order landing at the engine depends on your connection, your broker's system, and the routing path your order takes. For a retail investor in Kathmandu using a mobile app, that path may involve multiple hops and significant latency. For a trader using a direct connection at a broker firm's terminal, that path is much shorter.</p>
   <h3>The Broker Terminal Advantage</h3>
   <p>On NEPSE, every order — including any order a broker places for itself or for favoured clients — goes through the broker's TMS to the exchange's matching engine. But not every path is equally fast. An order typed in by a broker's dealing staff, or sent from accounts the broker controls, can reach the exchange sooner than an order sent from a phone app during a busy opening, when apps are slow. There is little public data on how big this edge is. But in a queue where the first orders at the circuit price get the shares, a fraction of a second can decide who is filled.</p>
@@ -2799,7 +2799,7 @@
   <p>Queue position matters not just for execution but for price discovery. When a large order enters NEPSE and starts consuming the order book, the price moves. Traders with early queue positions get filled at earlier, lower prices. Traders at the back of the queue — typically retail investors — get filled at later, higher prices, or do not get filled at all as the price moves away from their limit. They then face a choice: chase the price up (paying more) or miss the opportunity (losing the trading time they allocated).</p>
   <p>Sophisticated market participants understand this and deliberately use queue mechanics. They place exploratory orders early in the session, at modest sizes, to establish queue priority. They wait. When institutional or retail demand starts showing up and the price begins to move, their queued orders execute first. They sell into that demand at progressively higher prices.</p>
   <h3>Spoofing at the Queue Level</h3>
-  <p>Spoofing is the practice of placing large visible orders that a trader has no intention of executing, for the purpose of inducing other participants to behave in ways that benefit the spoofer, after which the fake orders are cancelled. In NEPSE, spoofing occurs at the queue level with some regularity. A large sell order appearing in the queue signals abundant supply and discourages buyers. Retail investors seeing that large sell order at Rs. 450 may conclude: there is heavy resistance here; I will wait. Meanwhile, the operator who placed the fake sell order is buying at lower prices. Once their buy accumulation is complete, the large sell order disappears. Retail investors, seeing the resistance removed, become buyers. The operator sells into their demand.</p>
+  <p>Spoofing is the practice of placing large visible orders that a trader has no intention of executing, for the purpose of inducing other participants to behave in ways that benefit the spoofer, after which the fake orders are cancelled. In NEPSE, spoofing occurs at the queue level with some regularity. A large sell order appearing in the queue signals abundant supply and discourages buyers. Retail investors seeing that large sell order at Rs 450 may conclude: there is heavy resistance here; I will wait. Meanwhile, the operator who placed the fake sell order is buying at lower prices. Once their buy accumulation is complete, the large sell order disappears. Retail investors, seeing the resistance removed, become buyers. The operator sells into their demand.</p>
   <p>On NEPSE this needs no high-speed computers. It is done by hand, in a thin order book: a trader places a large order a little away from the market, where everyone can see it in the market-depth screen, and cancels it later. In more developed markets, surveillance software detects such patterns within minutes. On NEPSE, order cancellations are less closely tracked, giving spoofers more time — if they are caught at all. The risk of automated versions is one reason SEBON suspended AI-based order entry in August 2026 until the practice had been studied.</p>
   <div class="callout">
     <span class="callout-label">WARNING</span>
@@ -2892,7 +2892,7 @@
   <h3>The Multi-Day Circuit Sequence</h3>
   <p>The most advanced circuit trick uses several circuits in a planned sequence. First come upper circuits for several days to pull in retail buyers. Then comes a sudden reversal — lower circuits — to shake out the nervous retail buyers who bought near the top. They sell at a loss, often to the same operators who sold to them at higher prices. The full cycle can take just two to three weeks in a thinly traded share. The operator who controls it profits both ways: selling to retail buyers during the upper circuits, and buying back from panicking sellers during the lower circuits.</p>
   <h3>What the Data Show</h3>
-  <p>To test whether chasing circuit runs pays, the Canon looked at every time a share closed at its upper limit three days in a row between 2015 and November 2026, leaving out the first months after a new listing: 120 cases in 76 companies (a Canon calculation from public daily price data; companies that later merged or delisted are not included). Buying at the close of that third day did not pay on average. In 81 of the 120 cases, the third circuit day was also the last. A month (20 trading days) later, the median share was about 3% lower — about 4% behind the typical NEPSE share over the same days — and 61% of cases were down. Six months later the results were spread very widely: about half had beaten the typical share, but nearly one in three (31%) was more than 20% below the price on day three. In plain terms, buying after three upper circuits is a coin toss with a heavy downside, not an edge.</p>
+  <p>To test whether chasing circuit runs pays, the Canon looked at every time a share closed at its upper limit three days in a row between 2015 and November 2026, leaving out the first months after a new listing: 145 cases in 86 companies (a Canon calculation from public daily price data, counting a day as an upper circuit when the close was within one percentage point of the limit; companies that later merged or delisted are not included). Buying at the close of that third day did not pay on average. In 101 of the 145 cases — seven in ten — the third circuit day was also the last. A month (20 trading days) later, the median share was about 4.5% lower — about 5 points behind the typical NEPSE share over the same days — and 62% of cases were down. Six months later the results were spread very widely: about half had beaten the typical share, but nearly one in three (30%) was more than 20% below the price on day three. In plain terms, buying after three upper circuits is a coin toss with a heavy downside, not an edge.</p>
   <div class="callout">
     <span class="callout-label">WARNING</span>
     Multiple consecutive upper circuits followed by a sudden reversal to lower circuits is a recognisable and destructive pattern in NEPSE. Retail investors who buy near the peak of a multi-day upper circuit sequence routinely absorb the maximum loss when the reversal comes. If you are considering buying into a stock that has already hit upper circuit three or more consecutive days, you need an extraordinarily strong fundamental reason — not the circuit streak itself — to justify the purchase.
@@ -2902,7 +2902,7 @@
   <p>Rule 1: Never use market orders in illiquid scrips.</p>
   <p>A market order in a thin NEPSE stock is an invitation for adversarial execution. You are saying: I will buy at any price. Brokers and operators will accommodate you at the worst price available. Use limit orders exclusively. Set your limit at a price that reflects your valuation, not the current market momentum. If the stock does not come to your price, you do not buy. This discipline protects you from paying the operator's distribution price.</p>
   <p>Rule 2: Treat consecutive upper circuit days as a warning signal, not a buy signal.</p>
-  <p>The more days a stock has been at upper circuit, the higher the probability that you are looking at an operator's distribution phase rather than a genuine breakout. The time to buy a good company is when no one is talking about it, not when everyone is fighting to get in. Reverse your instinct: excitement in NEPSE is usually a reason for caution. In the Canon's data, two out of three three-day circuit runs ended on day three — the day most latecomers buy.</p>
+  <p>The more days a stock has been at upper circuit, the higher the probability that you are looking at an operator's distribution phase rather than a genuine breakout. The time to buy a good company is when no one is talking about it, not when everyone is fighting to get in. Reverse your instinct: excitement in NEPSE is usually a reason for caution. In the Canon's data, seven out of ten three-day circuit runs ended on day three — the day most latecomers buy.</p>
   <p>Rule 3: Require a fundamental catalyst for every volume surge you investigate.</p>
   <p>Before you act on any volume spike, ask: what has changed for this company? Earnings release? Dividend announcement? Regulatory approval? New contract? If you cannot identify a credible, verifiable fundamental catalyst within ten minutes of searching, assume the volume is manufactured. Walk away. The opportunity will not be lost — there is no opportunity in wash-traded volume, only the illusion of one.</p>
   <p>Rule 4: Never make investment decisions based primarily on social media information.</p>
@@ -2926,7 +2926,7 @@
     <tr><th>Type of claim</th><th>Examples from this chapter</th></tr>
     <tr><td>Fact</td><td>Price-time priority; the 15% band since April 2026; the September 2026 data-centre outage; the August 2026 suspension of AI-based order entry; that SEBON and the CIB opened the cases described, and that charge sheets were filed in June 2026</td></tr>
     <tr><td>Allegation (not decided by a court)</td><td>Wash trading through 15 accounts; the Joshi Hydro rumour profits; Rs 3.80 billion of purchases without advance payment through one broker. The accused deny the charges.</td></tr>
-    <tr><td>Canon calculation</td><td>The 120 three-day upper-circuit runs and what followed; turnover per share from Chapter 11</td></tr>
+    <tr><td>Canon calculation</td><td>The 145 three-day upper-circuit runs and what followed; turnover per share from Chapter 11</td></tr>
     <tr><td>Observed pattern</td><td>The four phases of a price ramp; upper- and lower-circuit traps; volume surges without news</td></tr>
     <tr><td>Judgement</td><td>How large the broker speed advantage is; how often front-running happens (it is illegal and rarely proved)</td></tr>
   </table>
@@ -3106,24 +3106,24 @@
   <h2>Lesson 14.1 — How a Company Lists on NEPSE: The IPO Process Step by Step</h2>
   <h3>The Regulatory Architecture</h3>
   <p>Nepal's primary market operates under a specific legal and institutional framework that every serious investor should understand. The Securities Act, 2063 (2007) is the foundational legislation. SEBON — the Securities Board of Nepal — is the apex regulatory authority, equivalent to the SEC in the United States or SEBI in India. NEPSE — the Nepal Stock Exchange — is the trading venue where approved securities are listed and subsequently traded.</p>
-  <p>No company can offer shares to the public without SEBON's prior approval. This is a non-negotiable starting point. The approval process is not a rubber stamp — it involves a thorough review of the company's financials, legal standing, promoter credentials, and the adequacy of the prospectus disclosures.</p>
+  <p>No company can offer shares to the public without SEBON's prior approval. This is a non-negotiable starting point. SEBON checks that the prospectus is complete and follows the rules, and it can demand changes before it approves. But approval is not a judgment that the price is fair or that the company is safe. SEBON's job is to make sure the facts are disclosed; deciding whether they add up to a good investment is your job.</p>
   <p>Who Can Issue an IPO?</p>
   <p>The eligibility criteria for an IPO in Nepal are defined by SEBON's regulations and differ depending on the sector. Generally, a company must:</p>
   <p>Be incorporated as a public limited company under the Companies Act, 2063 (2006)</p>
   <p>Have a minimum paid-up capital as specified by the relevant regulatory authority for its sector (e.g., Nepal Rastra Bank for banks and financial institutions, the Nepal Insurance Authority for insurance companies)</p>
-  <p>Have completed at least one fiscal year of operations in most cases, though certain infrastructure and hydropower companies may be exempted</p>
+  <p>Meet any track-record rules for its sector — for example, investment companies now need at least three years of operations and profits in the last two years. The exact conditions differ by sector, and some infrastructure and hydropower companies list before full commercial operation</p>
   <p>Have audited financial statements prepared according to Nepal Financial Reporting Standards (NFRS)</p>
   <p>Have appointed a licensed Issue Manager (also called a Merchant Banker) who will take responsibility for the issue process</p>
-  <p>Obtain a credit rating where the rules require one, from one of the three SEBON-licensed agencies: ICRA Nepal, CARE Ratings Nepal or Infomerics Credit Rating Nepal. Investment companies, for example, have needed one since SEBON's stricter criteria of 2025, and most recent issuers publish a rating in their prospectus.</p>
+  <p>Obtain a rating where the rules require one, from one of the three rating agencies licensed by SEBON: ICRA Nepal, CARE Ratings Nepal or Infomerics Credit Rating Nepal. Investment companies, for example, have needed a credit rating since SEBON's stricter criteria of 2025, and most recent issuers disclose a rating in their prospectus. (The two kinds of rating are explained below.)</p>
   <h3>The Step-by-Step IPO Process</h3>
   <p>Understanding the sequential nature of the IPO process helps investors anticipate what information will become available and when.</p>
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th scope="col">Step</th><th scope="col">Activity</th><th scope="col">Key Players</th><th scope="col">Investor Significance</th></tr>
-    <tr><td>1</td><td>Board resolution to go public; appointment of Issue Manager</td><td>Company Board, Issue Manager</td><td>Signals management's intent and choice of underwriter — a respected Issue Manager lends credibility</td></tr>
+    <tr><td>1</td><td>Board resolution to go public; appointment of Issue Manager</td><td>Company Board, Issue Manager</td><td>Signals management's intent. The Issue Manager's track record is worth checking, but reputation is no substitute for reading the prospectus yourself</td></tr>
     <tr><td>2</td><td>Due diligence by Issue Manager on financials, legal compliance, business model</td><td>Issue Manager, Company Auditors, Legal Counsel</td><td>This is where genuine risks are uncovered — or buried. The quality of this step determines prospectus accuracy</td></tr>
     <tr><td>3</td><td>Preparation and filing of the Draft Prospectus with SEBON</td><td>Issue Manager, Company</td><td>The first public document — study it before the application window opens</td></tr>
-    <tr><td>4</td><td>SEBON review. The rules set a review period, but the clock stops each time SEBON sends questions back, so in practice it often takes many months</td><td>SEBON</td><td>SEBON may request clarifications or modifications — long delays can signal problems</td></tr>
+    <tr><td>4</td><td>SEBON review. The rules set a review period, but the clock stops each time SEBON sends questions back, so in practice it often takes many months</td><td>SEBON</td><td>SEBON may request clarifications or modifications. A long delay can mean disclosure problems — or simply a crowded queue — so find out which</td></tr>
     <tr><td>5</td><td>SEBON approval and issuance of permit to open subscription</td><td>SEBON</td><td>The green light. Issue Manager publishes the Final Prospectus</td></tr>
     <tr><td>6</td><td>Public notice and subscription window opens (at least 4 working days, and up to 15 days)</td><td>Issue Manager, Banks (ASBA)</td><td>The window in which investors apply via ASBA or MeroShare</td></tr>
     <tr><td>7</td><td>Subscription window closes; application data compiled</td><td>Issue Manager, Banks, CDSC</td><td>All valid applications are pooled for the allotment process</td></tr>
@@ -3137,14 +3137,25 @@
   <p>The Issue Manager (IM) is the most important third party in an IPO. A licensed merchant bank or financial institution, the IM wears multiple hats: financial adviser to the issuer, underwriter (in many cases), compliance verifier, and bridge between the company and SEBON. The quality of the IM directly affects the quality of disclosures. A high-reputation IM has more to lose by endorsing a weak or misleading prospectus. Conversely, smaller or less established IMs may lack the leverage or incentive to push back on issuers.</p>
   <div class="callout">
     <span class="callout-label">INVESTOR TIP</span>
-    Before reading the prospectus, check who the Issue Manager is. Cross-reference their past IPOs: Did those companies perform? Were there material omissions later revealed? A track record of poorly disclosed issues should increase your scepticism. Then check the credit rating. An IPO grade (used by CARE Ratings Nepal, for example) runs from Grade 1, strong fundamentals, to Grade 5, poor fundamentals. Madhya Bhotekoshi's 2021 IPO carried Grade 4+ — 'below average fundamentals' — and was still oversubscribed nearly four times, which shows how few applicants look.
+    Before reading the prospectus, check who the Issue Manager is. Cross-reference their past IPOs: Did those companies perform? Were there material omissions later revealed? A track record of poorly disclosed issues should increase your scepticism. Bear in mind that this is a monitoring habit, not a proven predictor: this book has not tested whether Issue Managers with better reputations actually bring better IPOs.
+  </div>
+  <h3>IPO Grading vs Credit Rating: Two Different Tools</h3>
+  <p>Nepali prospectuses can carry two kinds of rating, and they answer different questions. Mixing them up is a common mistake.</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th scope="col"></th><th scope="col">IPO grade</th><th scope="col">Credit (issuer) rating</th></tr>
+    <tr><td>Question it answers</td><td>How strong are the company's fundamentals compared with other issuers?</td><td>How strong is the company financially, and how likely is it to meet its debts on time?</td></tr>
+    <tr><td>Scale (example)</td><td>CARE-NP IPO Grade 1 (strong fundamentals) to Grade 5 (poor)</td><td>Letter grades, e.g. CARE-NP A-, BBB-, B+ or ICRA's LB+; an '(Is)' tag marks an issuer rating</td></tr>
+    <tr><td>Real examples</td><td>Madhya Bhotekoshi's 2021 IPO: Grade 4+ ('below average fundamentals') — still oversubscribed nearly four times</td><td>Reliance Spinning Mills: CARE-NP A- (Is), on credit watch; Bhagawati Steel (2026): CARE-NP BBB- (Is), on watch with negative implications</td></tr>
+    <tr><td>What it does not tell you</td><td colspan="2">Neither is a buy recommendation, and neither says whether the issue price is attractive. A strong company can still be sold to you at too high a price.</td></tr>
+  </table>
   </div>
   <h3>Underwriting and Its Implications</h3>
-  <p>Many IPOs in Nepal are underwritten, meaning the underwriter guarantees to purchase any shares not subscribed by the public. Underwriting sounds like a safety net, but it is worth questioning why an underwriter agreed to guarantee the issue. Underwriters are professional investors — if they were genuinely uncertain about demand, they would charge a very high underwriting premium or decline entirely. An underwritten IPO at a reasonable premium suggests the IM is confident in minimum demand. An IPO that struggles to find underwriters is a warning signal.</p>
+  <p>Many IPOs in Nepal are underwritten, meaning the underwriter agrees to buy any shares the public does not take. Read the terms: how much of the issue is underwritten, for what fee, and on what conditions. A willingness to underwrite is a weak signal at best. The underwriter may simply be paid enough to take the risk, or may expect the issue to sell out anyway. It is not proof of strong demand, and still less proof of value.</p>
   <h2>Lesson 14.2 — The Prospectus: What to Read, What to Verify, and What to Question</h2>
   <p>The prospectus is the single most important document an IPO investor can study. It is both a legal disclosure and a marketing document — a duality that creates tension. The company must, by law, disclose material risks. At the same time, it presents itself in the most favourable light possible. The sophisticated investor learns to see through the presentation to the substance beneath.</p>
   <h3>Legal Status of the Prospectus</h3>
-  <p>Under Nepal's securities laws, a prospectus is a legally binding document. Any material misstatement or omission that causes loss to investors can attract civil and criminal liability for the company's directors and the Issue Manager. This legal weight is the primary reason why prospectuses, despite their promotional tone, contain information that is genuinely useful — because omitting key risks is itself a legal violation.</p>
+  <p>The Securities Act 2063 makes the company, the directors who sign the prospectus and named experts liable for false or misleading statements in it, under the conditions the Act sets out, and the Companies Act adds its own rules on prospectus content. That legal risk is the main reason prospectuses, despite their promotional tone, contain genuinely useful information. But liability is not automatic for every omission, and winning compensation in Nepal's courts is slow — so treat the prospectus as a document to check, not to trust.</p>
   <h3>The Anatomy of a Nepali Prospectus</h3>
   <p>A standard NEPSE prospectus is structured in predictable sections. Knowing what each section should contain — and what to look for — transforms a tedious document into a rich source of investment intelligence.</p>
   <div style="overflow-x:auto;">
@@ -3152,7 +3163,7 @@
     <tr><th scope="col">Section</th><th scope="col">What It Contains</th><th scope="col">What to Look For / Question</th></tr>
     <tr><td>Company Overview</td><td>Legal name, registration, incorporation date, registered office, nature of business</td><td>How old is the company? Has it changed its business model? Multiple address changes can suggest instability</td></tr>
     <tr><td>Share Capital Structure</td><td>Authorised, issued, and paid-up capital; promoter vs public shareholding breakdown</td><td>What percentage are promoters retaining? Low promoter retention (below 51% post-IPO in most sectors) raises questions about their conviction</td></tr>
-    <tr><td>Objects of the Issue</td><td>How IPO proceeds will be used (expansion, debt repayment, working capital, etc.)</td><td>Is the stated use credible? Debt repayment is neutral; expansion is positive; vague 'general corporate purposes' is a yellow flag</td></tr>
+    <tr><td>Objects of the Issue</td><td>How IPO proceeds will be used (expansion, debt repayment, working capital, etc.)</td><td>Is the stated use credible, and will it earn more than the money costs? Repaying expensive debt can add value; expansion adds value only if it earns more than the cost of capital; vague 'general corporate purposes' is a yellow flag</td></tr>
     <tr><td>Financial Statements (3 years audited)</td><td>Balance sheet, income statement, cash flow, notes to accounts</td><td>The core analytical section — see detailed guidance below</td></tr>
     <tr><td>Risk Factors</td><td>Legally mandated disclosures of material risks</td><td>Are risks specific and honest, or generic and boilerplate? Vague risk disclosures often mean real risks are being minimised</td></tr>
     <tr><td>Management &amp; Promoters</td><td>Director profiles, shareholding, related-party transactions</td><td>Look for conflicts of interest, related-party loans, and promoters with histories in failed companies</td></tr>
@@ -3172,7 +3183,7 @@
   <p>For all sectors: Is revenue growth accompanied by cash flow growth? Revenue that grows without corresponding cash collections may indicate aggressive accrual accounting.</p>
   <h3>Balance Sheet Integrity</h3>
   <p>Assets on a balance sheet are only as reliable as the judgements behind them. For a Nepali prospectus, focus on:</p>
-  <p>Non-Performing Loans (NPL ratio) for BFIs: Compare against NRB's mandated thresholds and sector averages. An NPL above 5% at IPO time warrants serious scrutiny.</p>
+  <p>Non-Performing Loans (NPL ratio) for BFIs: Compare against NRB's rules and, above all, against peers: the commercial-bank average was about 5.35% in mid-July 2026, so a fixed '5% red line' no longer works. Look at the trend, how much has been set aside for losses (provisions), and what kinds of loans are going bad.</p>
   <p>Fixed asset revaluations: Some companies revalue land and buildings upward just before an IPO to inflate book value. Check whether the paid-up capital increase was driven by bonus shares issued from revaluation reserves — this is common and can inflate per-share book value artificially.</p>
   <p>Goodwill and intangibles: Are these significant? Have they been impairment-tested recently? Impairment charges post-IPO can significantly dent reported profits.</p>
   <p>Related-party receivables: Large receivables from promoter-affiliated entities are a classic indicator of fund diversion or disguised losses.</p>
@@ -3182,7 +3193,7 @@
   <table class="figures">
     <tr><th scope="col">Metric</th><th scope="col">Year 1</th><th scope="col">Year 2</th><th scope="col">Year 3</th><th scope="col">Trend Interpretation</th></tr>
     <tr><td>Net Profit Margin (%)</td><td>Fill from data</td><td>Fill from data</td><td>Fill from data</td><td>Declining margins suggest cost pressure or revenue quality issues</td></tr>
-    <tr><td>Return on Equity (%)</td><td>Fill from data</td><td>Fill from data</td><td>Fill from data</td><td>ROE below 10% in a Nepali context is mediocre; above 20% deserves examination of leverage</td></tr>
+    <tr><td>Return on Equity (%)</td><td>Fill from data</td><td>Fill from data</td><td>Fill from data</td><td>Compare with the return shareholders require (the cost of equity — this book uses about 12% as a working example). ROE persistently below that destroys value; a very high ROE deserves a check on leverage and one-off gains</td></tr>
     <tr><td>Earnings Per Share (EPS)</td><td>Fill from data</td><td>Fill from data</td><td>Fill from data</td><td>Growth trend vs dilution from IPO shares</td></tr>
     <tr><td>Dividend History</td><td>Fill from data</td><td>Fill from data</td><td>Fill from data</td><td>Companies paying regular dividends demonstrate cash generation discipline</td></tr>
   </table>
@@ -3196,15 +3207,15 @@
   <p>Ask three questions of every risk factor: (1) Is this risk real and company-specific, or generic sector boilerplate? (2) Has this risk already partially materialised — and is the prospectus disclosing the current impact? (3) Is this risk quantifiable, and if so, why has the company not quantified it?</p>
   <p>The Auditor's Report: A Checklist</p>
   <p>The auditor's opinion is summarised in a few paragraphs, but its implications are enormous. Check:</p>
-  <p>Opinion type: Unqualified (clean), Qualified, Adverse, or Disclaimer of opinion. Only an unqualified opinion should be treated as a green light.</p>
-  <p>Emphasis of matter paragraphs: These are not qualifications but draw attention to issues the auditor believes are important. Do not ignore them.</p>
+  <p>Opinion type: unqualified (clean), qualified, adverse, or disclaimer of opinion. A clean opinion means the auditor found the accounts fairly presented — it does not rule out fraud, weak business economics or future losses. A qualified opinion is not automatically fatal: read the 'basis for opinion' to see what the problem is, how large it is, whether it affects the whole accounts, and whether it recurs. Adverse opinions and disclaimers are serious red flags.</p>
+  <p>Emphasis of matter paragraphs: these do not change the opinion, but they point to something the auditor thinks you must not miss. Watch especially for a 'material uncertainty related to going concern' — the auditor's warning that the company's survival depends on events that may not happen.</p>
   <p>Key audit matters (under NFRS/ISA): What did the auditors identify as the most judgment-intensive areas? This reveals where the financial statements are most susceptible to management manipulation.</p>
   <p>Auditor identity: Is the auditor one of the recognised mid-to-large firms? Auditors with limited capacity or independence concerns introduce additional risk.</p>
   <h2>Lesson 14.3 — IPO Pricing in Nepal: Par, Premium and Book-Built Issues</h2>
   <p>Pricing is the variable that determines whether an IPO is a bargain, a fair deal, or a trap. In Nepal's market, IPO pricing follows one of three models: par value issues, fixed-premium issues and book-built issues. Understanding the difference — and what each model implies — is foundational to IPO analysis.</p>
   <h3>The Concept of Par Value</h3>
   <p>Par value (also called face value or nominal value) is the stated value of a share as defined in a company's Memorandum of Association. In Nepal, the standard par value is Rs 100 per share; mutual fund units use Rs 10. Par value is an accounting concept, not an economic one — it says nothing about what a share is worth.</p>
-  <p>When a company issues shares at par value — Rs 100 per share — it is issuing them at the accounting floor, not at any assessed market value. This is not inherently bad: many legitimate early-stage companies or companies with strong growth prospects offer at par to attract public investors. But the price being Rs 100 does not mean the shares are worth Rs 100.</p>
+  <p>When a company issues shares at par value — Rs 100 per share — it is issuing them at their nominal value — the legal starting point — not at any assessed market value. Nominal value, issue price and true (intrinsic) value are three different things. This is not inherently bad: many legitimate early-stage companies or companies with strong growth prospects offer at par to attract public investors. But the price being Rs 100 does not mean the shares are worth Rs 100.</p>
   <p>Premium Issues: The Logic and the Risk</p>
   <p>A premium issue occurs when shares are offered above par value. If par is Rs 100 and the issue price is Rs 250, the company is asking investors to pay a Rs 150 premium per share. This premium is credited to the share premium account, which increases the company's equity (but not its paid-up capital).</p>
   <p>Premium pricing is justified when a company can demonstrate, through its financials, that the intrinsic value of the share substantially exceeds par value. This is typically calculated on the basis of:</p>
@@ -3227,13 +3238,16 @@
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th scope="col">Valuation Metric</th><th scope="col">How to Calculate</th><th scope="col">How to Interpret for a Nepali IPO</th></tr>
-    <tr><td>Price-to-Book (P/B)</td><td>IPO Price ÷ Net Worth Per Share</td><td>Below 1.0x suggests discount to assets (good). Above 2.0x requires strong ROE justification. Sector norms vary significantly.</td></tr>
-    <tr><td>Price-to-Earnings (P/E)</td><td>IPO Price ÷ Latest Year EPS</td><td>Compare to post-listing sector P/E on NEPSE. If the IPO P/E is materially above sector average, you are paying for growth that may not materialise.</td></tr>
+    <tr><td>Price-to-Book (P/B)</td><td>IPO Price ÷ Net Worth Per Share</td><td>Not good or bad by itself. Below 1.0x can mean a bargain — or assets that earn too little, are overstated, or hide liabilities. A high P/B can be fair if the company earns a high, lasting return on equity. Compare with the 'justified P/B' below</td></tr>
+    <tr><td>Price-to-Earnings (P/E)</td><td>IPO Price ÷ EPS after the IPO (latest profit ÷ shares after the new issue)</td><td>Compare to post-listing sector P/E on NEPSE. If the IPO P/E is materially above sector average, you are paying for growth that may not materialise.</td></tr>
     <tr><td>IPO P/E vs. Secondary Market P/E</td><td>IPO P/E ÷ Sector Average P/E on NEPSE</td><td>A ratio above 1.5 means the IPO is pricing in 50% more growth than what the secondary market currently assigns to similar companies.</td></tr>
     <tr><td>Dividend Yield at IPO Price</td><td>Dividend Per Share ÷ IPO Price</td><td>For income-oriented investors, is the projected yield competitive against fixed deposits? NRB-regulated BFI FDs typically set the baseline.</td></tr>
     <tr><td>EPS Growth Trend</td><td>YoY growth in EPS over 3 years</td><td>Negative or declining EPS growth alongside a premium issue is a strong warning signal.</td></tr>
   </table>
   </div>
+  <h3>Two Calculations Every IPO Needs</h3>
+  <p><strong>1. Use the share count after the IPO.</strong> New shares dilute earnings per share. Suppose a company earned Rs 100 million last year and had 10 million shares: EPS is Rs 10. It now issues 5 million new shares at Rs 150. If profit does not rise straight away, EPS after the IPO is Rs 100 million ÷ 15 million = Rs 6.67. The P/E you are really paying is 150 ÷ 6.67 = 22.5 times, not 150 ÷ 10 = 15 times. It is like sharing the same pot of dal among more people: each plate gets less.</p>
+  <p><strong>2. Compare price-to-book with what the business can earn.</strong> A simple, widely used formula links the two: justified P/B = (ROE − g) ÷ (r − g). Here ROE is the return on equity the company can sustain, g is its long-run growth rate, and r is the return you require (its cost of equity). With r = 12% and g = 5%, a company earning a 15% ROE is worth about (15 − 5) ÷ (12 − 5) = 1.4 times book; one earning 9% is worth only about 0.6 times book. So a share at 0.8 times book can be expensive, and one at 1.8 times book can be cheap. The formula rests on assumptions — steady returns and growth, and a sensible choice of r — so use it as a guide to the right range, not a precise answer.</p>
   <h3>Sector-Specific Pricing Norms in Nepal</h3>
   <p>Different sectors in Nepal have historically supported different valuation multiples, both at IPO and in the secondary market. Understanding these norms prevents misapplication of a blanket framework:</p>
   <p>Commercial Banks: Tend to trade at P/B multiples of 1.0x–2.5x on NEPSE. IPOs priced above 2.0x book value require exceptional ROE (above 20%) to be justified.</p>
@@ -3244,7 +3258,7 @@
   <h2>Lesson 14.4 — Allotment System: Lottery-Based Allocation and Why It Exists</h2>
   <p>Nepal's IPO allotment system is unique in its design and reflects specific economic and social policy goals. For ordinary applicants, Nepal uses a lottery whenever an issue is oversubscribed — even in book-built IPOs, where only the institutional portion is allocated by bidding. Understanding why this system exists — and its implications for investors — is important for realistic expectations.</p>
   <p>Why Lottery-Based Allotment?</p>
-  <p>The lottery system was introduced to serve two interconnected goals: fairness and market development. In a market where institutional investors are limited and retail participation is the primary driver of IPO demand, allocating shares through a lottery ensures that no single large investor can crowd out small investors. Every eligible applicant — whether applying for the minimum lot or the maximum — has an equal probability of receiving an allotment in the oversubscribed category.</p>
+  <p>The lottery system was introduced to serve two interconnected goals: fairness and market development. In a market where institutional investors are limited and retail participation is the primary driver of IPO demand, allocating shares through a lottery ensures that no single large investor can crowd out small investors. Within each reserved slice, every eligible applicant — whether applying for the minimum lot or the maximum — has the same chance of being drawn in the first round.</p>
   <p>This has a significant distributional effect: shares of popular IPOs are spread across a larger number of shareholders, preventing the concentration that occurs in book-built markets where preferred institutional investors receive bulk allocations. However, this comes at a cost: sophisticated investors who have done deep analysis receive no preferential reward for their research effort. The same allocation probability applies to the informed and the uninformed.</p>
   <h3>Who Gets Which Slice</h3>
   <p>The public offering is not one pool. It is split into reserved slices, and each slice has its own lottery.</p>
@@ -3263,14 +3277,14 @@
   <h3>Mechanics of the Allotment Process</h3>
   <p>When an IPO closes, the total number of valid applications is tallied. There are two outcomes:</p>
   <p>Undersubscription (applications &lt; shares available): All applicants receive full allotment. There is no lottery. This is relatively rare for well-marketed IPOs but common for less attractive or poorly priced issues.</p>
-  <p>Oversubscription (applications &gt; shares available): A lottery is conducted by CDSC (CDS and Clearing Limited). The lottery is computerised and audited. Each valid applicant is entered once regardless of the number of lots applied for — this is the 'equal probability' principle.</p>
+  <p>Oversubscription (applications &gt; shares available): A computerised lottery is run by the Issue Manager using CDSC's allotment system, normally with regulators' representatives present. Each valid applicant is entered once regardless of the number of lots applied for — this is the 'equal probability' principle.</p>
   <div class="callout">
     <span class="callout-label">IMPLICATION FOR STRATEGY</span>
     Because the lottery treats each applicant equally regardless of lots applied for, the marginal return from applying for more lots is zero in terms of lottery probability. The practical implication: applying for more lots does not improve your chances of allotment. It only affects the quantity received IF you are selected. Given that most popular IPOs are highly oversubscribed, applying for a large number of lots increases the capital you have blocked with no corresponding increase in allotment probability.
   </div>
   <h3>The Minimum Lot System</h3>
   <p>SEBON specifies a minimum application quantity — the minimum lot — for each IPO. This is typically 10 shares (Rs 1,000 at par value for a Rs 100 face value share). High-priced book-built issues can use larger lots: each Reliance Spinning Mills winner got 50 shares, worth about Rs 41,000. The minimum lot system serves to ensure broad participation: even small investors can participate without committing large capital.</p>
-  <p>For oversubscribed issues, the allotment is first conducted to satisfy one minimum lot to each applicant in the lottery, then remaining shares (if any) are distributed in additional rounds. This means:</p>
+  <p>In a typical oversubscribed issue, lottery winners each get the minimum lot first; any shares left over are then shared out in further steps (in Reliance Spinning Mills' issue, 18 leftover shares gave 18 more applicants one extra share each). The exact steps are set in each issue's allotment rules. This means:</p>
   <p>If the oversubscription ratio is very high (e.g., 50x), even winners typically receive only the minimum lot.</p>
   <p>Applying for more than the minimum lot has very limited benefit in a heavily oversubscribed IPO unless the oversubscription ratio is moderate (e.g., 2x–5x).</p>
   <h3>Calculating Expected Returns Under the Lottery System</h3>
@@ -3278,20 +3292,30 @@
   <div style="overflow-x:auto;">
   <table class="figures">
     <tr><th scope="col">Parameter</th><th scope="col">Value</th></tr>
-    <tr><td>IPO Issue Price</td><td>Rs 100 per share (par)</td></tr>
+    <tr><td>IPO issue price</td><td>Rs 100 per share (par)</td></tr>
     <tr><td>Expected selling price (based on comparable recent listings)</td><td>Rs 160</td></tr>
-    <tr><td>Expected Gain Per Share if Allotted</td><td>Rs 60</td></tr>
-    <tr><td>Minimum Lot Size</td><td>10 shares = Rs 1,000 blocked</td></tr>
-    <tr><td>Oversubscription Ratio</td><td>30x (30 applicants for every 1 lot available in lottery)</td></tr>
-    <tr><td>Estimated Allotment Probability</td><td>~1 in 30 = 3.3%</td></tr>
-    <tr><td>Expected Gain = Gain × Probability</td><td>Rs 600 × 3.3% = Rs 20</td></tr>
-    <tr><td>Expected Return on Blocked Capital</td><td>Rs 20 / Rs 1,000 = 2.0% for the blocking period (usually about 2–3 weeks from application to release)</td></tr>
-    <tr><td>Annualised Expected Return (at 3 weeks blocked)</td><td>~35% annualised — but with high variance (either 0 or 60% per lot)</td></tr>
+    <tr><td>Gain if allotted 10 shares, before costs</td><td>Rs 600</td></tr>
+    <tr><td>Costs when selling (brokerage, SEBON fee, Rs 25 DP fee) and 5% capital gains tax</td><td>About Rs 60, leaving about Rs 540</td></tr>
+    <tr><td>Chance of being drawn (assumed)</td><td>1 in 30 = 3.3%</td></tr>
+    <tr><td>Expected gain = 3.3% × Rs 540</td><td>About Rs 18</td></tr>
   </table>
   </div>
-  <p>This calculation reveals why applying for IPOs can be rational even when allotment probability is low: the short blocking period means the opportunity cost is limited, and the potential gain (though uncertain) can translate to attractive annualised returns. However, this logic breaks down for IPOs with low expected listing premiums, where even a successful allotment produces modest gains.</p>
+  <p>Now compare two applicants for the same issue, both with blocked money for about three weeks:</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th scope="col"></th><th scope="col">Applies for 10 shares</th><th scope="col">Applies for 100 shares</th></tr>
+    <tr><td>Money blocked</td><td>Rs 1,000</td><td>Rs 10,000</td></tr>
+    <tr><td>Chance of being drawn</td><td>3.3%</td><td>3.3% (the same)</td></tr>
+    <tr><td>Shares if drawn</td><td>10</td><td>10 (heavily oversubscribed issue)</td></tr>
+    <tr><td>Expected gain</td><td>About Rs 18</td><td>About Rs 18</td></tr>
+    <tr><td>Expected return on blocked money</td><td>About 1.8%</td><td>About 0.18%</td></tr>
+  </table>
+  </div>
+  <p>Two warnings about these numbers. First, the expected gain assumes you are drawn and can sell above the issue price; listings can also fall, and then the 'gain' is a loss. Second, annualising — about 1.8% over three weeks is roughly 30% a year — describes a small amount of money for a short time under simple assumptions. It is not a repeatable 30% return on your whole portfolio, and it is not risk-free.</p>
+  <p><strong>Working out your real odds.</strong> The headline 'oversubscribed X times' counts shares applied for, not people, and many people apply for more than the minimum. Your chance is better measured as the number of successful applicants divided by the number of valid applicants in your slice. Madhya Bhotekoshi (2021) was 'oversubscribed about 3.9 times', yet about 36% of valid applicants (819,000 of 2.29 million) got shares — roughly 1 in 3. Reliance Spinning Mills (2025) was oversubscribed about 29 times, and about 1 in 28 valid applicants was drawn.</p>
+  <p>This is why applying for the minimum lot can be sensible even when the odds are low: little money is tied up, for a short time. Applying for more than the minimum in a heavily oversubscribed issue only lowers your return on the money blocked. And the logic breaks down when the likely gain is small or the issue could list below its price.</p>
   <p>The CDSC Allotment Process: Transparency and Verification</p>
-  <p>The allotment process is conducted by CDSC and is publicly auditable. Results are published on the CDSC website and accessible through MeroShare. Investors can verify their allotment status within approximately two weeks of the subscription window closing. The process is designed to be tamper-proof: applications are verified against CDS account numbers, and duplicate applications from the same person are disqualified.</p>
+  <p>Results are published on CDSC's IPO-result website and in MeroShare, usually within about two weeks of the subscription closing. Several separate steps happen in order, and it helps to know which one you are waiting for: your application is submitted; it is checked and validated; the money is blocked; the allotment is drawn; the blocked money is either taken or released; and finally, allotted shares are credited to your demat account. Duplicate applications from the same person are rejected.</p>
   <div class="callout">
     <span class="callout-label">FRAUD RISK</span>
     Multiple applications using different family members' CDS accounts are a common practice. This is technically permitted if each family member applies independently from their own demat account and bank account. However, using another person's identity without their consent is fraudulent and carries legal risk. CDSC conducts duplicate checks on bank accounts and CDS accounts linked to the same application window.
@@ -3342,7 +3366,7 @@
   <p>While every listing is unique, there is a recognisable pattern in Nepal's market, rooted in the structure of the investor base and the scarcity dynamics of the ASBA/lottery system:</p>
   <p>The first trade: A new listing does not open wherever buyers and sellers like. NEPSE sets an opening range. Since early 2026 the first price can be at most three times the face value (or three times the net worth per share, if that is below Rs 100) — so a Rs 100 share can open at no more than about Rs 300. Popular listings open at the top of that range, because the queue of unsuccessful lottery applicants who want the share is huge.</p>
   <p>The circuit run: From then on, the normal daily limit applies — 10% before April 2026, 15% since. In popular listings, buyers at the limit price vastly outnumber sellers, so the share locks at the upper circuit day after day. Few allottees sell, because they expect another rise tomorrow, so often only a few hundred shares change hands each day.</p>
-  <p>The turn: The run ends when enough holders decide to sell at the limit price. In the Canon's sample of 69 IPO listings from January 2022 to June 2026, the median run lasted six trading days and roughly doubled the price from the first day's close. For the 2025–26 listings the median run was nine to ten days, and the price almost tripled.</p>
+  <p>The turn: The run ends when enough holders decide to sell at the limit price. In the Canon's sample of 67 IPO listings from January 2022 to June 2026, the median run lasted seven trading days (half of all runs lasted between about 2 and 11 days) and roughly doubled the price from the first day's close. Since NEPSE's new opening rule of February 2026, runs have been longer and steeper: for the 16 listings since then, the median run was nine days and the price rose more than threefold from the first close.</p>
   <p>After the run: Only when the circuit run breaks does real price discovery begin — and by then the share may be priced for a great deal of good news.</p>
   <p>Why This Pattern Exists: The Behavioural Explanation</p>
   <p>Several well-documented behavioural phenomena drive listing day dynamics:</p>
@@ -3354,12 +3378,33 @@
   <p>Newly listed shares attract attention simply because they are new. Media coverage, social media discussion, and the psychological novelty of a fresh listing create elevated interest that has nothing to do with fundamental value. This novelty effect fades within days or weeks, after which the price typically reverts toward fundamentals.</p>
   <h3>Liquidity Premium Deflation</h3>
   <p>On listing day, the entire outstanding public float — minus those held by long-term holders — is technically available for trading. But in practice, most allottees hold their shares at least briefly, and the actual free float on day one is limited. This temporary supply constraint amplifies price moves in both directions. As more allottees sell over subsequent days, the effective free float increases and price discovery improves.</p>
-  <p>The Empirical Pattern: Overperformance on Day 1, Underperformance Over 3–12 Months</p>
-  <p>Research on IPO markets around the world finds that new shares tend to be priced cheaply at issue and then lag the market over the following months and years. NEPSE shows its own version. In the Canon's sample (69 IPO listings, January 2022 to June 2026; a Canon calculation from public daily price data, identifying listings by their circuit-locked first days), buying on the day the circuit run ended was a poor bet. Sixty trading days later, the median share was about 15% lower (16% for the 2025–26 listings), 61% of cases were down, and the median was about 7 points behind the typical NEPSE share. Over six months the picture was mixed — roughly half were up — so the clear lesson is about the first few months after the run, not about holding forever.</p>
+  <p>The Empirical Pattern: What Happens After the Run</p>
+  <p>Research on IPO markets around the world finds that new shares tend to be priced cheaply at issue and then lag the market over the following months and years. NEPSE shows its own version, with an important twist. The table below follows the 67 listings from the close of the last circuit day (a Canon calculation; method and full data below).</p>
+  <div style="overflow-x:auto;">
+  <table class="figures">
+    <tr><th scope="col">Trading days after the run ended</th><th scope="col">All 67 listings: median return</th><th scope="col">Share of cases up</th><th scope="col">Beat the typical share</th><th scope="col">Listings since Feb 2026: median return</th></tr>
+    <tr><td>20</td><td>−10%</td><td>34%</td><td>45%</td><td>−20%</td></tr>
+    <tr><td>60</td><td>−15%</td><td>39%</td><td>40%</td><td>−29%</td></tr>
+    <tr><td>120</td><td>+8%</td><td>56%</td><td>62%</td><td>−44% (10 cases)</td></tr>
+    <tr><td>180</td><td>+1%</td><td>51%</td><td>59%</td><td>too few cases</td></tr>
+  </table>
+  </div>
+  <p>Read it in three steps. First, the weeks right after a circuit run were usually bad: three months later, about six in ten listings were lower. Second, over four to six months the picture evened out for the older listings — the typical one ended up roughly where it started, with very wide spreads either way. Average returns look much better than the medians because a few huge winners pull them up (Reliance Spinning Mills, for example, kept climbing to around Rs 3,700 by May 2026). Third, the 2026 listings, under the new low opening price, ran higher and then fell much harder. That is a warning, not yet a law: 16 cases is a small sample, and only 10 have been followed for six months.</p>
+  <div class="callout">
+    <span class="callout-label">HOW THE IPO STUDY WAS DONE</span>
+    <ul style="margin:10px 0 0;padding-left:20px;">
+      <li>Data: public daily closing prices and volumes for NEPSE securities (the open nepse-data dataset), to November 2026.</li>
+      <li>Sample: ordinary shares that first appear between January 2022 and June 2026, first close between Rs 50 and Rs 800, and 3,000 shares or fewer traded on the first day — the pattern of a circuit-locked IPO. Mutual funds, debentures and promoter-share listings are excluded. This rule misses IPOs that traded freely on day one, so the sample leans toward 'hot' listings.</li>
+      <li>Circuit day: a close-to-close rise within one percentage point of the daily limit (10% before 20 April 2026, 15% after). Missing days are skipped.</li>
+      <li>Returns: from the close of the last circuit day, prices only — no dividends, no bonus-share adjustment, no costs or taxes (selling costs plus 5% tax would trim gains slightly).</li>
+      <li>Benchmark: the median return of all ordinary shares over the same days. The dataset has no daily NEPSE index, so this 'typical share' stands in for it.</li>
+      <li>Full list of the 67 listings with dates, prices and returns: <a href="/investors-canon/data/ipo-listings-study-2022-2026.csv">download the data (CSV)</a>. Anyone can check and challenge the result.</li>
+    </ul>
+  </div>
   <p>This is the IPO investor's dilemma: the easy money (listing gain) is won by lottery, not skill. The hard money — holding through post-listing volatility to the point of genuine fundamental appreciation — requires conviction, patience, and the discipline to ignore the noise of the first days and weeks.</p>
   <div class="callout">
     <span class="callout-label">RULE OF THUMB</span>
-    Never chase a new listing during or at the end of its circuit run. On NEPSE the listing day itself is held to a low opening price, so the real point of maximum optimism is usually the last circuit day. If you missed the lottery, wait for the run to end and the price to settle. But do not expect to buy at the listing-day price: in the Canon's sample, only 8 of 63 new listings fell back to their first-day close within the next 120 trading days.
+    Never chase a new listing during or at the end of its circuit run. On NEPSE the listing day itself is held to a low opening price, so the real point of maximum optimism is usually the last circuit day. If you missed the lottery, wait at least until the run has ended and the price has had a few weeks to settle. But do not expect to buy at the listing-day price: in the Canon's sample, only 8 of 61 listings followed for six months ever fell back to their first-day close — and none of the 2026 listings did.
   </div>
   <h3>When Listing Day Goes the Other Way</h3>
   <p>Not all listings are premiums. Some IPOs list below their issue price — a situation that is jarring for allottees who expected a gain. This typically occurs when:</p>
@@ -3380,7 +3425,7 @@
   <p>Layer 2: The Management and Promoter Screen</p>
   <p>Management quality is difficult to assess from a prospectus, but proxies exist:</p>
   <p>Promoter pedigree: What else have they built? Are there other companies in their group, and what is their reputation?</p>
-  <p>Promoter lock-in: Regulations require promoter shares to be locked up — three years for most companies, at least five for banks, and as set in the prospectus for hydropower (Lesson 13.4). What is the duration here? A short lock-in period (minimum regulatory requirement) suggests promoters view the IPO as an exit, not a long-term commitment.</p>
+  <p>Promoter lock-in: Regulations require promoter shares to be locked up — three years for most companies, at least five for banks, and as set in the prospectus for hydropower (Lesson 13.4). What is the duration here? A lock-in at the legal minimum is not proof that promoters plan to leave, but it means you should watch the expiry date and any sale notices closely.</p>
   <p>Board independence: Are independent directors genuinely independent? Do they have relevant expertise?</p>
   <p>Related-party transactions: Are there large or growing transactions with promoter-affiliated entities? These can be legitimate, but they can also be channels for profit extraction.</p>
   <p>Management compensation: Is compensation disclosed? Excessive management remuneration at the expense of retained earnings is a warning sign.</p>
@@ -3389,7 +3434,7 @@
   <p>Is profitability genuine and sustainable? (Not propped up by one-time items, related-party revenues, or deferred costs)</p>
   <p>Is the balance sheet solid? (Adequate capitalisation, no hidden liabilities, NPLs within norms for financial sector companies)</p>
   <p>Is cash generation consistent with reported profits? (Operating cash flow should roughly track net profit; large divergence suggests earnings quality issues)</p>
-  <p>What do the credit rating and any IPO grade say? A grade of 4 or 5 on a 1-to-5 scale means the agency sees below-average or poor fundamentals.</p>
+  <p>What do the credit rating and any IPO grade say? An IPO grade of 4 or 5 on the 1-to-5 scale means the agency sees below-average or poor fundamentals. Neither rating is a recommendation or a verdict on the price.</p>
   <p>Layer 4: The Pricing Screen</p>
   <p>Use the valuation framework from Lesson 14.3. Calculate:</p>
   <p>P/B at issue price vs. sector average P/B on NEPSE</p>
@@ -3400,7 +3445,7 @@
   <p>Layer 5: The Use of Proceeds Screen</p>
   <p>Revisit the 'Objects of the Issue' section with a sceptical eye:</p>
   <p>Is the capital genuinely needed for value-creating activities? Expansion into new markets or capacity increases can be value-accretive.</p>
-  <p>Is a significant portion going toward debt repayment? This reduces risk but does not create new value for IPO investors — it transfers wealth from equity holders to debt holders.</p>
+  <p>Is a significant portion going toward debt repayment? That can add value — lower interest costs, less risk of distress, more future cash — especially if the debt is expensive. It adds little if the debt is cheap and the company is passing up better uses for the money, or if the issue price already counts the benefit. Ask what return each rupee raised will earn compared with its cost.</p>
   <p>Is the capital deployment plan specific and costed, or vague and aspirational?</p>
   <p>What is the timeline for deployment? Capital that sits idle for years post-IPO generates below-cost-of-capital returns.</p>
   <p>Layer 6: The Risk-Adjusted Return Screen</p>
@@ -3412,6 +3457,25 @@
     <span class="callout-label">SYNTHESIS QUESTION</span>
     After running all six layers, ask: Would I buy this stock at the issue price in the secondary market tomorrow, independently of whether I receive an IPO allotment? If the answer is no — if you are relying entirely on the listing premium to generate a return — you are speculating, not investing. Both are valid activities, but they require different frameworks and different risk tolerances.
   </div>
+  <div class="callout">
+    <span class="callout-label">THREE DIFFERENT DECISIONS — KEEP THEM SEPARATE</span>
+    <ul style="margin:10px 0 0;padding-left:20px;">
+      <li><strong>Investment:</strong> would I own this company for three to five years at this price? Needs Layers 1–5.</li>
+      <li><strong>Short-term trade:</strong> is there a pricing or liquidity opportunity around listing? Needs the listing-day evidence in Lesson 14.6, and an exit plan.</li>
+      <li><strong>Lottery ticket:</strong> is the expected gain worth the small blocked amount? Needs only the arithmetic in Lesson 14.4 — and only the minimum lot.</li>
+    </ul>
+  </div>
+  <div class="callout">
+    <span class="callout-label">SUGGESTED AUTOMATIC 'NO' RULES (THIS BOOK'S JUDGEMENT, NOT REGULATION)</span>
+    <ul style="margin:10px 0 0;padding-left:20px;">
+      <li>An adverse audit opinion, a disclaimer, or a going-concern warning that the prospectus does not explain convincingly.</li>
+      <li>Related-party sales or receivables that make up a large share of the totals.</li>
+      <li>Post-IPO P/E or P/B well above the justified range, with no believable growth case.</li>
+      <li>Promoters or directors facing unresolved fraud or market-manipulation cases.</li>
+      <li>A premium price combined with an IPO grade of 4 or 5.</li>
+      <li>You cannot explain how the company makes money in two sentences.</li>
+    </ul>
+  </div>
   <h2>Lesson 14.8 — Common IPO Traps: Overpriced Issues, Window-Dressed Financials, Weak Promoter History</h2>
   <p>The final lesson in this chapter is the most practically urgent: a catalogue of the traps that catch investors, and the patterns that identify them before damage is done. These are not hypothetical scenarios — each reflects documented patterns in Nepal's IPO market over the past decade.</p>
   <p>Trap 1: The Overpriced Premium Issue</p>
@@ -3420,7 +3484,7 @@
   <p>Premium greater than 50% above book value for a company with ROE below 15%</p>
   <p>Issue Manager with limited track record or recent involvement in issues that significantly underperformed post-listing</p>
   <p>Prospectus projections of future profitability that imply a step-change in growth without a clear business catalyst</p>
-  <p>SEBON approval taking longer than usual — this can indicate that SEBON required significant revisions, suggesting the initial prospectus had deficiencies</p>
+  <p>SEBON approval taking much longer than usual — this can mean SEBON required significant revisions, though it can also reflect a crowded queue; check the news and the pipeline report for the reason</p>
   <p>A loss-making or barely profitable company pushing hard for approval — in June 2026 a SEBON official told the Kathmandu Post that some directors had even lobbied for IPOs of loss-making companies</p>
   <p>Trap 2: Window-Dressed Financial Statements</p>
   <p>Window dressing refers to the manipulation of reported financial statements to present a more favourable picture ahead of an IPO. In Nepal's context, common techniques include:</p>
@@ -3445,7 +3509,7 @@
   </div>
   <p>Trap 4: The Sector-Hype Issue</p>
   <p>Cyclical enthusiasm for particular sectors creates windows during which poorly positioned companies successfully list at high valuations by riding sector momentum. In Nepal, this has been observed in hydropower (during periods of high NEPSE hydro sector P/E ratios), microfinance (during its rapid expansion phase), and insurance (during deregulation periods). The mechanism: investors extrapolate sector growth to individual companies without distinguishing between sector leaders and laggards.</p>
-  <p>Protection: When a sector is hot and multiple IPOs from the same sector are queued, apply individual financial analysis rather than sector-level conviction. The last companies to list in a sector wave are often the weakest — the stronger ones listed earlier. With 39 hydropower companies in SEBON's pipeline in November 2026, this trap is live.</p>
+  <p>Protection: When a sector is hot and multiple IPOs from the same sector are queued, apply individual financial analysis rather than sector-level conviction. A common market belief is that the last companies to list in a sector wave are the weakest. This book has not tested that claim, so treat it as a reason to compare each issue with the ones before it, not as a fact. With 39 hydropower companies in SEBON's pipeline in November 2026, this trap is live.</p>
   <p>Trap 5: The Small Issue with Disproportionate Hype</p>
   <p>Small IPOs (by total capital size) with heavy social media and community network marketing create artificial demand signals. The oversubscription ratio for such issues can be extremely high — often dozens of times — not because the company is exceptional, but because the total shares available are small relative to Nepal's total investor population. A high oversubscription ratio is not evidence of investment merit; it is a reflection of issue size relative to applicant population.</p>
   <p>The risk: investors who manage to receive allotment in a very small issue face a thin secondary market with low liquidity. Post-listing, exiting a position in a thinly traded stock without significant price impact can be difficult.</p>
@@ -3458,7 +3522,8 @@
     <tr><th>Type of claim</th><th>Examples from this chapter</th></tr>
     <tr><td>Rule</td><td>SEBON approval for every issue; the 10% reserve for Nepalis working abroad; mutual fund and employee slices; the 10-share minimum lot; the opening-range rule for new listings; the 10% and 15% daily limits</td></tr>
     <tr><td>Fact (documented case)</td><td>Reliance Spinning Mills' book building (Rs 912 cut-off, Rs 820.80 public price) and allotment; Madhya Bhotekoshi's quotas and odds; SEBON's pipeline of 117 applications in November 2026</td></tr>
-    <tr><td>Canon calculation</td><td>The 69-listing sample: median circuit run, gain to the end of the run, returns 60 and 120 trading days later, and how few fell back to the listing-day price. The sample is small and identified from price patterns, so treat it as a strong hint, not a law</td></tr>
+    <tr><td>Canon calculation (data downloadable)</td><td>The 67-listing study: circuit runs, returns 20 to 180 trading days later, comparison with the typical share, and the split before and after February 2026. Small sample, identified from price patterns, prices not adjusted for bonus shares — a strong hint, not a law</td></tr>
+    <tr><td>Hypothesis (not tested here)</td><td>That Issue Manager reputation predicts IPO quality; that the last listings in a sector wave are the weakest; that a minimum lock-in signals an exit plan</td></tr>
     <tr><td>Rule of thumb / judgement</td><td>The six-layer framework; the pricing ratios; that heavy oversubscription says more about issue size than quality; window-dressing red flags</td></tr>
   </table>
   </div>
@@ -3469,10 +3534,10 @@
     <tr><th scope="col">Lesson</th><th scope="col">Core Takeaway</th></tr>
     <tr><td>14.1 — The IPO Process</td><td>The process is sequential and regulated; the quality of the Issue Manager is a leading indicator of prospectus credibility. Understand every step before you apply.</td></tr>
     <tr><td>14.2 — The Prospectus</td><td>Read beyond the narrative. Financial statements, auditor reports, risk factors, and related-party disclosures are where the truth lives — and where deception hides.</td></tr>
-    <tr><td>14.3 — IPO Pricing</td><td>Neither par, premium nor book-built pricing signals value on its own. Always calculate P/B, P/E, and compare to secondary market sector multiples before deciding an IPO is fairly priced.</td></tr>
+    <tr><td>14.3 — IPO Pricing</td><td>Neither par, premium nor book-built pricing signals value on its own. Use EPS after the IPO, and judge price-to-book against what the company can earn (justified P/B). Always calculate P/B, P/E, and compare to secondary market sector multiples before deciding an IPO is fairly priced.</td></tr>
     <tr><td>14.4 — Allotment System</td><td>The lottery treats all applicants equally by design. Applying for more lots does not improve allotment probability. Expected return must account for allotment probability, not just listing premium.</td></tr>
     <tr><td>14.5 — ASBA and MeroShare</td><td>Mechanical errors are a common and avoidable source of failed applications. Follow the process carefully. Maintain your demat and KYC. Apply early in the subscription window.</td></tr>
-    <tr><td>14.6 — Listing Day</td><td>New listings open in a fixed range and usually lock at the upper circuit for days. The riskiest moment to buy is the end of that run; in the Canon's sample the median share was about 15% lower 60 trading days later.</td></tr>
+    <tr><td>14.6 — Listing Day</td><td>New listings open in a fixed range and usually lock at the upper circuit for days. The riskiest moment to buy is the end of that run: in the Canon's 67-listing sample the median share was about 15% lower 60 trading days later, and the 2026 listings fell much harder.</td></tr>
     <tr><td>14.7 — IPO Analysis Framework</td><td>Apply all six layers: business quality, management quality, financial quality, pricing, use of proceeds, risk-adjusted return. The sixth-layer question — would you buy in the secondary market at the issue price? — cuts through all the noise.</td></tr>
     <tr><td>14.8 — Common Traps</td><td>Overpriced premium issues, window-dressed financials, weak promoter history, sector-hype timing, and the psychology of FOMO are the five recurring traps. Knowledge of each is the only reliable protection.</td></tr>
   </table>
