@@ -1,0 +1,628 @@
+{
+ "name": "Canon Quality Score (Canon Score)",
+ "version": "1.3",
+ "adopted": "2026-11-22",
+ "adopted_bs": "6 Mangsir 2083",
+ "master_chapter": "Chapter 64",
+ "status": "Structured, partly subjective quality checklist combining business quality, governance, tradability and price. Weights and thresholds are author judgement; not validated against investment results. Written after seeing 2021 bank data (in-sample).",
+ "applies_to": "Scores made on or after 2026-11-22. Never applied retroactively to version 1.2 scores or to the 1.2-P forward record.",
+ "preserved_records": {
+  "1.2": "canon-score-spec-v1.2.json (frozen 2026-11-17)",
+  "1.2-P": {
+   "label": "1.2-P (pilot)",
+   "chapter": "Chapter 80, Lesson 80.9",
+   "frozen": "2026-11-17",
+   "universe": "19 listed commercial banks",
+   "dimensions_scored": [
+    "financial_strength",
+    "liquidity",
+    "valuation",
+    "growth"
+   ],
+   "points_scored": 60,
+   "later_addition": {
+    "dimension": "dividend_discipline",
+    "points": 10,
+    "years_used": 4
+   },
+   "data_years": 2,
+   "price_date": "2026-11-13",
+   "judged_on_or_after": "2027-11-12"
+  },
+  "case_studies_still_v1_2": {
+   "Chapter 83 Nabil Bank": 75,
+   "Chapter 85 Chhimek Laghubitta": 77,
+   "Chapter 89 Karnali Development Bank": "see chapter"
+  }
+ },
+ "conventions": {
+  "boundary": "A value exactly on a band boundary takes the higher band.",
+  "two_rows": "If a company fits two rows for any other reason, take the lower score.",
+  "aggregation": "Sum of seven dimension scores (0-100); never averaged.",
+  "price_dependence": "Dimensions 3 and 4 depend on the share price and trading; record the price date with every score.",
+  "record": "Record rubric version, data cut-off date and share-price date with every score.",
+  "year_counting": "'In at least 4 of the last 5 years' compares each of the last five years with the year before (needs six years of data).",
+  "missing_data": "An unverified sub-component scores no higher than its middle row and is marked 'not verified' (tables may set a stricter limit). If more than 20 of 100 points are unverified or estimated, the total is 'provisional'.",
+  "big_swing": "A year-on-year change of more than 50%, up or down. Moderate = no big swing; very volatile / erratic = two or more big swings in five years."
+ },
+ "dimensions": [
+  {
+   "id": 1,
+   "name": "Financial Strength & Profitability",
+   "points": 20,
+   "sub": [
+    {
+     "name": "3-year average ROE",
+     "points": 8,
+     "definition": "Each year: net profit attributable to ordinary shareholders / average equity ((opening+closing)/2). Simple average of the three annual ROEs. Standalone accounts; group accounts only if most business is in subsidiaries (note it).",
+     "bands": [
+      [
+       "15%+ with no year below 10%",
+       8
+      ],
+      [
+       "10%-15%, or 15%+ with one year below 10%",
+       6
+      ],
+      [
+       "7%-10%",
+       4
+      ],
+      [
+       "below 7%, or negative in any of the last 3 years",
+       1
+      ]
+     ]
+    },
+    {
+     "name": "Capital adequacy (BFIs)",
+     "points": 7,
+     "definition": "Total CAR versus the NRB minimum for the institution's class (commercial banks: 11% including 2.5-point conservation buffer). Other class minimums per NRB's current Unified Directive.",
+     "bands": [
+      [
+       "2 points or more above class minimum",
+       7
+      ],
+      [
+       "0.5 to 2 points above",
+       5
+      ],
+      [
+       "0 to 0.5 points above",
+       3
+      ],
+      [
+       "below minimum at any point in last 3 years",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Leverage (non-financial companies)",
+     "points": 7,
+     "bands": [
+      [
+       "D/E < 1.0x and interest cover > 5x",
+       7
+      ],
+      [
+       "D/E 1.0x-2.0x with cover 3x-5x",
+       5
+      ],
+      [
+       "D/E 2.0x-3.0x, or cover 1.5x-3x",
+       3
+      ],
+      [
+       "D/E > 3.0x, or cover < 1.5x",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Earnings quality, 5-year profit history",
+     "points": 5,
+     "bands": [
+      [
+       "no loss year; profit grew in at least 4 of 5 years",
+       5
+      ],
+      [
+       "one loss year, or two flat or declining years",
+       3
+      ],
+      [
+       "no loss year but flat or declining in 3+ years",
+       2
+      ],
+      [
+       "two or more loss years, or erratic",
+       1
+      ]
+     ],
+     "adjustments": [
+      "Non-financial companies: if 3-year operating cash flow < 50% of 3-year net profit, drop one row.",
+      "Lenders: asset quality handled in Dimension 6."
+     ]
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Governance & Promoter Behaviour",
+   "points": 15,
+   "sub": [
+    {
+     "name": "Promoter holding stability and pledging (3 years)",
+     "points": 6,
+     "bands": [
+      [
+       "stable or rising; under 10% pledged",
+       6
+      ],
+      [
+       "broadly stable; 10%-25% pledged",
+       4
+      ],
+      [
+       "falling without stated reason, or 25%-50% pledged",
+       2
+      ],
+      [
+       "falling sharply without stated reason, more than 50% pledged, or repeated insider selling",
+       0
+      ]
+     ],
+     "source_order": [
+      "company share register / annual report shareholding note",
+      "SEBON and NEPSE disclosures",
+      "CDSC records"
+     ],
+     "explained_falls": "Falls from mergers, legally required sales or new public issues are not penalised; only unexplained or repeated falls count.",
+     "missing_data": "Pledging not verified: at most 4 of 6."
+    },
+    {
+     "name": "Audit opinion and related-party dealings",
+     "points": 5,
+     "bands": [
+      [
+       "clean opinion; small, fully disclosed RPT",
+       5
+      ],
+      [
+       "clean opinion with emphasis of matter (not going concern)",
+       4
+      ],
+      [
+       "prior-year restatement, or large but disclosed RPT",
+       3
+      ],
+      [
+       "qualified opinion on a limited, explained matter",
+       2
+      ],
+      [
+       "qualified on loans, provisions or RPT; scope limitation on a material area; or going-concern uncertainty",
+       1
+      ],
+      [
+       "adverse opinion, disclaimer, or undisclosed RPT found",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Disclosure and board independence",
+     "points": 4,
+     "legal_minimum": "Companies Act 2063 s86 (per NepalLaws summary): at least 1 independent director on a public-company board of up to 7, at least 2 on a larger board; sector regulator may require more.",
+     "bands": [
+      [
+       "all quarterly reports and AGM on time for 3 years, and more independent directors than legal minimum",
+       4
+      ],
+      [
+       "on time with exactly the minimum, or independence not verified",
+       3
+      ],
+      [
+       "repeated late filings, or below the legal minimum",
+       1
+      ],
+      [
+       "penalised by SEBON or NEPSE for disclosure failure in last 3 years",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Liquidity & Tradability",
+   "points": 10,
+   "sub": [
+    {
+     "name": "Average daily turnover, 6 months",
+     "points": 5,
+     "definition": "Total value traded over 6 months / number of NEPSE trading days, including zero-trade days.",
+     "bands": [
+      [
+       "Rs 5 million+",
+       5
+      ],
+      [
+       "Rs 1-5 million",
+       3
+      ],
+      [
+       "Rs 0.2-1 million",
+       1
+      ],
+      [
+       "below Rs 0.2 million",
+       0
+      ]
+     ],
+     "adjustments": [
+      "Thin trading: traded on fewer than half of trading days -> at most 1."
+     ]
+    },
+    {
+     "name": "Free float",
+     "points": 5,
+     "bands": [
+      [
+       "40%+",
+       5
+      ],
+      [
+       "25%-40%",
+       3
+      ],
+      [
+       "10%-25%",
+       1
+      ],
+      [
+       "below 10%",
+       0
+      ]
+     ]
+    }
+   ],
+   "note": "Floors, not fine ranking. Position-size liquidity is checked separately by Chapter 56's ADV rule."
+  },
+  {
+   "id": 4,
+   "name": "Valuation Reasonableness",
+   "points": 15,
+   "sub": [
+    {
+     "name": "P/E vs sector median",
+     "points": 8,
+     "bands": [
+      [
+       "0.8x or below (needs ROE >= sector median ROE, else 6)",
+       8
+      ],
+      [
+       "0.8x-1.1x",
+       6
+      ],
+      [
+       "1.1x-1.5x",
+       3
+      ],
+      [
+       "above 1.5x, or operating loss over last 12 months",
+       1
+      ]
+     ],
+     "not_scorable": "Hydropower before commercial operation: score from P/B row (7->8, 5->6, 3->3, 1->1)."
+    },
+    {
+     "name": "P/B vs sector median",
+     "points": 7,
+     "bands": [
+      [
+       "0.8x or below (needs ROE >= sector median ROE, else 5)",
+       7
+      ],
+      [
+       "0.8x-1.1x",
+       5
+      ],
+      [
+       "1.1x-1.5x",
+       3
+      ],
+      [
+       "above 1.5x, or negative book value",
+       1
+      ]
+     ]
+    }
+   ],
+   "sector_median": "NEPSE sector groups; at least 5 companies (else 'not verified', middle row); P/E uses trailing 12-month EPS and excludes loss-makers; simple median; record price date.",
+   "note": "P/E and P/B move with the same price: read as one view. Company's own 5-year median is a cross-check only."
+  },
+  {
+   "id": 5,
+   "name": "Sector & Business Model Durability",
+   "points": 15,
+   "sub": [
+    {
+     "name": "Moat",
+     "points": 8,
+     "bands": [
+      [
+       "high barriers and proof: 3-year ROE >= sector median (hydropower: operating plant delivering >= 90% of contracted energy in 2 of last 3 years)",
+       8
+      ],
+      [
+       "moderate barriers, or licence/regulated position without proof",
+       5
+      ],
+      [
+       "low barriers; commodity-like",
+       2
+      ],
+      [
+       "structural regulatory or technological threat",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Revenue concentration",
+     "points": 7,
+     "bands": [
+      [
+       "no customer or segment above 20%",
+       7
+      ],
+      [
+       "20%-40% from one segment or counterparty",
+       4
+      ],
+      [
+       "above 40% from one counterparty",
+       2
+      ]
+     ],
+     "note": "Sector versions in Chapter 65 (e.g. hydropower single-buyer PPA)."
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "name": "Growth Trajectory",
+   "points": 15,
+   "sub": [
+    {
+     "name": "5-year revenue CAGR (non-lenders)",
+     "points": 8,
+     "definition": "Operating revenue only; exclude one-off, revaluation and non-operating income. Merger/acquisition in period: use combined figures, else at most 6 and note 'merger'.",
+     "bands": [
+      [
+       "15%+, positive in at least 4 of 5 years",
+       8
+      ],
+      [
+       "8%-15%",
+       6
+      ],
+      [
+       "0%-8%",
+       3
+      ],
+      [
+       "negative, or very volatile",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Loan growth vs system (lenders)",
+     "points": 8,
+     "rationale": "Lender income is mainly interest, which moves with rates as well as lending; the loan book is the better measure of expansion.",
+     "bands": [
+      [
+       "within 5 points of system, either way",
+       8
+      ],
+      [
+       "5-10 points faster or slower",
+       5
+      ],
+      [
+       "more than 10 points faster or slower, or shrinking while system grows",
+       2
+      ]
+     ],
+     "adjustment_order": [
+      "1. Credit peak (system credit growth > 20% or system CD ratio within 5 points of ceiling) and lender > 5 points faster than system: 0, stop.",
+      "2. Loans > 5 points faster than deposits: drop one row.",
+      "3. NPL ratio above system average and higher than a year earlier: drop one row. Steps 2-3 cannot take score below 2.",
+      "4. No verified system figure for same period: at most 5."
+     ]
+    },
+    {
+     "name": "EPS on a comparable share count, 5 years",
+     "points": 7,
+     "definition": "Use reported basic EPS as restated in the latest annual report (NFRS / IAS 33 restate for bonus issues and the bonus element of rights issues); do not adjust twice. If only unrestated reports: divide earlier EPS by (1 + bonus ratio) per later bonus; for a rights issue below market, divide by (pre-issue price / theoretical ex-rights price). If unclear, rebuild from net profit and weighted average shares.",
+     "bands": [
+      [
+       "rose in at least 4 of 5 years, no big swing",
+       7
+      ],
+      [
+       "rose in 3 of 5 years, at most one big swing",
+       4
+      ],
+      [
+       "rose in 2 of 5 years, or very volatile",
+       2
+      ],
+      [
+       "rose in fewer than 2 years, or negative in 3+ years",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "name": "Dividend & Capital Return Discipline",
+   "points": 10,
+   "sub": [
+    {
+     "name": "Consistency, 5 years",
+     "points": 6,
+     "definition": "A year counts as paid only with a real cash dividend (not cash that only covers the 5% tax on a bonus issue). Payout = (cash + bonus) / distributable profit. 30%-70% is a design preference.",
+     "bands": [
+      [
+       "real cash dividend every year; payout 30%-70%",
+       6
+      ],
+      [
+       "real cash in 4 of 5 years, or payout consistently below 30% or above 70%",
+       4
+      ],
+      [
+       "real cash in 2-3 of 5 years, erratic",
+       2
+      ],
+      [
+       "real cash in 0-1 of 5 years",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Source and purpose",
+     "points": 4,
+     "bands": [
+      [
+       "genuine distributable profit; reserves intact or growing; any bonus tied to stated capital need",
+       4
+      ],
+      [
+       "partly one-off or revaluation gains, or bonus with no stated use",
+       2
+      ],
+      [
+       "drawn from capital or reserves",
+       0
+      ]
+     ]
+    }
+   ],
+   "retained_by_design": "Hydropower before COD, or bank/insurer barred from paying by regulator capital rules: consistency 4/6, source 2/4, marked 'retained by design'."
+  }
+ ],
+ "score_bands": [
+  [
+   "85-100",
+   "Exceptional; core holding up to 6%-8% of equity sleeve"
+  ],
+  [
+   "70-84",
+   "Strong; 4%-6%"
+  ],
+  [
+   "55-69",
+   "Adequate; satellite 1.5%-3%"
+  ],
+  [
+   "45-54",
+   "Watch list; no new money"
+  ],
+  [
+   "below 45",
+   "Exclude; existing holders review"
+  ]
+ ],
+ "hard_limits": {
+  "governance_override": {
+   "triggers": [
+    "Governance total below 5 of 15",
+    "promoter-pledging check scores 0 of 6",
+    "audit/related-party check scores 1 or less of 5"
+   ],
+   "effect": "total capped at 54"
+  },
+  "cap_54": [
+   "NRB has declared the company 'problematic'",
+   "capital below the regulatory minimum",
+   "audit disclaimer"
+  ],
+  "exclude": [
+   "court or regulator finding of fraud by management or controlling shareholders"
+  ],
+  "provisional": [
+   "accounts materially restated (until a full year of new audited figures)"
+  ]
+ },
+ "known_overlaps": "About 25-30 of 100 points rest directly or indirectly on reported profit (ROE, earnings quality, EPS growth, dividend consistency, ROE gate on valuation).",
+ "comparability": "Compare totals within a sector; cross-sector comparability is a design aim, not tested.",
+ "still_judgement": [
+  "what counts as a 'segment' in revenue concentration",
+  "'structural threat' in the moat check",
+  "when a gain is 'one-off' in the dividend source check"
+ ],
+ "considered_v2_0": {
+  "status": "needs a test before adoption",
+  "items": [
+   "one home dimension per indicator to limit double counting",
+   "growth judged by return on new capital",
+   "compare weights with simple alternatives such as equal weights",
+   "double-counting diagnostic: correlation of sub-scores, leave-one-dimension-out ranking changes, equal-weight comparison (Chapter 80 audit)"
+  ]
+ },
+ "test_protocol": [
+  "scores frozen before results are known",
+  "whole sector including merged, failed and delisted companies",
+  "returns including dividends",
+  "comparison with simple alternatives such as equal weights"
+ ],
+ "worked_example": {
+  "company": "Himalaya Unnati Bank Ltd (HUBL), invented",
+  "v1_3": {
+   "financial_strength": 16,
+   "governance": 15,
+   "liquidity": 8,
+   "valuation": 11,
+   "durability": 12,
+   "growth": 15,
+   "dividends": 10,
+   "total": 87,
+   "business_only_of_75": 68
+  },
+  "v1_2_total": 85,
+  "v1_1_total": 83
+ },
+ "history": [
+  [
+   "1.0",
+   "2026-08-29",
+   "original"
+  ],
+  [
+   "1.1",
+   "2026-11-16",
+   "closed table gaps and overlaps, bonus-adjusted EPS, severe-red-flag override trigger with cap 54, aligned bands with Ch66, capped unverified pledging"
+  ],
+  [
+   "1.2",
+   "2026-11-17",
+   "lender loan growth vs system with credit-peak cap and funding check; valuation discount needs ROE >= sector median"
+  ],
+  [
+   "1.3",
+   "2026-11-22",
+   "complete scoring rules for steps left to judgement in 1.2; CAR vs class minimum; ROE, ADV, swing definitions; cash and thin-trading checks; lender asset-quality step and adjustment order; EPS per NFRS/IAS 33 incl. rights bonus element; real-cash dividend rule; sector-median and loss-maker rules; licence alone not full moat; pledge source order; extra hard limits. Weights and bands unchanged."
+  ]
+ ]
+}
