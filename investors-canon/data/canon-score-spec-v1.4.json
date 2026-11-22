@@ -78,7 +78,7 @@
     {
      "name": "Capital adequacy (BFIs)",
      "points": 7,
-     "definition": "Total CAR vs the NRB minimum for the class, at the latest quarter-end. Commercial banks: NRB Capital Adequacy Framework 2015 - minimum total capital 8.5% (Tier 1 6%, CET1 4.5%) plus 2.5-point capital conservation buffer in CET1 = 11%; counter-cyclical buffer 0.5% announced from 2024-07-15 (NRB BSD report 2022/23), check current status. Other classes: score only against a minimum checked in NRB's current Unified Directive for that class (record directive and date); if unchecked, 'not verified', max 5. Public sources quote microfinance 8% (4% core) and B/C 10% or 11% (conflicting).",
+     "definition": "Total CAR vs the NRB minimum for the institution's class and level, at the latest quarter-end. Commercial banks: NRB Capital Adequacy Framework 2015 - minimum total capital 8.5% (Tier 1 6%, CET1 4.5%) plus 2.5-point capital conservation buffer in CET1 = 11%; counter-cyclical buffer 0.5% announced from 2024-07-15 (NRB BSD report 2022/23), check current status. Other classes per NRB Financial Stability Report FY 2023/24 (as of mid-July 2024): development banks 11% CAR with 8.5% core, national-level development banks 10% with 6% Tier 1; finance companies 10% with 6% Tier 1; microfinance 8% capital fund with 4% core. Use a newer Unified Directive figure if one exists; record source and date. If the applicable minimum cannot be determined: 'not verified', max 5.",
      "bands": [
       [
        "2 points or more above class minimum",
@@ -256,7 +256,7 @@
     {
      "name": "Disclosure and board independence",
      "points": 4,
-     "legal_minimum": "Banks and financial institutions: BAFIA 2073 s14 - board of 5 to 7, at least 1 independent director (s14(1), s14(3)). Other public companies: Companies Act 2063 s86(3) - at least 1 independent director on a board of up to 7, 2 on a larger board (secondary summary; Act text not reached).",
+     "legal_minimum": "Banks and financial institutions: BAFIA 2073 s14 - board of 5 to 7, at least 1 independent director (s14(1), s14(3)). Other public companies: Companies Act 2063 s86(2) board of 3 to 11 (verbatim); s86(3) at least 1 independent director on a board of up to 7, 2 on a larger board (NepalLaws summary and Prime Law FAQ agree; Act wording not reached).",
      "bands": [
       [
        "all quarterly reports and AGM on time for 3 years, and more independent directors than legal minimum",
@@ -726,5 +726,11 @@
   "rule": "Always report all three; never the total alone."
  },
  "score_bands_note": "Position limits attached to bands are provisional ceilings, not evidence-based sizes; Chapter 60/66 concentration limits, maximum tolerable loss and Chapter 56 ADV rule also apply.",
- "forward_pilot_note": "The 1.2-P pilot (frozen 2026-11-17) cannot validate v1.4; its 2027-11 review is a first-year look only."
+ "forward_pilot_note": "The 1.2-P pilot (frozen 2026-11-17) cannot validate v1.4; its 2027-11 review is a first-year look only.",
+ "errata": [
+  [
+   "2026-11-22",
+   "CAR minimums for classes B, C, D filled in from NRB Financial Stability Report FY 2023/24; Companies Act s86 source note. Rules unchanged."
+  ]
+ ]
 }
