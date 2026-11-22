@@ -1,16 +1,16 @@
 {
  "chapters": {
   "ch-0-1-credit-cycle.html": {
-   "content_date": "2026-11-21",
-   "hash": "7b2315255438ded4fb8d54818181be4c"
+   "content_date": "2026-11-22",
+   "hash": "38240a792384a99ce325cba436a664c0"
   },
   "ch-0-2-nrb-transmission.html": {
    "content_date": "2026-11-21",
    "hash": "1d3decc01f8b9db51e8145a2685aafcd"
   },
   "ch-0-3-liquidity-regimes.html": {
-   "content_date": "2026-11-21",
-   "hash": "9e2db9ec9049bf27e31669d9750489b8"
+   "content_date": "2026-11-22",
+   "hash": "7b11641f85a2c4a378d117bce5f75610"
   },
   "ch-01-nrb-monetary-policy.html": {
    "content_date": "2026-11-21",
@@ -21,8 +21,8 @@
    "hash": "f564abfb75750e8ef5682b1a667278c1"
   },
   "ch-03-nrb-policy-transmission.html": {
-   "content_date": "2026-11-21",
-   "hash": "70b23232f81ea5b01617fd92f25385c3"
+   "content_date": "2026-11-22",
+   "hash": "45625db9ad2727f0749ed9e025a3dc9f"
   },
   "ch-04-external-sector.html": {
    "content_date": "2026-11-21",
@@ -33,16 +33,16 @@
    "hash": "3ce17e3437451e0232ed5235076958a8"
   },
   "ch-06-global-macro-risk.html": {
-   "content_date": "2026-11-21",
-   "hash": "569554e4280ffc47eb0a5f5f1a946939"
+   "content_date": "2026-11-22",
+   "hash": "04ad6055a0fc33f41dea1930be95cc07"
   },
   "ch-07-nepse-reality.html": {
    "content_date": "2026-11-21",
    "hash": "e7e6404114cc22d6383d3cc43e457ee1"
   },
   "ch-08-regulatory-architecture.html": {
-   "content_date": "2026-11-21",
-   "hash": "c4cc2f012d58b63736956e82523621ce"
+   "content_date": "2026-11-22",
+   "hash": "58ef2d1d231506f10e05746543f5e3fc"
   },
   "ch-09-market-participants.html": {
    "content_date": "2026-11-21",
@@ -53,8 +53,8 @@
    "hash": "daa50c9afd62dc2d3267886a88fbabb4"
   },
   "ch-11-liquidity-problem.html": {
-   "content_date": "2026-11-21",
-   "hash": "67ac8ca11dda4ac6c075f01312bd5613"
+   "content_date": "2026-11-22",
+   "hash": "2ec38738cb4599075731dcff637f253b"
   },
   "ch-12-microstructure-failures.html": {
    "content_date": "2026-11-21",
@@ -73,8 +73,8 @@
    "hash": "ef722ea488c077a5e2c4530a58cd58ba"
   },
   "ch-16-mutual-funds.html": {
-   "content_date": "2026-11-21",
-   "hash": "a343101846b5c87278d6d70cad6104c3"
+   "content_date": "2026-11-22",
+   "hash": "2d21f50ae805824d3cbb5f66943e664a"
   },
   "ch-17-debentures-bonds.html": {
    "content_date": "2026-11-21",
@@ -491,5 +491,5 @@
   "glossary.html": "2026-09-07",
   "study-guide.html": "2026-09-07"
  },
- "index_date": "2026-11-21"
+ "index_date": "2026-11-22"
 }
