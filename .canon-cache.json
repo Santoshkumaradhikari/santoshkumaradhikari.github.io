@@ -2,7 +2,7 @@
  "chapters": {
   "ch-0-1-credit-cycle.html": {
    "content_date": "2026-11-22",
-   "hash": "990fa9890f4bbe57a7e22f8675924ed0"
+   "hash": "1e0ccb7539d4a92df832da03982224f2"
   },
   "ch-0-2-nrb-transmission.html": {
    "content_date": "2026-11-22",
@@ -38,7 +38,7 @@
   },
   "ch-07-nepse-reality.html": {
    "content_date": "2026-11-22",
-   "hash": "a514c213ebc34ca7f9906258745523df"
+   "hash": "846e1c57b6b39bcd45f800421afad1d2"
   },
   "ch-08-regulatory-architecture.html": {
    "content_date": "2026-11-22",
@@ -82,7 +82,7 @@
   },
   "ch-18-what-doesnt-exist.html": {
    "content_date": "2026-11-22",
-   "hash": "850dc1b4f6d682d6b10208970ceec5f2"
+   "hash": "2189030b02d671fb93e6a93217947ec0"
   },
   "ch-19-governance-landscape.html": {
    "content_date": "2026-11-18",
@@ -261,12 +261,12 @@
    "hash": "8e6424717ff1269b73e044db737b5b0e"
   },
   "ch-63-canon-scoring-philosophy.html": {
-   "content_date": "2026-11-18",
-   "hash": "25b916f5529f1cd3906b9d224c9609b4"
+   "content_date": "2026-11-22",
+   "hash": "0c86f89e9b926a4f114c8067977ee6db"
   },
   "ch-64-seven-dimension-score.html": {
-   "content_date": "2026-11-18",
-   "hash": "05fc3e00e8fbe981d4538d7090f06d9b"
+   "content_date": "2026-11-22",
+   "hash": "4a23e9b57d1c61b5cd2025b9db502ede"
   },
   "ch-65-sector-subscore-adjustments.html": {
    "content_date": "2026-11-18",
@@ -341,48 +341,48 @@
    "hash": "0601c1a66030e4b4f000f0b95ac7a38f"
   },
   "ch-83-case-study-commercial-bank.html": {
-   "content_date": "2026-11-18",
-   "hash": "4ce08a2a41ecab7786d121241c5ab045"
+   "content_date": "2026-11-22",
+   "hash": "f2bfe1a96e65f155baea33ffc92a799a"
   },
   "ch-84-case-study-hydropower-plant.html": {
-   "content_date": "2026-11-18",
-   "hash": "ff7b599f7c1d5353d269742d5ad10ca0"
+   "content_date": "2026-11-22",
+   "hash": "b4dc73ac4bba482cbff7bae0571e2034"
   },
   "ch-85-case-study-microfinance-institution.html": {
-   "content_date": "2026-11-18",
-   "hash": "9d7b34f82071911d8caf32457037a52d"
+   "content_date": "2026-11-22",
+   "hash": "cfcb41cd1a49eb08ec804adb10b22b63"
   },
   "ch-86-case-study-manufacturing-company.html": {
-   "content_date": "2026-11-18",
-   "hash": "26916631c861b8f232d76e80ea0c499e"
+   "content_date": "2026-11-22",
+   "hash": "f311525f5c13803e7a3645705013d33f"
   },
   "ch-87-case-study-rights-issue.html": {
-   "content_date": "2026-11-18",
-   "hash": "1f59406836b8517826c1418028a976dc"
+   "content_date": "2026-11-22",
+   "hash": "36ab7ee77224ebd07b8af556f167aa7c"
   },
   "ch-88-case-study-ipo-analysis.html": {
-   "content_date": "2026-11-18",
-   "hash": "f178f0bccbd23dcdfc2fe92a8f0bc967"
+   "content_date": "2026-11-22",
+   "hash": "302e2f0fc7eecc773d1be1a90ff953f7"
   },
   "ch-89-case-study-bank-failure.html": {
-   "content_date": "2026-11-18",
-   "hash": "020784832c5d8db109e7863217e814ce"
+   "content_date": "2026-11-22",
+   "hash": "30584aa350a02fee9b7e9e4f29d87d9d"
   },
   "ch-90-case-study-nepse-mania.html": {
-   "content_date": "2026-11-18",
-   "hash": "c5eb1566cb0c0abe84f91b7fbbc43b66"
+   "content_date": "2026-11-22",
+   "hash": "e718b4cb6a9d7008c9dd375a89c4b468"
   },
   "ch-91-case-study-hydropower-overrun.html": {
-   "content_date": "2026-11-18",
-   "hash": "a3c81d7eabbdf867b04ba5c781aa9b9f"
+   "content_date": "2026-11-22",
+   "hash": "cc5f1c8a5542b19459bbfdcc3581deac"
   },
   "ch-92-case-study-insurance-company.html": {
-   "content_date": "2026-11-18",
-   "hash": "c4a52ec0ef21d797fc9247b93bdd26e7"
+   "content_date": "2026-11-22",
+   "hash": "74a3859696194a3ed52015f4303df27d"
   },
   "ch-93-case-study-hotel-investment.html": {
-   "content_date": "2026-11-18",
-   "hash": "811587049e988395d2de576fb94d1bad"
+   "content_date": "2026-11-22",
+   "hash": "5959e80d1666e1eb00222a6706b47e95"
   },
   "ch-94-daily-weekly-monthly-annual-routines.html": {
    "content_date": "2026-11-18",
@@ -449,8 +449,8 @@
    "hash": "d97aa14bb06c232fdf46f905660eda05"
   },
   "ch-110-nepse-regulatory-change-tracker.html": {
-   "content_date": "2026-11-18",
-   "hash": "6f6f1db21b360c2b6a101bcd613da7b9"
+   "content_date": "2026-11-22",
+   "hash": "18022d64800ee5b60d7c9b54e4a471fd"
   },
   "ch-111-personal-research-library.html": {
    "content_date": "2026-11-18",
