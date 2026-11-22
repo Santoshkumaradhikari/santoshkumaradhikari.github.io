@@ -1,0 +1,467 @@
+{
+ "name": "Canon Quality Score (Canon Score)",
+ "version": "1.2",
+ "frozen": "2026-11-17",
+ "master_chapter": "Chapter 64",
+ "status": "Structured quality checklist. Weights and thresholds are author judgement; not validated against investment results. v1.2 was written after seeing 2021 bank data (in-sample).",
+ "forward_record": {
+  "label": "1.2-P (pilot)",
+  "chapter": "Chapter 80, Lesson 80.9",
+  "frozen": "2026-11-17",
+  "universe": "19 listed commercial banks",
+  "dimensions_scored": [
+   "financial_strength",
+   "liquidity",
+   "valuation",
+   "growth"
+  ],
+  "points_scored": 60,
+  "later_addition": {
+   "dimension": "dividend_discipline",
+   "points": 10,
+   "years_used": 4
+  },
+  "data_years": 2,
+  "price_date": "2026-11-13",
+  "judged_on_or_after": "2027-11-12"
+ },
+ "conventions": {
+  "boundary": "A value exactly on a band boundary takes the higher band.",
+  "two_rows": "If a company fits two rows, take the lower score.",
+  "aggregation": "Sum of seven dimension scores (0-100); never averaged.",
+  "price_dependence": "Dimensions 3 and 4 depend on the share price and trading; record the price date with every score."
+ },
+ "dimensions": [
+  {
+   "id": 1,
+   "name": "Financial Strength & Profitability",
+   "points": 20,
+   "sub": [
+    {
+     "name": "3-year average ROE",
+     "points": 8,
+     "bands": [
+      [
+       "15%+ with no year below 10%",
+       8
+      ],
+      [
+       "10%-15%, or 15%+ with one year below 10%",
+       6
+      ],
+      [
+       "7%-10%",
+       4
+      ],
+      [
+       "below 7%, or negative in any of last 3 years",
+       1
+      ]
+     ]
+    },
+    {
+     "name": "Capital adequacy (BFIs) / leverage (non-BFIs)",
+     "points": 7,
+     "bands": [
+      [
+       "CAR 13%+ (BFI); D/E <1.0x and interest cover >5x (non-BFI)",
+       7
+      ],
+      [
+       "CAR 11.5%-13%; moderate leverage with adequate cover",
+       5
+      ],
+      [
+       "CAR 11.0%-11.5%",
+       3
+      ],
+      [
+       "CAR below 11% at any point in 3 years; high leverage with weak cover",
+       0
+      ]
+     ],
+     "gap": "non-BFI middle bands undefined (see proposed_v1_3)"
+    },
+    {
+     "name": "Earnings quality, 5-year profit history",
+     "points": 5,
+     "bands": [
+      [
+       "no loss year; profit grew in 4+ of last 5 years",
+       5
+      ],
+      [
+       "one loss year, or two flat/declining years",
+       3
+      ],
+      [
+       "no loss year, but flat/declining in 3+ years",
+       2
+      ],
+      [
+       "two+ loss years or erratic",
+       1
+      ]
+     ],
+     "gap": "year-counting convention undefined"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Governance & Promoter Behaviour",
+   "points": 15,
+   "sub": [
+    {
+     "name": "Promoter holding stability and pledging (CDSC, 3 years)",
+     "points": 6,
+     "bands": [
+      [
+       "stable/increasing; <10% pledged",
+       6
+      ],
+      [
+       "broadly stable; 10%-25% pledged",
+       4
+      ],
+      [
+       "declining, or 25%-50% pledged",
+       2
+      ],
+      [
+       "sharply declining, >50% pledged, or repeated insider selling",
+       0
+      ]
+     ],
+     "missing_data": "pledging not verified: score at most 4"
+    },
+    {
+     "name": "Related-party transactions and audit opinion",
+     "points": 5,
+     "bands": "qualitative only in v1.2 (near full marks / near zero)",
+     "gap": "bands undefined"
+    },
+    {
+     "name": "Disclosure timeliness and board independence",
+     "points": 4,
+     "bands": "qualitative only in v1.2",
+     "gap": "bands undefined"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Liquidity & Tradability",
+   "points": 10,
+   "sub": [
+    {
+     "name": "Average daily turnover, 6 months",
+     "points": 5,
+     "bands": [
+      [
+       "Rs 5 million+",
+       5
+      ],
+      [
+       "Rs 1-5 million",
+       3
+      ],
+      [
+       "Rs 200,000-1 million",
+       1
+      ],
+      [
+       "below Rs 200,000",
+       0
+      ]
+     ],
+     "gap": "averaging method undefined"
+    },
+    {
+     "name": "Free float",
+     "points": 5,
+     "bands": [
+      [
+       "40%+",
+       5
+      ],
+      [
+       "below 10%",
+       0
+      ]
+     ],
+     "gap": "middle bands undefined"
+    }
+   ],
+   "note": "Floors, not a measure of whether your own order can be filled; use Chapter 56's ADV rule."
+  },
+  {
+   "id": 4,
+   "name": "Valuation Reasonableness",
+   "points": 15,
+   "sub": [
+    {
+     "name": "P/E vs sector median",
+     "points": 8,
+     "bands": [
+      [
+       "0.8x or below (only if ROE >= sector median; else 6)",
+       8
+      ],
+      [
+       "0.8x-1.1x",
+       6
+      ],
+      [
+       "1.1x-1.5x",
+       3
+      ],
+      [
+       "above 1.5x, or losses",
+       1
+      ]
+     ]
+    },
+    {
+     "name": "P/B vs sector median",
+     "points": 7,
+     "bands": "'identical relative logic' to P/E; in-line = 5 and 1.1x-1.5x = 3 as applied in Chapters 64 and 83; top band 7 only if ROE >= sector median",
+     "gap": "full bands not written out"
+    }
+   ],
+   "note": "Only the sector median is scored; the company's own 5-year median is a cross-check."
+  },
+  {
+   "id": 5,
+   "name": "Sector & Business Model Durability",
+   "points": 15,
+   "sub": [
+    {
+     "name": "Regulatory and competitive moat",
+     "points": 8,
+     "bands": [
+      [
+       "licensed, high barriers, defensible",
+       8
+      ],
+      [
+       "moderate barriers",
+       5
+      ],
+      [
+       "low barriers, commodity-like",
+       2
+      ],
+      [
+       "structural threat",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Revenue concentration",
+     "points": 7,
+     "bands": [
+      [
+       "no customer/segment >20%",
+       7
+      ],
+      [
+       "20%-40%",
+       4
+      ],
+      [
+       "above 40%",
+       2
+      ]
+     ],
+     "note": "Chapter 65 replaces this for hydropower (single NEA buyer)."
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "name": "Growth Trajectory",
+   "points": 15,
+   "sub": [
+    {
+     "name": "5-year revenue CAGR (non-lenders)",
+     "points": 8,
+     "bands": [
+      [
+       "15%+, positive in 4 of 5 years",
+       8
+      ],
+      [
+       "8%-15%",
+       6
+      ],
+      [
+       "0%-8%",
+       3
+      ],
+      [
+       "negative or highly volatile",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Loan growth vs system (lenders, from v1.2)",
+     "points": 8,
+     "bands": [
+      [
+       "within 5 points of system",
+       8
+      ],
+      [
+       "5-10 points faster or slower",
+       5
+      ],
+      [
+       "more than 10 points faster or slower, or shrinking while system grows",
+       2
+      ]
+     ],
+     "adjustments": [
+      "at a credit peak, >5 points faster than system scores 0",
+      "loans >5 points faster than deposits: drop one row",
+      "no verified system figure: at most 5"
+     ]
+    },
+    {
+     "name": "Bonus-adjusted EPS growth, 5 years",
+     "points": 7,
+     "bands": [
+      [
+       "rose in 4+ of 5 years, no single-year swing >50%",
+       7
+      ],
+      [
+       "rose in 3 of 5",
+       4
+      ],
+      [
+       "rose in 2 of 5, or high volatility",
+       2
+      ],
+      [
+       "rose in fewer than 2, or negative in 3+ years",
+       0
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "id": 7,
+   "name": "Dividend & Capital Return Discipline",
+   "points": 10,
+   "sub": [
+    {
+     "name": "Consistency, 5 years",
+     "points": 6,
+     "bands": [
+      [
+       "paid every year; payout 30%-70% of distributable profit",
+       6
+      ],
+      [
+       "paid 4 of 5, or payout very low/high",
+       4
+      ],
+      [
+       "paid 2-3 of 5",
+       2
+      ],
+      [
+       "paid 0-1 of 5",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Funding source",
+     "points": 4,
+     "bands": [
+      [
+       "genuine distributable profit, reserves intact",
+       4
+      ],
+      [
+       "partly one-off or revaluation gains",
+       2
+      ],
+      [
+       "drawing down capital or reserves",
+       0
+      ]
+     ]
+    }
+   ]
+  }
+ ],
+ "score_bands": [
+  [
+   "85-100",
+   "Exceptional; core holding up to 6%-8% of equity sleeve"
+  ],
+  [
+   "70-84",
+   "Strong; 4%-6%"
+  ],
+  [
+   "55-69",
+   "Adequate; satellite 1.5%-3%"
+  ],
+  [
+   "45-54",
+   "Watch list; no new money"
+  ],
+  [
+   "below 45",
+   "Exclude; existing holders review"
+  ]
+ ],
+ "governance_override": {
+  "triggers": [
+   "Governance total below 5 of 15",
+   "promoter-pledging check scores 0 of 6",
+   "audit/related-party check scores 1 or less of 5"
+  ],
+  "effect": "total capped at 54"
+ },
+ "known_overlaps": "About 25-30 of 100 points rest directly or indirectly on reported profit (ROE, earnings quality, EPS growth, dividend consistency, ROE gate on valuation).",
+ "comparability": "Compare totals within a sector; cross-sector comparability is a design aim, not tested.",
+ "proposed_v1_3": {
+  "status": "proposed, not in force; never applies to the 1.2-P record",
+  "items": [
+   "Related-party/audit bands 5/3/1/0",
+   "Disclosure/board bands 4/3/1/0",
+   "P/B bands 7/5/3/1 with ROE gate",
+   "Free float bands 5 (40%+)/3 (25-40%)/1 (10-25%)/0 (<10%)",
+   "Non-BFI leverage bands 7/5/3/0",
+   "Year counting: compare each of last five years with the year before (six years of data)",
+   "Average daily turnover = 6-month traded value / NEPSE trading days, including zero-trade days",
+   "Missing data: unverified sub-component at most middle band; >20 points unverified = provisional",
+   "Record data cut-off and price date with every score"
+  ]
+ },
+ "history": [
+  [
+   "1.0",
+   "2026-08-29",
+   "original"
+  ],
+  [
+   "1.1",
+   "2026-11-16",
+   "closed table gaps and overlaps, bonus-adjusted EPS, severe-red-flag override trigger with cap 54, aligned bands with Ch66, capped unverified pledging"
+  ],
+  [
+   "1.2",
+   "2026-11-17",
+   "lender loan growth vs system with credit-peak cap and funding check; valuation discount needs ROE >= sector median"
+  ]
+ ]
+}
