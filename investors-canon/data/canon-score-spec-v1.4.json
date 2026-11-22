@@ -439,7 +439,7 @@
        0
       ]
      ],
-     "note": "Sector versions in Chapter 65 (e.g. hydropower single-buyer PPA).",
+     "note": "Hydropower single-buyer NEA PPA scores 0 under this table (labelled 'single-buyer PPA'); compare within hydropower only; Chapter 65 has no exact sector table yet.",
      "definition": "Largest single exposure. Non-financial: max of one customer's share of revenue, one segment/product's share of revenue, one region's share of revenue, one supplier's share of purchases. Lenders: credit concentration = largest share of loan book in one sector, segment or region (label 'credit concentration')."
     }
    ]
@@ -615,14 +615,16 @@
   ],
   "provisional": [
    "accounts materially restated (until a full year of new audited figures)"
-  ]
+  ],
+  "duration": "Caps apply only while the flag is current: audit = latest audited annual report; pledging = latest disclosed figure; unexplained promoter falls count for the 3-year look-back."
  },
  "known_overlaps": "About 25-30 of 100 points rest directly or indirectly on reported profit (ROE, earnings quality, EPS growth, dividend consistency, ROE gate on valuation).",
  "comparability": "Compare totals within a sector; cross-sector comparability is a design aim, not tested.",
  "still_judgement": [
   "grouping customers, products and regions in concentration",
   "structural threat in moat",
-  "one-off gain in dividend source"
+  "one-off gain in dividend source",
+  "hydropower single-buyer concentration until Chapter 65 sets a sector table"
  ],
  "considered_v2_0": {
   "status": "needs a test before adoption",
@@ -731,6 +733,10 @@
   [
    "2026-11-22",
    "CAR minimums for classes B, C, D filled in from NRB Financial Stability Report FY 2023/24; Companies Act s86 source note. Rules unchanged."
+  ],
+  [
+   "2026-11-22",
+   "Removed incorrect pointer to a Chapter 65 hydropower concentration table (none exists); clarified cap duration; noted the 1.2-P pilot cannot validate v1.4. Rules unchanged."
   ]
  ]
 }
