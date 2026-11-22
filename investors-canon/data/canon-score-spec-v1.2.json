@@ -444,7 +444,9 @@
    "Year counting: compare each of last five years with the year before (six years of data)",
    "Average daily turnover = 6-month traded value / NEPSE trading days, including zero-trade days",
    "Missing data: unverified sub-component at most middle band; >20 points unverified = provisional",
-   "Record data cut-off and price date with every score"
+   "Record data cut-off and price date with every score",
+   "Dividends retained by design (pre-COD hydropower; payouts barred by regulator): consistency 4 of 6 and funding 2 of 4, marked 'retained by design'",
+   "Extra hard caps at 54: NRB 'problematic' declaration, capital below regulatory minimum, audit disclaimer; exclusion if a court or regulator finds fraud by management or controlling shareholders; material restatement makes the score provisional"
   ]
  },
  "history": [
@@ -463,5 +465,13 @@
    "2026-11-17",
    "lender loan growth vs system with credit-peak cap and funding check; valuation discount needs ROE >= sector median"
   ]
- ]
+ ],
+ "considered_v2_0": {
+  "status": "needs a test before adoption",
+  "items": [
+   "one home dimension per indicator to limit double counting",
+   "growth judged by return on new capital",
+   "compare weights with simple alternatives such as equal weights"
+  ]
+ }
 }
