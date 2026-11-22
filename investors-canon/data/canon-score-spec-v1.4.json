@@ -62,7 +62,7 @@
        8
       ],
       [
-       "10%-15%, or 15%+ with one year below 10%",
+       "10%-15%, or 15%+ with any year below 10%",
        6
       ],
       [
@@ -470,7 +470,8 @@
        "negative, or very volatile",
        0
       ]
-     ]
+     ],
+     "zero_start": "If revenue 5 years ago was zero or from less than a full year of operation: CAGR not used; 3 if revenue grew in at least 3 of last 4 years, else 0."
     },
     {
      "name": "Relative loan-growth discipline (lenders)",
@@ -500,7 +501,7 @@
     {
      "name": "EPS on a comparable share count, 5 years",
      "points": 7,
-     "definition": "Use reported basic EPS as restated in the latest annual report (NFRS / IAS 33 restate for bonus issues and the bonus element of rights issues); do not adjust twice. If only unrestated reports: divide earlier EPS by (1 + bonus ratio) per later bonus; for a rights issue below market, divide by (pre-issue price / theoretical ex-rights price). If unclear, rebuild from net profit and weighted average shares. Check the EPS note and reconcile share count; if fewer than five restated years, adjust older reports.",
+     "definition": "Use reported basic EPS as restated in the latest annual report (NFRS / IAS 33 restate for bonus issues and the bonus element of rights issues); do not adjust twice. If only unrestated reports: divide earlier EPS by (1 + bonus ratio) per later bonus; for a rights issue below market, divide by (pre-issue price / theoretical ex-rights price). If unclear, rebuild from net profit and weighted average shares. Check the EPS note and reconcile share count; if fewer than five restated years, adjust older reports. Audited NFRS statements restate the comparative year; adjust older years only. Expect an EPS dip in a rights-issue year.",
      "bands": [
       [
        "rose in at least 4 of 5 years, no big swing",
@@ -534,22 +535,23 @@
      "definition": "A year counts as paid only with a real cash dividend (not tax-only cash on a bonus). Cash payout ratio = cash dividends / distributable profit; 30%-70% is a design preference. Bonus capitalisation ratio = bonus face value / distributable profit, recorded separately; not treated as equivalent to cash.",
      "bands": [
       [
-       "real cash dividend every year; cash payout 30%-70%",
+       "real cash every year, cash payout within 30%-70% in at least 4 of 5 years",
        6
       ],
       [
-       "real cash in 4 of 5 years, or cash payout consistently below 30% or above 70%",
+       "real cash in 4 of 5 years; or every year with payout outside 30%-70% in 2+ years",
        4
       ],
       [
-       "real cash in 2-3 of 5 years, erratic",
+       "real cash in 2-3 of 5 years",
        2
       ],
       [
        "real cash in 0-1 of 5 years",
        0
       ]
-     ]
+     ],
+     "distributable_profit_bfi": "Lenders: use NRB-format distributable profit (after general reserve - at least 20% of net profit until reserve = 2x paid-up capital, BAFIA 2073 s44 - regulatory reserve and CSR fund), not headline net profit."
     },
     {
      "name": "Source and purpose",
@@ -737,6 +739,10 @@
   [
    "2026-11-22",
    "Removed incorrect pointer to a Chapter 65 hydropower concentration table (none exists); clarified cap duration; noted the 1.2-P pilot cannot validate v1.4. Rules unchanged."
+  ],
+  [
+   "2026-11-22",
+   "Clarifications: ROE row 2 'any year below 10%'; zero/part-year start revenue rule; 'consistently' = 2+ of 5 years in payout table; BFI distributable profit; NAS 33 comparatives and rights-year dip; dated NEPSE valuation figures; CCyB check via monetary policy. No published score changes."
   ]
  ]
 }
