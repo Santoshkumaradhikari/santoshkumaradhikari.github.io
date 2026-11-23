@@ -4,6 +4,7 @@ Every input below is listed, with its source and status, in canon-case-ebl-nica-
 Run:  python3 canon_case_ebl_nica_v1_5_0.py
 It uses the reference functions in canon_score_reference_v1_5_0.py, so the points come from the written rules.
 Data cut-off 23 Nov 2026 (7 Mangsir 2083); share prices 13 Nov 2026. Teaching material, not investment advice.
+Corrected 23 Nov 2026 after review: NICA promoter check 4 -> 0 (repeated insider selling); valuation parts counted as estimated.
 """
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -34,8 +35,8 @@ def ebl():
     s["eps"] = R.eps_points([12.26, 17.63, 23.34, 25.70, 33.59, 35.19])
     s["dividends"] = R.dividend_consistency([True] * 5, [18.7, 26.3, 18.5, 36.6, 26.1])
     s["source"] = 2                                                      # no stated reason found: middle row
-    unverified_or_estimated = {"car": 7, "promoter": 6, "audit": 5, "board": 4, "float": 5,
-                               "moat": 8, "concentration": 7, "source": 4}
+    unverified_or_estimated = {"car": 7, "promoter": 6, "audit": 5, "board": 4, "float": 5, "valuation": 15,
+                               "moat": 8, "concentration": 7, "source": 4}   # valuation: full-year, not trailing, figures
     return s, unverified_or_estimated, dict(problematic=False, capital_below_min=False, restated=False)
 
 
@@ -44,7 +45,9 @@ def nica():
     s["roe"] = R.roe_points([2.38, -14.03, 0.70])
     s["car"] = R.car_points(11.12, 11.0, all_components_met=False)       # Tier 1 = CET1 6.27% < 8.5% / 7%
     s["earnings"] = R.earnings_quality([3250, 4215, 4445, 700, -3872, 180], "lender", writeback_share_max=0)
-    s["promoter"] = min(6, 4)                                            # 51% unchanged (estimated); pledging not verified
+    # 51% unchanged, but promoters sold shares with no stated reason in FY 2081/82 and FY 2082/83:
+    # "repeated insider selling" (Chapter 64, two of the last three years) -> A = 0; pledging not verified -> B at most 4
+    s["promoter"] = min(0, 4)
     s["audit"] = 2                                                       # opinion not read: at most lower middle row
     s["board"] = R.board_points(late_filings=2, independents=1, legal_min=1)   # two late AGMs
     s["turnover"] = R.turnover_points(24.85e6, 15.88e6, 1.0)
@@ -57,7 +60,7 @@ def nica():
     s["eps"] = R.eps_points([21.79, 28.25, 29.80, 4.69, -25.96, 1.21])
     s["dividends"] = R.dividend_consistency([False] * 5, [None] * 5)
     s["source"] = 2                                                      # no table row fits exactly: lower of nearest (4, 2)
-    unverified_or_estimated = {"promoter": 6, "audit": 5, "float": 5, "concentration": 7}
+    unverified_or_estimated = {"promoter": 6, "audit": 5, "float": 5, "valuation": 15, "concentration": 7}
     return s, unverified_or_estimated, dict(problematic=False, capital_below_min=True, restated=True)
 
 
@@ -86,5 +89,5 @@ def report(name, fn):
 if __name__ == "__main__":
     e = report("EBL", ebl)
     n = report("NICA", nica)
-    assert e == (74, 57, 17) and n == (37, 23, 14), "scores changed - update the chapter"
+    assert e == (74, 57, 17) and n == (33, 19, 14), "scores changed - update the chapter"
     print("checks pass")
