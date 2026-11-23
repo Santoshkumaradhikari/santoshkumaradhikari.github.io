@@ -266,7 +266,7 @@
   },
   "ch-64-seven-dimension-score.html": {
    "content_date": "2026-11-23",
-   "hash": "36bc2a40992cc67944d70d3beacbaa36"
+   "hash": "2babc2b1cfb938d7b51aa2d5f5a4019c"
   },
   "ch-65-sector-subscore-adjustments.html": {
    "content_date": "2026-11-22",
@@ -329,8 +329,8 @@
    "hash": "9e54f4205615574d10eb81d5a488e856"
   },
   "ch-80-calibrating-scoring-model.html": {
-   "content_date": "2026-11-18",
-   "hash": "de09ea20271e53b02abeafcf2660408e"
+   "content_date": "2026-11-23",
+   "hash": "e09c245bff4c18f88bae48351eb4b115"
   },
   "ch-81-testing-refining-exit-rules.html": {
    "content_date": "2026-11-18",
@@ -483,6 +483,10 @@
   "ch-118-final-synthesis.html": {
    "content_date": "2026-11-18",
    "hash": "c94062bb7cdd281234773185459767a4"
+  },
+  "ch-64a-two-banks-scored.html": {
+   "content_date": "2026-11-23",
+   "hash": "aefa852dbe3ec27c300094d19e0e7fc9"
   }
  },
  "pages": {
