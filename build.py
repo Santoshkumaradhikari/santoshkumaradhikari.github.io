@@ -313,8 +313,9 @@ def build_toc(data):
 
 def update_index_counts(page, data):
     chapters = flatten(data)
-    n_all = len(chapters)
-    n_main = sum(1 for c in chapters if not c["num"].startswith("0."))
+    # case studies (numbers with a letter, e.g. "64A") are listed in the TOC but not counted as chapters
+    n_main = sum(1 for c in chapters if c["num"].isdigit())
+    n_all = n_main + sum(1 for c in chapters if c["num"].startswith("0."))
     n_parts = sum(1 for v in data["volumes"] for p in v["parts"]
                   if p["roman"].strip() != "Part 0")
     n_vols = len(data["volumes"])

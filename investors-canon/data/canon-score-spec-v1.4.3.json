@@ -1,0 +1,876 @@
+{
+ "name": "Canon Quality Score (Canon Score)",
+ "version": "1.4.3",
+ "adopted": "2026-11-23",
+ "adopted_bs": "7 Mangsir 2083",
+ "master_chapter": "Chapter 64",
+ "status": "Structured ranking tool, partly subjective, combining business quality, governance, tradability and price. Not a measure of intrinsic value, a return forecast or a probability of success. Weights, thresholds and overrides are author judgement. No out-of-sample record for v1.4; written after seeing 2021 bank data.",
+ "applies_to": "Scores made on or after 2026-11-22. Never applied retroactively to version 1.2 scores or to the 1.2-P forward record.",
+ "preserved_records": {
+  "1.2": "canon-score-spec-v1.2.json (frozen 2026-11-17)",
+  "1.2-P": {
+   "label": "1.2-P (pilot)",
+   "chapter": "Chapter 80, Lesson 80.9",
+   "frozen": "2026-11-17",
+   "universe": "19 listed commercial banks",
+   "dimensions_scored": [
+    "financial_strength",
+    "liquidity",
+    "valuation",
+    "growth"
+   ],
+   "points_scored": 60,
+   "later_addition": {
+    "dimension": "dividend_discipline",
+    "points": 10,
+    "years_used": 4
+   },
+   "data_years": 2,
+   "price_date": "2026-11-13",
+   "judged_on_or_after": "2027-11-12"
+  },
+  "case_studies_still_v1_2": {
+   "Chapter 83 Nabil Bank": 75,
+   "Chapter 85 Chhimek Laghubitta": 77,
+   "Chapter 89 Karnali Development Bank": "see chapter"
+  }
+ },
+ "conventions": {
+  "boundary": "Each figure fits exactly one row. 'X to under Y' includes X not Y; 'over X up to Y' includes Y not X; 'or more/or higher/or less/at least' include the figure; 'under/below/over/above' exclude it.",
+  "two_rows": "If a company fits two rows for any other reason, take the lower score.",
+  "aggregation": "Sum of seven dimension scores (0-100); never averaged.",
+  "price_dependence": "Dimensions 3 and 4 depend on the share price and trading; record the price date with every score.",
+  "record": "Record rubric version, data cut-off date and share-price date with every score.",
+  "year_counting": "A five-year growth record = five year-on-year comparisons from six consecutive annual figures (profit, revenue, loans, deposits, EPS). 'Grew' = higher than the year before. Five-year dividend record = dividends declared for five financial years. Three-year average ROE = three annual ROEs from four year-end balance sheets. Loss years and 'the last five years' are counted over the five most recent annual figures.",
+  "missing_data": "Not applicable: follow the table's own rule; not counted as missing. Unavailable / unverified ('not verified'): no higher than the middle row (lower of two middle rows when even) unless the table sets its own limit. Estimated: score normally, label 'estimated'. Unavailable + unverified + estimated > 20 points -> total 'provisional'.",
+  "big_swing": "Year-on-year change > 50% up or down; a change into or out of a loss counts as a big swing, except in the profit-record (earnings quality) table, where loss rows already price loss years.",
+  "point_changes": "'Deduct N points' subtracts from the table score, floor 0. 'Drop one row' moves to the next lower row; the lowest row stays. Every table covers every company; if none fits, score the lower of the two nearest rows and report the gap.",
+  "accounting_basis": "Consolidated accounts (parent-attributable) for profit, revenue, EPS, cash flow and concentration when published; lenders' regulatory items (CAR, NPL, loan/deposit growth, credit concentration) on the bank's own NRB-reported figures.",
+  "applicability": {
+   "NRB lenders (A-D)": "capital cushion; lender profit check; relative loan-growth discipline",
+   "insurers": "interim solvency cushion vs NIA enforced minimum; interim insurer profit check; revenue = net earned premium",
+   "other companies": "debt-to-equity + interest cover; cash check; revenue CAGR"
+  }
+ },
+ "dimensions": [
+  {
+   "id": 1,
+   "name": "Financial Strength & Profitability",
+   "points": 20,
+   "sub": [
+    {
+     "name": "3-year average ROE",
+     "points": 8,
+     "definition": "Each year: profit attributable to owners of the parent / average equity attributable to owners of the parent ((opening+closing)/2). Use consolidated accounts whenever published (excluding non-controlling interests from both lines); otherwise standalone. Simple average of the three annual ROEs. Report all three annual ROEs. Zero or negative equity at any year-end: score 1.",
+     "bands": [
+      [
+       "15% or higher, no year below 10%",
+       8
+      ],
+      [
+       "10% to under 15%; or 15%+ with a year below 10%; no loss year",
+       6
+      ],
+      [
+       "7% to under 10%, no loss year",
+       4
+      ],
+      [
+       "under 7%, or a loss year (any average)",
+       1
+      ]
+     ]
+    },
+    {
+     "name": "Regulatory capital cushion (BFIs)",
+     "points": 7,
+     "definition": "Total CAR above the class minimum at the latest quarter-end; below the minimum in any component = 0 and hard cap. Counter-cyclical buffer: 0.5% required by mid-July 2024, 0% for FY 2081/82; check current rate. Applicable minimum undetermined: 'unverified', max 5.",
+     "bands": [
+      [
+       "2.0 points or more above class minimum",
+       7
+      ],
+      [
+       "0.5 to under 2.0 points above",
+       5
+      ],
+      [
+       "0 to under 0.5 points above",
+       3
+      ],
+      [
+       "below the minimum in any part",
+       0
+      ]
+     ],
+     "past_breach": "Below minimum at any quarter-end in last 3 years but above now: max 3.",
+     "framework_routing": "Unified Directive 2082, Directive No. 1: class A and national-level class B -> Capital Adequacy Framework 2015; other class B and class C -> Capital Adequacy Framework 2007 (updated July 2008).",
+     "minimums": {
+      "A, national-level B (CAF 2015)": "total 8.5% + 2.5% CCB = 11%; Tier 1 6% + 2.5% = 8.5%; CET1 4.5% + 2.5% = 7%",
+      "other B, C (CAF 2007 s2.6)": "Tier 1 (core) 6%; total capital fund 10%; NRB may set higher for an individual institution",
+      "D microfinance (FSR FY2023/24)": "capital fund 8%; core 4%"
+     }
+    },
+    {
+     "name": "Solvency cushion (insurers, interim)",
+     "points": 7,
+     "definition": "Solvency ratio (% of NIA risk-based capital requirement). 2025 RBC directive (as described by an audit and Clickmandu, Sep 2026): 130% supervisory target, 100% lower boundary of the supervisory range, lower Minimum Capital Requirement. NIA lists a 2026 directive (updated 4 Aug 2026), not read. Interim.",
+     "bands": [
+      [
+       "200% or more",
+       7
+      ],
+      [
+       "130% to under 200%",
+       5
+      ],
+      [
+       "100% to under 130%",
+       3
+      ],
+      [
+       "under 100%",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Leverage (non-financial companies) = debt-to-equity (3) + interest cover (4)",
+     "points": 7,
+     "parts": [
+      {
+       "name": "debt-to-equity",
+       "points": 3,
+       "definition": "interest-bearing borrowings + lease liabilities / equity",
+       "bands": [
+        [
+         "under 1.0x",
+         3
+        ],
+        [
+         "1.0x to under 2.0x",
+         2
+        ],
+        [
+         "2.0x to under 3.0x",
+         1
+        ],
+        [
+         "3.0x or more, or zero or negative equity",
+         0
+        ]
+       ]
+      },
+      {
+       "name": "interest cover",
+       "points": 4,
+       "definition": "operating profit (EBIT) / interest expense",
+       "bands": [
+        [
+         "5x or more, or no interest-bearing debt",
+         4
+        ],
+        [
+         "3x to under 5x",
+         3
+        ],
+        [
+         "1.5x to under 3x",
+         1
+        ],
+        [
+         "under 1.5x, or operating loss",
+         0
+        ]
+       ]
+      }
+     ],
+     "note": "Debt maturity recorded, not scored. Chapter 65 has no sector version yet; compare hydropower only with hydropower.",
+     "cases": [
+      "no interest-bearing debt: cover 4",
+      "debt with little or no expensed interest (capitalised interest): use all interest incurred",
+      "operating loss: cover 0",
+      "zero/negative equity: D/E 0 and flagged"
+     ]
+    },
+    {
+     "name": "Earnings quality: five year-on-year profit comparisons (six annual figures)",
+     "points": 5,
+     "bands": [
+      [
+       "no loss year; profit grew in at least 4 of 5 comparisons",
+       5
+      ],
+      [
+       "no loss year; flat or declining in exactly 2",
+       3
+      ],
+      [
+       "no loss year, flat or declining in 3+; or exactly one loss year",
+       2
+      ],
+      [
+       "two or more loss years, or erratic",
+       1
+      ]
+     ],
+     "adjustments": [
+      "Non-financial: cash conversion ratio = sum of 3-year operating cash flow / sum of 3-year net profit; below 0.5 -> deduct 1 point (floor 0). Not applied if 3-year net profit <= 0.",
+      "Lenders: if in any of the last 3 years more than 25% of net profit came from provision write-backs or one-off gains -> deduct 1 point.",
+      "Insurers (interim): if >25% of net profit in any of last 3 years came from realised investment gains or releases of earlier reserves -> deduct 1 point."
+     ]
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "name": "Governance & Promoter Behaviour",
+   "points": 15,
+   "sub": [
+    {
+     "name": "Promoter holding (A) and pledging (B), 3 years; score = lower of A and B",
+     "points": 6,
+     "bands": {
+      "A_holding": [
+       [
+        "stable (<1 point change) or rising",
+        6
+       ],
+       [
+        "fell 1 to under 3 points",
+        4
+       ],
+       [
+        "fell 3 to 5 points",
+        2
+       ],
+       [
+        "fell over 5 points, or repeated unexplained insider selling",
+        0
+       ]
+      ],
+      "B_pledged": [
+       [
+        "under 10%",
+        6
+       ],
+       [
+        "10% to under 25%",
+        4
+       ],
+       [
+        "25% to 50%",
+        2
+       ],
+       [
+        "over 50%",
+        0
+       ]
+      ]
+     },
+     "source_order": [
+      "company share register / annual report shareholding note",
+      "SEBON and NEPSE disclosures",
+      "CDSC records"
+     ],
+     "explained_falls": "Falls from mergers, legally required sales or new public issues are not penalised; only unexplained or repeated falls count.",
+     "missing_data": "Pledging not verified: at most 4 of 6."
+    },
+    {
+     "name": "Audit opinion and related-party dealings",
+     "points": 5,
+     "bands": [
+      [
+       "clean opinion; small, fully disclosed RPT",
+       5
+      ],
+      [
+       "clean opinion with emphasis of matter (not going concern)",
+       4
+      ],
+      [
+       "prior-year restatement, or large but disclosed RPT",
+       3
+      ],
+      [
+       "qualified opinion on a limited, explained matter",
+       2
+      ],
+      [
+       "qualified on loans, provisions or RPT; scope limitation on a material area; or going-concern material uncertainty",
+       1
+      ],
+      [
+       "adverse opinion, disclaimer, or undisclosed RPT found",
+       0
+      ]
+     ],
+     "terms": "Use the auditor report headings: emphasis of matter; material uncertainty related to going concern; qualified; adverse; disclaimer."
+    },
+    {
+     "name": "Disclosure and board structure",
+     "points": 4,
+     "legal_minimum": "Banks and financial institutions: BAFIA 2073 s14 - board of 5 to 7, at least 1 director under s14(3) ('independent director' in the Law Commission English text; 'professional director' in another translation). Other public companies: Companies Act 2063 s86(2) board of 3 to 11 (verified); s86(3) at least 1 independent director on a board of up to 7, 2 on a larger board (two agreeing legal publishers; sub-section text not read).",
+     "bands": [
+      [
+       "all filings and AGM on time 3 years; more independent directors than minimum; attendance and audit-committee tests met",
+       4
+      ],
+      [
+       "on time 3 years; exactly the minimum, or more than minimum but attendance/committee test not met or unverified",
+       3
+      ],
+      [
+       "one late quarterly report or one late AGM in 3 years, no penalty",
+       2
+      ],
+      [
+       "two or more late filings, or below legal minimum",
+       1
+      ],
+      [
+       "penalised by SEBON/NEPSE for disclosure failure in 3 years",
+       0
+      ]
+     ],
+     "top_row_extra": "Each independent director meets legal independence tests, attended >= 75% of board meetings in last year, audit committee includes one; unverified -> 3. Structural test only. Measures structure and filing discipline, not board effectiveness."
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "name": "Liquidity & Tradability",
+   "points": 10,
+   "sub": [
+    {
+     "name": "Average daily turnover, 6 months",
+     "points": 5,
+     "definition": "Total value traded over 6 months / number of NEPSE trading days, including zero-trade days.",
+     "bands": [
+      [
+       "Rs 5 million or more",
+       5
+      ],
+      [
+       "Rs 1 million to under 5 million",
+       3
+      ],
+      [
+       "Rs 0.2 million to under 1 million",
+       1
+      ],
+      [
+       "under Rs 0.2 million",
+       0
+      ]
+     ],
+     "adjustments": [
+      "Thin trading: traded on fewer than half of trading days -> at most 1.",
+      "Block-trade check: if 6-month average > 2x median daily turnover, score from the median ('block-trade adjusted')."
+     ]
+    },
+    {
+     "name": "Free float",
+     "points": 5,
+     "bands": [
+      [
+       "40% or more",
+       5
+      ],
+      [
+       "25% to under 40%",
+       3
+      ],
+      [
+       "10% to under 25%",
+       1
+      ],
+      [
+       "under 10%",
+       0
+      ]
+     ],
+     "definition": "Share of outstanding shares genuinely available for ordinary trading: excludes promoter/founder, government and other strategic holdings, cross-holdings, locked-in shares, restricted employee/management shares and other restricted holdings (categories as in SEBON working paper on benchmark index restructuring, Asoj 30 2083 / 16 Oct 2026, a consultation draft). If restricted holdings cannot all be identified: public holding minus disclosed locked-in shares, marked 'estimated'."
+    }
+   ],
+   "note": "Preliminary tradability screen only. Circuit-hit frequency, post-halt price gaps and bunching of turnover are not scored; order-size feasibility via Chapter 56 ADV rule, circuit risk via Chapter 58."
+  },
+  {
+   "id": 4,
+   "name": "Valuation Reasonableness",
+   "points": 15,
+   "sub": [
+    {
+     "name": "P/E vs sector median",
+     "points": 8,
+     "bands": [
+      [
+       "0.8x sector median or less (needs ROE >= sector median; lenders also NPL <= system)",
+       8
+      ],
+      [
+       "over 0.8x up to 1.1x",
+       6
+      ],
+      [
+       "over 1.1x up to 1.5x",
+       3
+      ],
+      [
+       "over 1.5x, or negative trailing 12-month EPS (loss for ordinary shareholders)",
+       1
+      ]
+     ]
+    },
+    {
+     "name": "P/B vs sector median",
+     "points": 7,
+     "bands": [
+      [
+       "0.8x or less (same gates)",
+       7
+      ],
+      [
+       "over 0.8x up to 1.1x",
+       5
+      ],
+      [
+       "over 1.1x up to 1.5x",
+       3
+      ],
+      [
+       "over 1.5x, or negative book value",
+       1
+      ]
+     ]
+    }
+   ],
+   "sector_median": "NEPSE sector groups, comparable companies only (hydropower: operating plants); same price date; book values and earnings from the same latest published quarter and accounting basis. P/E median: exclude companies with negative trailing 12-month EPS; TTM EPS. P/B median: include loss-makers with positive book value; exclude zero/negative book. Each median needs at least 5 companies of its own, else 'unverified' and in-line row. Simple median; record price date.",
+   "note": "P/E and P/B move with the same price: read as one view. Company's own 5-year median is a cross-check only.",
+   "no_earnings_rule": "Pre-COD hydropower (no meaningful earnings): P/E not applicable; valuation = P/B points / 7 x 15, rounded; labelled 'one measure only'. ROE gate cannot be passed, so max 11. P/E 'not applicable' does not count towards the provisional limit.",
+   "discount_gate": "Top P/E or P/B row needs ROE >= sector median ROE; for lenders also NPL ratio <= system average.",
+   "cross_checks": "Recorded, not scored: own 5-year median; absolute P/E and P/B. Banks: justified P/B = (ROE - g) / (COE - g), recorded not scored."
+  },
+  {
+   "id": 5,
+   "name": "Sector & Business Model Durability",
+   "points": 15,
+   "sub": [
+    {
+     "name": "Moat",
+     "points": 8,
+     "bands": [
+      [
+       "high barriers and evidence: ROE (Lesson 64.2 method) >= annual sector median in at least 4 of last 5 years (lenders: gross NPL <= class average in those years); hydropower: operating plants together delivered >= 90% of contracted energy in 2 of last 3 years, >= 10 years left on PPAs covering most of that energy",
+       8
+      ],
+      [
+       "moderate barriers, or licence/regulated position without proof",
+       5
+      ],
+      [
+       "low barriers; commodity-like",
+       2
+      ],
+      [
+       "structural regulatory or technological threat",
+       0
+      ]
+     ]
+    },
+    {
+     "name": "Business and counterparty concentration",
+     "points": 7,
+     "bands": [
+      [
+       "20% or less",
+       7
+      ],
+      [
+       "over 20% up to 40%",
+       4
+      ],
+      [
+       "over 40% up to 60%",
+       2
+      ],
+      [
+       "over 60%",
+       0
+      ]
+     ],
+     "definition": "Largest single exposure. Non-financial: max of one customer's share of revenue, one segment/product's share of revenue, one region's share of revenue, one supplier's share of purchases. Lenders: credit concentration = largest share of loan book in one sector, segment or region (label 'credit concentration'). Denominators: revenue for customer/segment/region, purchases for supplier; record which exposure was largest. Lenders: single-borrower/connected-group exposure recorded, not scored.",
+     "hydropower": "Single-buyer NEA PPA scores 0 as a provisional penalty; hydropower totals not comparable across sectors until Chapter 65 sets a table (offtaker credit, payment delays/receivables, PPA length and enforceability, transmission, curtailment and deemed energy, tariff/regulation)."
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "name": "Growth Trajectory",
+   "points": 15,
+   "sub": [
+    {
+     "name": "5-year revenue CAGR (non-lenders)",
+     "points": 8,
+     "definition": "Operating revenue only; exclude one-off, revaluation and non-operating income. Merger/acquisition in period: use combined figures, else at most 6 and note 'merger'. CAGR = (revenue_t / revenue_t-5)^(1/5) - 1 from six annual figures.",
+     "bands": [
+      [
+       "15% or more and growth in at least 4 of 5 comparisons",
+       8
+      ],
+      [
+       "8% to under 15%; or 15%+ with growth in fewer than 4",
+       6
+      ],
+      [
+       "0% to under 8%",
+       3
+      ],
+      [
+       "under 0%, or very volatile",
+       0
+      ]
+     ],
+     "zero_start": "Zero or part-year starting revenue: with >= 4 comparisons, 3 if growth in at least 3 of last 4, else 0; with fewer than 4 (incl. pre-operation): 3, 'insufficient history', counted as unverified. Insurers (interim): revenue = net earned premium."
+    },
+    {
+     "name": "Relative loan-growth discipline (lenders)",
+     "points": 8,
+     "rationale": "Lender income is mainly interest, which moves with rates as well as lending; the loan book is the better measure of expansion.",
+     "bands": [
+      [
+       "5 percentage points or less faster or slower",
+       8
+      ],
+      [
+       "over 5 up to 10 points",
+       5
+      ],
+      [
+       "over 10 points, or shrinking while system grows",
+       2
+      ]
+     ],
+     "adjustment_order": [
+      "1. Credit peak (book's working definition: system credit growth > 20% or system CD ratio within 5 points of ceiling) and lender > 5 points faster than system: 0 on this 8-point part; final, skip steps 2-4.",
+      "2. Loans > 5 points faster than deposits: drop one row.",
+      "3. Gross NPL above the class gross average (same quarter-end) AND write-off-adjusted NPL (Canon proxy) higher than a year earlier -> drop one row; or restructured/rescheduled loans > 5% -> drop one row (one drop max for this step). Steps 2-3 floor 2.",
+      "4. No verified system figure for same period: at most 5."
+     ],
+     "measurement": "Five-year CAGR of gross loans and advances for the lender and its class system over the same six year-ends; deposits measured the same way. Systems: commercial banks, development banks, finance companies, microfinance.",
+     "adjusted_npl": "(NPLs + loans written off in the year) / (total loans + loans written off in the year), gross, same quarter-end as the class average."
+    },
+    {
+     "name": "EPS on a comparable share count: five year-on-year comparisons",
+     "points": 7,
+     "definition": "Basic EPS (not diluted). Weighted average ordinary shares. Under NFRS (NAS 33, mirroring IAS 33; earlier 2008 NAS 26 also covered EPS; in current NFRS NAS 26 is a different standard) each report restates the previous year for bonus issues and the bonus element of rights issues. For each year take EPS from the latest report showing it; adjust only for issues after that report. Bonus: divide by (1 + ratio). Rights: TERP = (old shares x market price + new shares x issue price) / (old + new); divide earlier EPS by market price / TERP. Unclear: rebuild from net profit and weighted shares. Expect an EPS dip in a rights-issue year.",
+     "bands": [
+      [
+       "rose in at least 4 of 5 years, no big swing",
+       7
+      ],
+      [
+       "rose in 3 or more of 5, at most one big swing",
+       4
+      ],
+      [
+       "rose in 2 of 5 years, or very volatile",
+       2
+      ],
+      [
+       "rose in fewer than 2 years, or negative in 3+ years",
+       0
+      ]
+     ],
+     "loss_rule": "A year counts as 'rose' only if EPS positive that year. Negative EPS in latest year or in 2+ of 5 years: max 2. 'Last five years' = five most recent annual EPS figures."
+    }
+   ],
+   "notes": [
+    "Growth is nominal; NRB average CPI inflation 3.08% FY 2025/26, 4.06% FY 2024/25; not inflation-adjusted in scoring.",
+    "Lenders: record absolute loan growth beside the relative score."
+   ]
+  },
+  {
+   "id": 7,
+   "name": "Dividend & Capital Return Discipline",
+   "points": 10,
+   "sub": [
+    {
+     "name": "Consistency, 5 years",
+     "points": 6,
+     "definition": "A year counts as paid only with a real cash dividend (not tax-only cash on a bonus). Cash payout ratio = cash dividends / distributable profit; 30%-70% is a design preference. Bonus capitalisation ratio = bonus face value / distributable profit, recorded separately; not treated as equivalent to cash.",
+     "bands": [
+      [
+       "real cash every year, cash payout within 30%-70% in at least 4 of 5 years",
+       6
+      ],
+      [
+       "real cash in 4 of 5 years; or every year with payout outside 30%-70% in 2+ years",
+       4
+      ],
+      [
+       "real cash in 2-3 of 5 years",
+       2
+      ],
+      [
+       "real cash in 0-1 of 5 years",
+       0
+      ]
+     ],
+     "distributable_profit": "From the profit-appropriation statement or statement of changes in equity, not headline net profit. Lenders: NRB-format figure; BAFIA 2073 s44 requires at least 20% of net profit to the general reserve until the reserve equals twice paid-up capital, then at least 10% (checked against Nepali text); plus regulatory reserve and CSR fund.",
+     "zero_or_negative_distributable_profit": "Payout ratio not applicable; cash paid that year counts as outside 30-70% and source check scores 0; no profit and no dividend = a year without a real cash dividend."
+    },
+    {
+     "name": "Source and reason",
+     "points": 4,
+     "bands": [
+      [
+       "genuine distributable profit; reserves intact or growing; stated reason for profit kept back",
+       4
+      ],
+      [
+       "partly one-off/revaluation gains, or profit kept with no stated reason",
+       2
+      ],
+      [
+       "drawn from capital or reserves",
+       0
+      ]
+     ],
+     "note": "A bonus issue capitalises existing reserves; it raises no money and is not itself a use of retained earnings."
+    }
+   ],
+   "retained_by_design": "Hydropower before COD, or bank/insurer barred from paying by regulator capital rules: consistency 4/6, source 2/4, marked 'retained by design'.",
+   "recorded_not_scored": "Exploratory proxy (not a return on capital): 5-year rise in EPS / total EPS retained over the 5 years, comparable share count."
+  }
+ ],
+ "score_bands": [
+  [
+   "85-100",
+   "Exceptional combined score; core holding up to 6%-8% of equity sleeve"
+  ],
+  [
+   "70-84",
+   "Strong; 4%-6%"
+  ],
+  [
+   "55-69",
+   "Adequate; satellite 1.5%-3%"
+  ],
+  [
+   "45-54",
+   "Watch list; no new money"
+  ],
+  [
+   "below 45",
+   "Exclude; existing holders review"
+  ]
+ ],
+ "hard_limits": {
+  "governance_override": {
+   "triggers": [
+    "Governance total below 5 of 15",
+    "pledging check 0 of 6 (>50% pledged, unexplained sharp fall, or repeated unexplained insider selling)",
+    "audit check 1 or less of 5 (qualified on loans/provisions/RPT, material scope limitation, going-concern material uncertainty, adverse, disclaimer, undisclosed RPT)"
+   ],
+   "effect": "total capped at 54"
+  },
+  "cap_54": [
+   "NRB has declared the company 'problematic'",
+   "capital below the regulatory minimum",
+   "audit disclaimer"
+  ],
+  "exclude": [
+   "court or regulator finding of fraud by management or controlling shareholders"
+  ],
+  "provisional": [
+   "accounts materially restated (until a full year of new audited figures)"
+  ],
+  "duration": "Caps apply only while the flag is current: audit = latest audited annual report; pledging = latest disclosed figure; unexplained promoter falls count for the 3-year look-back."
+ },
+ "known_overlaps": "About 25-30 of 100 points rest directly or indirectly on reported profit (ROE, earnings quality, EPS growth, dividend consistency, ROE gate on valuation).",
+ "comparability": "Compare totals within a sector; cross-sector comparability is a design aim, not tested.",
+ "still_judgement": [
+  "grouping customers, products and regions in concentration",
+  "structural threat in moat",
+  "one-off gain in dividend source",
+  "hydropower single-buyer concentration until Chapter 65 sets a sector table",
+  "'small' vs 'large' related-party dealings",
+  "interim insurer rules until Chapter 65"
+ ],
+ "considered_v2_0": {
+  "status": "needs a test before adoption",
+  "items": [
+   "one home dimension per indicator to limit double counting",
+   "growth judged by return on new capital",
+   "compare weights with simple alternatives such as equal weights",
+   "double-counting diagnostic: correlation of sub-scores, leave-one-dimension-out ranking changes, equal-weight comparison (Chapter 80 audit)",
+   "score return on retained capital",
+   "separate customer/region/product/supplier concentration scores",
+   "lender valuation using asset quality and cost of equity",
+   "duration and severity of past capital breaches",
+   "board effectiveness beyond structure",
+   "board effectiveness from documents (RPT approvals and terms, board challenge, auditor independence/rotation, audit follow-up, minority treatment, capital allocation)",
+   "circuit-risk adjustment",
+   "lender capital quality and stress tests",
+   "debt maturity",
+   "hydropower concentration sector table",
+   "ROIC and incremental ROIC vs cost of capital (non-financials)",
+   "inflation-adjusted growth",
+   "absolute and profitable loan growth",
+   "bid-ask spread, price impact, days to exit",
+   "separate engines (financial strength, intrinsic value, liquidity/exit, portfolio sizing) rather than more points"
+  ]
+ },
+ "test_protocol": [
+  "scores frozen before results known",
+  "whole sector incl. merged, failed, delisted",
+  "total shareholder return incl. dividends",
+  "rank correlation overall and within sector",
+  "risk-adjusted return and maximum drawdown",
+  "equal-weight comparison",
+  "value beyond simple measures (ROE, P/B, leverage)",
+  "dimension ablation",
+  "score stability to small data revisions",
+  "point-in-time data only",
+  "transaction costs, fees and slippage",
+  "benchmarks: NEPSE index and sector index",
+  "rebalancing rule fixed in advance",
+  "market phases incl. credit stress; annual return, volatility, Sharpe ratio, downside deviation, turnover",
+  "correlation table and principal-component analysis of sub-scores",
+  "independent replication on a separate period",
+  "annualisation: compounded annual return; volatility = SD of daily returns x sqrt(NEPSE trading days per year); Sharpe risk-free = average NRB 91-day T-bill yield over the period",
+  "rivals: Piotroski F-Score; Greenblatt-style return on capital + earnings yield rank (non-financials); justified P/B (banks); weights estimated on one period and tested on another",
+  "valuation floor: compare 1-point bottom rows with a 0-point alternative",
+  "nominal threshold drift: check score distributions over years"
+ ],
+ "worked_example": {
+  "company": "HUBL (invented)",
+  "v1_3_total": 87,
+  "v1_2_total": 85,
+  "v1_1_total": 83,
+  "edge_cases": [
+   "Kanchan Cement (invented): leverage 1+1=2/7; cash conversion 0.45 -> earnings quality 5-1=4",
+   "Tamor Khola Hydro (invented, pre-COD): valuation 5/7 x 15 = 11, one measure only; dividends retained by design 4+2",
+   "Sagarmatha Growth Bank (invented): ROE 8/8; write-backs 30% of profit -> -1; NPL 5.1% vs 4.0% rising -> drop a row; 55% pledged -> override cap 54"
+  ],
+  "assumptions_marked": [
+   "write-backs/one-offs max 8% of profit",
+   "adjusted NPL 3.1% vs 3.4% a year earlier, class average 4.0%",
+   "restructured loans 1.2%",
+   "reserves grew every year; distributions met NRB conditions",
+   "Tier 1 and CET1 10.3%"
+  ],
+  "v1_4_2": {
+   "financial_strength": 16,
+   "governance": 15,
+   "liquidity": 8,
+   "valuation": 11,
+   "durability": 12,
+   "growth": 15,
+   "dividends": 10,
+   "total": 87,
+   "business_quality_of_75": 68,
+   "share_attractiveness_of_25": 19
+  },
+  "five_year_roe": {
+   "hubl": [
+    13.5,
+    12.1,
+    11.0,
+    15.2,
+    16.4
+   ],
+   "sector_median_illustrative": [
+    12.0,
+    13.0,
+    10.2,
+    9.0,
+    8.5
+   ],
+   "years_at_or_above": 4
+  },
+  "turnover_median_rs_m": 2.6
+ },
+ "history": [
+  [
+   "1.0",
+   "2026-08-29",
+   "original"
+  ],
+  [
+   "1.1",
+   "2026-11-16",
+   "closed table gaps and overlaps, bonus-adjusted EPS, severe-red-flag override trigger with cap 54, aligned bands with Ch66, capped unverified pledging"
+  ],
+  [
+   "1.2",
+   "2026-11-17",
+   "lender loan growth vs system with credit-peak cap and funding check; valuation discount needs ROE >= sector median"
+  ],
+  [
+   "1.3",
+   "2026-11-22",
+   "complete scoring rules for steps left to judgement in 1.2; CAR vs class minimum; ROE, ADV, swing definitions; cash and thin-trading checks; lender asset-quality step and adjustment order; EPS per NFRS/IAS 33 incl. rights bonus element; real-cash dividend rule; sector-median and loss-maker rules; licence alone not full moat; pledge source order; extra hard limits. Weights and bands unchanged."
+  ],
+  [
+   "1.4",
+   "2026-11-22",
+   "technical patch: P/B scaling for no-earnings companies (no double count); leverage split D/E 3 + cover 4; business and counterparty concentration with zero row (credit concentration for lenders); full free-float definition; deduction rules; cash conversion ratio; lender profit check; consolidated ROE alignment; past CAR breach max 3; measurable promoter falls; board effectiveness tests; gross NPL with write-offs added back and restructured loans; EPS loss rule; cash-only payout with bonus recorded separately; return on retained capital recorded; three reported outputs; position limits labelled provisional. Weights and score bands unchanged."
+  ],
+  [
+   "1.4.1",
+   "2026-11-23",
+   "technical corrections (see patch list in Chapter 64): ROE loss-year rule; P/B median peer set; profit-record row order; boundary, year-counting, missing-data and swing definitions; zero equity and capitalised interest; capital table by class with dates; CCyB history; adjusted NPL formula; loan/deposit CAGR; NAS 33 restatement; hydropower comparability; HUBL evidence. Weights and bands unchanged."
+  ],
+  [
+   "1.4.2",
+   "2026-11-23",
+   "technical patch: lender capital table per Directive 1/2082 framework routing (other B and C: 10%/6%); interim insurer solvency and profit check; retained-earnings ratio renamed exploratory proxy; NPL method (gross vs class, adjusted vs own past); interval wording in all tables; promoter table split; board table completed; insufficient-history rule; block-trade median check; five-year moat method and multi-plant hydropower; basic EPS; accounting basis; provisional-score position rule; combined-score band wording. Weights, bands and scored measures unchanged."
+  ],
+  [
+   "1.4.3",
+   "2026-11-23",
+   "P/E loss test on EPS; zero/negative distributable profit rule; credit-peak 0 final; EPS loss window; EPS row 3-or-more; profit-record swing rule; insurer bands 200/130/100; interim part-score gate; CAGR notation; reference implementation and 84 test cases. Weights, bands and measures unchanged."
+  ]
+ ],
+ "supersedes": {
+  "1.4.2": "canon-score-spec-v1.4.2.json"
+ },
+ "outputs": {
+  "business_quality_score": {
+   "dimensions": [
+    1,
+    2,
+    5,
+    6,
+    7
+   ],
+   "max": 75
+  },
+  "share_attractiveness_score": {
+   "dimensions": [
+    3,
+    4
+   ],
+   "max": 25
+  },
+  "canon_score": {
+   "max": 100
+  },
+  "rule": "Always report all three; never the total alone."
+ },
+ "score_bands_note": "Position limits attached to bands are provisional ceilings, not evidence-based sizes; Chapter 60/66 concentration limits, maximum tolerable loss and Chapter 56 ADV rule also apply. Provisional scores take the ceiling of the band below. Bands describe the combined score, not business quality alone. Interim gate: a total in the top two bands takes the next band's ceiling if Business Quality < 38/75 or Share Attractiveness < 13/25; provisional also moves one band down; at most one band down in all.",
+ "forward_pilot_note": "The 1.2-P pilot (frozen 2026-11-17) cannot validate v1.4; its 2027-11 review is a first-year look only.",
+ "patch_scope": "Technical corrections; weights, bands and scored measures unchanged; HUBL 87 unchanged.",
+ "status_of_file": "Complete executable specification for rubric 1.4.2. Earlier spec files are an archive/change log.",
+ "related_methods": [
+  "Piotroski F-Score (2000)",
+  "Greenblatt magic formula (2005)",
+  "Graham margin of safety",
+  "Altman Z-Score (1968)",
+  "Quality Minus Junk (2019)"
+ ],
+ "reference_implementation": "canon_score_reference_v1_4_3.py",
+ "test_cases": "canon-score-test-cases-v1.4.3.json (84 cases, all pass)"
+}

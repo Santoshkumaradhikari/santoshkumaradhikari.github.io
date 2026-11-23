@@ -1,0 +1,80 @@
+{
+ "name": "Canon Score validation protocol",
+ "version": "1",
+ "registered": "2026-11-23",
+ "registered_bs": "7 Mangsir 2083",
+ "master_chapter": "Chapter 80, Lesson 80.10",
+ "two_tracks": {
+  "textbook": {
+   "question": "Does the Canon teach correct, checkable company analysis?",
+   "proof": "dated sourced facts, checkable rules, worked examples, How Sure tables",
+   "not_proof": "investment results"
+  },
+  "model": {
+   "question": "Do higher scores lead to better company outcomes and better after-cost returns than simpler methods?",
+   "proof": "frozen pre-registered forward records on unseen data vs rivals",
+   "not_proof": "explanations, expert approval, in-sample backtests"
+  }
+ },
+ "records": [
+  {
+   "id": 1,
+   "rubric": "1.2-P",
+   "frozen": "2026-11-17",
+   "universe": "19 listed commercial banks",
+   "rules": "Chapter 80 Lesson 80.9",
+   "judged_on_or_after": "2027-11-12"
+  },
+  {
+   "id": 2,
+   "rubric": "1.4.2 (or current at scoring)",
+   "freeze_by": "2027-01-15",
+   "freeze_by_bs": "1 Magh 2083",
+   "universe": "all listed commercial banks, all seven dimensions",
+   "repeat": "annually, first NEPSE trading day of Magh, rubric version labelled"
+  }
+ ],
+ "universe_expansion": [
+  "development banks and finance companies from the second annual record",
+  "hydropower and insurers after Chapter 65 sets sector rules",
+  "other sectors when >= 10 comparable companies"
+ ],
+ "rivals": {
+  "all": [
+   "equal-weight seven dimensions"
+  ],
+  "banks": [
+   "four-number rank: mean of ranks on ROE (high), gross NPL (low), capital cushion (high), P/B (low)",
+   "justified-value gap: ((ROE - 0.05)/(0.12 - 0.05)) / actual P/B; COE 12% and g 5% fixed for all banks"
+  ],
+  "non_financials": [
+   "Piotroski F-Score (nine original signals)",
+   "Greenblatt-style rank: return on capital = EBIT/(net working capital + net fixed assets); earnings yield = EBIT/EV; combined ranks"
+  ],
+  "benchmarks": [
+   "NEPSE index",
+   "relevant NEPSE sector index"
+  ]
+ },
+ "outcomes": {
+  "company_quality_12m": "adverse event for lenders: gross NPL up > 1 percentage point; capital below minimum; cash dividend cut to zero; audit qualification; NRB problematic status",
+  "return_12m_36m": "price change + cash dividends, adjusted for bonus/rights, mergers followed at official swap ratio, after broker commission, SEBON and CDSC fees and capital gains tax in force; maximum drawdown reported"
+ },
+ "analysis": {
+  "per_record": "within-sector Spearman rank correlation of score vs outcome; top third vs bottom third",
+  "pooling": "across records and sectors; single-year results reported as one observation, never a verdict"
+ },
+ "decision_rules": {
+  "pass": "after >= 3 annual records including a period with NEPSE index down >= 15% from peak: pooled rank correlation > 0 for both outcomes AND Canon >= best simple rival on after-cost return",
+  "fail": "pooled correlation <= 0, or a simple rival better; book states it plainly; model track recommends the rival; Canon continues as a teaching checklist",
+  "otherwise": "no clear signal yet; keep recording"
+ },
+ "protections": [
+  "frozen scores never changed",
+  "rubric changes apply only to later records, versioned and logged",
+  "point-in-time data only",
+  "all companies scored incl. later merged/failed/delisted",
+  "in-sample backtests labelled exploratory, never count toward a pass",
+  "each record, rival scores and outcomes published as data files"
+ ]
+}

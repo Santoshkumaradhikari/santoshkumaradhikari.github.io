@@ -1,0 +1,1072 @@
+{
+ "name": "Canon Score test cases",
+ "rubric": "1.4.3",
+ "created": "2026-11-23",
+ "note": "Expected values were worked out by hand from the Chapter 64 tables, then checked with canon_score_reference_v1_4_3.py. Percentages as numbers.",
+ "cases": [
+  {
+   "id": "ROE-01",
+   "function": "roe_points",
+   "inputs": {
+    "roes": [
+     15,
+     15,
+     15
+    ]
+   },
+   "expected": 8,
+   "rule": "average exactly 15% is in '15% or higher'; no year below 10%"
+  },
+  {
+   "id": "ROE-02",
+   "function": "roe_points",
+   "inputs": {
+    "roes": [
+     8,
+     9,
+     31
+    ]
+   },
+   "expected": 6,
+   "rule": "average 16% with years below 10%, no loss -> 6"
+  },
+  {
+   "id": "ROE-03",
+   "function": "roe_points",
+   "inputs": {
+    "roes": [
+     -5,
+     20,
+     35
+    ]
+   },
+   "expected": 1,
+   "rule": "any loss year -> 1, whatever the average"
+  },
+  {
+   "id": "ROE-04",
+   "function": "roe_points",
+   "inputs": {
+    "roes": [
+     10,
+     10,
+     10
+    ]
+   },
+   "expected": 6,
+   "rule": "exactly 10% is in '10% to under 15%'"
+  },
+  {
+   "id": "ROE-05",
+   "function": "roe_points",
+   "inputs": {
+    "roes": [
+     6.9,
+     7,
+     7.1
+    ]
+   },
+   "expected": 4,
+   "rule": "average 7.0% is in '7% to under 10%'"
+  },
+  {
+   "id": "ROE-06",
+   "function": "roe_points",
+   "inputs": {
+    "roes": [
+     12,
+     14,
+     16
+    ],
+    "equity_nonpositive": true
+   },
+   "expected": 1,
+   "rule": "zero or negative equity -> 1"
+  },
+  {
+   "id": "ROE-HUBL",
+   "function": "roe_points",
+   "inputs": {
+    "roes": [
+     11.0,
+     15.2,
+     16.4
+    ]
+   },
+   "expected": 6,
+   "rule": "HUBL: average 14.2%"
+  },
+  {
+   "id": "CAR-01",
+   "function": "car_points",
+   "inputs": {
+    "car": 13.0,
+    "minimum": 11
+   },
+   "expected": 7,
+   "rule": "exactly 2.0 points above -> 7"
+  },
+  {
+   "id": "CAR-02",
+   "function": "car_points",
+   "inputs": {
+    "car": 12.8,
+    "minimum": 11
+   },
+   "expected": 5,
+   "rule": "HUBL: 1.8 above -> 5"
+  },
+  {
+   "id": "CAR-03",
+   "function": "car_points",
+   "inputs": {
+    "car": 11.0,
+    "minimum": 11
+   },
+   "expected": 3,
+   "rule": "at the minimum -> 3"
+  },
+  {
+   "id": "CAR-04",
+   "function": "car_points",
+   "inputs": {
+    "car": 12.0,
+    "minimum": 11,
+    "all_components_met": false
+   },
+   "expected": 0,
+   "rule": "Tier 1 missed -> below minimum -> 0"
+  },
+  {
+   "id": "CAR-05",
+   "function": "car_points",
+   "inputs": {
+    "car": 13.5,
+    "minimum": 11,
+    "breach_in_last_3y": true
+   },
+   "expected": 3,
+   "rule": "past breach caps at 3"
+  },
+  {
+   "id": "CAR-06",
+   "function": "car_points",
+   "inputs": {
+    "car": 10.5,
+    "minimum": 10
+   },
+   "expected": 5,
+   "rule": "finance company (CAF 2007, 10%): 0.5 above -> 5"
+  },
+  {
+   "id": "INS-01",
+   "function": "insurer_points",
+   "inputs": {
+    "solvency_pct": 130
+   },
+   "expected": 5,
+   "rule": "exactly the 130% target -> 5"
+  },
+  {
+   "id": "INS-02",
+   "function": "insurer_points",
+   "inputs": {
+    "solvency_pct": 99
+   },
+   "expected": 0,
+   "rule": "under 100% -> 0"
+  },
+  {
+   "id": "INS-03",
+   "function": "insurer_points",
+   "inputs": {
+    "solvency_pct": 427
+   },
+   "expected": 7,
+   "rule": "non-life average 4.27x -> 7"
+  },
+  {
+   "id": "DE-01",
+   "function": "de_points",
+   "inputs": {
+    "de": 1.0
+   },
+   "expected": 2,
+   "rule": "exactly 1.0x is in '1.0x to under 2.0x'"
+  },
+  {
+   "id": "DE-02",
+   "function": "de_points",
+   "inputs": {
+    "de": 3.0
+   },
+   "expected": 0,
+   "rule": "3.0x or more -> 0"
+  },
+  {
+   "id": "DE-03",
+   "function": "de_points",
+   "inputs": {
+    "de": 0.5,
+    "equity_nonpositive": true
+   },
+   "expected": 0,
+   "rule": "zero/negative equity -> 0"
+  },
+  {
+   "id": "COV-01",
+   "function": "cover_points",
+   "inputs": {
+    "cover": 5.0
+   },
+   "expected": 4,
+   "rule": "exactly 5x -> 4"
+  },
+  {
+   "id": "COV-02",
+   "function": "cover_points",
+   "inputs": {
+    "no_interest_bearing_debt": true
+   },
+   "expected": 4,
+   "rule": "no debt -> 4"
+  },
+  {
+   "id": "COV-03",
+   "function": "cover_points",
+   "inputs": {
+    "cover": 8,
+    "operating_loss": true
+   },
+   "expected": 0,
+   "rule": "operating loss -> 0"
+  },
+  {
+   "id": "KANCHAN-LEV",
+   "function": "de_points",
+   "inputs": {
+    "de": 2.4
+   },
+   "expected": 1,
+   "rule": "Kanchan D/E 2.4x"
+  },
+  {
+   "id": "EQ-01",
+   "function": "earnings_quality",
+   "inputs": {
+    "profits": [
+     100,
+     110,
+     120,
+     120,
+     130,
+     140
+    ]
+   },
+   "expected": 5,
+   "rule": "grew 4 of 5 (one flat), no loss -> 5"
+  },
+  {
+   "id": "EQ-02",
+   "function": "earnings_quality",
+   "inputs": {
+    "profits": [
+     100,
+     110,
+     105,
+     115,
+     110,
+     120
+    ]
+   },
+   "expected": 3,
+   "rule": "two declines, no loss -> 3"
+  },
+  {
+   "id": "EQ-03",
+   "function": "earnings_quality",
+   "inputs": {
+    "profits": [
+     100,
+     110,
+     120,
+     -20,
+     130,
+     140
+    ]
+   },
+   "expected": 2,
+   "rule": "exactly one loss year -> 2 (its swings are not counted again)"
+  },
+  {
+   "id": "EQ-04",
+   "function": "earnings_quality",
+   "inputs": {
+    "profits": [
+     100,
+     -10,
+     120,
+     -20,
+     130,
+     140
+    ]
+   },
+   "expected": 1,
+   "rule": "two loss years -> 1"
+  },
+  {
+   "id": "EQ-05",
+   "function": "earnings_quality",
+   "inputs": {
+    "profits": [
+     100,
+     110,
+     120,
+     125,
+     130,
+     140
+    ],
+    "sector": "other",
+    "cash_conversion": 0.45
+   },
+   "expected": 4,
+   "rule": "Kanchan: 5 minus cash-check deduction"
+  },
+  {
+   "id": "EQ-06",
+   "function": "earnings_quality",
+   "inputs": {
+    "profits": [
+     100,
+     110,
+     120,
+     125,
+     130,
+     140
+    ],
+    "sector": "lender",
+    "writeback_share_max": 30
+   },
+   "expected": 4,
+   "rule": "Sagarmatha: write-backs 30% -> deduct 1"
+  },
+  {
+   "id": "EQ-07",
+   "function": "earnings_quality",
+   "inputs": {
+    "profits": [
+     100,
+     200,
+     90,
+     250,
+     260,
+     270
+    ]
+   },
+   "expected": 1,
+   "rule": "three big swings -> erratic -> 1"
+  },
+  {
+   "id": "PRO-01",
+   "function": "promoter_points",
+   "inputs": {
+    "fall_points_unexplained": 0,
+    "pledged_pct": 5
+   },
+   "expected": 6,
+   "rule": "explained 2-point fall counts as 0; 5% pledged -> 6"
+  },
+  {
+   "id": "PRO-02",
+   "function": "promoter_points",
+   "inputs": {
+    "fall_points_unexplained": 2,
+    "pledged_pct": 5
+   },
+   "expected": 4,
+   "rule": "unexplained 2-point fall, 5% pledged -> lower of 4 and 6"
+  },
+  {
+   "id": "PRO-03",
+   "function": "promoter_points",
+   "inputs": {
+    "fall_points_unexplained": 0.5,
+    "pledged_pct": 55
+   },
+   "expected": 0,
+   "rule": "over 50% pledged -> 0 (override)"
+  },
+  {
+   "id": "PRO-04",
+   "function": "promoter_points",
+   "inputs": {
+    "fall_points_unexplained": 5,
+    "pledged_pct": 10
+   },
+   "expected": 2,
+   "rule": "exactly 5-point fall -> 2; exactly 10% pledged -> 4; lower 2"
+  },
+  {
+   "id": "BRD-01",
+   "function": "board_points",
+   "inputs": {
+    "late_filings": 0,
+    "independents": 2,
+    "legal_min": 1,
+    "tests_met": true
+   },
+   "expected": 4,
+   "rule": "HUBL"
+  },
+  {
+   "id": "BRD-02",
+   "function": "board_points",
+   "inputs": {
+    "late_filings": 0,
+    "independents": 2,
+    "legal_min": 1,
+    "tests_met": false
+   },
+   "expected": 3,
+   "rule": "attendance test failed -> 3"
+  },
+  {
+   "id": "BRD-03",
+   "function": "board_points",
+   "inputs": {
+    "late_filings": 1,
+    "independents": 2,
+    "legal_min": 1,
+    "tests_met": true
+   },
+   "expected": 2,
+   "rule": "one late filing, no penalty -> 2"
+  },
+  {
+   "id": "BRD-04",
+   "function": "board_points",
+   "inputs": {
+    "late_filings": 0,
+    "independents": 0,
+    "legal_min": 1
+   },
+   "expected": 1,
+   "rule": "below legal minimum -> 1"
+  },
+  {
+   "id": "LIQ-01",
+   "function": "turnover_points",
+   "inputs": {
+    "avg_rs": 3200000,
+    "median_rs": 2600000
+   },
+   "expected": 3,
+   "rule": "HUBL"
+  },
+  {
+   "id": "LIQ-02",
+   "function": "turnover_points",
+   "inputs": {
+    "avg_rs": 6000000,
+    "median_rs": 2000000
+   },
+   "expected": 3,
+   "rule": "average > 2x median -> score median Rs 2m -> 3"
+  },
+  {
+   "id": "LIQ-03",
+   "function": "turnover_points",
+   "inputs": {
+    "avg_rs": 5000000,
+    "share_of_days_traded": 0.4
+   },
+   "expected": 1,
+   "rule": "thin trading caps at 1"
+  },
+  {
+   "id": "FLT-01",
+   "function": "float_points",
+   "inputs": {
+    "pct": 40
+   },
+   "expected": 5,
+   "rule": "exactly 40% -> 5"
+  },
+  {
+   "id": "FLT-02",
+   "function": "float_points",
+   "inputs": {
+    "pct": 24.9
+   },
+   "expected": 1,
+   "rule": "under 25% -> 1"
+  },
+  {
+   "id": "PE-01",
+   "function": "pe_points",
+   "inputs": {
+    "rel": 0.8
+   },
+   "expected": 8,
+   "rule": "exactly 0.8x is in '0.8x or less'; gates pass"
+  },
+  {
+   "id": "PE-02",
+   "function": "pe_points",
+   "inputs": {
+    "rel": 0.8,
+    "roe_ge_median": false
+   },
+   "expected": 6,
+   "rule": "discount not earned -> in-line row"
+  },
+  {
+   "id": "PE-03",
+   "function": "pe_points",
+   "inputs": {
+    "rel": 0.85
+   },
+   "expected": 6,
+   "rule": "HUBL"
+  },
+  {
+   "id": "PE-04",
+   "function": "pe_points",
+   "inputs": {
+    "rel": 0.9,
+    "ttm_eps_negative": true
+   },
+   "expected": 1,
+   "rule": "negative TTM EPS -> 1"
+  },
+  {
+   "id": "PB-01",
+   "function": "pb_points",
+   "inputs": {
+    "rel": 0.87
+   },
+   "expected": 5,
+   "rule": "HUBL"
+  },
+  {
+   "id": "PB-02",
+   "function": "pb_points",
+   "inputs": {
+    "rel": 1.5
+   },
+   "expected": 3,
+   "rule": "exactly 1.5x is in 'over 1.1x up to 1.5x'"
+  },
+  {
+   "id": "VAL-PRECOD",
+   "function": "valuation_points",
+   "inputs": {
+    "pb": 0.7,
+    "pre_cod": true
+   },
+   "expected": 11,
+   "rule": "Tamor Khola: 5/7 x 15 = 10.7 -> 11"
+  },
+  {
+   "id": "CON-01",
+   "function": "concentration_points",
+   "inputs": {
+    "largest_pct": 20
+   },
+   "expected": 7,
+   "rule": "exactly 20% -> 7"
+  },
+  {
+   "id": "CON-02",
+   "function": "concentration_points",
+   "inputs": {
+    "largest_pct": 30
+   },
+   "expected": 4,
+   "rule": "HUBL"
+  },
+  {
+   "id": "CON-03",
+   "function": "concentration_points",
+   "inputs": {
+    "largest_pct": 100
+   },
+   "expected": 0,
+   "rule": "single-buyer PPA -> 0"
+  },
+  {
+   "id": "REV-01",
+   "function": "revenue_points",
+   "inputs": {
+    "revenue": [
+     100,
+     115,
+     132,
+     152,
+     175,
+     202
+    ]
+   },
+   "expected": 8,
+   "rule": "CAGR 15.09% (Rs 100 to Rs 202 crore), grew 5 of 5 -> 8"
+  },
+  {
+   "id": "REV-01b",
+   "function": "revenue_points",
+   "inputs": {
+    "revenue": [
+     100,
+     115,
+     132,
+     152,
+     175,
+     201
+    ]
+   },
+   "expected": 6,
+   "rule": "Rs 100 to Rs 201 crore is 14.98% a year: just under the 15% line -> 6"
+  },
+  {
+   "id": "REV-02",
+   "function": "revenue_points",
+   "inputs": {
+    "revenue": [
+     100,
+     130,
+     120,
+     150,
+     140,
+     202
+    ]
+   },
+   "expected": 6,
+   "rule": "CAGR over 15% but grew only 3 of 5 -> 6"
+  },
+  {
+   "id": "REV-03",
+   "function": "revenue_points",
+   "inputs": {
+    "revenue": [
+     0,
+     50,
+     80,
+     90,
+     100,
+     110
+    ]
+   },
+   "expected": 3,
+   "rule": "zero start; grew in last 4 -> 3"
+  },
+  {
+   "id": "REV-04",
+   "function": "revenue_points",
+   "inputs": {
+    "revenue": [
+     1,
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "insufficient_history": true
+   },
+   "expected": 3,
+   "rule": "fewer than four comparisons -> 3, insufficient history"
+  },
+  {
+   "id": "REV-05",
+   "function": "revenue_points",
+   "inputs": {
+    "revenue": [
+     100,
+     104,
+     108,
+     112,
+     117,
+     121
+    ]
+   },
+   "expected": 3,
+   "rule": "CAGR about 3.9% -> 3"
+  },
+  {
+   "id": "LND-HUBL",
+   "function": "lender_growth_points",
+   "inputs": {
+    "lender_cagr": 11,
+    "system_cagr": 9,
+    "deposit_cagr": 10.5,
+    "gross_npl": 2.9,
+    "class_gross_npl": 4.0,
+    "adj_npl": 3.1,
+    "adj_npl_prev": 3.4,
+    "restructured_pct": 1.2
+   },
+   "expected": 8,
+   "rule": "HUBL"
+  },
+  {
+   "id": "LND-01",
+   "function": "lender_growth_points",
+   "inputs": {
+    "lender_cagr": 14,
+    "system_cagr": 9,
+    "deposit_cagr": 12
+   },
+   "expected": 8,
+   "rule": "exactly 5 points faster -> 8"
+  },
+  {
+   "id": "LND-02",
+   "function": "lender_growth_points",
+   "inputs": {
+    "lender_cagr": 16,
+    "system_cagr": 9,
+    "deposit_cagr": 12,
+    "credit_peak": true
+   },
+   "expected": 0,
+   "rule": "credit peak and >5 faster -> 0, final"
+  },
+  {
+   "id": "LND-03",
+   "function": "lender_growth_points",
+   "inputs": {
+    "lender_cagr": 12,
+    "system_cagr": 9,
+    "deposit_cagr": 5,
+    "gross_npl": 4.6,
+    "class_gross_npl": 4.0,
+    "adj_npl": 5.1,
+    "adj_npl_prev": 4.3
+   },
+   "expected": 2,
+   "rule": "funding and NPL drops: 8 -> 5 -> 2 (floor 2)"
+  },
+  {
+   "id": "LND-04",
+   "function": "lender_growth_points",
+   "inputs": {
+    "lender_cagr": -2,
+    "system_cagr": -4,
+    "deposit_cagr": -1
+   },
+   "expected": 8,
+   "rule": "shrinking with a shrinking system: 2 points apart -> 8 (record absolute growth)"
+  },
+  {
+   "id": "LND-05",
+   "function": "lender_growth_points",
+   "inputs": {
+    "lender_cagr": -1,
+    "system_cagr": 3,
+    "deposit_cagr": 2
+   },
+   "expected": 2,
+   "rule": "shrinking while system grows -> 2"
+  },
+  {
+   "id": "LND-06",
+   "function": "lender_growth_points",
+   "inputs": {
+    "lender_cagr": 10,
+    "system_cagr": 9,
+    "deposit_cagr": 9,
+    "system_verified": false
+   },
+   "expected": 5,
+   "rule": "no verified system figure -> max 5"
+  },
+  {
+   "id": "EPS-01",
+   "function": "eps_points",
+   "inputs": {
+    "eps": [
+     20,
+     22,
+     24,
+     24,
+     26,
+     28
+    ]
+   },
+   "expected": 7,
+   "rule": "rose 4 of 5, no big swing -> 7"
+  },
+  {
+   "id": "EPS-02",
+   "function": "eps_points",
+   "inputs": {
+    "eps": [
+     20,
+     22,
+     40,
+     42,
+     44,
+     46
+    ]
+   },
+   "expected": 4,
+   "rule": "rose 5 of 5 but one big swing -> 4"
+  },
+  {
+   "id": "EPS-03",
+   "function": "eps_points",
+   "inputs": {
+    "eps": [
+     20,
+     22,
+     -2,
+     14,
+     16,
+     18
+    ]
+   },
+   "expected": 2,
+   "rule": "mid loss year: two swings into/out of loss -> very volatile -> 2"
+  },
+  {
+   "id": "EPS-04",
+   "function": "eps_points",
+   "inputs": {
+    "eps": [
+     20,
+     22,
+     24,
+     26,
+     28,
+     -5
+    ]
+   },
+   "expected": 2,
+   "rule": "latest year negative -> at most 2"
+  },
+  {
+   "id": "EPS-05",
+   "function": "eps_points",
+   "inputs": {
+    "eps": [
+     -5,
+     -4,
+     -3,
+     -2,
+     -1,
+     2
+    ]
+   },
+   "expected": 0,
+   "rule": "negative in 4 of last five -> 0"
+  },
+  {
+   "id": "DIV-HUBL",
+   "function": "dividend_consistency",
+   "inputs": {
+    "real_cash": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "payout": [
+     40,
+     40,
+     40,
+     40,
+     40
+    ]
+   },
+   "expected": 6,
+   "rule": "HUBL"
+  },
+  {
+   "id": "DIV-01",
+   "function": "dividend_consistency",
+   "inputs": {
+    "real_cash": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "payout": [
+     20,
+     25,
+     45,
+     80,
+     35
+    ]
+   },
+   "expected": 4,
+   "rule": "outside range in 3 years -> 4"
+  },
+  {
+   "id": "DIV-02",
+   "function": "dividend_consistency",
+   "inputs": {
+    "real_cash": [
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "payout": [
+     40,
+     null,
+     40,
+     40,
+     40
+    ]
+   },
+   "expected": 6,
+   "rule": "one year with no distributable profit counts as outside; only one -> 6"
+  },
+  {
+   "id": "DIV-03",
+   "function": "dividend_consistency",
+   "inputs": {
+    "real_cash": [
+     true,
+     true,
+     true,
+     false,
+     true
+    ],
+    "payout": [
+     40,
+     40,
+     40,
+     null,
+     40
+    ]
+   },
+   "expected": 4,
+   "rule": "real cash 4 of 5 -> 4"
+  },
+  {
+   "id": "SRC-01",
+   "function": "source_points",
+   "inputs": {
+    "from_capital_or_reserves": true
+   },
+   "expected": 0,
+   "rule": "cash paid with no distributable profit -> 0"
+  },
+  {
+   "id": "TOT-HUBL",
+   "function": "total_with_limits",
+   "inputs": {
+    "dims": {
+     "fs": 16,
+     "gov": 15,
+     "liq": 8,
+     "val": 11,
+     "dur": 12,
+     "gro": 15,
+     "div": 10
+    },
+    "governance_total": 15,
+    "pledging_pts": 6,
+    "audit_pts": 5
+   },
+   "expected": 87,
+   "rule": "HUBL total"
+  },
+  {
+   "id": "TOT-SAGARMATHA",
+   "function": "total_with_limits",
+   "inputs": {
+    "dims": {
+     "fs": 18,
+     "gov": 9,
+     "liq": 9,
+     "val": 10,
+     "dur": 10,
+     "gro": 9,
+     "div": 8
+    },
+    "governance_total": 9,
+    "pledging_pts": 0,
+    "audit_pts": 5
+   },
+   "expected": 54,
+   "rule": "pledging 0 fires override -> capped at 54"
+  },
+  {
+   "id": "TOT-FRAUD",
+   "function": "total_with_limits",
+   "inputs": {
+    "dims": {
+     "x": 90
+    },
+    "governance_total": 15,
+    "pledging_pts": 6,
+    "audit_pts": 5,
+    "fraud": true
+   },
+   "expected": null,
+   "rule": "proven fraud -> excluded"
+  },
+  {
+   "id": "CEIL-HUBL",
+   "function": "ceiling",
+   "inputs": {
+    "total": 87,
+    "business_quality": 68,
+    "share_attractiveness": 19
+   },
+   "expected": "6%-8%",
+   "rule": "HUBL top ceiling"
+  },
+  {
+   "id": "CEIL-01",
+   "function": "ceiling",
+   "inputs": {
+    "total": 85,
+    "business_quality": 75,
+    "share_attractiveness": 10
+   },
+   "expected": "4%-6%",
+   "rule": "weak share attractiveness -> one band down"
+  },
+  {
+   "id": "CEIL-02",
+   "function": "ceiling",
+   "inputs": {
+    "total": 85,
+    "business_quality": 60,
+    "share_attractiveness": 25
+   },
+   "expected": "6%-8%",
+   "rule": "both halves at least half -> top ceiling"
+  },
+  {
+   "id": "CEIL-03",
+   "function": "ceiling",
+   "inputs": {
+    "total": 86,
+    "business_quality": 70,
+    "share_attractiveness": 16,
+    "provisional": true
+   },
+   "expected": "4%-6%",
+   "rule": "provisional -> one band down"
+  },
+  {
+   "id": "CEIL-04",
+   "function": "ceiling",
+   "inputs": {
+    "total": 86,
+    "business_quality": 75,
+    "share_attractiveness": 11,
+    "provisional": true
+   },
+   "expected": "4%-6%",
+   "rule": "both rules: still one band down at most"
+  }
+ ]
+}
