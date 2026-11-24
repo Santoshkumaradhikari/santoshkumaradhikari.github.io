@@ -275,7 +275,8 @@
       "CDSC records"
      ],
      "explained_falls": "Falls from mergers, legally required sales or new public issues are not penalised; only unexplained or repeated falls count.",
-     "missing_data": "Pledging not verified: at most 4 of 6."
+     "missing_data": "Pledging not verified: at most 4 of 6.",
+     "repeated_insider_selling": "Promoters or directors sold shares, without a stated reason, in at least two of the last three years (Chapter 64, Lesson 64.3). Scores 0 on part A whatever the change in promoter percentage, and triggers the governance override."
     },
     {
      "name": "Audit opinion and related-party dealings",
@@ -889,7 +890,7 @@
   "Quality Minus Junk (2019)"
  ],
  "reference_implementation": "canon_score_reference_v1_5_0.py",
- "test_cases": "canon-score-test-cases-v1.5.0.json (90 cases, all pass)",
+ "test_cases": "canon-score-test-cases-v1.5.0.json (91 cases, all pass; PRO-05 added 24 Nov 2026)",
  "evidence_hierarchy": [
   "law, regulations, regulator directives",
   "audited annual reports",
@@ -909,5 +910,11 @@
   "documents and page references",
   "estimates, gaps, judgements",
   "regulatory rules checked"
+ ],
+ "clarifications": [
+  {
+   "date": "2026-11-24",
+   "text": "Added the definition of 'repeated insider selling' that Chapter 64's text already contained but this file did not; no rule or score changes. Added test case PRO-05 (91 cases)."
+  }
  ]
 }

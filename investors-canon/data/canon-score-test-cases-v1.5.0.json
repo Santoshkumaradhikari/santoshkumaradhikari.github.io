@@ -1135,6 +1135,17 @@
    },
    "expected": 5,
    "rule": "loss-maker: P/E 0 + P/B in line 5 = 5"
+  },
+  {
+   "id": "PRO-05",
+   "function": "promoter_points",
+   "inputs": {
+    "fall_points_unexplained": 0,
+    "pledged_pct": 5,
+    "repeated_selling": true
+   },
+   "expected": 0,
+   "note": "repeated unexplained insider selling scores 0 whatever the holding change (added 24 Nov 2026)"
   }
  ]
 }
