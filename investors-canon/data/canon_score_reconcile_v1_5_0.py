@@ -6,14 +6,16 @@ Checks that the five files that make up the rubric say the same thing:
   3. the reference calculation (canon_score_reference_v1_5_0.py) - via the 91 test cases,
   4. the property audit (canon_score_properties_v1_5_0.py),
   5. the case-study calculation (canon_case_ebl_nica_v1_5_0.py),
-and rebuilds the HUBL worked example (Lesson 64.6) from its stated inputs.
+rebuilds the HUBL worked example (Lesson 64.6) from its stated inputs, and checks the case study page
+(chapters/ch-64a-two-banks-scored.html): its glance-table scores and provisional-parts table against the case
+script, and its printed file fingerprints against the input file and script.
 
 For each of the 21 scoring tables it compares, row by row: the points, the table maximum, every threshold
 number in the specification's row text, and the boundary words ("under", "or more", "up to", "over", "or less").
 Run from this folder:  python3 canon_score_reconcile_v1_5_0.py      (exit code 0 = the package agrees)
 Written 25 Nov 2026. Teaching material, not investment software.
 """
-import html, json, os, re, subprocess, sys
+import contextlib, hashlib, html, io, json, os, re, subprocess, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PAGE = os.path.join(HERE, "..", "chapters", "ch-64-seven-dimension-score.html")
@@ -117,6 +119,40 @@ for k, want in (("roe", 6), ("car", 5), ("earnings", 5), ("promoter", 6), ("audi
                 ("float", 5), ("pe", 6), ("pb", 5), ("concentration", 4), ("growth", 8), ("eps", 7), ("dividends", 6)):
     ok(h[k] == want, f"HUBL {k}: reference gives {h[k]}, chapter shows {want}")
 
+# Case study 64A: page vs case script vs files
+import canon_case_ebl_nica_v1_5_0 as C
+CASE = open(os.path.join(HERE, "..", "chapters", "ch-64a-two-banks-scored.html")).read()
+ctabs = re.findall(r'<table class="figures">(.*?)</table>', CASE, flags=re.S)
+rows_of = lambda t: [[txt(c) for c in re.findall(r"<t[dh][^>]*>(.*?)</t[dh]>", r, flags=re.S)] for r in re.findall(r"<tr>(.*?)</tr>", t, flags=re.S)]
+with contextlib.redirect_stdout(io.StringIO()):
+    got = {"EBL": C.report("EBL", C.ebl), "NICA": C.report("NICA", C.nica)}      # (total, bq, sa)
+glance = next(rows_of(t) for t in ctabs if "Business Quality Score" in txt(t))
+gl = {r[0].split(" (")[0]: r for r in glance}
+for bank, col in (("EBL", 2), ("NICA", 3)):
+    total, bq, sa = got[bank]
+    for label, want in (("Business Quality Score", bq), ("Share Attractiveness Score", sa), ("Canon Score", total)):
+        ok(gl.get(label, [""] * 4)[col] == str(want), f"64A glance table: {bank} {label} shows {gl.get(label, [''] * 4)[col]!r}, case script {want}")
+PARTS = {"Promoter and pledging": ["promoter"], "Audit opinion": ["audit"], "Disclosure and board": ["board"], "Free float": ["float"],
+         "P/E": ["valuation"], "P/B": ["valuation"], "Moat": ["moat"], "Concentration": ["concentration"], "Dividend source and reason": ["source"]}
+prov = next((rows_of(t) for t in ctabs if "What would resolve it" in txt(t)), None)
+ok(prov is not None, "64A provisional-parts table not found")
+if prov:
+    for bank, col, fn in (("EBL", 1, C.ebl), ("NICA", 2, C.nica)):
+        flagged = fn()[1]
+        page = {r[0]: r[col] for r in prov[1:]}
+        val = sum(int(page[p]) for p in PARTS if page.get(p, "—").isdigit())
+        ok(page.get("Total") == str(sum(flagged.values())), f"64A provisional total {bank}: page {page.get('Total')}, case script {sum(flagged.values())}")
+        ok(val == sum(flagged.values()), f"64A provisional parts {bank} add to {val}, case script {sum(flagged.values())}")
+        for p, keys in PARTS.items():
+            if keys[0] == "valuation":
+                continue
+            want = sum(flagged.get(k, 0) for k in keys)
+            ok(page.get(p, "—") == (str(want) if want else "—"), f"64A provisional part {p} {bank}: page {page.get(p)}, case script {want}")
+        ok(int(page.get("P/E", "0")) + int(page.get("P/B", "0")) == flagged.get("valuation", 0), f"64A P/E + P/B {bank} != valuation {flagged.get('valuation')}")
+for fname in ("canon-case-ebl-nica-v1.5.0.csv", "canon_case_ebl_nica_v1_5_0.py"):
+    digest = hashlib.sha256(open(os.path.join(HERE, fname), "rb").read()).hexdigest()
+    ok(digest in CASE, f"64A page does not print the current fingerprint of {fname} ({digest[:12]}...)")
+
 # the executable files
 for script, expect in (("canon_score_reference_v1_5_0.py", "91 of 91 cases pass"),
                        ("canon_score_properties_v1_5_0.py", "0 failures"),
@@ -124,7 +160,7 @@ for script, expect in (("canon_score_reference_v1_5_0.py", "91 of 91 cases pass"
     out = subprocess.run([sys.executable, os.path.join(HERE, script)], capture_output=True, text=True).stdout
     ok(expect in out, f"{script} did not report '{expect}'")
 
-print(f"{checks} reconciliation checks across {len(MAP)} scoring tables and the HUBL example; {len(fail)} disagreements")
+print(f"{checks} reconciliation checks across {len(MAP)} scoring tables, the HUBL example and Case Study 64A; {len(fail)} disagreements")
 for f in fail:
     print("DISAGREE", f)
 sys.exit(1 if fail else 0)

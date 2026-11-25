@@ -946,6 +946,10 @@
   {
    "date": "2026-11-25",
    "text": "Fourth audit of 25 Nov: EPS 4-point row reworded so it no longer overlaps the 7-point row (wording now matches the reference calculation; no score change); 'rose' and 'big swing' restated beside the EPS table; scope of the lower-score rule; HUBL rebuilt from inputs inside canon_score_reconcile_v1_5_0.py (358 checks, 0 disagreements); NIA NFRS 17 dividend rules listed as unread."
+  },
+  {
+   "date": "2026-11-25",
+   "text": "Case Study 64A brought in line with these clarifications: capped-score record for NIC Asia (three flags), provisional parts table (EBL 54, NICA 38), write-back on the pre-tax basis (EBL FY 2081/82 2.2%), EPS and retained-by-design wording, position ceiling with Chapters 56, 60 and 66. canon_score_reconcile_v1_5_0.py now also checks 64A's glance scores, provisional parts and file fingerprints against the case script (387 checks, 0 disagreements). No rule or score changes."
   }
  ],
  "change_control": "Chapter, spec, test cases, reference calculation and evidence register form one package. A clarification is allowed only if all test cases and the property audit pass and no published score moves; logged with date in all files. Any change that could move a score needs a new version. Version stays 1.5.0 because Chapter 80 Record 2 is registered on it."
