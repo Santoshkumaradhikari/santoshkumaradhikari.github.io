@@ -1014,3 +1014,117 @@ body {
 }
 @media (min-width: 1041px) { .site-nav { gap: 22px; } }
 .site-footer .footer-note { margin-top: 6px; font-size: 0.78rem; }
+
+/* ==========================================================================
+   HOME PAGE — BOLDER COLOUR + "THE SITE IN NUMBERS" (25 Nov 2026)
+   Each section sits on its own soft colour band, like the coloured cloths
+   of a prayer-flag string: sky, marigold, laligurans, paddy green.
+   ========================================================================== */
+:root { --on-accent: #ffffff; --band: 9%; }
+[data-theme="dark"] { --on-accent: #0f1424; --band: 9%; }
+
+/* Hero: a sunrise glow over the Himalaya */
+.hero { isolation: isolate; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(ellipse 48% 62% at 88% 8%, color-mix(in srgb, var(--gold-bright) 26%, transparent), transparent 70%),
+    radial-gradient(ellipse 40% 50% at 70% 30%, color-mix(in srgb, var(--rose) 13%, transparent), transparent 70%),
+    radial-gradient(ellipse 45% 60% at 4% 0%, color-mix(in srgb, var(--sky) 16%, transparent), transparent 70%);
+}
+.eyebrow-dot { background: var(--flag-line); width: 9px; height: 9px; }
+
+/* "The site in numbers" */
+.numbers-strip {
+  position: relative;
+  padding: 34px 0 38px;
+  background: linear-gradient(105deg, #0b2d72 0%, #1a43a0 45%, #10488a 75%, #0a4f59 100%);
+  color: #ffffff;
+}
+[data-theme="dark"] .numbers-strip { background: linear-gradient(105deg, #121c3f 0%, #1a2d66 50%, #133e63 100%); }
+.numbers-strip::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: var(--flag-line);
+}
+.numbers-kicker {
+  margin: 0 0 14px; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: #ffd27a;
+}
+.numbers-grid {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
+}
+.num-tile a {
+  position: relative; display: flex; flex-direction: column; gap: 2px; height: 100%;
+  padding: 16px 14px 14px; border-radius: var(--r-md); overflow: hidden;
+  background: rgba(255, 255, 255, 0.10); border: 1px solid rgba(255, 255, 255, 0.22);
+  color: #ffffff; text-decoration: none;
+  transition: transform var(--dur) var(--ease), background var(--dur) var(--ease);
+}
+.num-tile a::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--t); }
+.num-tile a:hover { transform: translateY(-3px); background: rgba(255, 255, 255, 0.17); }
+.num-tile a:focus-visible { outline: 3px solid #ffd27a; outline-offset: 2px; }
+.num-tile .num {
+  font-family: var(--font-serif); font-size: 2.1rem; font-weight: 600; line-height: 1.05;
+  font-variant-numeric: tabular-nums; color: #ffffff;
+}
+.num-tile span { font-size: 0.82rem; color: #ffffff; line-height: 1.35; }
+.t-crimson { --t: #ff5a70; } .t-sky { --t: #72c2ff; } .t-green { --t: #7fd98a; }
+.t-marigold { --t: #ffc247; } .t-rhodo { --t: #ff86b8; } .t-teal { --t: #5fd0d9; }
+
+/* Coloured section bands */
+#explore    { background: color-mix(in srgb, var(--rose) 6%, var(--bg-elevated)); }
+#strengths  { background: color-mix(in srgb, var(--sky) 11%, var(--bg-elevated)); }
+#background { background: color-mix(in srgb, var(--gold-bright) 14%, var(--bg-elevated)); }
+#work       { background: color-mix(in srgb, var(--rose) 9%, var(--bg-elevated)); }
+#contact    { background: color-mix(in srgb, var(--green) 10%, var(--bg-elevated)); }
+[data-theme="dark"] #explore, [data-theme="dark"] #strengths, [data-theme="dark"] #background,
+[data-theme="dark"] #work, [data-theme="dark"] #contact { background-blend-mode: normal; }
+[data-theme="dark"] #explore    { background: color-mix(in srgb, var(--rose) 6%, var(--bg)); }
+[data-theme="dark"] #strengths  { background: color-mix(in srgb, var(--sky) 8%, var(--bg)); }
+[data-theme="dark"] #background { background: color-mix(in srgb, var(--gold-bright) 7%, var(--bg)); }
+[data-theme="dark"] #work       { background: color-mix(in srgb, var(--rose) 7%, var(--bg)); }
+[data-theme="dark"] #contact    { background: color-mix(in srgb, var(--green) 7%, var(--bg)); }
+.section h2::before { width: 96px; }
+#strengths h2  { color: var(--blue); }
+#background h2 { color: var(--gold); }
+#work h2       { color: var(--rose); }
+#contact h2    { color: var(--green); }
+#explore h2    { color: var(--primary); }
+
+/* Gradient cards with solid colour badges */
+.card, .work-item {
+  background: linear-gradient(160deg,
+    color-mix(in srgb, var(--accent-bar, var(--primary)) 16%, var(--bg-elevated)) 0%,
+    var(--bg-elevated) 62%);
+  box-shadow: var(--shadow-sm);
+}
+.icon-badge { color: var(--on-accent) !important; box-shadow: var(--shadow-sm); }
+.icon-badge.rose   { background: linear-gradient(135deg, var(--rose),   color-mix(in srgb, var(--rose) 72%, #000)); }
+.icon-badge.blue   { background: linear-gradient(135deg, var(--blue),   color-mix(in srgb, var(--blue) 72%, #000)); }
+.icon-badge.violet { background: linear-gradient(135deg, var(--violet), color-mix(in srgb, var(--violet) 72%, #000)); }
+.icon-badge.gold   { background: linear-gradient(135deg, var(--gold),   color-mix(in srgb, var(--gold) 72%, #000)); }
+.icon-badge.green  { background: linear-gradient(135deg, var(--green),  color-mix(in srgb, var(--green) 72%, #000)); }
+.icon-badge.teal   { background: linear-gradient(135deg, var(--teal),   color-mix(in srgb, var(--teal) 72%, #000)); }
+[data-theme="dark"] .icon-badge.rose   { background: var(--rose); }
+[data-theme="dark"] .icon-badge.blue   { background: var(--blue); }
+[data-theme="dark"] .icon-badge.violet { background: var(--violet); }
+[data-theme="dark"] .icon-badge.gold   { background: var(--gold); }
+[data-theme="dark"] .icon-badge.green  { background: var(--green); }
+[data-theme="dark"] .icon-badge.teal   { background: var(--teal); }
+.card .tag { color: var(--accent-bar, var(--primary)); }
+
+/* Ghost buttons keep a hint of colour all the time */
+.cta-row .btn-ghost:nth-child(2) { border-color: color-mix(in srgb, var(--blue) 45%, var(--line)); }
+.cta-row .btn-ghost:nth-child(3) { border-color: color-mix(in srgb, var(--green) 45%, var(--line)); }
+.cta-row .btn-ghost:nth-child(4) { border-color: color-mix(in srgb, var(--teal) 45%, var(--line)); }
+.cta-row .btn-ghost:nth-child(5) { border-color: color-mix(in srgb, var(--gold) 45%, var(--line)); }
+
+@media (max-width: 720px) {
+  .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+  .num-tile .num { font-size: 1.8rem; }
+}
+@media print {
+  .numbers-strip { background: none; color: #000; padding: 12px 0; }
+  .num-tile a, .num-tile .num, .num-tile span, .numbers-kicker { color: #000; background: none; border-color: #999; }
+  .hero::before, .numbers-strip::after { display: none; }
+}

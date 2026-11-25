@@ -233,3 +233,56 @@ if (contactForm) {
     window.location.href = mailto;
   });
 }
+
+// "The site in numbers" strip (home page): count the numbers up when the strip
+// scrolls into view, and fetch the live page-view total from GoatCounter.
+// The live tile stays hidden unless GoatCounter's public counter is switched on
+// (Settings → "Allow adding visitor counts on your website") and answers.
+(function () {
+  const strip = document.querySelector('.numbers-strip');
+  if (!strip) return;
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function countUp(el, target) {
+    if (reduce || !('requestAnimationFrame' in window)) { el.textContent = target.toLocaleString('en-IN'); return; }
+    const start = performance.now();
+    const dur = 1200;
+    function tick(now) {
+      const p = Math.min(1, (now - start) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(target * eased).toLocaleString('en-IN');
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  let started = false;
+  function startAll() {
+    if (started) return;
+    started = true;
+    strip.querySelectorAll('.num[data-count]').forEach((el) => countUp(el, Number(el.dataset.count)));
+  }
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      if (entries.some((e) => e.isIntersecting)) { startAll(); io.disconnect(); }
+    }, { threshold: 0.3 });
+    io.observe(strip);
+  } else {
+    startAll();
+  }
+
+  // Live total from GoatCounter (cached by GoatCounter for up to a few hours).
+  const tile = document.getElementById('views-tile');
+  const out = document.getElementById('views-total');
+  if (!tile || !out || !window.fetch) return;
+  fetch('https://santoshcanon.goatcounter.com/counter/TOTAL.json')
+    .then((r) => (r.ok ? r.json() : Promise.reject(r.status)))
+    .then((d) => {
+      const n = parseInt(String(d && d.count || '').replace(/[^0-9]/g, ''), 10);
+      if (!n) return;
+      out.dataset.count = String(n);
+      tile.hidden = false;
+      if (started) countUp(out, n); else out.textContent = '0';
+    })
+    .catch(() => { /* counter not public yet: keep the tile hidden */ });
+})();
