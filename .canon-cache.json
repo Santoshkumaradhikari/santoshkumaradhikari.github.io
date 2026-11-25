@@ -1,16 +1,16 @@
 {
  "chapters": {
   "ch-0-1-credit-cycle.html": {
-   "content_date": "2026-11-22",
-   "hash": "fda0599bef39a8baa56ab5ca7d2f15fb"
+   "content_date": "2026-11-25",
+   "hash": "e31de470c0ab88114384c153ae943a03"
   },
   "ch-0-2-nrb-transmission.html": {
-   "content_date": "2026-11-22",
-   "hash": "0df837fae8c715f549fd68c47ad8877b"
+   "content_date": "2026-11-25",
+   "hash": "81ea9a90ca2ba3661618f132fea75eda"
   },
   "ch-0-3-liquidity-regimes.html": {
-   "content_date": "2026-11-22",
-   "hash": "2a4c4264f067a06f117155fa18edd77c"
+   "content_date": "2026-11-25",
+   "hash": "6dea085a9c722a07fb43d7b07a16ef03"
   },
   "ch-01-nrb-monetary-policy.html": {
    "content_date": "2026-11-22",
@@ -37,16 +37,16 @@
    "hash": "b8e5efb8dca9e3c8c8536915ab48dc3d"
   },
   "ch-07-nepse-reality.html": {
-   "content_date": "2026-11-22",
-   "hash": "9695ea5d2c4594e3bd7f65437c6a8f96"
+   "content_date": "2026-11-25",
+   "hash": "b601ba2bcadc4b6c55653f8f1c6e7f06"
   },
   "ch-08-regulatory-architecture.html": {
-   "content_date": "2026-11-22",
-   "hash": "74451220df30db4fecd8896d4684d30f"
+   "content_date": "2026-11-25",
+   "hash": "dec59d08041f73c11d3f6723b9043052"
   },
   "ch-09-market-participants.html": {
-   "content_date": "2026-11-22",
-   "hash": "e534ab9d7ad5bcb97bc9dba7f9732881"
+   "content_date": "2026-11-25",
+   "hash": "da80b34561d9620a9ec02b7e1bbd6c30"
   },
   "ch-10-trading-mechanics.html": {
    "content_date": "2026-11-22",
@@ -57,12 +57,12 @@
    "hash": "3b3d180955371a1585df37e3ca2fb11a"
   },
   "ch-12-microstructure-failures.html": {
-   "content_date": "2026-11-22",
-   "hash": "56735c0611a9ed7b200d05793b6bc555"
+   "content_date": "2026-11-25",
+   "hash": "2db166ff4e30ee460cf664cc6d3f1413"
   },
   "ch-13-ordinary-shares.html": {
-   "content_date": "2026-11-22",
-   "hash": "1a7bfa844bb40409e9ec2039f527068b"
+   "content_date": "2026-11-25",
+   "hash": "216d335e9e374fd4e0130c0e083ba488"
   },
   "ch-14-ipos.html": {
    "content_date": "2026-11-22",
@@ -86,23 +86,23 @@
   },
   "ch-19-governance-landscape.html": {
    "content_date": "2026-11-25",
-   "hash": "8b0f243380cf57c10d707435be3d42af"
+   "hash": "1d2ce24e5a94b5064561bd0521749cf7"
   },
   "ch-20-promoter-behaviour.html": {
    "content_date": "2026-11-25",
-   "hash": "9c8c0c58fcd1b8be8ad25bdd092883ef"
+   "hash": "ca273df838c2d5f16e85b07e1445cc2b"
   },
   "ch-21-insider-trading.html": {
    "content_date": "2026-11-25",
-   "hash": "9688a0b46877fea3166a49cbe110cc83"
+   "hash": "5950d3bf53dbaeebf53c8470385d178d"
   },
   "ch-22-conglomerate-crossholdings.html": {
    "content_date": "2026-11-25",
-   "hash": "9d055b2b446d603e2c4be2dc3209dc92"
+   "hash": "d7c686aeb7b500572d901f9506e64efa"
   },
   "ch-23-governance-scoring.html": {
    "content_date": "2026-11-25",
-   "hash": "27f16e7d3732ca78b6834eac84858a0d"
+   "hash": "bbf39b36165b3d316e048b1ab1facf11"
   },
   "ch-24-reading-financial-statements.html": {
    "content_date": "2026-11-18",
