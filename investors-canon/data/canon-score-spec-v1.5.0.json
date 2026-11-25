@@ -50,7 +50,9 @@
    "NRB lenders (A-D)": "capital cushion; lender profit check; relative loan-growth discipline",
    "insurers": "interim solvency cushion vs NIA enforced minimum; interim insurer profit check; revenue = net earned premium",
    "other companies": "debt-to-equity + interest cover; cash check; revenue CAGR"
-  }
+  },
+  "provisional_unit": "Count each of the 16 scored parts once, at its full points, however many of its figures are missing; show part, points, gap and what would resolve it.",
+  "as_of": "Use only information published by the cut-off date; if later restated, keep the original score and publish a dated revised score beside it; never overwrite."
  },
  "dimensions": [
   {
@@ -219,7 +221,8 @@
       "Non-financial: cash conversion ratio = sum of 3-year operating cash flow / sum of 3-year net profit; below 0.5 -> deduct 1 point (floor 0). Not applied if 3-year net profit <= 0.",
       "Lenders: if in any of the last 3 years more than 25% of net profit came from provision write-backs or one-off gains -> deduct 1 point.",
       "Insurers (interim): if >25% of net profit in any of last 3 years came from realised investment gains or releases of earlier reserves -> deduct 1 point."
-     ]
+     ],
+     "writeback_basis": "pre-tax write-back or one-off gain / profit before tax; a net charge counts as zero"
     }
    ]
   },
@@ -572,7 +575,8 @@
       "4. No verified system figure for same period: at most 5."
      ],
      "measurement": "Five-year CAGR of gross loans and advances for the lender and its class system over the same six year-ends; deposits measured the same way. Systems: commercial banks, development banks, finance companies, microfinance.",
-     "adjusted_npl": "(NPLs + loans written off in the year) / (total loans + loans written off in the year), gross, same quarter-end as the class average."
+     "adjusted_npl": "(NPLs + loans written off in the year) / (total loans + loans written off in the year), gross, same quarter-end as the class average.",
+     "class_universe": "whole class at both year-ends so mergers inside the class cancel; record lenders that joined from outside the class"
     },
     {
      "name": "EPS on a comparable share count: five year-on-year comparisons",
@@ -702,7 +706,8 @@
    "accounts materially restated (until a full year of new audited figures)"
   ],
   "duration": "Caps apply only while the flag is current: audit = latest audited annual report; pledging = latest disclosed figure; unexplained promoter falls count for the 3-year look-back.",
-  "combination": "Caps do not add: total capped at 54 once however many limits fire; a cap never raises a lower total; a final fraud finding excludes whatever else applies; a finding under appeal counts once final (record the appeal); record each flag separately so clearing one does not lift a cap another still holds."
+  "combination": "Caps do not add: total capped at 54 once however many limits fire; a cap never raises a lower total; a final fraud finding excludes whatever else applies; a finding under appeal counts once final (record the appeal); record each flag separately so clearing one does not lift a cap another still holds.",
+  "capital_threshold_note": "'capital below the regulatory minimum' means below Lesson 64.2's table in any layer; for commercial banks that minimum includes the 2.5-point conservation buffer (11 / 8.5 / 7); record layer, threshold and date"
  },
  "known_overlaps": "About 25-30 of 100 points rest directly or indirectly on reported profit (ROE, earnings quality, EPS growth, dividend consistency, ROE gate on valuation).",
  "comparability": "Compare totals within a sector; cross-sector comparability is a design aim, not tested.",
@@ -922,6 +927,11 @@
   {
    "date": "2026-11-25",
    "text": "Full audit of Chapter 64: added pledged_measure (formula), on_time (deadline rules), hard_limits.combination; Chapter 64 text adds an illustrative label and valuation/loss/liquidity check to the HUBL example, a dependency map, a latest-year ROE disclosure note and three tests to the testing plan. Property audit canon_score_properties_v1_5_0.py: 454,643 checks pass. No rule or score changes."
+  },
+  {
+   "date": "2026-11-25",
+   "text": "Second audit of 25 Nov: capital-cap wording (buffer-inclusive, layer/threshold/date), provisional counting unit, write-back basis, as-of convention, loan-growth class universe, dependency map (moat reads ROE), HUBL version bridge, change-control rule. No rule or score changes."
   }
- ]
+ ],
+ "change_control": "Chapter, spec, test cases, reference calculation and evidence register form one package. A clarification is allowed only if all test cases and the property audit pass and no published score moves; logged with date in all files. Any change that could move a score needs a new version. Version stays 1.5.0 because Chapter 80 Record 2 is registered on it."
 }
