@@ -304,6 +304,9 @@ TEMPLATE = """<!DOCTYPE html>
   }})();
 </script>
 <script src="js/translate.js" defer></script>
+<!-- Visitor counting: GoatCounter, no cookies (see /analytics.js) -->
+<script src="/analytics.js" defer></script>
+<script data-goatcounter="https://santoshcanon.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
 
 </body>
 </html>

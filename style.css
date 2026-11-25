@@ -1013,3 +1013,4 @@ body {
   .brand { font-size: 0.95rem; }
 }
 @media (min-width: 1041px) { .site-nav { gap: 22px; } }
+.site-footer .footer-note { margin-top: 6px; font-size: 0.78rem; }

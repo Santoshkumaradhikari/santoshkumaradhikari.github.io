@@ -210,12 +210,22 @@ def regen_nav(page, prev_ch, next_ch):
     return NAV_RE.sub('<div class="chapter-nav">' + inner + '</div>', page, count=1)
 
 
+COUNTER_TAG = ('<!-- Visitor counting: GoatCounter, no cookies (see /analytics.js) -->\n<script src="/analytics.js" defer></script>\n<script data-goatcounter="https://santoshcanon.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>\n')
+
+
 def ensure_feed_link(page, feed_url):
     if "application/atom+xml" in page:
         return page
     link = (f'<link rel="alternate" type="application/atom+xml" '
             f'title="Canon Updates" href="{feed_url}">\n')
     return page.replace("</head>", link + "</head>", 1)
+
+
+def ensure_counter(page):
+    """Visitor counting (GoatCounter, no cookies): add the two script tags once, before </body>."""
+    if "santoshcanon.goatcounter.com" in page:
+        return page
+    return page.replace("</body>", COUNTER_TAG + "</body>", 1)
 
 
 def bump_date(page, new_date):
@@ -489,6 +499,7 @@ def main():
 
         # 3. advertise the feed
         page = ensure_feed_link(page, feed_url)
+        page = ensure_counter(page)
 
         if page != orig:
             nav_count += 1
@@ -510,6 +521,7 @@ def main():
             ld["dateModified"] = today
             page = set_ld(page, ld)
         page = ensure_feed_link(page, feed_url)
+        page = ensure_counter(page)
         if page != orig:
             write(idx, page)
             print("  ✓ index.html TOC / counts / Book schema refreshed")
@@ -519,7 +531,7 @@ def main():
     for p in sorted(docs.glob("*.html")):
         if p.name == "index.html":
             continue
-        page = ensure_feed_link(read(p), feed_url)
+        page = ensure_counter(ensure_feed_link(read(p), feed_url))
         if page != read(p):
             write(p, page)
 
