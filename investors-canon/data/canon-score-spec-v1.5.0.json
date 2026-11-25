@@ -52,7 +52,8 @@
    "other companies": "debt-to-equity + interest cover; cash check; revenue CAGR"
   },
   "provisional_unit": "Count each of the 16 scored parts once, at its full points, however many of its figures are missing; show part, points, gap and what would resolve it.",
-  "as_of": "Use only information published by the cut-off date; if later restated, keep the original score and publish a dated revised score beside it; never overwrite."
+  "as_of": "Use only information published by the cut-off date; if later restated, keep the original score and publish a dated revised score beside it; never overwrite.",
+  "estimated_record": "record method, source figures, main assumption and a plausible range"
  },
  "dimensions": [
   {
@@ -111,7 +112,8 @@
       "A, national-level B (CAF 2015)": "total 8.5% + 2.5% CCB = 11%; Tier 1 6% + 2.5% = 8.5%; CET1 4.5% + 2.5% = 7%",
       "other B, C (CAF 2007 s2.6)": "Tier 1 (core) 6%; total capital fund 10%; NRB may set higher for an individual institution",
       "D microfinance (FSR FY2023/24)": "capital fund 8%; core 4%"
-     }
+     },
+     "breach_record": "record number of quarter-ends below minimum and lowest ratio"
     },
     {
      "name": "Solvency cushion (insurers, interim)",
@@ -340,7 +342,8 @@
       ]
      ],
      "top_row_extra": "Each independent director meets legal independence tests, attended >= 75% of board meetings in last year, audit committee includes one; unverified -> 3. Structural test only. Measures structure and filing discipline, not board effectiveness.",
-     "on_time": "within the deadline of the rule that applies: AGM within six months after the financial year (Companies Act 2063 s76(1)); quarterly reports by the SEBON deadline for listed companies or, for BFIs, the NRB reporting directive; record the rule used and record late AGMs and late quarterly reports separately; insurers: also check Insurance Act 2079 and NIA directives"
+     "on_time": "within the deadline of the rule that applies: AGM within six months after the financial year (Companies Act 2063 s76(1)); quarterly reports by the SEBON deadline for listed companies or, for BFIs, the NRB reporting directive; record the rule used and record late AGMs and late quarterly reports separately; insurers: also check Insurance Act 2079 and NIA directives",
+     "canon_tests_not_law": "attendance (75%) and audit-committee tests are Canon scoring tests; only board size and minimum independent directors come from BAFIA s14 / Companies Act s86"
     }
    ]
   },
@@ -660,7 +663,8 @@
     }
    ],
    "retained_by_design": "Hydropower before COD, or bank/insurer barred from paying by regulator capital rules: consistency 4/6, source 2/4, marked 'retained by design'.",
-   "recorded_not_scored": "Exploratory proxy (not a return on capital): 5-year rise in EPS / total EPS retained over the 5 years, comparable share count."
+   "recorded_not_scored": "Exploratory proxy (not a return on capital): 5-year rise in EPS / total EPS retained over the 5 years, comparable share count.",
+   "retained_by_design_record": "6 points are a neutral placeholder, not evidence of dividend discipline; write 'retained by design' and record actual cash returned separately"
   }
  ],
  "score_bands": [
@@ -707,7 +711,8 @@
   ],
   "duration": "Caps apply only while the flag is current: audit = latest audited annual report; pledging = latest disclosed figure; unexplained promoter falls count for the 3-year look-back.",
   "combination": "Caps do not add: total capped at 54 once however many limits fire; a cap never raises a lower total; a final fraud finding excludes whatever else applies; a finding under appeal counts once final (record the appeal); record each flag separately so clearing one does not lift a cap another still holds.",
-  "capital_threshold_note": "'capital below the regulatory minimum' means below Lesson 64.2's table in any layer; for commercial banks that minimum includes the 2.5-point conservation buffer (11 / 8.5 / 7); record layer, threshold and date"
+  "capital_threshold_note": "'capital below the regulatory minimum' means below Lesson 64.2's table in any layer; for commercial banks that minimum includes the 2.5-point conservation buffer (11 / 8.5 / 7); record layer, threshold and date",
+  "capped_score_record": "record pre-cap score, capping rule, evidence and date, and condition for lifting"
  },
  "known_overlaps": "About 25-30 of 100 points rest directly or indirectly on reported profit (ROE, earnings quality, EPS growth, dividend consistency, ROE gate on valuation).",
  "comparability": "Compare totals within a sector; cross-sector comparability is a design aim, not tested.",
@@ -886,7 +891,7 @@
   },
   "rule": "Always report all three; never the total alone."
  },
- "score_bands_note": "Position limits attached to bands are provisional ceilings, not evidence-based sizes; Chapter 60/66 concentration limits, maximum tolerable loss and Chapter 56 ADV rule also apply. Provisional scores take the ceiling of the band below. Bands describe the combined score, not business quality alone. Interim gate: a total in the top two bands takes the next band's ceiling if Business Quality < 38/75 or Share Attractiveness < 13/25; provisional also moves one band down; at most one band down in all.",
+ "score_bands_note": "Position limits attached to bands are provisional ceilings, not evidence-based sizes; Chapter 60/66 concentration limits, maximum tolerable loss and Chapter 56 ADV rule also apply. Provisional scores take the ceiling of the band below. Bands describe the combined score, not business quality alone. Interim gate: a total in the top two bands takes the next band's ceiling if Business Quality < 38/75 or Share Attractiveness < 13/25; provisional also moves one band down; at most one band down in all. | Higher figure in each position range is the ceiling (Chapter 66 tranches; liquidity, sector and loss limits can stop lower); a provisional score takes the band below's ceiling, so never the 6-8% core range.",
  "forward_pilot_note": "The 1.2-P pilot (frozen 2026-11-17) cannot validate v1.4; its 2027-11 review is a first-year look only.",
  "patch_scope": "Minor version: two scoring changes (loss -> 0 on P/E; zero/negative book -> 0 on P/B) and insurer capital capped at 3 (unverified) until NIA 2026 is read; weights and bands unchanged; HUBL 87.",
  "status_of_file": "Complete executable specification for rubric 1.4.2. Earlier spec files are an archive/change log.",
@@ -931,6 +936,10 @@
   {
    "date": "2026-11-25",
    "text": "Second audit of 25 Nov: capital-cap wording (buffer-inclusive, layer/threshold/date), provisional counting unit, write-back basis, as-of convention, loan-growth class universe, dependency map (moat reads ROE), HUBL version bridge, change-control rule. No rule or score changes."
+  },
+  {
+   "date": "2026-11-25",
+   "text": "Third audit of 25 Nov: reconciliation script (21 tables, 342 checks, no disagreements); recording rules for estimates, capped scores, past breaches and retained-by-design; Canon-versus-law board tests; position-range reading; NIA 2026 status note; classified list of 1.5.0 score rules vs recording rules; full research references. No rule or score changes."
   }
  ],
  "change_control": "Chapter, spec, test cases, reference calculation and evidence register form one package. A clarification is allowed only if all test cases and the property audit pass and no published score moves; logged with date in all files. Any change that could move a score needs a new version. Version stays 1.5.0 because Chapter 80 Record 2 is registered on it."
