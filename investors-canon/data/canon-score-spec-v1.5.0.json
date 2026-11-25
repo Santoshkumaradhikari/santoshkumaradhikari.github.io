@@ -276,7 +276,8 @@
      ],
      "explained_falls": "Falls from mergers, legally required sales or new public issues are not penalised; only unexplained or repeated falls count.",
      "missing_data": "Pledging not verified: at most 4 of 6.",
-     "repeated_insider_selling": "Promoters or directors sold shares, without a stated reason, in at least two of the last three years (Chapter 64, Lesson 64.3). Scores 0 on part A whatever the change in promoter percentage, and triggers the governance override."
+     "repeated_insider_selling": "Promoters or directors sold shares, without a stated reason, in at least two of the last three years (Chapter 64, Lesson 64.3). Scores 0 on part A whatever the change in promoter percentage, and triggers the governance override.",
+     "pledged_measure": "pledged promoter shares / all promoter shares x 100 (not a share of all company shares); record lender, pledge date and any release or enforcement where disclosed"
     },
     {
      "name": "Audit opinion and related-party dealings",
@@ -335,7 +336,8 @@
        0
       ]
      ],
-     "top_row_extra": "Each independent director meets legal independence tests, attended >= 75% of board meetings in last year, audit committee includes one; unverified -> 3. Structural test only. Measures structure and filing discipline, not board effectiveness."
+     "top_row_extra": "Each independent director meets legal independence tests, attended >= 75% of board meetings in last year, audit committee includes one; unverified -> 3. Structural test only. Measures structure and filing discipline, not board effectiveness.",
+     "on_time": "within the deadline of the rule that applies: AGM within six months after the financial year (Companies Act 2063 s76(1)); quarterly reports by the SEBON deadline for listed companies or, for BFIs, the NRB reporting directive; record the rule used and record late AGMs and late quarterly reports separately; insurers: also check Insurance Act 2079 and NIA directives"
     }
    ]
   },
@@ -699,7 +701,8 @@
   "provisional": [
    "accounts materially restated (until a full year of new audited figures)"
   ],
-  "duration": "Caps apply only while the flag is current: audit = latest audited annual report; pledging = latest disclosed figure; unexplained promoter falls count for the 3-year look-back."
+  "duration": "Caps apply only while the flag is current: audit = latest audited annual report; pledging = latest disclosed figure; unexplained promoter falls count for the 3-year look-back.",
+  "combination": "Caps do not add: total capped at 54 once however many limits fire; a cap never raises a lower total; a final fraud finding excludes whatever else applies; a finding under appeal counts once final (record the appeal); record each flag separately so clearing one does not lift a cap another still holds."
  },
  "known_overlaps": "About 25-30 of 100 points rest directly or indirectly on reported profit (ROE, earnings quality, EPS growth, dividend consistency, ROE gate on valuation).",
  "comparability": "Compare totals within a sector; cross-sector comparability is a design aim, not tested.",
@@ -915,6 +918,10 @@
   {
    "date": "2026-11-24",
    "text": "Added the definition of 'repeated insider selling' that Chapter 64's text already contained but this file did not; no rule or score changes. Added test case PRO-05 (91 cases)."
+  },
+  {
+   "date": "2026-11-25",
+   "text": "Full audit of Chapter 64: added pledged_measure (formula), on_time (deadline rules), hard_limits.combination; Chapter 64 text adds an illustrative label and valuation/loss/liquidity check to the HUBL example, a dependency map, a latest-year ROE disclosure note and three tests to the testing plan. Property audit canon_score_properties_v1_5_0.py: 454,643 checks pass. No rule or score changes."
   }
  ]
 }

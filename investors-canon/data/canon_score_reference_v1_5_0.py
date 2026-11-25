@@ -146,6 +146,7 @@ def float_points(pct):
 
 # ---------------------------------------------------------------- Dimension 4
 def pe_points(rel, ttm_eps_negative=False, roe_ge_median=True, lender_npl_ok=True):
+    """rel: P/E / sector median P/E. Pass ttm_eps_negative=True when trailing 12-month EPS is negative OR zero (rule: 0 points)."""
     if ttm_eps_negative:
         return 0
     if rel <= 0.8:
