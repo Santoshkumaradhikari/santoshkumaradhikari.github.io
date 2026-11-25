@@ -826,3 +826,190 @@ main[tabindex="-1"]:focus {
   .skip-link, .print-toggle, .print-bar, .nav-toggle, .theme-toggle,
   .site-nav { display: none !important; }
 }
+
+/* ==========================================================================
+   NEPAL COLOUR LAYER — v3 (25 Nov 2026), shared with The Investor's Canon
+   Flag crimson and deep blue, Himalayan sky, laligurans (rhododendron)
+   pink, sayapatri (marigold) gold and Terai paddy green. Text colours meet
+   WCAG AA in both themes. Only colours and decoration change here.
+   ========================================================================== */
+:root {
+  --bg: #fdfaf4;
+  --bg-elevated: #ffffff;
+  --bg-subtle: #f6efe2;
+  --ink: #1b1a17;
+  --ink-soft: #4d483f;
+  --line: #e8dfcd;
+
+  --navy: #0b2d72;
+  --navy-soft: #1f4fb4;
+  --indigo: #c8102e;          /* primary is now flag crimson */
+  --indigo-strong: #a50d26;
+  --gold: #935400;            /* marigold, text-safe shade */
+  --gold-bright: #f4a300;
+  --rose: #c2185b;            /* laligurans */
+  --green: #28702d;           /* Terai paddy */
+  --blue: #1f4fb4;            /* flag blue */
+  --violet: #6b35c9;
+  --teal: #0e7480;            /* glacier lake */
+  --sky: #1366b0;
+
+  --primary: var(--indigo);
+  --primary-strong: var(--indigo-strong);
+  --gradient-brand: linear-gradient(100deg, #c8102e 0%, #c2185b 35%, #e86a00 70%, #1366b0 100%);
+  --flag-line: linear-gradient(90deg, #c8102e 0%, #c2185b 28%, #f4a300 55%, #1366b0 80%, #0b2d72 100%);
+  --tint: 7%;
+}
+
+[data-theme="dark"] {
+  --bg: #0f1424;
+  --bg-elevated: #1a2239;
+  --bg-subtle: #151c31;
+  --ink: #edebf3;
+  --ink-soft: #bcc0d0;
+  --line: #2a3350;
+
+  --navy: #8fb3ff;
+  --navy-soft: #b5cbff;
+  --indigo: #ff7a8c;
+  --indigo-strong: #ff9aa8;
+  --gold: #ffc247;
+  --gold-bright: #ffd27a;
+  --rose: #ff86b8;
+  --green: #7fd98a;
+  --blue: #8fb3ff;
+  --violet: #b79bff;
+  --teal: #5fd0d9;
+  --sky: #72c2ff;
+
+  --primary: var(--indigo);
+  --primary-strong: var(--indigo-strong);
+  --on-primary: #0f1424;
+  --gradient-brand: linear-gradient(100deg, #ff7a8c 0%, #ff86b8 35%, #ffc247 70%, #72c2ff 100%);
+  --flag-line: linear-gradient(90deg, #ff6b81 0%, #ff86b8 28%, #ffc247 55%, #72c2ff 80%, #8fb3ff 100%);
+  --tint: 12%;
+}
+
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(ellipse 900px 520px at 8% -8%, color-mix(in srgb, var(--sky) 10%, transparent), transparent 62%),
+    radial-gradient(ellipse 760px 520px at 102% 2%, color-mix(in srgb, var(--rose) 8%, transparent), transparent 58%);
+  background-repeat: no-repeat;
+}
+
+.site-header { border-bottom: 0; }
+.site-header::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: -3px; height: 3px;
+  background: var(--flag-line); pointer-events: none;
+}
+.brand {
+  background: linear-gradient(100deg, var(--navy) 0%, var(--primary) 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.site-nav a.nav-explore { color: var(--primary); font-weight: 700; }
+
+/* Hero: sky, Himalaya, coloured name */
+.hero {
+  position: relative;
+  padding-bottom: 150px;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 240' preserveAspectRatio='none'%3E%3Cpath fill='%231366b0' fill-opacity='.13' d='M0 160 L110 118 L200 146 L320 64 L410 116 L520 30 L610 104 L700 56 L800 126 L905 44 L1010 116 L1110 74 L1220 136 L1330 86 L1440 124 V240 H0Z'/%3E%3Cpath fill='%23ffffff' fill-opacity='.55' d='M500 46 L520 30 L540 46 L530 44 L520 52 L510 44Z M885 60 L905 44 L925 60 L915 58 L905 66 L895 58Z M300 80 L320 64 L340 80 L330 78 L320 86 L310 78Z'/%3E%3Cpath fill='%230b2d72' fill-opacity='.12' d='M0 200 L140 152 L260 184 L380 132 L500 178 L640 120 L760 184 L880 142 L1000 190 L1130 144 L1260 186 L1360 154 L1440 172 V240 H0Z'/%3E%3Cpath fill='%2328702d' fill-opacity='.10' d='M0 228 Q360 196 720 226 T1440 218 V240 H0Z'/%3E%3C/svg%3E") bottom center / 100% 170px no-repeat;
+}
+.hero h1 {
+  background: linear-gradient(100deg, var(--navy) 0%, var(--blue) 35%, var(--primary) 72%, var(--rose) 100%);
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+}
+.eyebrow {
+  color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 9%, var(--bg-elevated));
+  border-color: color-mix(in srgb, var(--primary) 25%, transparent);
+}
+.highlights li:nth-child(1)::before { background: var(--primary); }
+.highlights li:nth-child(2)::before { background: var(--blue); }
+.highlights li:nth-child(3)::before { background: var(--green); }
+.btn-primary { background: linear-gradient(100deg, var(--primary), var(--rose)); color: var(--on-primary); }
+.btn-ghost:nth-child(2):hover { border-color: var(--blue); color: var(--blue); }
+.btn-ghost:nth-child(3):hover { border-color: var(--green); color: var(--green); }
+.btn-ghost:nth-child(4):hover { border-color: var(--teal); color: var(--teal); }
+.btn-ghost:nth-child(5):hover { border-color: var(--gold); color: var(--gold); }
+
+/* Sections and cards carry their colour */
+.section { border-top: 0; position: relative; }
+.section-alt { background: color-mix(in srgb, var(--sky) 5%, var(--bg-subtle)); }
+.section h2 { position: relative; padding-top: 16px; }
+.section h2::before {
+  content: ""; position: absolute; left: 0; top: 0; width: 64px; height: 4px; border-radius: 4px;
+  background: var(--flag-line);
+}
+.card, .work-item {
+  background: color-mix(in srgb, var(--accent-bar, var(--primary)) var(--tint), var(--bg-elevated));
+  border-color: color-mix(in srgb, var(--accent-bar, var(--primary)) 25%, var(--line));
+}
+.card::before { transform: scaleX(1); height: 4px; }
+.work-item:has(.icon-badge.teal) { --accent-bar: var(--teal); }
+.work-link { color: var(--accent-bar, var(--primary)); }
+.contact-card {
+  background: color-mix(in srgb, var(--sky) var(--tint), var(--bg-elevated));
+  border-color: color-mix(in srgb, var(--sky) 25%, var(--line));
+}
+.site-footer { border-top: 0; position: relative; background: color-mix(in srgb, var(--navy) 6%, var(--bg-subtle)); }
+.site-footer::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--flag-line);
+}
+.site-footer a { color: var(--primary); font-weight: 600; }
+
+/* Feature grid ("Explore everything on this site") */
+.feature-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); }
+.feature-card {
+  --c: var(--sky);
+  position: relative; display: flex; flex-direction: column; gap: 6px;
+  padding: 20px 18px 18px; border-radius: var(--r-md); overflow: hidden;
+  background: color-mix(in srgb, var(--c) var(--tint), var(--bg-elevated));
+  border: 1px solid color-mix(in srgb, var(--c) 26%, var(--line));
+  color: var(--ink); text-decoration: none; font-size: 0.9rem; line-height: 1.55;
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+}
+.feature-card::before { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 4px; background: var(--c); }
+.feature-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--c); }
+.feature-card .fc-icon {
+  width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center;
+  background: color-mix(in srgb, var(--c) 18%, var(--bg-elevated)); color: var(--c); margin-bottom: 4px;
+}
+.feature-card .fc-icon svg { width: 21px; height: 21px; }
+.feature-card .fc-title { font-weight: 700; font-size: 1rem; }
+.feature-card .fc-text { color: var(--ink-soft); }
+.feature-card .fc-go { margin-top: auto; padding-top: 4px; font-weight: 700; font-size: 0.82rem; color: var(--c); }
+.c-crimson { --c: var(--primary); } .c-blue { --c: var(--blue); } .c-sky { --c: var(--sky); }
+.c-rhodo { --c: var(--rose); } .c-marigold { --c: var(--gold); } .c-green { --c: var(--green); }
+.c-teal { --c: var(--teal); } .c-violet { --c: var(--violet); }
+.features-more { margin-top: 26px; }
+
+@media (max-width: 720px) {
+  .hero { padding-bottom: 120px; background-size: 100% 120px; }
+}
+@media print {
+  .site-header::after, .site-footer::before { display: none !important; }
+  .hero { background: none; padding-bottom: 24px; }
+  .brand, .hero h1 { -webkit-text-fill-color: currentColor; background: none; color: #000; }
+}
+
+/* Header fit with the extra "Explore" link */
+.brand, .site-nav a { white-space: nowrap; }
+/* With six links the menu button now appears below 901px (script.js matches) */
+@media (max-width: 900px) {
+  .nav-toggle { display: flex; }
+  .site-nav {
+    position: absolute; top: 68px; left: 0; right: 0;
+    background: var(--bg-elevated); border-bottom: 1px solid var(--line);
+    flex-direction: column; align-items: flex-start;
+    padding: 16px 24px 20px; gap: 16px; display: none;
+  }
+  .site-nav.open { display: flex; }
+}
+@media (min-width: 901px) and (max-width: 1040px) {
+  .site-nav { gap: 14px; }
+  .site-nav a { font-size: 0.85rem; }
+  .brand { font-size: 0.95rem; }
+}
+@media (min-width: 1041px) { .site-nav { gap: 22px; } }
