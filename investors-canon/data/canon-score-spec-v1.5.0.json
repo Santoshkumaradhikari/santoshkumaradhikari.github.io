@@ -53,7 +53,8 @@
   },
   "provisional_unit": "Count each of the 16 scored parts once, at its full points, however many of its figures are missing; show part, points, gap and what would resolve it.",
   "as_of": "Use only information published by the cut-off date; if later restated, keep the original score and publish a dated revised score beside it; never overwrite.",
-  "estimated_record": "record method, source figures, main assumption and a plausible range"
+  "estimated_record": "record method, source figures, main assumption and a plausible range",
+  "two_rows_scope": "The lower-score rule is for real conflicts (good figure + red flag in the same row text); it never moves a company that meets every condition of a higher row to a lower one. Rows are written not to overlap."
  },
  "dimensions": [
   {
@@ -591,7 +592,7 @@
        7
       ],
       [
-       "rose in 3 or more of 5, at most one big swing",
+       "rose in exactly 3 of 5 with at most one big swing, or in 4-5 with exactly one big swing",
        4
       ],
       [
@@ -604,7 +605,8 @@
       ]
      ],
      "loss_rule": "A year counts as 'rose' only if EPS positive that year. Negative EPS in latest year or in 2+ of 5 years: max 2. 'Last five years' = five most recent annual EPS figures.",
-     "insufficient_history": "fewer than six figures: max 2, 7 points counted unverified"
+     "insufficient_history": "fewer than six figures: max 2, 7 points counted unverified",
+     "definitions": "'rose' = EPS higher than the year before and positive that year; big swing = change of more than 50% from the year before, or any move into or out of a loss"
     }
    ],
    "notes": [
@@ -940,6 +942,10 @@
   {
    "date": "2026-11-25",
    "text": "Third audit of 25 Nov: reconciliation script (21 tables, 342 checks, no disagreements); recording rules for estimates, capped scores, past breaches and retained-by-design; Canon-versus-law board tests; position-range reading; NIA 2026 status note; classified list of 1.5.0 score rules vs recording rules; full research references. No rule or score changes."
+  },
+  {
+   "date": "2026-11-25",
+   "text": "Fourth audit of 25 Nov: EPS 4-point row reworded so it no longer overlaps the 7-point row (wording now matches the reference calculation; no score change); 'rose' and 'big swing' restated beside the EPS table; scope of the lower-score rule; HUBL rebuilt from inputs inside canon_score_reconcile_v1_5_0.py (358 checks, 0 disagreements); NIA NFRS 17 dividend rules listed as unread."
   }
  ],
  "change_control": "Chapter, spec, test cases, reference calculation and evidence register form one package. A clarification is allowed only if all test cases and the property audit pass and no published score moves; logged with date in all files. Any change that could move a score needs a new version. Version stays 1.5.0 because Chapter 80 Record 2 is registered on it."

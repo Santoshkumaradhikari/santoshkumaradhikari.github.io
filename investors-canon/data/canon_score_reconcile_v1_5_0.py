@@ -5,7 +5,8 @@ Checks that the five files that make up the rubric say the same thing:
   2. the specification (canon-score-spec-v1.5.0.json) - every band,
   3. the reference calculation (canon_score_reference_v1_5_0.py) - via the 91 test cases,
   4. the property audit (canon_score_properties_v1_5_0.py),
-  5. the case-study calculation (canon_case_ebl_nica_v1_5_0.py).
+  5. the case-study calculation (canon_case_ebl_nica_v1_5_0.py),
+and rebuilds the HUBL worked example (Lesson 64.6) from its stated inputs.
 
 For each of the 21 scoring tables it compares, row by row: the points, the table maximum, every threshold
 number in the specification's row text, and the boundary words ("under", "or more", "up to", "over", "or less").
@@ -90,6 +91,32 @@ for name, dims in (("business_quality_score", [1, 2, 5, 6, 7]), ("share_attracti
     ok(SPEC["outputs"][name]["dimensions"] == dims, f"specification outputs.{name} dimensions changed")
 ok(SPEC["version"] == "1.5.0", "specification version is not 1.5.0")
 
+# HUBL (Lesson 64.6) rebuilt from its stated inputs with the reference functions: must give 87 = 68 + 19
+import canon_score_reference_v1_5_0 as R
+h = {
+    "roe": R.roe_points([11.0, 15.2, 16.4]),
+    "car": R.car_points(12.8, 11.0, all_components_met=True),                 # Tier 1 = CET1 10.3%
+    "earnings": R.earnings_quality([100, 108, 117, 117, 127, 138], "lender", writeback_share_max=8),
+    "promoter": R.promoter_points(0, 5),                                       # stable at 51%; under 10% pledged
+    "audit": R.AUDIT["clean"],
+    "board": R.board_points(late_filings=0, independents=2, legal_min=1, tests_met=True),
+    "turnover": R.turnover_points(3.2e6, 2.6e6, 1.0),
+    "float": R.float_points(49),
+    "pe": R.pe_points(13.5 / 15.8), "pb": R.pb_points(1.3 / 1.5),
+    "moat": 8,                                                                 # ROE >= median 4 of 5; NPL below average
+    "concentration": R.concentration_points(30),
+    "growth": R.lender_growth_points(11, 9, 10.5, gross_npl=2.9, class_gross_npl=4.0, adj_npl=3.1, adj_npl_prev=3.4,
+                                     restructured_pct=1.2),
+    "eps": R.eps_points([20.0, 21.6, 23.4, 23.4, 25.3, 27.4]),
+    "dividends": R.dividend_consistency([True] * 5, [40] * 5), "source": 4,
+}
+bq = sum(h[k] for k in ("roe", "car", "earnings", "promoter", "audit", "board", "moat", "concentration", "growth", "eps", "dividends", "source"))
+sa = sum(h[k] for k in ("turnover", "float", "pe", "pb"))
+ok((bq, sa, bq + sa) == (68, 19, 87), f"HUBL rebuilt as {bq} + {sa} = {bq + sa}, chapter says 68 + 19 = 87")
+for k, want in (("roe", 6), ("car", 5), ("earnings", 5), ("promoter", 6), ("audit", 5), ("board", 4), ("turnover", 3),
+                ("float", 5), ("pe", 6), ("pb", 5), ("concentration", 4), ("growth", 8), ("eps", 7), ("dividends", 6)):
+    ok(h[k] == want, f"HUBL {k}: reference gives {h[k]}, chapter shows {want}")
+
 # the executable files
 for script, expect in (("canon_score_reference_v1_5_0.py", "91 of 91 cases pass"),
                        ("canon_score_properties_v1_5_0.py", "0 failures"),
@@ -97,7 +124,7 @@ for script, expect in (("canon_score_reference_v1_5_0.py", "91 of 91 cases pass"
     out = subprocess.run([sys.executable, os.path.join(HERE, script)], capture_output=True, text=True).stdout
     ok(expect in out, f"{script} did not report '{expect}'")
 
-print(f"{checks} reconciliation checks across {len(MAP)} scoring tables; {len(fail)} disagreements")
+print(f"{checks} reconciliation checks across {len(MAP)} scoring tables and the HUBL example; {len(fail)} disagreements")
 for f in fail:
     print("DISAGREE", f)
 sys.exit(1 if fail else 0)
