@@ -49,8 +49,8 @@
    "hash": "da80b34561d9620a9ec02b7e1bbd6c30"
   },
   "ch-10-trading-mechanics.html": {
-   "content_date": "2026-11-22",
-   "hash": "0b70ffa684d0e98b5aaedea3ca95cbbd"
+   "content_date": "2026-11-26",
+   "hash": "83aa59b080f67d7fdaefecbb3fc59c9d"
   },
   "ch-11-liquidity-problem.html": {
    "content_date": "2026-11-22",
@@ -101,8 +101,8 @@
    "hash": "d7c686aeb7b500572d901f9506e64efa"
   },
   "ch-23-governance-scoring.html": {
-   "content_date": "2026-11-25",
-   "hash": "bbf39b36165b3d316e048b1ab1facf11"
+   "content_date": "2026-11-26",
+   "hash": "c7307a6040a72e26e207e21503a89686"
   },
   "ch-24-reading-financial-statements.html": {
    "content_date": "2026-11-25",
@@ -253,8 +253,8 @@
    "hash": "dd70bd9eb7c3c9fa9b80fdd6c6e52e30"
   },
   "ch-61-portfolio-risk-management.html": {
-   "content_date": "2026-11-18",
-   "hash": "9478461d0894725ab04078adcec5f271"
+   "content_date": "2026-11-26",
+   "hash": "3cb54654a718b93b039e4f8c760d4be1"
   },
   "ch-62-systematic-disciplined-investing.html": {
    "content_date": "2026-11-18",
@@ -265,8 +265,8 @@
    "hash": "2f5c6f04efb1c687a8764c00300f8f90"
   },
   "ch-64-seven-dimension-score.html": {
-   "content_date": "2026-11-25",
-   "hash": "5157baced761657d136c898f91ac70e2"
+   "content_date": "2026-11-26",
+   "hash": "a5ff93424d4cb96d4299ee3111f76778"
   },
   "ch-65-sector-subscore-adjustments.html": {
    "content_date": "2026-11-22",
@@ -289,8 +289,8 @@
    "hash": "88f4e97bf2cdffbc9e82048139cc236c"
   },
   "ch-70-research-tracking-systems.html": {
-   "content_date": "2026-11-18",
-   "hash": "941e93d67759e9e4529462ffb5a8a9c1"
+   "content_date": "2026-11-26",
+   "hash": "2a2eec32ac566fad7655287bf04ed0f5"
   },
   "ch-71-banking-sector-playbook.html": {
    "content_date": "2026-11-18",
@@ -369,8 +369,8 @@
    "hash": "30584aa350a02fee9b7e9e4f29d87d9d"
   },
   "ch-90-case-study-nepse-mania.html": {
-   "content_date": "2026-11-22",
-   "hash": "e718b4cb6a9d7008c9dd375a89c4b468"
+   "content_date": "2026-11-26",
+   "hash": "8d58f3d0248f6d0838ef0d8422a1749e"
   },
   "ch-91-case-study-hydropower-overrun.html": {
    "content_date": "2026-11-22",
@@ -393,8 +393,8 @@
    "hash": "ccf9b6423fddcbccc899efd4615894b0"
   },
   "ch-96-overriding-the-model.html": {
-   "content_date": "2026-11-18",
-   "hash": "e72974fcc7770974db0813bbc9938a3b"
+   "content_date": "2026-11-26",
+   "hash": "53cb85b04c2f0f6eb4f9a5ea068574aa"
   },
   "ch-97-drawdown-loss-rules.html": {
    "content_date": "2026-11-18",
@@ -495,5 +495,5 @@
   "glossary.html": "2026-09-07",
   "study-guide.html": "2026-09-07"
  },
- "index_date": "2026-11-25"
+ "index_date": "2026-11-26"
 }
