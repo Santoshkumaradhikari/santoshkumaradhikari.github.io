@@ -1,0 +1,54 @@
+# Cycle-settings test — rules written 17 Nov 2026, before the simulation was run
+
+Note added 27 Nov 2026: the rules were fixed before any result was computed, but by an author who
+already knew how the 2015-2026 market behaved. The result is therefore a retrospective simulation,
+not an out-of-sample test. Files: regime-test-data-2015-2026.csv (inputs, with the NRB report each
+row came from), regime_test_2015_2026.py (the simulation), regime-test-quarterly-2015-2026.csv (output).
+44 quarter-end readings give 43 quarterly holding periods.
+
+Question: would following Chapter 0.3's phases with Lesson 59.7's settings have done better than simply
+staying invested, from FY 2015/16 to 2026?
+
+Data (quarter-end months: mid-Oct, mid-Jan, mid-Apr, mid-Jul), from NRB "Current Macroeconomic and
+Financial Situation" reports:
+- CG  private-sector credit growth from BFIs, year-on-year %
+- DG  deposit growth at BFIs, year-on-year %
+- IB  weighted average interbank rate %
+- TB  91-day treasury-bill rate % (return earned on money held out of shares)
+- NEPSE index level
+- NPL system NPL ratio, mid-July each year (NRB)
+- Corridor floor and ceiling for each fiscal year (NRB monetary policy); none before FY 2016/17
+
+Phase reading for a quarter (in this order — first rule that fits):
+1. Compression (Phase 2): IB above the corridor midpoint. (Before a corridor existed: IB >= 5%.)
+2. Expansion   (Phase 1): CG >= 15%.
+3. Repair      (Phase 3): latest mid-July NPL ratio at least 0.2 points above the year before.
+4. Recovery    (Phase 4): anything else.
+
+Lesson 59.7 rules:
+- Change the setting only when two quarterly readings in a row agree on a new phase.
+- Act one quarter after the data month (NRB publishes about a month later; prices are quarterly).
+- Active part as a share of its normal target:
+  Phase 1: 100%.  Phase 2: cut to 50% at once.  Phase 3: rebuild +12.5 points a quarter, up to 75%.
+  Phase 4: rebuild +12.5 points a quarter, up to 100%.
+- Money out of shares earns the 91-day T-bill rate for the quarter.
+- Shares earn the NEPSE index change (price only, no dividends — this slightly favours the cycle rule;
+  a +2%/year dividend sensitivity will also be shown).
+
+Comparison: buy-and-hold (100% always). Report final value, worst fall from a peak, and the 2016-17 and
+2021-22 falls specifically. Starting position: 100% invested at the first quarter.
+
+## Clarifications fixed while coding, before any result was seen
+- Corridor midpoint = (ceiling + floor) / 2 for the corridor in force in the data month. 2016/17: ceiling 7%, floor
+  floated at interbank - 0.10 (so Compression needs interbank above ~6.9%). 2017/18-2018/19: 5.0. 2019/20: 4.5.
+  2020/21: 3.0. 2021/22: 3.5, then 5.5 from 23 Feb 2022. 2022/23: 7.0. 2023/24: 6.0 then 5.0. 2024/25: 4.75. 2025/26: 4.375.
+- The mid-July NPL figure counts from the mid-July reading onward. NPL: 2014 ~2.9 (derived), 2015 2.57, 2016 1.74,
+  2017 1.70 (NRB bank supervision reports), 2018-2026 from NRB Macroeconomic Indicators Table 18.
+- Entering Phase 1 sets 100% at once. Entering Phase 3 or 4 from above its cap cuts to the cap at once
+  (sensitivity: hold instead). Missing CG/DG in Apr 2018 and Oct 2024 interpolated (cannot change the phase).
+
+## Result (run 17 Nov 2026), Oct 2015 -> Jul 2026, 43 quarters
+Main: cycle rule 2.75x (+9.9%/yr) vs buy-and-hold 2.29x (+8.0%/yr). Worst fall: both -36.9% (2016-19, missed).
+2016-07 -> 2018-07: both -29.4% (rule never left Phase 1).  2021-07 -> 2022-10: rule -16.1%, buy-and-hold -35.6%.
+2022-10 -> 2026-07: rule +35.8%, buy-and-hold +39.8% (stuck at 75% in Repair while NPLs kept rising).
++2% dividends: 3.26x vs 2.83x. No lag: 2.51x. One reading enough: 2.62x. Phase 3 holds instead of cutting: 2.87x.

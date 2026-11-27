@@ -1,0 +1,26 @@
+# Six-signal regime test — rules written 27 Nov 2026, before this simulation was run
+
+Purpose: Lesson 80.8 tested a three-signal rule. This test uses the full Chapter 0.3.7 checklist as a
+vote, to see whether the extra signals help or hurt. Same data, lag, two-reading confirmation,
+Lesson 59.7 settings and cash return as Lesson 80.8. The author already knew the 2015-2026 history,
+so this is a retrospective simulation, not an out-of-sample test.
+
+Signal 3 (CD ratio) cannot be tested: NRB used a different measure (the CCD ratio) until 2021/22,
+so no consistent quarterly CD series exists for 2015-2026. Five of the six signals vote.
+
+Each signal names the phases it is consistent with (Chapter 0.3's phase descriptions):
+1. Credit growth (CG, y/y):   CG >= 15 -> {1}.  Else up >= 1 point on a year earlier -> {4}.
+                              Else down >= 1 point on a year earlier -> {2, 3}.  Else -> {3, 4}.
+2. Deposit growth (DG, y/y):  DG >= 15 -> {1, 4}.  10 <= DG < 15 -> {3, 4}.  DG < 10 -> {2}.
+4. Interbank rate (IB) vs corridor midpoint M (as in Lesson 80.8; before the corridor, M = 5):
+                              IB > M -> {2}.  IB <= M - 1.5 -> {1, 4}.  Otherwise -> {3}.
+5. System NPL (latest mid-July vs the year before): up >= 0.2 points -> {2, 3}.  Otherwise -> {1, 4}.
+6. NEPSE trend (index vs 4 quarters earlier): up >= 10% -> {1, 4}.  down >= 10% -> {2, 3}.  Otherwise -> {3, 4}.
+   (Quarters without a year of history: no NEPSE or credit-change vote.)
+
+Phase for the quarter: the phase consistent with the most signals. Ties broken in the order
+Compression (2) > Expansion (1) > Repair (3) > Recovery (4) — the same order as the three-signal rule.
+Sensitivity: on a tie, keep the previous reading instead.
+
+Report: final value, yearly return, worst fall, the 2016-18 and 2021-22 falls and the 2022-26 climb,
+against both buy-and-hold and the three-signal rule. Whatever the result, it is reported.
