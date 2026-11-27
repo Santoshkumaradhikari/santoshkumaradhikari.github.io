@@ -5,7 +5,7 @@
  "adopted_bs": "7 Mangsir 2083",
  "master_chapter": "Chapter 64",
  "status": "Structured ranking tool, partly subjective, combining business quality, governance, tradability and price. Not a measure of intrinsic value, a return forecast or a probability of success. Weights, thresholds and overrides are author judgement. No out-of-sample record for v1.4; written after seeing 2021 bank data.",
- "applies_to": "Scores made on or after 2026-11-22. Never applied retroactively to version 1.2 scores or to the 1.2-P forward record.",
+ "applies_to": "Scores made on or after 2026-11-23, the date this version was adopted; each score records the version current when it was made (the 1.3 to 1.4.x line began on 2026-11-22). Never applied retroactively to version 1.2 scores or to the 1.2-P forward record.",
  "preserved_records": {
   "1.2": "canon-score-spec-v1.2.json (frozen 2026-11-17)",
   "1.2-P": {
@@ -706,7 +706,7 @@
    "audit disclaimer"
   ],
   "exclude": [
-   "final finding of fraud by a court or competent regulator (allegations recorded, not treated as findings)"
+   "final finding by a court or competent regulator of fraud by the company's management or controlling shareholders (allegations, investigations and news reports recorded beside the score, not treated as findings)"
   ],
   "provisional": [
    "accounts materially restated (until a full year of new audited figures)"
@@ -893,7 +893,7 @@
   },
   "rule": "Always report all three; never the total alone."
  },
- "score_bands_note": "Position limits attached to bands are provisional ceilings, not evidence-based sizes; Chapter 60/66 concentration limits, maximum tolerable loss and Chapter 56 ADV rule also apply. Provisional scores take the ceiling of the band below. Bands describe the combined score, not business quality alone. Interim gate: a total in the top two bands takes the next band's ceiling if Business Quality < 38/75 or Share Attractiveness < 13/25; provisional also moves one band down; at most one band down in all. | Higher figure in each position range is the ceiling (Chapter 66 tranches; liquidity, sector and loss limits can stop lower); a provisional score takes the band below's ceiling, so never the 6-8% core range.",
+ "score_bands_note": "Position limits attached to bands are provisional ceilings, not evidence-based sizes; Chapter 60/66 concentration limits and the Chapter 56 ADV rule also apply, and the Chapter 81 exit rules and Chapter 97 drawdown rules govern when to cut a holding. Provisional scores take the ceiling of the band below. Bands describe the combined score, not business quality alone. Interim gate: a total in the top two bands takes the next band's ceiling if Business Quality < 38/75 or Share Attractiveness < 13/25; provisional also moves one band down; at most one band down in all. | Higher figure in each position range is the ceiling (Chapter 66 tranches; liquidity, sector and loss limits can stop lower); a provisional score takes the band below's ceiling, so never the 6-8% core range.",
  "forward_pilot_note": "The 1.2-P pilot (frozen 2026-11-17) cannot validate v1.4; its 2027-11 review is a first-year look only.",
  "patch_scope": "Minor version: two scoring changes (loss -> 0 on P/E; zero/negative book -> 0 on P/B) and insurer capital capped at 3 (unverified) until NIA 2026 is read; weights and bands unchanged; HUBL 87.",
  "status_of_file": "Complete executable specification for rubric 1.4.2. Earlier spec files are an archive/change log.",
@@ -950,6 +950,10 @@
   {
    "date": "2026-11-25",
    "text": "Case Study 64A brought in line with these clarifications: capped-score record for NIC Asia (three flags), provisional parts table (EBL 54, NICA 38), write-back on the pre-tax basis (EBL FY 2081/82 2.2%), EPS and retained-by-design wording, position ceiling with Chapters 56, 60 and 66. canon_score_reconcile_v1_5_0.py now also checks 64A's glance scores, provisional parts and file fingerprints against the case script (387 checks, 0 disagreements). No rule or score changes."
+  },
+  {
+   "date": "2026-11-27",
+   "text": "Wording aligned with Chapter 64, no rule or score changes: the exclusion is a final finding of fraud by the company's management or controlling shareholders (not any fraud finding); applies_to now names this version's adoption date (2026-11-23) instead of the 2026-11-22 start of the 1.3 line, which earlier files carried over; the bands note points to the Chapter 81 exit rules and Chapter 97 drawdown rules instead of an undefined 'maximum tolerable loss'. Open, not changed: whether an insurer below 100% of the NIA solvency requirement should trigger the 54 cap (today it scores 0 of 7 but is not capped); for Chapter 65."
   }
  ],
  "change_control": "Chapter, spec, test cases, reference calculation and evidence register form one package. A clarification is allowed only if all test cases and the property audit pass and no published score moves; logged with date in all files. Any change that could move a score needs a new version. Version stays 1.5.0 because Chapter 80 Record 2 is registered on it."

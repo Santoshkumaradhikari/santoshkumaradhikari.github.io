@@ -2248,3 +2248,6 @@ a.feature-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md)
 .fw-limits { grid-column: 1 / -1; background: var(--bg-alt); border: 1px solid var(--rule-strong); border-left: 4px solid var(--np-crimson); border-radius: 10px; padding: 14px 18px; }
 .fw-limits p { margin: 6px 0 0; font-family: var(--sans); font-size: 13.5px; line-height: 1.55; color: var(--ink-soft); }
 .fw-limits strong { color: var(--ink); }
+.fw-authority { font-family: var(--sans); font-size: 14px; line-height: 1.6; color: var(--ink-soft); background: var(--bg-alt); border: 1px solid var(--rule); border-radius: 10px; padding: 14px 18px; margin: -32px 0 48px; }
+.fw-authority strong { color: var(--ink); }
+.fw-authority a { color: var(--ink); }
