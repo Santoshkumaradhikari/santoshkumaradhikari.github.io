@@ -37,8 +37,8 @@
    "hash": "b8e5efb8dca9e3c8c8536915ab48dc3d"
   },
   "ch-07-nepse-reality.html": {
-   "content_date": "2026-11-25",
-   "hash": "b601ba2bcadc4b6c55653f8f1c6e7f06"
+   "content_date": "2026-11-27",
+   "hash": "481f4fc05a5f213503d117a40576b175"
   },
   "ch-08-regulatory-architecture.html": {
    "content_date": "2026-11-25",
@@ -261,20 +261,20 @@
    "hash": "8e6424717ff1269b73e044db737b5b0e"
   },
   "ch-63-canon-scoring-philosophy.html": {
-   "content_date": "2026-11-22",
-   "hash": "2f5c6f04efb1c687a8764c00300f8f90"
+   "content_date": "2026-11-27",
+   "hash": "097b93ae5e5354a24f6029fb67a5d3bf"
   },
   "ch-64-seven-dimension-score.html": {
-   "content_date": "2026-11-26",
-   "hash": "a5ff93424d4cb96d4299ee3111f76778"
+   "content_date": "2026-11-27",
+   "hash": "71ed94092c08a52f650348a2799f3206"
   },
   "ch-65-sector-subscore-adjustments.html": {
-   "content_date": "2026-11-22",
-   "hash": "dd3e8a0104122d8715e22d3c8772a3cb"
+   "content_date": "2026-11-27",
+   "hash": "c18a33e7f74901dd6c0426019c376081"
   },
   "ch-66-using-canon-score-portfolio.html": {
-   "content_date": "2026-11-22",
-   "hash": "a561c8d2e6b5f42500c4812ff4a354ec"
+   "content_date": "2026-11-27",
+   "hash": "880185448e82d5114f41b029ad9aebcd"
   },
   "ch-67-long-term-value-investing.html": {
    "content_date": "2026-11-18",
@@ -329,8 +329,8 @@
    "hash": "9e54f4205615574d10eb81d5a488e856"
   },
   "ch-80-calibrating-scoring-model.html": {
-   "content_date": "2026-11-23",
-   "hash": "e09c245bff4c18f88bae48351eb4b115"
+   "content_date": "2026-11-27",
+   "hash": "db5102059b087cb0c7fabba8ad03e4de"
   },
   "ch-81-testing-refining-exit-rules.html": {
    "content_date": "2026-11-18",
@@ -485,8 +485,8 @@
    "hash": "c94062bb7cdd281234773185459767a4"
   },
   "ch-64a-two-banks-scored.html": {
-   "content_date": "2026-11-25",
-   "hash": "408852a7962b6ca06699d26958bce9a4"
+   "content_date": "2026-11-27",
+   "hash": "3807e111a44b9328d09180252da500cf"
   }
  },
  "pages": {
@@ -495,5 +495,5 @@
   "glossary.html": "2026-09-07",
   "study-guide.html": "2026-09-07"
  },
- "index_date": "2026-11-26"
+ "index_date": "2026-11-27"
 }
