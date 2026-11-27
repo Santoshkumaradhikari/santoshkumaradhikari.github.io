@@ -1,48 +1,48 @@
 {
  "chapters": {
   "ch-0-1-credit-cycle.html": {
-   "content_date": "2026-11-25",
-   "hash": "e31de470c0ab88114384c153ae943a03"
+   "content_date": "2026-11-27",
+   "hash": "b34a86d3fbd0431c9b4b72fe4692a04e"
   },
   "ch-0-2-nrb-transmission.html": {
-   "content_date": "2026-11-25",
-   "hash": "81ea9a90ca2ba3661618f132fea75eda"
+   "content_date": "2026-11-27",
+   "hash": "8d1b5c904febbb6fcc02c4f7f1089c02"
   },
   "ch-0-3-liquidity-regimes.html": {
-   "content_date": "2026-11-25",
-   "hash": "6dea085a9c722a07fb43d7b07a16ef03"
+   "content_date": "2026-11-27",
+   "hash": "dfb3378b97187cb9922a987783e2a495"
   },
   "ch-01-nrb-monetary-policy.html": {
-   "content_date": "2026-11-22",
-   "hash": "fe456db0dc57f562673b8c2e8d468cd8"
+   "content_date": "2026-11-27",
+   "hash": "e74b3e697cac8d62b9363ea1868b7d75"
   },
   "ch-02-credit-policy-impact.html": {
-   "content_date": "2026-11-22",
-   "hash": "e52562394245d240bf2a18f802d8f22e"
+   "content_date": "2026-11-27",
+   "hash": "30fbbc54f45694a50b530246bafd8f15"
   },
   "ch-03-nrb-policy-transmission.html": {
-   "content_date": "2026-11-22",
-   "hash": "d15f30111d1cbca8ab99c135a3eb1ab8"
+   "content_date": "2026-11-27",
+   "hash": "6ebc304d6a3f78b1d81abcd9f48d7ccb"
   },
   "ch-04-external-sector.html": {
-   "content_date": "2026-11-24",
-   "hash": "6f8e92f48d90785e636452c31d754335"
+   "content_date": "2026-11-27",
+   "hash": "8cf7c2f9eb1281fd4b43998642af4349"
   },
   "ch-05-india-economy.html": {
-   "content_date": "2026-11-22",
-   "hash": "9243a592a8438ebabdabb05d2133d203"
+   "content_date": "2026-11-27",
+   "hash": "8d61a98c6d4a4d58cf395cb9b10e2dd1"
   },
   "ch-06-global-macro-risk.html": {
-   "content_date": "2026-11-22",
-   "hash": "b8e5efb8dca9e3c8c8536915ab48dc3d"
+   "content_date": "2026-11-27",
+   "hash": "bb1fe14215bed7d20dff7f9821912ef0"
   },
   "ch-07-nepse-reality.html": {
    "content_date": "2026-11-27",
    "hash": "044d3fcdc49c0925aae73fa586813eb0"
   },
   "ch-08-regulatory-architecture.html": {
-   "content_date": "2026-11-25",
-   "hash": "dec59d08041f73c11d3f6723b9043052"
+   "content_date": "2026-11-27",
+   "hash": "170324933e590127f192cca10cf9d0da"
   },
   "ch-09-market-participants.html": {
    "content_date": "2026-11-25",
@@ -77,8 +77,8 @@
    "hash": "7cc5b7f214147c374d71f2d5b123580b"
   },
   "ch-17-debentures-bonds.html": {
-   "content_date": "2026-11-22",
-   "hash": "826dc9bb64be52b6677dbdbddb864bd9"
+   "content_date": "2026-11-27",
+   "hash": "651ee03a5486aa022280518cd1e83bdb"
   },
   "ch-18-what-doesnt-exist.html": {
    "content_date": "2026-11-22",
@@ -246,7 +246,7 @@
   },
   "ch-59-asset-allocation.html": {
    "content_date": "2026-11-27",
-   "hash": "55579b1592f8073d073ca54c9d6ccc93"
+   "hash": "fa7cea72ee323e19855462229ee016bd"
   },
   "ch-60-equity-portfolio-construction.html": {
    "content_date": "2026-11-27",
@@ -266,7 +266,7 @@
   },
   "ch-64-seven-dimension-score.html": {
    "content_date": "2026-11-27",
-   "hash": "71ed94092c08a52f650348a2799f3206"
+   "hash": "570456b7ac6ed8da28faf557a0c7c558"
   },
   "ch-65-sector-subscore-adjustments.html": {
    "content_date": "2026-11-27",
@@ -326,11 +326,11 @@
   },
   "ch-79-backtesting-mindset.html": {
    "content_date": "2026-11-27",
-   "hash": "5f7bb36d057270e3d3db08fae333739d"
+   "hash": "66184c480284254fceefe55aa3fdb98e"
   },
   "ch-80-calibrating-scoring-model.html": {
    "content_date": "2026-11-27",
-   "hash": "06fa0b232424fefcfd965aaf6d0cf9fe"
+   "hash": "cdae4d3f4a8803b51dcb55f5a818b550"
   },
   "ch-81-testing-refining-exit-rules.html": {
    "content_date": "2026-11-27",
@@ -338,7 +338,7 @@
   },
   "ch-82-measuring-managing-model-drift.html": {
    "content_date": "2026-11-27",
-   "hash": "437a6294872123f57444d7a6ad804b3f"
+   "hash": "2ed5a7180793f76755096f0a7ed608f3"
   },
   "ch-83-case-study-commercial-bank.html": {
    "content_date": "2026-11-22",
