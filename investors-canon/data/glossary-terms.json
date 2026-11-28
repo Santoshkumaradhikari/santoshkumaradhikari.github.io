@@ -1,0 +1,5497 @@
+[
+ {
+  "id": "nepse",
+  "term": "NEPSE",
+  "full": "Nepal Stock Exchange",
+  "cat": "market",
+  "chapters": [
+   "ch-07-nepse-reality"
+  ],
+  "definition": "The only stock exchange in Nepal. Every listed share, mutual fund unit and debenture trades here. With just one venue, there is no second market to sell on when buyers disappear.",
+  "example": "Like a town with one haat bazaar: if the bazaar is quiet, there is nowhere else to sell your buffalo.",
+  "nepali": "नेपाल स्टक एक्सचेन्ज",
+  "see_also": [
+   "nepse-index",
+   "liquidity"
+  ]
+ },
+ {
+  "id": "nepse-index",
+  "term": "NEPSE index",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-07-nepse-reality",
+   "ch-106-nepse-data-handbook-almanac"
+  ],
+  "definition": "The main number that tracks the overall price level of listed shares, with bigger companies counting for more. It fell about 43%, from 3,198.60 on 18 August 2021 to 1,815.13 on 25 September 2022.",
+  "example": "A thermometer for the whole market, not for any one share.",
+  "nepali": "नेप्से परिसूचक",
+  "see_also": [
+   "sub-index"
+  ]
+ },
+ {
+  "id": "sub-index",
+  "term": "Sub-index",
+  "full": "Sector index",
+  "cat": "market",
+  "chapters": [
+   "ch-07-nepse-reality"
+  ],
+  "definition": "An index for one group of companies only, such as banking, hydropower or life insurance. It shows whether a sector is rising or falling as a whole.",
+  "example": "",
+  "nepali": "उपसूचक",
+  "see_also": [
+   "nepse-index"
+  ]
+ },
+ {
+  "id": "market-capitalisation",
+  "term": "Market capitalisation",
+  "full": "Market cap",
+  "cat": "market",
+  "chapters": [
+   "ch-07-nepse-reality",
+   "ch-39-valuation-ratios"
+  ],
+  "definition": "Share price × number of shares. It is what the market says the whole company is worth today.",
+  "example": "A bank with 20 crore shares at Rs 500 has a market cap of Rs 100 arba.",
+  "nepali": "बजार पुँजीकरण",
+  "see_also": [
+   "book-value"
+  ]
+ },
+ {
+  "id": "broker",
+  "term": "Broker",
+  "full": "Stockbroker",
+  "cat": "market",
+  "chapters": [
+   "ch-09-market-participants"
+  ],
+  "definition": "A firm licensed by SEBON to place buy and sell orders on NEPSE for you. You open a broker account and trade through the broker's TMS.",
+  "example": "",
+  "nepali": "धितोपत्र दलाल",
+  "see_also": [
+   "tms",
+   "broker-commission"
+  ]
+ },
+ {
+  "id": "tms",
+  "term": "TMS",
+  "full": "Trading Management System",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The broker's online system where your buy and sell orders actually reach NEPSE. Each licensed broker runs its own TMS. It is separate from MeroShare: orders go through TMS, while applications, EDIS approvals and holdings live in MeroShare.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "meroshare",
+   "broker",
+   "limit-order"
+  ]
+ },
+ {
+  "id": "meroshare",
+  "term": "MeroShare",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics",
+   "ch-112-technology-tools-nepse-investor"
+  ],
+  "definition": "CDSC's website and app for investors. You use it to apply for IPOs, FPOs and rights shares, approve EDIS when you sell, and see your holdings. It is not a place to buy or sell: that happens in your broker's TMS.",
+  "example": "",
+  "nepali": "मेरोसेयर",
+  "see_also": [
+   "cdsc",
+   "edis",
+   "asba"
+  ]
+ },
+ {
+  "id": "cdsc",
+  "term": "CDSC",
+  "full": "CDS and Clearing Limited",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "Nepal's central depository. It holds every listed share in electronic form, runs MeroShare, and settles trades: it moves the shares and the money after a deal is agreed.",
+  "example": "If NEPSE is the bazaar where the price is agreed, CDSC is the land office that records the change of owner.",
+  "nepali": "सीडीएससी",
+  "see_also": [
+   "demat-account",
+   "t-2"
+  ]
+ },
+ {
+  "id": "demat-account",
+  "term": "Demat account",
+  "full": "Dematerialised account",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The account that holds your shares electronically, the way a bank account holds your money. You need one to buy or hold any NEPSE share.",
+  "example": "",
+  "nepali": "डिम्याट खाता",
+  "see_also": [
+   "boid",
+   "depository-participant"
+  ]
+ },
+ {
+  "id": "depository-participant",
+  "term": "Depository participant",
+  "full": "DP",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The bank or broker that opens and runs your demat account on CDSC's system. Most banks and many brokers act as one.",
+  "example": "",
+  "nepali": "निक्षेप सदस्य",
+  "see_also": [
+   "demat-account",
+   "dp-charge"
+  ]
+ },
+ {
+  "id": "boid",
+  "term": "BOID",
+  "full": "Beneficial Owner Identification",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The 16-digit number that identifies your demat account in CDSC's records. Your shares are held against it, and CDSC allows one IPO application per BOID per issue.",
+  "example": "",
+  "nepali": "बीओआईडी",
+  "see_also": [
+   "demat-account"
+  ]
+ },
+ {
+  "id": "edis",
+  "term": "EDIS",
+  "full": "Electronic Delivery Instruction Slip",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The approval a seller gives in MeroShare to release sold shares from the demat account. Forgetting it is a common and costly mistake: the sale is agreed but settlement fails, and the seller pays a penalty.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "meroshare",
+   "t-2"
+  ]
+ },
+ {
+  "id": "t-2",
+  "term": "T+2",
+  "full": "Trade day plus two",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "Shares and money change hands two working days after the trade. If you buy on Sunday, the shares reach your demat account on Tuesday.",
+  "example": "",
+  "nepali": "टी+२",
+  "see_also": [
+   "settlement",
+   "book-closure"
+  ]
+ },
+ {
+  "id": "settlement",
+  "term": "Settlement",
+  "full": "Clearing and settlement",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The step after a trade in which the shares actually move to the buyer and the money to the seller. On NEPSE it happens on T+2, through CDSC.",
+  "example": "",
+  "nepali": "राफसाफ",
+  "see_also": [
+   "t-2",
+   "cdsc"
+  ]
+ },
+ {
+  "id": "limit-order",
+  "term": "Limit order",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "An order with a price limit: the highest price you will pay when buying, or the lowest you will accept when selling. It protects you from paying far more than you meant to in a thin market.",
+  "example": "Telling the shopkeeper 'I will pay up to Rs 500, not a rupee more.'",
+  "nepali": "सीमित मूल्य आदेश",
+  "see_also": [
+   "order-book",
+   "spread"
+  ]
+ },
+ {
+  "id": "order-book",
+  "term": "Order book",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The list of buy orders (bids) and sell orders (asks) waiting at different prices for one share. In a thin share it may hold only a handful of orders.",
+  "example": "",
+  "nepali": "आदेश पुस्तिका",
+  "see_also": [
+   "bid-and-ask",
+   "market-depth"
+  ]
+ },
+ {
+  "id": "bid-and-ask",
+  "term": "Bid and ask",
+  "full": "Bid and offer",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The bid is the highest price a buyer is offering right now; the ask is the lowest price a seller will accept. A trade happens when they meet.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "spread",
+   "order-book"
+  ]
+ },
+ {
+  "id": "spread",
+  "term": "Spread",
+  "full": "Bid-ask spread",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The gap between the best buying and best selling prices. In thin NEPSE shares it can be Rs 5, Rs 20 or more, sometimes several percent of the price. Buying at the ask and later selling at the bid loses the spread straight away.",
+  "example": "Like the gap between what a money changer pays for your dollars and what he charges for them.",
+  "nepali": "",
+  "see_also": [
+   "bid-and-ask",
+   "market-depth"
+  ]
+ },
+ {
+  "id": "market-depth",
+  "term": "Market depth",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics",
+   "ch-54-liquidity-first-order-risk"
+  ],
+  "definition": "How many shares are waiting to be bought or sold near the best prices. A deep book can absorb a large order; a shallow one moves sharply when you sell.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "order-book",
+   "liquidity"
+  ]
+ },
+ {
+  "id": "pre-open-session",
+  "term": "Pre-open session",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "A short period before normal trading in which orders are collected to help set the opening price.",
+  "example": "",
+  "nepali": "प्रि-ओपन सत्र",
+  "see_also": [
+   "order-book"
+  ]
+ },
+ {
+  "id": "circuit-limit",
+  "term": "Circuit limit",
+  "full": "Upper and lower circuit",
+  "cat": "market",
+  "chapters": [
+   "ch-08-regulatory-architecture",
+   "ch-58-circuit-trap-exit-modelling"
+  ],
+  "definition": "The most a share's price may move in one day. For ordinary shares in the normal market it is 15% from the previous close, since 20 April 2026. At the upper circuit you cannot buy higher that day; at the lower circuit you cannot sell lower.",
+  "example": "",
+  "nepali": "सर्किट",
+  "see_also": [
+   "circuit-trap"
+  ]
+ },
+ {
+  "id": "circuit-trap",
+  "term": "Circuit trap",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-58-circuit-trap-exit-modelling"
+  ],
+  "definition": "A share that keeps hitting its circuit limit day after day while very few shares change hands. When it turns, it can hit the lower limit day after day and you cannot sell at all. A fast rise on real news is not a trap by itself; the warning is limit hits plus tiny turnover plus a rumour.",
+  "example": "A one-way bridge: easy to cross in, impossible to cross back when traffic turns.",
+  "nepali": "",
+  "see_also": [
+   "circuit-limit",
+   "exit-risk"
+  ]
+ },
+ {
+  "id": "average-daily-turnover",
+  "term": "Average daily turnover",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-11-liquidity-problem",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The rupee value of a share traded on a normal day, averaged over a period such as six months. The Canon Score uses it to grade how easily a share trades.",
+  "example": "",
+  "nepali": "औसत दैनिक कारोबार",
+  "see_also": [
+   "adv",
+   "liquidity-and-tradability"
+  ]
+ },
+ {
+  "id": "adv",
+  "term": "ADV",
+  "full": "Average Daily Volume",
+  "cat": "market",
+  "chapters": [
+   "ch-56-adv-rule"
+  ],
+  "definition": "The average amount of a share that changes hands each day, counted in shares or, as this book usually does, in rupees, over a recent window such as 20 trading days. It tells you how big an order the market can take.",
+  "example": "Asking for a taxi in a village versus central Kathmandu: five people at once is a problem in the village, trivial in the city.",
+  "nepali": "",
+  "see_also": [
+   "adv-rule",
+   "average-daily-turnover"
+  ]
+ },
+ {
+  "id": "adv-rule",
+  "term": "ADV rule",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-56-adv-rule"
+  ],
+  "definition": "This book's limit on position size: hold no more of a share than you could sell in 5 trading days while being only 10% of each day's trading. In simple maths, about half of one day's average turnover.",
+  "example": "A share trading Rs 20 lakh a day allows about Rs 10 lakh; one trading Rs 1 lakh a day allows only about Rs 50,000.",
+  "nepali": "",
+  "see_also": [
+   "adv",
+   "exit-risk"
+  ]
+ },
+ {
+  "id": "liquidity",
+  "term": "Liquidity",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-11-liquidity-problem",
+   "ch-54-liquidity-first-order-risk"
+  ],
+  "definition": "How easily you can sell a share for cash without pushing its price down. In NEPSE it is the most important risk after the business itself. (The same word also describes how much spare money banks have; see Liquidity regime.)",
+  "example": "A road busy on festival days can be empty when you need a ride.",
+  "nepali": "तरलता",
+  "see_also": [
+   "exit-risk",
+   "liquidity-regime"
+  ]
+ },
+ {
+  "id": "exit-risk",
+  "term": "Exit risk",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-55-exit-risk"
+  ],
+  "definition": "The risk that you cannot sell when you need to, or only at a much lower price. It is highest exactly when markets fall and buyers vanish.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "liquidity",
+   "stress-test"
+  ]
+ },
+ {
+  "id": "free-float",
+  "term": "Free float",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-57-free-float-allocation-limits",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The share of a company's stock that ordinary investors can actually trade. It leaves out promoter, government and other strategic holdings, cross-holdings and locked-in shares. Chapter 64 gives 5 points at 40% or more, 3 at 25–40%, 1 at 10–25% and 0 below 10%.",
+  "example": "What matters is not how much water is underground but how much you can draw from the well.",
+  "nepali": "सार्वजनिक रूपमा कारोबारयोग्य सेयर",
+  "see_also": [
+   "thin-float",
+   "lock-in-period"
+  ]
+ },
+ {
+  "id": "thin-float",
+  "term": "Thin float",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-57-free-float-allocation-limits"
+  ],
+  "definition": "A free float so small that a few orders can move the price a lot. Thin-float shares are prone to circuit traps however good the business.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "free-float",
+   "circuit-trap"
+  ]
+ },
+ {
+  "id": "book-closure",
+  "term": "Book closure",
+  "full": "Record date",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The date by which you must be a registered shareholder to receive a declared dividend, bonus or rights. Because of T+2, you must buy early enough for the trade to settle before that date.",
+  "example": "",
+  "nepali": "बुक क्लोज",
+  "see_also": [
+   "t-2",
+   "agm"
+  ]
+ },
+ {
+  "id": "price-adjustment",
+  "term": "Price adjustment",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-13-ordinary-shares",
+   "ch-37-rights-bonus-tax"
+  ],
+  "definition": "After the book closure for a bonus or rights issue, the share's price is adjusted downward to reflect the extra shares. The company is not worth less; its value is spread across more shares.",
+  "example": "Cutting the same roti into more pieces.",
+  "nepali": "मूल्य समायोजन",
+  "see_also": [
+   "bonus-share",
+   "terp"
+  ]
+ },
+ {
+  "id": "broker-commission",
+  "term": "Broker commission",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "The fee your broker charges on each buy and sell, as a percentage that falls for bigger trades: 0.36% up to Rs 50,000 (minimum Rs 10), then lower rates for larger amounts, as of November 2026.",
+  "example": "",
+  "nepali": "दलाल कमिसन",
+  "see_also": [
+   "sebon-fee",
+   "dp-charge",
+   "round-trip-cost"
+  ]
+ },
+ {
+  "id": "sebon-fee",
+  "term": "SEBON fee",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "A small regulatory fee of 0.015% of the trade value, paid on each buy and sell.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "broker-commission"
+  ]
+ },
+ {
+  "id": "dp-charge",
+  "term": "DP charge",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "A fixed charge of about Rs 25 per company per day when shares leave your demat account on a sale. On small trades it is a large share of the cost.",
+  "example": "",
+  "nepali": "डीपी शुल्क",
+  "see_also": [
+   "depository-participant",
+   "round-trip-cost"
+  ]
+ },
+ {
+  "id": "round-trip-cost",
+  "term": "Round-trip cost",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-10-trading-mechanics",
+   "ch-35-capital-gains-tax"
+  ],
+  "definition": "The total cost of buying and later selling: commission and SEBON fee both ways plus the DP charge, before capital gains tax. On a Rs 6,000 position it is about Rs 70, or 1.2%.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "broker-commission",
+   "dp-charge"
+  ]
+ },
+ {
+  "id": "margin-loan",
+  "term": "Margin loan",
+  "full": "Margin lending",
+  "cat": "market",
+  "chapters": [
+   "ch-02-credit-policy-impact",
+   "ch-59-asset-allocation"
+  ],
+  "definition": "A loan to buy shares, secured on those shares. If prices fall far enough, the lender sells your shares, often at the worst time. This book says no margin loans for beginners.",
+  "example": "Like a family house mortgaged to a moneylender: you live there, but someone else can take it.",
+  "nepali": "मार्जिन कर्जा",
+  "see_also": [
+   "margin-call"
+  ]
+ },
+ {
+  "id": "margin-call",
+  "term": "Margin call",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-02-credit-policy-impact",
+   "ch-90-case-study-nepse-mania"
+  ],
+  "definition": "A lender's demand for more money when the shares behind a margin loan fall in value. If you cannot pay, the lender sells. In 2021–22 margin calls forced many Nepali investors to sell near the bottom.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "margin-loan"
+  ]
+ },
+ {
+  "id": "operator",
+  "term": "Operator",
+  "full": "Price manipulation",
+  "cat": "market",
+  "chapters": [
+   "ch-12-microstructure-failures",
+   "ch-21-insider-trading"
+  ],
+  "definition": "Nepali market slang for a person or group that pushes a share's price up through coordinated buying and rumours, then sells to late buyers. Thin-float shares are the usual targets.",
+  "example": "",
+  "nepali": "अपरेटर",
+  "see_also": [
+   "circuit-trap",
+   "insider-trading"
+  ]
+ },
+ {
+  "id": "bull-market-and-bear-market",
+  "term": "Bull market and bear market",
+  "full": "",
+  "cat": "market",
+  "chapters": [
+   "ch-90-case-study-nepse-mania"
+  ],
+  "definition": "A bull market is a long, broad rise in prices; a bear market a long, broad fall. NEPSE's 2021 peak and the fall that followed are the book's main example.",
+  "example": "",
+  "nepali": "तेजी र मन्दी बजार",
+  "see_also": [
+   "drawdown",
+   "credit-cycle"
+  ]
+ },
+ {
+  "id": "merchant-banker",
+  "term": "Merchant banker",
+  "full": "Issue manager",
+  "cat": "market",
+  "chapters": [
+   "ch-09-market-participants",
+   "ch-14-ipos"
+  ],
+  "definition": "A SEBON-licensed firm that manages share issues (IPOs, FPOs, rights) for companies, and often also acts as share registrar or runs mutual funds.",
+  "example": "",
+  "nepali": "मर्चेन्ट बैंकर",
+  "see_also": [
+   "ipo",
+   "share-registrar"
+  ]
+ },
+ {
+  "id": "share-registrar",
+  "term": "Share registrar",
+  "full": "RTA",
+  "cat": "market",
+  "chapters": [
+   "ch-14-ipos"
+  ],
+  "definition": "The firm that keeps a company's list of shareholders up to date and handles allotments, dividends and bonus credits.",
+  "example": "",
+  "nepali": "सेयर रजिस्ट्रार",
+  "see_also": [
+   "merchant-banker"
+  ]
+ },
+ {
+  "id": "ordinary-share",
+  "term": "Ordinary share",
+  "full": "Equity share",
+  "cat": "products",
+  "chapters": [
+   "ch-13-ordinary-shares"
+  ],
+  "definition": "A share of ownership in a company. It gives you a part of the profits (through dividends) and a vote at the AGM, and it is paid last if the company fails.",
+  "example": "Owning one share of a bank is like owning a tiny slice of the whole bank, not a deposit in it.",
+  "nepali": "साधारण सेयर",
+  "see_also": [
+   "promoter",
+   "face-value"
+  ]
+ },
+ {
+  "id": "face-value",
+  "term": "Face value",
+  "full": "Par value",
+  "cat": "products",
+  "chapters": [
+   "ch-13-ordinary-shares"
+  ],
+  "definition": "The nominal value printed on a share, usually Rs 100 for NEPSE companies. Dividends and bonus percentages are quoted on face value, not on the market price.",
+  "example": "A 20% cash dividend on a Rs 100 face-value share is Rs 20, even if the share trades at Rs 600.",
+  "nepali": "अंकित मूल्य",
+  "see_also": [
+   "dividend-yield"
+  ]
+ },
+ {
+  "id": "paid-up-capital",
+  "term": "Paid-up capital",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-25-balance-sheet"
+  ],
+  "definition": "The total face value of the shares a company has issued and been paid for. NRB and other regulators set minimum paid-up capital for some sectors, which is one reason companies issue bonus or rights shares.",
+  "example": "",
+  "nepali": "चुक्ता पुँजी",
+  "see_also": [
+   "bonus-share",
+   "rights-issue"
+  ]
+ },
+ {
+  "id": "ipo",
+  "term": "IPO",
+  "full": "Initial Public Offering",
+  "cat": "products",
+  "chapters": [
+   "ch-14-ipos",
+   "ch-77-ipo-playbook"
+  ],
+  "definition": "A company's first sale of shares to the public, after which it lists on NEPSE. Applications go through ASBA or MeroShare; when demand is higher than the shares on offer, allotment is by lottery.",
+  "example": "",
+  "nepali": "प्रारम्भिक सार्वजनिक निष्कासन",
+  "see_also": [
+   "asba",
+   "oversubscription",
+   "book-building"
+  ]
+ },
+ {
+  "id": "fpo",
+  "term": "FPO",
+  "full": "Further Public Offering",
+  "cat": "products",
+  "chapters": [
+   "ch-15-rights-issues-fpos"
+  ],
+  "definition": "A sale of new shares to the public by a company that is already listed.",
+  "example": "",
+  "nepali": "थप सार्वजनिक निष्कासन",
+  "see_also": [
+   "ipo",
+   "rights-issue"
+  ]
+ },
+ {
+  "id": "asba",
+  "term": "ASBA",
+  "full": "Application Supported by Blocked Amount",
+  "cat": "products",
+  "chapters": [
+   "ch-14-ipos"
+  ],
+  "definition": "The system for applying to IPOs, FPOs and rights issues. Your bank blocks the amount in your own account instead of taking it; it is released if you get nothing and debited only if you are allotted shares.",
+  "example": "",
+  "nepali": "आस्बा",
+  "see_also": [
+   "ipo",
+   "meroshare"
+  ]
+ },
+ {
+  "id": "book-building",
+  "term": "Book building",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-14-ipos"
+  ],
+  "definition": "A way to set an IPO price. Institutional investors bid within a price band; the price at which enough bids arrive becomes the cut-off, and the public then applies at a fixed discount to it.",
+  "example": "An auction among wholesale buyers, after which retail customers get the same goods slightly cheaper.",
+  "nepali": "बुक बिल्डिङ",
+  "see_also": [
+   "cut-off-price",
+   "ipo"
+  ]
+ },
+ {
+  "id": "cut-off-price",
+  "term": "Cut-off price",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-14-ipos"
+  ],
+  "definition": "In book building, the price at which enough institutional bids arrive to sell the shares on offer.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "book-building"
+  ]
+ },
+ {
+  "id": "oversubscription",
+  "term": "Oversubscription",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-14-ipos"
+  ],
+  "definition": "When investors apply for more shares than are on offer. Popular NEPSE IPOs are oversubscribed many times, so shares are allotted by lottery.",
+  "example": "",
+  "nepali": "अधिक आवेदन",
+  "see_also": [
+   "ipo"
+  ]
+ },
+ {
+  "id": "local-and-migrant-worker-quotas",
+  "term": "Local and migrant-worker quotas",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-14-ipos",
+   "ch-77-ipo-playbook"
+  ],
+  "definition": "Parts of some IPOs set aside for particular groups, such as people affected by a hydropower project or Nepalis working abroad. They change who can apply, not what the company is worth.",
+  "example": "",
+  "nepali": "स्थानीय र वैदेशिक रोजगार कोटा",
+  "see_also": [
+   "ipo"
+  ]
+ },
+ {
+  "id": "rights-issue",
+  "term": "Rights issue",
+  "full": "Rights shares",
+  "cat": "products",
+  "chapters": [
+   "ch-15-rights-issues-fpos",
+   "ch-78-rights-issue-playbook"
+  ],
+  "definition": "An offer letting existing shareholders buy new shares, usually below the market price, in proportion to what they already hold. Unlike a bonus issue, you must put in fresh cash.",
+  "example": "",
+  "nepali": "हकप्रद सेयर",
+  "see_also": [
+   "renounce",
+   "terp",
+   "unsubscribed-shares"
+  ]
+ },
+ {
+  "id": "renounce",
+  "term": "Renounce",
+  "full": "Rights renunciation",
+  "cat": "products",
+  "chapters": [
+   "ch-15-rights-issues-fpos",
+   "ch-78-rights-issue-playbook"
+  ],
+  "definition": "To give up, or sell, your right to buy rights shares instead of using it yourself.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "rights-issue"
+  ]
+ },
+ {
+  "id": "unsubscribed-shares",
+  "term": "Unsubscribed shares",
+  "full": "Devolved rights shares",
+  "cat": "products",
+  "chapters": [
+   "ch-15-rights-issues-fpos"
+  ],
+  "definition": "Rights shares that existing shareholders did not take up. The company can then sell them to others, often by auction.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "rights-issue"
+  ]
+ },
+ {
+  "id": "terp",
+  "term": "TERP",
+  "full": "Theoretical ex-rights price",
+  "cat": "products",
+  "chapters": [
+   "ch-15-rights-issues-fpos",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The price a share should trade at just after a rights issue, once the cheap new shares are blended in. A Rs 400 share with one Rs 100 rights share for each held gives TERP = (400 + 100) ÷ 2 = Rs 250.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "rights-issue",
+   "price-adjustment"
+  ]
+ },
+ {
+  "id": "bonus-share",
+  "term": "Bonus share",
+  "full": "Stock dividend",
+  "cat": "products",
+  "chapters": [
+   "ch-13-ordinary-shares",
+   "ch-37-rights-bonus-tax"
+  ],
+  "definition": "Free extra shares given to existing shareholders out of the company's reserves. You hold more shares, but not more of the company, and EPS falls because the same profit is shared across more shares. A 5% tax applies, usually paid by a small cash dividend that exists only for that.",
+  "example": "Cutting the same roti into more pieces.",
+  "nepali": "बोनस सेयर",
+  "see_also": [
+   "cash-dividend",
+   "price-adjustment"
+  ]
+ },
+ {
+  "id": "cash-dividend",
+  "term": "Cash dividend",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-36-dividend-interest-tax",
+   "ch-68-dividend-income-strategy"
+  ],
+  "definition": "Profit paid to shareholders in money. Only real cash dividends count as 'paid' in the Canon Score; a token cash amount that only covers the bonus tax does not.",
+  "example": "",
+  "nepali": "नगद लाभांश",
+  "see_also": [
+   "payout-ratio",
+   "dividend-yield",
+   "bonus-share"
+  ]
+ },
+ {
+  "id": "debenture",
+  "term": "Debenture",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-17-debentures-bonds"
+  ],
+  "definition": "A listed corporate bond: a loan to a company that pays fixed interest (the coupon) and returns the principal at maturity. Debenture holders are paid before shareholders if the company fails.",
+  "example": "",
+  "nepali": "ऋणपत्र",
+  "see_also": [
+   "coupon",
+   "yield"
+  ]
+ },
+ {
+  "id": "coupon",
+  "term": "Coupon",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-17-debentures-bonds"
+  ],
+  "definition": "The fixed yearly interest a bond or debenture pays, as a percentage of its face value.",
+  "example": "",
+  "nepali": "ब्याज दर",
+  "see_also": [
+   "debenture",
+   "yield"
+  ]
+ },
+ {
+  "id": "yield",
+  "term": "Yield",
+  "full": "Yield to maturity",
+  "cat": "products",
+  "chapters": [
+   "ch-17-debentures-bonds"
+  ],
+  "definition": "The return a bond gives if you buy it at today's price and hold it to the end. When bond prices fall, yields rise, and the other way round.",
+  "example": "Like a seesaw: price on one side, yield on the other.",
+  "nepali": "प्रतिफल",
+  "see_also": [
+   "coupon",
+   "risk-free-rate"
+  ]
+ },
+ {
+  "id": "treasury-bill",
+  "term": "Treasury bill",
+  "full": "T-bill",
+  "cat": "products",
+  "chapters": [
+   "ch-17-debentures-bonds",
+   "ch-59-asset-allocation"
+  ],
+  "definition": "A short-term loan to the Government of Nepal, sold by NRB at auction. It is about as safe as a rupee investment gets, and its rate is a guide to short-term interest rates.",
+  "example": "",
+  "nepali": "ट्रेजरी बिल",
+  "see_also": [
+   "risk-free-rate"
+  ]
+ },
+ {
+  "id": "government-savings-bonds",
+  "term": "Government savings bonds",
+  "full": "Citizens and Foreign Employment Savings Bonds",
+  "cat": "products",
+  "chapters": [
+   "ch-17-debentures-bonds"
+  ],
+  "definition": "Bonds the government sells to ordinary savers, including Citizens Savings Bonds and Foreign Employment Savings Bonds for Nepalis working abroad.",
+  "example": "",
+  "nepali": "नागरिक बचतपत्र, वैदेशिक रोजगार बचतपत्र",
+  "see_also": [
+   "treasury-bill"
+  ]
+ },
+ {
+  "id": "fixed-deposit",
+  "term": "Fixed deposit",
+  "full": "FD",
+  "cat": "products",
+  "chapters": [
+   "ch-59-asset-allocation"
+  ],
+  "definition": "Money placed in a bank for a fixed period at a fixed rate. It suits emergency money and money waiting to be invested; check the penalty for breaking it early.",
+  "example": "",
+  "nepali": "मुद्दती निक्षेप",
+  "see_also": [
+   "emergency-fund"
+  ]
+ },
+ {
+  "id": "mutual-fund",
+  "term": "Mutual fund",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-16-mutual-funds"
+  ],
+  "definition": "A pool of money from many investors, managed by a licensed fund manager and invested in many shares and bonds. You own units of the pool, not the shares directly.",
+  "example": "",
+  "nepali": "सामूहिक लगानी कोष",
+  "see_also": [
+   "open-ended-fund",
+   "closed-end-fund",
+   "nav-per-unit"
+  ]
+ },
+ {
+  "id": "open-ended-fund",
+  "term": "Open-ended fund",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-16-mutual-funds"
+  ],
+  "definition": "A mutual fund that issues new units and buys them back from you at close to their NAV, so you do not need a buyer on NEPSE to get out.",
+  "example": "",
+  "nepali": "खुला मुखी योजना",
+  "see_also": [
+   "closed-end-fund",
+   "sip"
+  ]
+ },
+ {
+  "id": "closed-end-fund",
+  "term": "Closed-end fund",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-16-mutual-funds"
+  ],
+  "definition": "A mutual fund with a fixed number of units that trade on NEPSE like shares. Their price often sits below the NAV per unit.",
+  "example": "",
+  "nepali": "बन्द मुखी योजना",
+  "see_also": [
+   "open-ended-fund",
+   "nav-per-unit"
+  ]
+ },
+ {
+  "id": "nav-per-unit",
+  "term": "NAV per unit",
+  "full": "Net asset value per unit",
+  "cat": "products",
+  "chapters": [
+   "ch-16-mutual-funds"
+  ],
+  "definition": "What one unit of a mutual fund is worth: the value of everything the fund holds, minus what it owes, divided by the number of units.",
+  "example": "",
+  "nepali": "प्रति इकाई खुद सम्पत्ति मूल्य",
+  "see_also": [
+   "mutual-fund"
+  ]
+ },
+ {
+  "id": "sip",
+  "term": "SIP",
+  "full": "Systematic Investment Plan",
+  "cat": "products",
+  "chapters": [
+   "ch-16-mutual-funds",
+   "ch-62-systematic-disciplined-investing"
+  ],
+  "definition": "Putting a fixed amount into a mutual fund every month, whatever the market does. You buy more units when prices are low and fewer when they are high.",
+  "example": "Planting the kitchen garden every season, rain or no rain.",
+  "nepali": "एसआईपी",
+  "see_also": [
+   "steady-part",
+   "open-ended-fund"
+  ]
+ },
+ {
+  "id": "lock-in-period",
+  "term": "Lock-in period",
+  "full": "",
+  "cat": "products",
+  "chapters": [
+   "ch-14-ipos",
+   "ch-57-free-float-allocation-limits"
+  ],
+  "definition": "A period after listing during which some shares, typically promoter shares, may not be sold. When it ends, a wave of newly sellable shares can arrive.",
+  "example": "",
+  "nepali": "बिक्री रोक अवधि",
+  "see_also": [
+   "promoter",
+   "free-float"
+  ]
+ },
+ {
+  "id": "nrb",
+  "term": "NRB",
+  "full": "Nepal Rastra Bank",
+  "cat": "macro",
+  "chapters": [
+   "ch-01-nrb-monetary-policy"
+  ],
+  "definition": "Nepal's central bank. It sets monetary policy, licenses and supervises banks and financial institutions, and manages the currency and foreign exchange reserves.",
+  "example": "",
+  "nepali": "नेपाल राष्ट्र बैंक",
+  "see_also": [
+   "monetary-policy",
+   "unified-directive"
+  ]
+ },
+ {
+  "id": "monetary-policy",
+  "term": "Monetary policy",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-01-nrb-monetary-policy"
+  ],
+  "definition": "NRB's decisions on interest rates, bank liquidity and credit, meant to keep prices and the economy stable. Its effects flow through bank lending into NEPSE.",
+  "example": "",
+  "nepali": "मौद्रिक नीति",
+  "see_also": [
+   "monetary-policy-statement",
+   "interest-rate-corridor"
+  ]
+ },
+ {
+  "id": "monetary-policy-statement",
+  "term": "Monetary Policy Statement",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-01-nrb-monetary-policy",
+   "ch-113-annual-financial-calendar"
+  ],
+  "definition": "NRB's yearly policy announcement, made early in the fiscal year (around Shrawan), with mid-year reviews. Markets watch it for changes to rates and lending rules.",
+  "example": "",
+  "nepali": "मौद्रिक नीति वक्तव्य",
+  "see_also": [
+   "monetary-policy"
+  ]
+ },
+ {
+  "id": "credit-cycle",
+  "term": "Credit cycle",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-0-1-credit-cycle"
+  ],
+  "definition": "The repeated swing between easy bank lending and tight bank lending. This book's central idea is that NEPSE moves strongly with it, through bank money, more than through company profits alone.",
+  "example": "Like the monsoon and the dry season: easy money fills the fields, tight money dries them.",
+  "nepali": "कर्जा चक्र",
+  "see_also": [
+   "liquidity-regime",
+   "phase-1-expansion"
+  ]
+ },
+ {
+  "id": "liquidity-regime",
+  "term": "Liquidity regime",
+  "full": "Money season",
+  "cat": "macro",
+  "chapters": [
+   "ch-0-3-liquidity-regimes"
+  ],
+  "definition": "The state of Nepal's banking money at a given time: loose, when banks have spare money and lend easily, or tight, when they are short of loanable funds. Chapter 0.3 sorts it into four phases.",
+  "example": "",
+  "nepali": "तरलता अवस्था",
+  "see_also": [
+   "phase-1-expansion",
+   "phase-2-compression"
+  ]
+ },
+ {
+  "id": "phase-1-expansion",
+  "term": "Phase 1 — Expansion",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-0-3-liquidity-regimes",
+   "ch-59-asset-allocation"
+  ],
+  "definition": "Banks lend freely and money is easy. In this book's plan you may use up to 100% of your active part, never more, and never raise a margin loan in a rally.",
+  "example": "",
+  "nepali": "विस्तार चरण",
+  "see_also": [
+   "phase-2-compression",
+   "liquidity-regime"
+  ]
+ },
+ {
+  "id": "phase-2-compression",
+  "term": "Phase 2 — Compression",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-0-3-liquidity-regimes",
+   "ch-59-asset-allocation"
+  ],
+  "definition": "Banks run short of money and rates rise. The plan cuts the active part to about half, selling the weakest scores first, and repays margin loans.",
+  "example": "",
+  "nepali": "संकुचन चरण",
+  "see_also": [
+   "phase-3-repair"
+  ]
+ },
+ {
+  "id": "phase-3-repair",
+  "term": "Phase 3 — Repair",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-0-3-liquidity-regimes",
+   "ch-59-asset-allocation"
+  ],
+  "definition": "Rates are high and the market is beaten down. The plan rebuilds from 50% toward 75%, buying only scores of 70 or more at low prices.",
+  "example": "",
+  "nepali": "मर्मत चरण",
+  "see_also": [
+   "phase-4-recovery"
+  ]
+ },
+ {
+  "id": "phase-4-recovery",
+  "term": "Phase 4 — Recovery",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-0-3-liquidity-regimes",
+   "ch-59-asset-allocation"
+  ],
+  "definition": "Money starts flowing again. The plan rebuilds toward 100% in half-steps.",
+  "example": "",
+  "nepali": "पुनरुत्थान चरण",
+  "see_also": [
+   "phase-1-expansion"
+  ]
+ },
+ {
+  "id": "credit-peak",
+  "term": "Credit peak",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-0-3-liquidity-regimes",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "This book's working definition: system credit growth above 20%, or the system CD ratio within 5 points of NRB's ceiling. At a credit peak, a bank lending much faster than the system scores 0 on loan growth.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "credit-cycle",
+   "cd-ratio"
+  ]
+ },
+ {
+  "id": "interbank-rate",
+  "term": "Interbank rate",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-01-nrb-monetary-policy"
+  ],
+  "definition": "The interest rate banks charge each other for very short loans. When it shoots up, banks are short of money: an early sign of tightening.",
+  "example": "",
+  "nepali": "अन्तर-बैंक दर",
+  "see_also": [
+   "interest-rate-corridor",
+   "excess-liquidity"
+  ]
+ },
+ {
+  "id": "interest-rate-corridor",
+  "term": "Interest rate corridor",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-01-nrb-monetary-policy"
+  ],
+  "definition": "NRB's band for short-term rates, with a floor (where banks can park spare money with NRB) and a ceiling (where they can borrow from NRB). The policy rate sits inside it.",
+  "example": "Like the banks of a river that keep the water within a channel.",
+  "nepali": "ब्याजदर करिडोर",
+  "see_also": [
+   "interbank-rate",
+   "monetary-policy"
+  ]
+ },
+ {
+  "id": "excess-liquidity",
+  "term": "Excess liquidity",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-0-3-liquidity-regimes"
+  ],
+  "definition": "Spare money in the banking system that banks have not lent out. Plenty of it pushes rates down and often lifts share prices.",
+  "example": "",
+  "nepali": "अधिक तरलता",
+  "see_also": [
+   "liquidity-regime"
+  ]
+ },
+ {
+  "id": "base-rate",
+  "term": "Base rate",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-29-banking-accounting"
+  ],
+  "definition": "A bank's benchmark lending rate, worked out from its cost of funds and other costs. Loan rates are set as the base rate plus a premium.",
+  "example": "",
+  "nepali": "आधार दर",
+  "see_also": [
+   "cost-of-funds"
+  ]
+ },
+ {
+  "id": "remittance",
+  "term": "Remittance",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-04-external-sector"
+  ],
+  "definition": "Money sent home by Nepalis working abroad. It is one of Nepal's largest sources of foreign money and a major source of bank deposits, so it feeds the credit cycle.",
+  "example": "",
+  "nepali": "विप्रेषण",
+  "see_also": [
+   "balance-of-payments"
+  ]
+ },
+ {
+  "id": "balance-of-payments",
+  "term": "Balance of payments",
+  "full": "BoP",
+  "cat": "macro",
+  "chapters": [
+   "ch-04-external-sector"
+  ],
+  "definition": "A record of all money flowing into and out of Nepal: trade, remittances, aid, investment. A surplus usually adds to bank liquidity; a deficit drains it.",
+  "example": "",
+  "nepali": "शोधनान्तर स्थिति",
+  "see_also": [
+   "foreign-exchange-reserves",
+   "remittance"
+  ]
+ },
+ {
+  "id": "foreign-exchange-reserves",
+  "term": "Foreign exchange reserves",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-04-external-sector"
+  ],
+  "definition": "The foreign currency NRB holds to pay for imports and defend the rupee. Months of import cover is the usual way to judge whether they are enough.",
+  "example": "",
+  "nepali": "विदेशी विनिमय सञ्चिति",
+  "see_also": [
+   "balance-of-payments"
+  ]
+ },
+ {
+  "id": "rupee-peg",
+  "term": "Rupee peg",
+  "full": "NPR–INR peg",
+  "cat": "macro",
+  "chapters": [
+   "ch-05-india-economy"
+  ],
+  "definition": "The Nepali rupee is fixed to the Indian rupee at 1.6 NPR per INR. It makes India's economy and interest rates matter a great deal for Nepal.",
+  "example": "",
+  "nepali": "भारु-नेरु स्थिर विनिमय दर",
+  "see_also": [
+   "foreign-exchange-reserves"
+  ]
+ },
+ {
+  "id": "inflation",
+  "term": "Inflation",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-01-nrb-monetary-policy",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The general rise in prices. NRB put consumer inflation at 3.08% in FY 2025/26. Growth figures in the book are in rupees (nominal), not adjusted for inflation.",
+  "example": "A shopkeeper whose sales rise 10% while prices rise 8% is selling only a little more rice.",
+  "nepali": "मुद्रास्फीति",
+  "see_also": [
+   "nominal-and-real"
+  ]
+ },
+ {
+  "id": "nominal-and-real",
+  "term": "Nominal and real",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Nominal figures are in plain rupees; real figures remove inflation. 10% revenue growth with 3% inflation is about 6.8% real growth.",
+  "example": "",
+  "nepali": "नाममात्र र वास्तविक",
+  "see_also": [
+   "inflation"
+  ]
+ },
+ {
+  "id": "fiscal-year",
+  "term": "Fiscal year",
+  "full": "FY",
+  "cat": "macro",
+  "chapters": [
+   "ch-113-annual-financial-calendar"
+  ],
+  "definition": "Nepal's financial year runs from 1 Shrawan to the end of Asar, roughly mid-July to mid-July. FY 2082/83 ended in mid-July 2026.",
+  "example": "",
+  "nepali": "आर्थिक वर्ष",
+  "see_also": [
+   "quarter-end"
+  ]
+ },
+ {
+  "id": "quarter-end",
+  "term": "Quarter-end",
+  "full": "",
+  "cat": "macro",
+  "chapters": [
+   "ch-113-annual-financial-calendar"
+  ],
+  "definition": "Nepali companies report at the ends of Asoj (mid-October), Poush (mid-January), Chaitra (mid-April) and Asar (mid-July, the year-end).",
+  "example": "",
+  "nepali": "त्रैमासिक अन्त्य",
+  "see_also": [
+   "fiscal-year",
+   "quarterly-report"
+  ]
+ },
+ {
+  "id": "bikram-sambat",
+  "term": "Bikram Sambat",
+  "full": "BS",
+  "cat": "macro",
+  "chapters": [
+   "ch-113-annual-financial-calendar"
+  ],
+  "definition": "Nepal's official calendar, about 56 years and 8 months ahead of the international (AD) calendar. Mangsir 2083 falls in November–December 2026.",
+  "example": "",
+  "nepali": "विक्रम संवत्",
+  "see_also": [
+   "fiscal-year"
+  ]
+ },
+ {
+  "id": "arba-crore-lakh",
+  "term": "Arba, crore, lakh",
+  "full": "Nepali number units",
+  "cat": "macro",
+  "chapters": [
+   "ch-99-full-investment-memo"
+  ],
+  "definition": "Nepal's units for large numbers. One lakh = 100,000. One crore = 10 million (100 lakh). One arba = 1 billion (100 crore). One kharba = 100 billion (100 arba).",
+  "example": "A profit of Rs 2.4 arba is Rs 2.4 billion.",
+  "nepali": "लाख, करोड, अर्ब, खर्ब",
+  "see_also": []
+ },
+ {
+  "id": "nrb-macroeconomic-report",
+  "term": "NRB macroeconomic report",
+  "full": "Current Macroeconomic and Financial Situation",
+  "cat": "macro",
+  "chapters": [
+   "ch-0-3-liquidity-regimes"
+  ],
+  "definition": "NRB's monthly report on the economy and the banking system: deposits, lending, interest rates, NPLs, capital and more. It is the main data source for reading the money season.",
+  "example": "",
+  "nepali": "चालु आर्थिक तथा वित्तीय स्थिति",
+  "see_also": [
+   "liquidity-regime"
+  ]
+ },
+ {
+  "id": "bfi",
+  "term": "BFI",
+  "full": "Banks and financial institutions",
+  "cat": "banks",
+  "chapters": [
+   "ch-08-regulatory-architecture",
+   "ch-29-banking-accounting"
+  ],
+  "definition": "NRB's umbrella term for the lenders it licenses: commercial banks, development banks, finance companies and microfinance institutions.",
+  "example": "",
+  "nepali": "बैंक तथा वित्तीय संस्था",
+  "see_also": [
+   "bfi-classes"
+  ]
+ },
+ {
+  "id": "bfi-classes",
+  "term": "BFI classes",
+  "full": "Class A, B, C and D",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "NRB's four licence classes: A = commercial banks, B = development banks, C = finance companies, D = microfinance institutions. Each class has its own capital rules, so always compare a lender with its own class.",
+  "example": "",
+  "nepali": "क, ख, ग, घ वर्ग",
+  "see_also": [
+   "bfi",
+   "car"
+  ]
+ },
+ {
+  "id": "car",
+  "term": "CAR",
+  "full": "Capital adequacy ratio",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting",
+   "ch-41-asset-quality-ratios",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A lender's own capital as a share of its risk-weighted assets (mainly loans). For commercial banks NRB requires 11% total, 8.5% Tier 1 and 7% common equity, including a 2.5-point conservation buffer. NRB's figure for all 20 commercial banks together was 12.19% in mid-October 2026.",
+  "example": "Like the spare tyre a bus must carry: not because it will be needed today, but because being caught without one is severe.",
+  "nepali": "पुँजी पर्याप्तता अनुपात",
+  "see_also": [
+   "tier-1-capital",
+   "capital-conservation-buffer",
+   "risk-weighted-assets"
+  ]
+ },
+ {
+  "id": "tier-1-capital",
+  "term": "Tier 1 capital",
+  "full": "Core capital",
+  "cat": "banks",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A bank's strongest capital: share capital, retained profits and reserves that can absorb losses while the bank keeps running. Commercial banks need at least 6% plus the 2.5-point buffer, so 8.5% in all.",
+  "example": "",
+  "nepali": "प्राथमिक पुँजी",
+  "see_also": [
+   "cet1",
+   "tier-2-capital",
+   "car"
+  ]
+ },
+ {
+  "id": "cet1",
+  "term": "CET1",
+  "full": "Common equity tier 1",
+  "cat": "banks",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The purest part of Tier 1: the shareholders' own money and retained profits. Commercial banks need 4.5% plus the 2.5-point buffer, so 7% in all.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "tier-1-capital"
+  ]
+ },
+ {
+  "id": "tier-2-capital",
+  "term": "Tier 2 capital",
+  "full": "Supplementary capital",
+  "cat": "banks",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Weaker capital, such as subordinated debt and some loan-loss provisions, that helps absorb losses only after Tier 1. It counts toward total CAR.",
+  "example": "",
+  "nepali": "पूरक पुँजी",
+  "see_also": [
+   "tier-1-capital"
+  ]
+ },
+ {
+  "id": "capital-conservation-buffer",
+  "term": "Capital conservation buffer",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "An extra 2.5 points of common equity on top of a bank's base minimum. A bank that dips into it has not failed, but NRB limits its dividends and bonuses. The Canon treats a bank below the full 11% / 8.5% / 7% as below its minimum (a Canon rule).",
+  "example": "The last few metres of water in a reservoir: you may draw on it in a drought, but you must stop handing it out.",
+  "nepali": "पुँजी संरक्षण बफर",
+  "see_also": [
+   "car",
+   "counter-cyclical-buffer"
+  ]
+ },
+ {
+  "id": "counter-cyclical-buffer",
+  "term": "Counter-cyclical buffer",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Extra capital NRB can require (up to 2.5%) in boom years, to be released in bad years. It is set at 0% for FY 2082/83.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "capital-conservation-buffer"
+  ]
+ },
+ {
+  "id": "risk-weighted-assets",
+  "term": "Risk-weighted assets",
+  "full": "RWA",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting"
+  ],
+  "definition": "A bank's loans and other assets, each weighted by how risky it is. A home loan counts for less than an unsecured business loan. CAR is measured against this total.",
+  "example": "",
+  "nepali": "जोखिम भारित सम्पत्ति",
+  "see_also": [
+   "car"
+  ]
+ },
+ {
+  "id": "d-sib",
+  "term": "D-SIB",
+  "full": "Domestic systemically important bank",
+  "cat": "banks",
+  "chapters": [
+   "ch-83-case-study-commercial-bank"
+  ],
+  "definition": "A bank so big that its failure would shake the whole system. NRB's November 2025 framework identifies 10 such banks and asks for extra capital of 0.2–1% of risk-weighted assets from 2027.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "car"
+  ]
+ },
+ {
+  "id": "npl",
+  "term": "NPL",
+  "full": "Non-performing loan",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting",
+   "ch-41-asset-quality-ratios"
+  ],
+  "definition": "A loan whose borrower has stopped repaying on time, and the share of all loans that are in this state. NRB's figure for all 20 commercial banks together was 5.71% in mid-October 2026. A rising NPL is one of the clearest warnings that a loan book is turning sour.",
+  "example": "",
+  "nepali": "निष्क्रिय कर्जा",
+  "see_also": [
+   "provision-coverage",
+   "restructured-loan",
+   "write-off"
+  ]
+ },
+ {
+  "id": "restructured-loan",
+  "term": "Restructured loan",
+  "full": "Rescheduled loan",
+  "cat": "banks",
+  "chapters": [
+   "ch-41-asset-quality-ratios",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A loan whose repayment terms were changed because the borrower was struggling. It may not show as an NPL, so the Canon drops a growth row if restructured loans exceed 5% of total loans.",
+  "example": "",
+  "nepali": "पुनर्संरचित कर्जा",
+  "see_also": [
+   "npl",
+   "evergreening"
+  ]
+ },
+ {
+  "id": "loan-loss-provision",
+  "term": "Loan loss provision",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting"
+  ],
+  "definition": "Money a lender sets aside from profit to cover loans it expects will not be repaid. Setting provisions too low makes profit look higher than it really is.",
+  "example": "",
+  "nepali": "कर्जा नोक्सानी व्यवस्था",
+  "see_also": [
+   "provision-coverage",
+   "write-back"
+  ]
+ },
+ {
+  "id": "provision-coverage",
+  "term": "Provision coverage",
+  "full": "Provision coverage ratio",
+  "cat": "banks",
+  "chapters": [
+   "ch-31-microfinance-accounting",
+   "ch-41-asset-quality-ratios"
+  ],
+  "definition": "Loan-loss provisions as a share of bad loans. Higher coverage means a better-cushioned lender.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "loan-loss-provision",
+   "npl"
+  ]
+ },
+ {
+  "id": "expected-credit-loss",
+  "term": "Expected credit loss",
+  "full": "ECL",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting"
+  ],
+  "definition": "The NFRS method of providing for losses a lender expects, not only those already suffered. Loans are sorted into stages by how risky they have become.",
+  "example": "",
+  "nepali": "अपेक्षित कर्जा नोक्सानी",
+  "see_also": [
+   "stage-3"
+  ]
+ },
+ {
+  "id": "stage-3",
+  "term": "Stage 3",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting"
+  ],
+  "definition": "Under the expected-credit-loss method, loans that are already credit-impaired: the borrower is in serious trouble. Similar in spirit to NPLs.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "expected-credit-loss",
+   "npl"
+  ]
+ },
+ {
+  "id": "write-back",
+  "term": "Write-back",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Profit a lender books by releasing provisions made in earlier years. If more than a quarter of a year's profit comes from write-backs or one-off gains, the Canon takes off a point.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "loan-loss-provision"
+  ]
+ },
+ {
+  "id": "write-off",
+  "term": "Write-off",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-41-asset-quality-ratios",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Removing a loan from the books as unrecoverable. It lowers the NPL ratio without improving the business, so the Canon also looks at a write-off-adjusted NPL ratio.",
+  "example": "",
+  "nepali": "अपलेखन",
+  "see_also": [
+   "npl"
+  ]
+ },
+ {
+  "id": "evergreening",
+  "term": "Evergreening",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-28-red-flags",
+   "ch-29-banking-accounting"
+  ],
+  "definition": "Giving a struggling borrower a new loan to repay the old one, so the bad loan never shows as overdue.",
+  "example": "Paying one credit card with another: the debt never shrinks, it just changes name.",
+  "nepali": "",
+  "see_also": [
+   "restructured-loan",
+   "loan-recycling"
+  ]
+ },
+ {
+  "id": "nim",
+  "term": "NIM",
+  "full": "Net interest margin",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting",
+   "ch-40-profitability-ratios"
+  ],
+  "definition": "What a bank earns on its loans and investments minus what it pays on deposits and borrowing, as a percentage of its interest-earning assets. It is a bank's core profit margin.",
+  "example": "",
+  "nepali": "खुद ब्याज मार्जिन",
+  "see_also": [
+   "net-interest-income",
+   "cost-of-funds"
+  ]
+ },
+ {
+  "id": "net-interest-income",
+  "term": "Net interest income",
+  "full": "NII",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting"
+  ],
+  "definition": "Interest earned minus interest paid, in rupees. It is a bank's main source of income.",
+  "example": "",
+  "nepali": "खुद ब्याज आम्दानी",
+  "see_also": [
+   "nim"
+  ]
+ },
+ {
+  "id": "cost-of-funds",
+  "term": "Cost of funds",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting"
+  ],
+  "definition": "The average interest rate a bank pays for its money (deposits and borrowing). Nabil's was 3.09% at mid-July 2026.",
+  "example": "",
+  "nepali": "कोषको लागत",
+  "see_also": [
+   "casa",
+   "base-rate"
+  ]
+ },
+ {
+  "id": "casa",
+  "term": "CASA",
+  "full": "Current and savings account ratio",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting"
+  ],
+  "definition": "The share of a bank's deposits held in current and savings accounts, which pay little interest, rather than in fixed deposits. A higher CASA usually means cheaper funding.",
+  "example": "",
+  "nepali": "चल्ती तथा बचत निक्षेप अनुपात",
+  "see_also": [
+   "cost-of-funds"
+  ]
+ },
+ {
+  "id": "cd-ratio",
+  "term": "CD ratio",
+  "full": "Credit-to-deposit ratio",
+  "cat": "banks",
+  "chapters": [
+   "ch-02-credit-policy-impact",
+   "ch-29-banking-accounting"
+  ],
+  "definition": "A bank's loans divided by its deposits (with the adjustments NRB sets). NRB's ceiling is 90%. A system near the ceiling has little room to lend more, an early sign of tightening.",
+  "example": "",
+  "nepali": "कर्जा-निक्षेप अनुपात",
+  "see_also": [
+   "credit-peak",
+   "liquidity-regime"
+  ]
+ },
+ {
+  "id": "institutional-deposit",
+  "term": "Institutional deposit",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting"
+  ],
+  "definition": "A large deposit from a company or organisation. It can be withdrawn in one go, so a bank that relies on them has less stable funding.",
+  "example": "",
+  "nepali": "संस्थागत निक्षेप",
+  "see_also": [
+   "casa"
+  ]
+ },
+ {
+  "id": "cost-to-income-ratio",
+  "term": "Cost-to-income ratio",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-41-asset-quality-ratios"
+  ],
+  "definition": "Operating costs as a share of operating income. Lower means a more efficient bank.",
+  "example": "",
+  "nepali": "लागत-आम्दानी अनुपात",
+  "see_also": [
+   "nim"
+  ]
+ },
+ {
+  "id": "single-obligor-limit",
+  "term": "Single obligor limit",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-41-asset-quality-ratios"
+  ],
+  "definition": "NRB's limit on how much a bank may lend to one borrower or connected group, to stop one failure sinking the bank.",
+  "example": "",
+  "nepali": "एकल ग्राहक कर्जा सीमा",
+  "see_also": [
+   "concentration"
+  ]
+ },
+ {
+  "id": "deprived-sector-lending",
+  "term": "Deprived sector lending",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting",
+   "ch-30-development-bank-finance"
+  ],
+  "definition": "Lending NRB requires banks to direct to low-income and disadvantaged groups, often through microfinance institutions.",
+  "example": "",
+  "nepali": "विपन्न वर्ग कर्जा",
+  "see_also": [
+   "microfinance-institution"
+  ]
+ },
+ {
+  "id": "regulatory-reserve",
+  "term": "Regulatory reserve",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting"
+  ],
+  "definition": "A reserve NRB requires lenders to keep from profit for items such as accrued interest not yet received. It cannot be paid out as dividends.",
+  "example": "",
+  "nepali": "नियामकीय कोष",
+  "see_also": [
+   "distributable-profit",
+   "general-reserve"
+  ]
+ },
+ {
+  "id": "general-reserve",
+  "term": "General reserve",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A reserve banks must build from profit: at least 20% of each year's net profit until it equals twice the paid-up capital, then at least 10% a year (BAFIA 2073, Section 44).",
+  "example": "",
+  "nepali": "साधारण जगेडा कोष",
+  "see_also": [
+   "distributable-profit"
+  ]
+ },
+ {
+  "id": "distributable-profit",
+  "term": "Distributable profit",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-29-banking-accounting",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Profit left for owners after the reserves the law requires. For a bank, NRB sets how it is worked out. It can be far below net profit, and it is the right base for the payout ratio.",
+  "example": "",
+  "nepali": "वितरणयोग्य नाफा",
+  "see_also": [
+   "payout-ratio",
+   "general-reserve"
+  ]
+ },
+ {
+  "id": "prompt-corrective-action",
+  "term": "Prompt Corrective Action",
+  "full": "PCA",
+  "cat": "banks",
+  "chapters": [
+   "ch-89-case-study-bank-failure"
+  ],
+  "definition": "NRB's ladder of steps for a lender whose capital falls too low: limits on lending, dividends and expansion, rising with the size of the shortfall.",
+  "example": "",
+  "nepali": "शीघ्र सुधारात्मक कारबाही",
+  "see_also": [
+   "problematic-institution",
+   "car"
+  ]
+ },
+ {
+  "id": "problematic-institution",
+  "term": "Problematic institution",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-89-case-study-bank-failure",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A status NRB can declare for a lender in serious trouble, after which it can take over the lender's management. In the Canon Score it caps the total at 54.",
+  "example": "",
+  "nepali": "समस्याग्रस्त संस्था",
+  "see_also": [
+   "hard-rule-cap-at-54",
+   "prompt-corrective-action"
+  ]
+ },
+ {
+  "id": "merger",
+  "term": "Merger",
+  "full": "Forced or voluntary merger",
+  "cat": "banks",
+  "chapters": [
+   "ch-89-case-study-bank-failure"
+  ],
+  "definition": "Two companies combining into one. Many Nepali BFIs merged after NRB raised capital requirements. When comparing growth, a merger means part of the growth was bought, not earned.",
+  "example": "",
+  "nepali": "गाभिने/मर्जर",
+  "see_also": [
+   "paid-up-capital"
+  ]
+ },
+ {
+  "id": "microfinance-institution",
+  "term": "Microfinance institution",
+  "full": "MFI, Class D",
+  "cat": "banks",
+  "chapters": [
+   "ch-31-microfinance-accounting",
+   "ch-73-microfinance-sector-playbook"
+  ],
+  "definition": "A lender that gives small loans, often to rural women in groups, without collateral. Over-indebted borrowers and rising bad loans hit many Nepali MFIs from 2021 to 2026.",
+  "example": "",
+  "nepali": "लघुवित्त वित्तीय संस्था",
+  "see_also": [
+   "group-lending",
+   "borrower-overlap",
+   "par30"
+  ]
+ },
+ {
+  "id": "group-lending",
+  "term": "Group lending",
+  "full": "Joint liability",
+  "cat": "banks",
+  "chapters": [
+   "ch-31-microfinance-accounting"
+  ],
+  "definition": "MFI loans made to members of a small group who guarantee each other. Group pressure replaces collateral.",
+  "example": "",
+  "nepali": "समूह कर्जा",
+  "see_also": [
+   "microfinance-institution"
+  ]
+ },
+ {
+  "id": "borrower-overlap",
+  "term": "Borrower overlap",
+  "full": "Multiple borrowing",
+  "cat": "banks",
+  "chapters": [
+   "ch-65-sector-subscore-adjustments",
+   "ch-73-microfinance-sector-playbook"
+  ],
+  "definition": "The same borrower holding loans from several MFIs at once, often without any lender seeing the whole debt.",
+  "example": "A household borrowing from three village cooperatives to cover one shortfall: each lender thinks the debt looks manageable.",
+  "nepali": "बहुबैंकिङ कर्जा",
+  "see_also": [
+   "over-indebtedness",
+   "loan-recycling"
+  ]
+ },
+ {
+  "id": "loan-recycling",
+  "term": "Loan recycling",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-65-sector-subscore-adjustments"
+  ],
+  "definition": "Taking a new loan mainly to repay an old one, not to fund real income. It keeps repayment records clean while the borrower sinks deeper.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "evergreening",
+   "borrower-overlap"
+  ]
+ },
+ {
+  "id": "over-indebtedness",
+  "term": "Over-indebtedness",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-73-microfinance-sector-playbook"
+  ],
+  "definition": "When a borrower owes more than income can repay. It was the root of the 2021–2026 microfinance stress.",
+  "example": "",
+  "nepali": "अति ऋणग्रस्तता",
+  "see_also": [
+   "borrower-overlap"
+  ]
+ },
+ {
+  "id": "par30",
+  "term": "PAR30",
+  "full": "Portfolio at risk, 30 days",
+  "cat": "banks",
+  "chapters": [
+   "ch-31-microfinance-accounting"
+  ],
+  "definition": "The share of an MFI's loans with any payment more than 30 days late. It warns of trouble earlier than the NPL ratio.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "npl",
+   "microfinance-institution"
+  ]
+ },
+ {
+  "id": "wholesale-borrowing",
+  "term": "Wholesale borrowing",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-31-microfinance-accounting"
+  ],
+  "definition": "Loans an MFI takes from banks to fund its own lending. Heavy reliance makes it sensitive to bank interest rates.",
+  "example": "",
+  "nepali": "थोक कर्जा",
+  "see_also": [
+   "microfinance-institution"
+  ]
+ },
+ {
+  "id": "asset-quality-ratios",
+  "term": "Asset quality ratios",
+  "full": "",
+  "cat": "banks",
+  "chapters": [
+   "ch-41-asset-quality-ratios"
+  ],
+  "definition": "Ratios that show how healthy a lender's loans are: NPL ratio, provision coverage, restructured loans and similar.",
+  "example": "",
+  "nepali": "सम्पत्ति गुणस्तर अनुपात",
+  "see_also": [
+   "npl",
+   "provision-coverage"
+  ]
+ },
+ {
+  "id": "ppa",
+  "term": "PPA",
+  "full": "Power purchase agreement",
+  "cat": "hydro",
+  "chapters": [
+   "ch-32-hydropower-accounting",
+   "ch-72-hydropower-sector-playbook"
+  ],
+  "definition": "The long-term contract under which a buyer, usually NEA, agrees to buy a plant's electricity at set prices for a set number of years. It is the most important document for valuing a hydropower share, though river flows, transmission and how promptly NEA pays still matter.",
+  "example": "",
+  "nepali": "विद्युत खरिद-बिक्री सम्झौता",
+  "see_also": [
+   "nea",
+   "tariff-escalation",
+   "single-buyer-ppa"
+  ]
+ },
+ {
+  "id": "nea",
+  "term": "NEA",
+  "full": "Nepal Electricity Authority",
+  "cat": "hydro",
+  "chapters": [
+   "ch-72-hydropower-sector-playbook"
+  ],
+  "definition": "The state-owned utility that buys almost all the power private plants produce, runs much of the grid and sells electricity to consumers.",
+  "example": "",
+  "nepali": "नेपाल विद्युत प्राधिकरण",
+  "see_also": [
+   "ppa",
+   "ipp"
+  ]
+ },
+ {
+  "id": "ipp",
+  "term": "IPP",
+  "full": "Independent power producer",
+  "cat": "hydro",
+  "chapters": [
+   "ch-72-hydropower-sector-playbook"
+  ],
+  "definition": "A privately owned power company, such as most listed hydropower firms, that sells electricity to NEA under a PPA.",
+  "example": "",
+  "nepali": "निजी विद्युत उत्पादक",
+  "see_also": [
+   "nea",
+   "ppa"
+  ]
+ },
+ {
+  "id": "run-of-river",
+  "term": "Run-of-river",
+  "full": "RoR",
+  "cat": "hydro",
+  "chapters": [
+   "ch-32-hydropower-accounting",
+   "ch-72-hydropower-sector-playbook"
+  ],
+  "definition": "A plant that uses the river's flow as it comes, with little or no storage. Output is high in the monsoon and low in the dry season.",
+  "example": "",
+  "nepali": "नदी प्रवाही आयोजना",
+  "see_also": [
+   "storage-and-peaking-plant",
+   "dry-and-wet-season"
+  ]
+ },
+ {
+  "id": "storage-and-peaking-plant",
+  "term": "Storage and peaking plant",
+  "full": "PRoR, storage",
+  "cat": "hydro",
+  "chapters": [
+   "ch-72-hydropower-sector-playbook"
+  ],
+  "definition": "A plant that can hold water back (in a pond or reservoir) to generate when demand is highest, usually earning a better price.",
+  "example": "",
+  "nepali": "जलाशययुक्त/पिकिङ आयोजना",
+  "see_also": [
+   "run-of-river"
+  ]
+ },
+ {
+  "id": "cod",
+  "term": "COD",
+  "full": "Commercial operation date",
+  "cat": "hydro",
+  "chapters": [
+   "ch-43-hydropower-financial-model"
+  ],
+  "definition": "The day a hydropower plant starts selling power under its PPA. Revenue begins and loan repayment starts; a late COD pushes revenue back while interest keeps adding up.",
+  "example": "",
+  "nepali": "व्यापारिक उत्पादन मिति",
+  "see_also": [
+   "required-cod",
+   "cost-overrun"
+  ]
+ },
+ {
+  "id": "required-cod",
+  "term": "Required COD",
+  "full": "RCOD, deemed COD",
+  "cat": "hydro",
+  "chapters": [
+   "ch-43-hydropower-financial-model"
+  ],
+  "definition": "The date by which the PPA expects a plant to start selling power. Missing it can bring penalties; delays caused by the buyer's side (such as a missing transmission line) may count as a 'deemed' COD.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "cod"
+  ]
+ },
+ {
+  "id": "contracted-energy",
+  "term": "Contracted energy",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-43-hydropower-financial-model",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The amount of electricity the PPA expects a plant to deliver each year or season. The Canon's hydropower moat test asks for at least 90% of it in 2 of the last 3 years.",
+  "example": "",
+  "nepali": "सम्झौता गरिएको ऊर्जा",
+  "see_also": [
+   "moat",
+   "plant-load-factor"
+  ]
+ },
+ {
+  "id": "plant-load-factor",
+  "term": "Plant load factor",
+  "full": "PLF",
+  "cat": "hydro",
+  "chapters": [
+   "ch-43-hydropower-financial-model"
+  ],
+  "definition": "Actual electricity produced as a share of what the plant would produce running at full power all year.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "contracted-energy"
+  ]
+ },
+ {
+  "id": "dry-and-wet-season",
+  "term": "Dry and wet season",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-43-hydropower-financial-model"
+  ],
+  "definition": "Nepal's rivers run low in the dry months and high in the monsoon, so a plant's output, and often its tariff, differ by season. Compare the same quarter year on year.",
+  "example": "",
+  "nepali": "सुख्खा र वर्षा याम",
+  "see_also": [
+   "run-of-river",
+   "hydrology"
+  ]
+ },
+ {
+  "id": "tariff-escalation",
+  "term": "Tariff escalation",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-43-hydropower-financial-model"
+  ],
+  "definition": "A fixed yearly rise in the PPA price for a set number of years after COD. When the escalations end, revenue flattens.",
+  "example": "",
+  "nepali": "दर वृद्धि",
+  "see_also": [
+   "ppa"
+  ]
+ },
+ {
+  "id": "royalty",
+  "term": "Royalty",
+  "full": "Capacity and energy royalty",
+  "cat": "hydro",
+  "chapters": [
+   "ch-32-hydropower-accounting"
+  ],
+  "definition": "Fees a hydropower company pays the government: one based on installed capacity and one on energy sold. Royalties usually step up after 15 years of operation, which lowers profit that year.",
+  "example": "A staircase: the rent goes up on a known date.",
+  "nepali": "रोयल्टी",
+  "see_also": [
+   "tax-holiday"
+  ]
+ },
+ {
+  "id": "tax-holiday",
+  "term": "Tax holiday",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-32-hydropower-accounting",
+   "ch-38-tax-planning"
+  ],
+  "definition": "A period of no or reduced income tax for a newly commissioned plant. When it ends, profit after tax falls even if the plant runs exactly as before.",
+  "example": "",
+  "nepali": "कर छुट अवधि",
+  "see_also": [
+   "royalty"
+  ]
+ },
+ {
+  "id": "generation-licence",
+  "term": "Generation licence",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "The government licence to build and run a plant for a fixed number of years. A plant with a limited licensed life should not be valued as if its cash lasts forever.",
+  "example": "Like valuing a shop on a 30-year lease: count the years you can trade.",
+  "nepali": "विद्युत उत्पादन अनुमतिपत्र",
+  "see_also": [
+   "terminal-value",
+   "dcf"
+  ]
+ },
+ {
+  "id": "cwip",
+  "term": "CWIP",
+  "full": "Capital work in progress",
+  "cat": "hydro",
+  "chapters": [
+   "ch-32-hydropower-accounting"
+  ],
+  "definition": "Money spent on a plant that is not finished yet. It sits on the balance sheet until COD, when it becomes a working asset.",
+  "example": "",
+  "nepali": "निर्माणाधीन पुँजीगत कार्य",
+  "see_also": [
+   "interest-during-construction"
+  ]
+ },
+ {
+  "id": "interest-during-construction",
+  "term": "Interest during construction",
+  "full": "IDC, capitalised interest",
+  "cat": "hydro",
+  "chapters": [
+   "ch-32-hydropower-accounting",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Interest on construction loans added to the project's cost instead of being shown as an expense. The company still owes it: work out interest cover using all interest, including this part.",
+  "example": "",
+  "nepali": "निर्माण अवधिको ब्याज",
+  "see_also": [
+   "cwip",
+   "interest-cover"
+  ]
+ },
+ {
+  "id": "project-finance",
+  "term": "Project finance",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-42-project-finance"
+  ],
+  "definition": "Funding a single project mostly with loans repaid only from that project's own cash, usually through a separate company (an SPV).",
+  "example": "",
+  "nepali": "परियोजना वित्त",
+  "see_also": [
+   "non-recourse-loan",
+   "dscr"
+  ]
+ },
+ {
+  "id": "non-recourse-loan",
+  "term": "Non-recourse loan",
+  "full": "Limited recourse",
+  "cat": "hydro",
+  "chapters": [
+   "ch-42-project-finance"
+  ],
+  "definition": "A project loan that lenders can recover only from the project, not from the owners' other assets.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "project-finance"
+  ]
+ },
+ {
+  "id": "spv",
+  "term": "SPV",
+  "full": "Special purpose vehicle",
+  "cat": "hydro",
+  "chapters": [
+   "ch-42-project-finance"
+  ],
+  "definition": "A company set up to own one project, keeping its debts and risks separate from the owners' other businesses.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "project-finance"
+  ]
+ },
+ {
+  "id": "dscr",
+  "term": "DSCR",
+  "full": "Debt-service coverage ratio",
+  "cat": "hydro",
+  "chapters": [
+   "ch-42-project-finance",
+   "ch-43-hydropower-financial-model",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Cash available to pay lenders ÷ the principal and interest due that year. Below 1, the project cannot meet its loan payments from its own cash. Interest cover alone misses the repayments.",
+  "example": "",
+  "nepali": "ऋण सेवा कभरेज अनुपात",
+  "see_also": [
+   "cfads",
+   "dsra",
+   "interest-cover"
+  ]
+ },
+ {
+  "id": "cfads",
+  "term": "CFADS",
+  "full": "Cash flow available for debt service",
+  "cat": "hydro",
+  "chapters": [
+   "ch-42-project-finance"
+  ],
+  "definition": "The cash a project has left, after running costs and tax, to pay its lenders. It is the top line of the DSCR.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "dscr",
+   "cash-waterfall"
+  ]
+ },
+ {
+  "id": "dsra",
+  "term": "DSRA",
+  "full": "Debt service reserve account",
+  "cat": "hydro",
+  "chapters": [
+   "ch-42-project-finance"
+  ],
+  "definition": "A cash reserve, often several months of loan payments, that lenders require a project to keep for bad years.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "dscr"
+  ]
+ },
+ {
+  "id": "cash-waterfall",
+  "term": "Cash waterfall",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-42-project-finance"
+  ],
+  "definition": "The order in which a project's cash is used: running costs, then lenders, then reserves, and only then shareholders.",
+  "example": "Water fills the top pool first; only the overflow reaches the bottom.",
+  "nepali": "",
+  "see_also": [
+   "cfads"
+  ]
+ },
+ {
+  "id": "p50-and-p90",
+  "term": "P50 and P90",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-43-hydropower-financial-model"
+  ],
+  "definition": "Estimates of yearly energy output: P50 is the level expected to be beaten in half of years; P90, a more cautious level, is beaten in 9 years out of 10.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "hydrology"
+  ]
+ },
+ {
+  "id": "hydrology",
+  "term": "Hydrology",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-43-hydropower-financial-model"
+  ],
+  "definition": "The study of a river's flows over the years. It decides how much energy a plant can realistically produce.",
+  "example": "",
+  "nepali": "जलविज्ञान",
+  "see_also": [
+   "p50-and-p90"
+  ]
+ },
+ {
+  "id": "curtailment",
+  "term": "Curtailment",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-72-hydropower-sector-playbook"
+  ],
+  "definition": "When a plant cannot sell all the power it could produce, for example because the transmission line is full or demand is low. Whether the PPA pays for 'deemed energy' in that case matters a lot.",
+  "example": "",
+  "nepali": "विद्युत कटौती",
+  "see_also": [
+   "ppa",
+   "nea"
+  ]
+ },
+ {
+  "id": "cost-overrun",
+  "term": "Cost overrun",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-91-case-study-hydropower-overrun"
+  ],
+  "definition": "A project costing more than planned, often with a delay. Extra cost usually means extra debt and interest, and lower returns for shareholders.",
+  "example": "",
+  "nepali": "लागत वृद्धि",
+  "see_also": [
+   "cod"
+  ]
+ },
+ {
+  "id": "lcoe",
+  "term": "LCOE",
+  "full": "Levelised cost of energy",
+  "cat": "hydro",
+  "chapters": [
+   "ch-43-hydropower-financial-model"
+  ],
+  "definition": "The average cost of producing each unit of electricity over a plant's whole life, including building it. A plant whose tariff is below its LCOE loses money over its life.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "ppa"
+  ]
+ },
+ {
+  "id": "single-buyer-ppa",
+  "term": "Single-buyer PPA",
+  "full": "",
+  "cat": "hydro",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Almost every listed plant sells all its power to NEA, so under the Canon's concentration table it scores 0 of 7. This is a deliberate, provisional rule: compare hydropower scores only with other hydropower scores.",
+  "example": "",
+  "nepali": "एकल खरिदकर्ता",
+  "see_also": [
+   "concentration",
+   "moat"
+  ]
+ },
+ {
+  "id": "nia",
+  "term": "NIA",
+  "full": "Nepal Insurance Authority",
+  "cat": "insurance",
+  "chapters": [
+   "ch-08-regulatory-architecture",
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "The regulator for insurers in Nepal. It sets solvency, reserving and investment rules.",
+  "example": "",
+  "nepali": "नेपाल बीमा प्राधिकरण",
+  "see_also": [
+   "solvency-ratio",
+   "risk-based-capital-directive"
+  ]
+ },
+ {
+  "id": "life-insurer",
+  "term": "Life insurer",
+  "full": "",
+  "cat": "insurance",
+  "chapters": [
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "A company that sells life, endowment and similar policies. It collects premiums now and pays claims years or decades later, so its profit depends heavily on actuarial assumptions.",
+  "example": "",
+  "nepali": "जीवन बीमा कम्पनी",
+  "see_also": [
+   "embedded-value",
+   "persistency",
+   "actuary"
+  ]
+ },
+ {
+  "id": "non-life-insurer",
+  "term": "Non-life insurer",
+  "full": "General insurer",
+  "cat": "insurance",
+  "chapters": [
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "A company that insures motor, property, health, travel and similar risks, usually for one year at a time. A bad year shows quickly in its combined ratio.",
+  "example": "",
+  "nepali": "निर्जीवन बीमा कम्पनी",
+  "see_also": [
+   "combined-ratio",
+   "reinsurance"
+  ]
+ },
+ {
+  "id": "reinsurance",
+  "term": "Reinsurance",
+  "full": "Reinsurer",
+  "cat": "insurance",
+  "chapters": [
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "Insurance for insurers: an insurer passes part of its risk, and part of the premium, to a reinsurer. Nepal has listed reinsurers, which carry other insurers' biggest risks.",
+  "example": "",
+  "nepali": "पुनर्बीमा",
+  "see_also": [
+   "non-life-insurer"
+  ]
+ },
+ {
+  "id": "premium",
+  "term": "Premium",
+  "full": "Gross written and net earned premium",
+  "cat": "insurance",
+  "chapters": [
+   "ch-33-insurance-accounting"
+  ],
+  "definition": "The price a customer pays for a policy. Gross written premium is all policies sold in the year; net earned premium is the part kept after reinsurance and earned for cover already given. The Canon uses net earned premium as an insurer's revenue.",
+  "example": "",
+  "nepali": "बीमाशुल्क",
+  "see_also": [
+   "claims-ratio"
+  ]
+ },
+ {
+  "id": "claims-ratio",
+  "term": "Claims ratio",
+  "full": "Loss ratio",
+  "cat": "insurance",
+  "chapters": [
+   "ch-33-insurance-accounting",
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "Claims paid and owed ÷ premiums earned. The higher it is, the less is left from each rupee of premium.",
+  "example": "",
+  "nepali": "दाबी अनुपात",
+  "see_also": [
+   "combined-ratio"
+  ]
+ },
+ {
+  "id": "combined-ratio",
+  "term": "Combined ratio",
+  "full": "",
+  "cat": "insurance",
+  "chapters": [
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "A non-life insurer's claims plus expenses, divided by premiums earned. Above 100% means it loses money on the insurance itself and relies on investment income.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "claims-ratio",
+   "underwriting-result"
+  ]
+ },
+ {
+  "id": "underwriting-result",
+  "term": "Underwriting result",
+  "full": "",
+  "cat": "insurance",
+  "chapters": [
+   "ch-33-insurance-accounting"
+  ],
+  "definition": "Premiums earned minus claims and costs: what an insurer makes from insurance itself, before investment income.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "combined-ratio"
+  ]
+ },
+ {
+  "id": "solvency-ratio",
+  "term": "Solvency ratio",
+  "full": "",
+  "cat": "insurance",
+  "chapters": [
+   "ch-41-asset-quality-ratios",
+   "ch-64-seven-dimension-score",
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "An insurer's available capital divided by the capital it must hold for its risks. NIA's ladder sets lines at 130% (supervisory target), 100%, 70% and 45%. Under 100% caps the Canon Score at 54.",
+  "example": "Like warning lines on a river gauge: each level brings stronger action.",
+  "nepali": "सोल्भेन्सी अनुपात",
+  "see_also": [
+   "risk-based-capital-directive",
+   "nia"
+  ]
+ },
+ {
+  "id": "risk-based-capital-directive",
+  "term": "Risk-Based Capital Directive",
+  "full": "RBC",
+  "cat": "insurance",
+  "chapters": [
+   "ch-64-seven-dimension-score",
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "NIA's rulebook that ties the capital an insurer must hold to the risks it carries. It is being phased in, with full application from mid-July 2027.",
+  "example": "",
+  "nepali": "जोखिममा आधारित पुँजी निर्देशिका",
+  "see_also": [
+   "solvency-ratio"
+  ]
+ },
+ {
+  "id": "embedded-value",
+  "term": "Embedded value",
+  "full": "",
+  "cat": "insurance",
+  "chapters": [
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "A life insurer's net assets plus the value of profits expected from policies already sold. It shows value that yearly profit hides.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "life-insurer",
+   "persistency"
+  ]
+ },
+ {
+  "id": "persistency",
+  "term": "Persistency",
+  "full": "",
+  "cat": "insurance",
+  "chapters": [
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "The share of a life insurer's policies that stay in force year after year. Low persistency means customers drop out early and the profit expected from them is lost.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "embedded-value"
+  ]
+ },
+ {
+  "id": "actuary",
+  "term": "Actuary",
+  "full": "Actuarial valuation",
+  "cat": "insurance",
+  "chapters": [
+   "ch-33-insurance-accounting",
+   "ch-74-insurance-sector-playbook"
+  ],
+  "definition": "A specialist who estimates how much money an insurer must hold today to pay future claims, using assumptions about deaths, lapses and interest.",
+  "example": "",
+  "nepali": "बीमाङ्की",
+  "see_also": [
+   "technical-reserves"
+  ]
+ },
+ {
+  "id": "technical-reserves",
+  "term": "Technical reserves",
+  "full": "Policy reserves, life fund",
+  "cat": "insurance",
+  "chapters": [
+   "ch-33-insurance-accounting"
+  ],
+  "definition": "Money an insurer holds to pay claims it owes or expects to owe. They are not ordinary debt, which is why insurers get their own capital test.",
+  "example": "",
+  "nepali": "प्राविधिक जगेडा",
+  "see_also": [
+   "ibnr",
+   "actuary"
+  ]
+ },
+ {
+  "id": "ibnr",
+  "term": "IBNR",
+  "full": "Incurred but not reported",
+  "cat": "insurance",
+  "chapters": [
+   "ch-33-insurance-accounting"
+  ],
+  "definition": "Claims for events that have already happened but have not been reported to the insurer yet. An insurer must reserve for them.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "technical-reserves"
+  ]
+ },
+ {
+  "id": "nfrs-17",
+  "term": "NFRS 17",
+  "full": "Insurance contracts standard",
+  "cat": "insurance",
+  "chapters": [
+   "ch-33-insurance-accounting"
+  ],
+  "definition": "The accounting standard for insurance contracts. It spreads profit over the life of a policy through the contractual service margin.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "contractual-service-margin",
+   "nfrs"
+  ]
+ },
+ {
+  "id": "contractual-service-margin",
+  "term": "Contractual service margin",
+  "full": "CSM",
+  "cat": "insurance",
+  "chapters": [
+   "ch-33-insurance-accounting"
+  ],
+  "definition": "Under NFRS 17, the profit an insurer expects from policies already sold but not yet earned. It is released into profit as cover is given.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "nfrs-17"
+  ]
+ },
+ {
+  "id": "annual-report",
+  "term": "Annual report",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-24-reading-financial-statements"
+  ],
+  "definition": "A company's yearly book of audited accounts, auditor's report, directors' report and notes. Most of the Canon Score is built from it.",
+  "example": "",
+  "nepali": "वार्षिक प्रतिवेदन",
+  "see_also": [
+   "audit-opinion",
+   "quarterly-report"
+  ]
+ },
+ {
+  "id": "quarterly-report",
+  "term": "Quarterly report",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-24-reading-financial-statements"
+  ],
+  "definition": "Unaudited results published each quarter on NEPSE and the company's website. First-reported figures are often revised at audit, so compare them later.",
+  "example": "",
+  "nepali": "त्रैमासिक प्रतिवेदन",
+  "see_also": [
+   "annual-report",
+   "restatement"
+  ]
+ },
+ {
+  "id": "nfrs",
+  "term": "NFRS",
+  "full": "Nepal Financial Reporting Standards",
+  "cat": "accounts",
+  "chapters": [
+   "ch-24-reading-financial-statements"
+  ],
+  "definition": "Nepal's accounting rules, based on the international IFRS standards, used by listed companies to prepare their accounts.",
+  "example": "",
+  "nepali": "नेपाल वित्तीय प्रतिवेदनमान",
+  "see_also": [
+   "nas",
+   "ican"
+  ]
+ },
+ {
+  "id": "nas",
+  "term": "NAS",
+  "full": "Nepal Accounting Standards",
+  "cat": "accounts",
+  "chapters": [
+   "ch-24-reading-financial-statements"
+  ],
+  "definition": "The individual standards within Nepal's accounting framework, such as NAS 33 on earnings per share.",
+  "example": "",
+  "nepali": "नेपाल लेखामान",
+  "see_also": [
+   "nfrs"
+  ]
+ },
+ {
+  "id": "ican",
+  "term": "ICAN",
+  "full": "Institute of Chartered Accountants of Nepal",
+  "cat": "accounts",
+  "chapters": [
+   "ch-24-reading-financial-statements"
+  ],
+  "definition": "The professional body for chartered accountants and auditors in Nepal.",
+  "example": "",
+  "nepali": "नेपाल चार्टर्ड एकाउन्टेन्ट्स संस्था",
+  "see_also": [
+   "audit-opinion"
+  ]
+ },
+ {
+  "id": "balance-sheet",
+  "term": "Balance sheet",
+  "full": "Statement of financial position",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet"
+  ],
+  "definition": "A snapshot of what a company owns (assets), what it owes (liabilities) and what is left for owners (equity) on one date.",
+  "example": "A photo of the household on one day: land, gold and cash, minus loans.",
+  "nepali": "वासलात",
+  "see_also": [
+   "equity",
+   "assets-and-liabilities"
+  ]
+ },
+ {
+  "id": "income-statement",
+  "term": "Income statement",
+  "full": "Profit and loss account",
+  "cat": "accounts",
+  "chapters": [
+   "ch-26-income-statement"
+  ],
+  "definition": "What a company earned and spent over a period, ending in its profit or loss.",
+  "example": "A month's household diary: income in, costs out, savings left.",
+  "nepali": "नाफा-नोक्सान हिसाब",
+  "see_also": [
+   "revenue",
+   "net-profit"
+  ]
+ },
+ {
+  "id": "cash-flow-statement",
+  "term": "Cash flow statement",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-27-cash-flow-statement"
+  ],
+  "definition": "Where cash actually came from and went over a period, split into operating, investing and financing activities. Profit can be on paper; cash is harder to fake.",
+  "example": "",
+  "nepali": "नगद प्रवाह विवरण",
+  "see_also": [
+   "operating-cash-flow",
+   "free-cash-flow"
+  ]
+ },
+ {
+  "id": "operating-cash-flow",
+  "term": "Operating cash flow",
+  "full": "CFO",
+  "cat": "accounts",
+  "chapters": [
+   "ch-27-cash-flow-statement"
+  ],
+  "definition": "Cash generated by the company's normal business. Investing cash flow (CFI) covers buying and selling assets; financing cash flow (CFF) covers loans, share issues and dividends.",
+  "example": "",
+  "nepali": "सञ्चालन नगद प्रवाह",
+  "see_also": [
+   "cash-conversion-ratio"
+  ]
+ },
+ {
+  "id": "assets-and-liabilities",
+  "term": "Assets and liabilities",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet"
+  ],
+  "definition": "Assets are what a company owns or is owed (cash, loans given, plant, investments). Liabilities are what it owes (deposits, borrowings, unpaid bills).",
+  "example": "",
+  "nepali": "सम्पत्ति र दायित्व",
+  "see_also": [
+   "balance-sheet"
+  ]
+ },
+ {
+  "id": "equity",
+  "term": "Equity",
+  "full": "Shareholders' equity, net worth",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet"
+  ],
+  "definition": "Assets minus liabilities: the owners' share of the company. Paid-up capital plus reserves and retained profit.",
+  "example": "",
+  "nepali": "शेयरधनी कोष",
+  "see_also": [
+   "book-value",
+   "roe"
+  ]
+ },
+ {
+  "id": "reserves",
+  "term": "Reserves",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet"
+  ],
+  "definition": "Profits and gains kept in the company rather than paid out, held under different headings: general reserve, share premium, revaluation reserve, retained earnings and others.",
+  "example": "",
+  "nepali": "जगेडा कोष",
+  "see_also": [
+   "retained-earnings",
+   "share-premium"
+  ]
+ },
+ {
+  "id": "retained-earnings",
+  "term": "Retained earnings",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet"
+  ],
+  "definition": "Profits the company has kept over the years instead of paying out as dividends.",
+  "example": "",
+  "nepali": "सञ्चित नाफा",
+  "see_also": [
+   "reserves"
+  ]
+ },
+ {
+  "id": "share-premium",
+  "term": "Share premium",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet"
+  ],
+  "definition": "The amount investors paid above face value when the company issued shares.",
+  "example": "",
+  "nepali": "सेयर प्रिमियम",
+  "see_also": [
+   "face-value"
+  ]
+ },
+ {
+  "id": "revaluation-reserve",
+  "term": "Revaluation reserve",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet",
+   "ch-49-book-value-nav"
+  ],
+  "definition": "A paper gain from revaluing assets such as land upward. It is not cash and not profit from the business.",
+  "example": "",
+  "nepali": "पुनर्मूल्याङ्कन जगेडा",
+  "see_also": [
+   "reserves"
+  ]
+ },
+ {
+  "id": "revenue",
+  "term": "Revenue",
+  "full": "Operating revenue",
+  "cat": "accounts",
+  "chapters": [
+   "ch-26-income-statement"
+  ],
+  "definition": "Money earned from the company's main business before costs. The Canon's growth test uses operating revenue only, leaving out one-off and revaluation gains.",
+  "example": "",
+  "nepali": "आम्दानी",
+  "see_also": [
+   "cagr"
+  ]
+ },
+ {
+  "id": "net-profit",
+  "term": "Net profit",
+  "full": "Profit after tax",
+  "cat": "accounts",
+  "chapters": [
+   "ch-26-income-statement"
+  ],
+  "definition": "What is left after all costs, interest and tax. For EPS and ROE, use the profit that belongs to ordinary shareholders.",
+  "example": "",
+  "nepali": "खुद नाफा",
+  "see_also": [
+   "eps",
+   "roe"
+  ]
+ },
+ {
+  "id": "depreciation",
+  "term": "Depreciation",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-26-income-statement",
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "Spreading the cost of a long-lived asset, such as a turbine or a building, over its useful years. It reduces profit but is not cash leaving that year.",
+  "example": "",
+  "nepali": "ह्रास कट्टी",
+  "see_also": [
+   "capex",
+   "fcfe"
+  ]
+ },
+ {
+  "id": "capex",
+  "term": "Capex",
+  "full": "Capital expenditure",
+  "cat": "accounts",
+  "chapters": [
+   "ch-27-cash-flow-statement",
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "Money spent on long-lived assets: new machines, plants, buildings.",
+  "example": "",
+  "nepali": "पुँजीगत खर्च",
+  "see_also": [
+   "depreciation",
+   "free-cash-flow"
+  ]
+ },
+ {
+  "id": "working-capital",
+  "term": "Working capital",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-27-cash-flow-statement",
+   "ch-34-manufacturing-trading-hotel"
+  ],
+  "definition": "Money tied up in running the business day to day: stock and money owed by customers, minus money owed to suppliers. When it grows, cash is absorbed.",
+  "example": "",
+  "nepali": "चालु पुँजी",
+  "see_also": [
+   "working-capital-cycle",
+   "fcfe"
+  ]
+ },
+ {
+  "id": "working-capital-cycle",
+  "term": "Working capital cycle",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-34-manufacturing-trading-hotel"
+  ],
+  "definition": "How many days cash is tied up from buying raw materials to collecting payment from customers.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "working-capital"
+  ]
+ },
+ {
+  "id": "receivables",
+  "term": "Receivables",
+  "full": "Debtors",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet",
+   "ch-28-red-flags"
+  ],
+  "definition": "Money customers owe the company. Receivables growing much faster than sales is a red flag.",
+  "example": "A shop's credit book: sales on paper, cash not yet in the drawer.",
+  "nepali": "आसामी",
+  "see_also": [
+   "red-flags"
+  ]
+ },
+ {
+  "id": "inventory",
+  "term": "Inventory",
+  "full": "Stock",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet",
+   "ch-34-manufacturing-trading-hotel"
+  ],
+  "definition": "Raw materials, work in progress and finished goods the company holds.",
+  "example": "",
+  "nepali": "मौज्दात",
+  "see_also": [
+   "working-capital"
+  ]
+ },
+ {
+  "id": "contingent-liability",
+  "term": "Contingent liability",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet"
+  ],
+  "definition": "A possible debt that depends on a future event, such as a court case or a guarantee. It is disclosed in the notes, not always on the balance sheet.",
+  "example": "",
+  "nepali": "सम्भावित दायित्व",
+  "see_also": [
+   "annual-report"
+  ]
+ },
+ {
+  "id": "goodwill",
+  "term": "Goodwill",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet",
+   "ch-49-book-value-nav"
+  ],
+  "definition": "The extra paid above the value of net assets when buying another company. It has no value if the company is wound up.",
+  "example": "",
+  "nepali": "ख्याति",
+  "see_also": [
+   "tangible-book-value"
+  ]
+ },
+ {
+  "id": "impairment",
+  "term": "Impairment",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-25-balance-sheet",
+   "ch-29-banking-accounting"
+  ],
+  "definition": "Writing down an asset whose value has fallen below its book value, such as a loan unlikely to be repaid.",
+  "example": "",
+  "nepali": "क्षयीकरण",
+  "see_also": [
+   "expected-credit-loss"
+  ]
+ },
+ {
+  "id": "other-comprehensive-income",
+  "term": "Other comprehensive income",
+  "full": "OCI",
+  "cat": "accounts",
+  "chapters": [
+   "ch-26-income-statement"
+  ],
+  "definition": "Gains and losses, such as changes in the value of some investments, that bypass the profit line and go straight to equity.",
+  "example": "",
+  "nepali": "अन्य विस्तृत आम्दानी",
+  "see_also": [
+   "equity"
+  ]
+ },
+ {
+  "id": "segment-reporting",
+  "term": "Segment reporting",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-24-reading-financial-statements"
+  ],
+  "definition": "Results broken down by business line or region. It shows where profit really comes from.",
+  "example": "",
+  "nepali": "खण्डगत प्रतिवेदन",
+  "see_also": [
+   "concentration"
+  ]
+ },
+ {
+  "id": "restatement",
+  "term": "Restatement",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Changing figures already published for an earlier year, usually to correct them. In Chapter 64 it lowers the audit check to 3 of 5.",
+  "example": "",
+  "nepali": "पुनर्प्रस्तुति",
+  "see_also": [
+   "audit-opinion"
+  ]
+ },
+ {
+  "id": "audit-opinion",
+  "term": "Audit opinion",
+  "full": "Auditor's report",
+  "cat": "accounts",
+  "chapters": [
+   "ch-23-governance-scoring",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The auditor's formal verdict on whether the accounts are fair. Read the heading the auditor uses: clean, emphasis of matter, qualified, adverse, or disclaimer.",
+  "example": "",
+  "nepali": "लेखापरीक्षकको राय",
+  "see_also": [
+   "clean-opinion",
+   "qualified-opinion",
+   "adverse-opinion"
+  ]
+ },
+ {
+  "id": "clean-opinion",
+  "term": "Clean opinion",
+  "full": "Unqualified opinion",
+  "cat": "accounts",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The auditor finds the accounts fair. It is reasonable assurance, not a guarantee against fraud.",
+  "example": "",
+  "nepali": "स्वच्छ राय",
+  "see_also": [
+   "audit-opinion"
+  ]
+ },
+ {
+  "id": "emphasis-of-matter",
+  "term": "Emphasis of matter",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A paragraph in which the auditor points to something worth noticing while still calling the accounts fair. Scores 4 of 5 in Chapter 64.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "audit-opinion"
+  ]
+ },
+ {
+  "id": "qualified-opinion",
+  "term": "Qualified opinion",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The accounts are fair except for a specific problem. A qualification on loans, provisions or related-party dealings scores 1 and caps the Canon Score at 54.",
+  "example": "",
+  "nepali": "सशर्त राय",
+  "see_also": [
+   "hard-rule-cap-at-54"
+  ]
+ },
+ {
+  "id": "adverse-opinion",
+  "term": "Adverse opinion",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The auditor says the accounts are not fair. Scores 0 and caps the Canon Score at 54.",
+  "example": "",
+  "nepali": "प्रतिकूल राय",
+  "see_also": [
+   "audit-opinion"
+  ]
+ },
+ {
+  "id": "disclaimer-of-opinion",
+  "term": "Disclaimer of opinion",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The auditor could not form an opinion at all, usually because it could not get enough evidence. Scores 0 and caps the Canon Score at 54.",
+  "example": "",
+  "nepali": "राय दिन अस्वीकार",
+  "see_also": [
+   "audit-opinion"
+  ]
+ },
+ {
+  "id": "going-concern-doubt",
+  "term": "Going-concern doubt",
+  "full": "Material uncertainty related to going concern",
+  "cat": "accounts",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A separate section in which the auditor says there is real doubt the company can keep operating. It scores 1 and caps the Canon Score at 54.",
+  "example": "",
+  "nepali": "निरन्तरता सम्बन्धी शंका",
+  "see_also": [
+   "audit-opinion"
+  ]
+ },
+ {
+  "id": "key-audit-matters",
+  "term": "Key audit matters",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-24-reading-financial-statements"
+  ],
+  "definition": "Areas the auditor judged most significant in the audit, such as loan provisions at a bank. They are not criticisms, but they show where the risks lie.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "audit-opinion"
+  ]
+ },
+ {
+  "id": "red-flags",
+  "term": "Red flags",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-28-red-flags"
+  ],
+  "definition": "Warning signs in the accounts that deserve a closer look: receivables racing ahead of sales, large related-party deals, frequent auditor changes, profit without cash.",
+  "example": "",
+  "nepali": "खतराका संकेत",
+  "see_also": [
+   "receivables",
+   "related-party-transaction"
+  ]
+ },
+ {
+  "id": "cash-conversion-ratio",
+  "term": "Cash conversion ratio",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-27-cash-flow-statement",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Operating cash flow over three years ÷ net profit over the same three years. Below 0.5, the Canon takes off a point for a non-financial company.",
+  "example": "A shop's credit book full of customers who never pay.",
+  "nepali": "",
+  "see_also": [
+   "operating-cash-flow"
+  ]
+ },
+ {
+  "id": "capital-gains-tax",
+  "term": "Capital gains tax",
+  "full": "CGT",
+  "cat": "accounts",
+  "chapters": [
+   "ch-35-capital-gains-tax"
+  ],
+  "definition": "Tax on the profit from selling shares. For resident individuals on listed shares since 22 September 2026: 3.75% if held more than 365 days, 5% if held 365 days or less.",
+  "example": "",
+  "nepali": "पुँजीगत लाभ कर",
+  "see_also": [
+   "holding-period",
+   "wacc-tax-cost-basis"
+  ]
+ },
+ {
+  "id": "holding-period",
+  "term": "Holding period",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-35-capital-gains-tax"
+  ],
+  "definition": "How long you held a share before selling. Crossing 365 days lowers the capital gains tax rate.",
+  "example": "",
+  "nepali": "धारण अवधि",
+  "see_also": [
+   "capital-gains-tax"
+  ]
+ },
+ {
+  "id": "wacc-tax-cost-basis",
+  "term": "WACC (tax cost basis)",
+  "full": "Weighted average cost of shares",
+  "cat": "accounts",
+  "chapters": [
+   "ch-35-capital-gains-tax"
+  ],
+  "definition": "For capital gains tax, the average price you paid for all your shares of one company, which sets your taxable gain. Not the same as WACC, the weighted average cost of capital in valuation.",
+  "example": "",
+  "nepali": "भारित औसत लागत",
+  "see_also": [
+   "capital-gains-tax",
+   "wacc"
+  ]
+ },
+ {
+  "id": "withholding-tax",
+  "term": "Withholding tax",
+  "full": "Final withholding, TDS",
+  "cat": "accounts",
+  "chapters": [
+   "ch-36-dividend-interest-tax"
+  ],
+  "definition": "Tax taken at source before you receive the money. For individuals it is final: 5% on dividends and 6% on bank interest and debenture coupons for FY 2083/84.",
+  "example": "",
+  "nepali": "अग्रिम कर कट्टी",
+  "see_also": [
+   "cash-dividend"
+  ]
+ },
+ {
+  "id": "tax-loss-harvesting",
+  "term": "Tax-loss harvesting",
+  "full": "",
+  "cat": "accounts",
+  "chapters": [
+   "ch-38-tax-planning"
+  ],
+  "definition": "Selling a share at a loss to offset gains for tax, where the rules allow it. Check Chapter 38 for what Nepal's rules permit.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "capital-gains-tax"
+  ]
+ },
+ {
+  "id": "pan",
+  "term": "PAN",
+  "full": "Permanent Account Number",
+  "cat": "accounts",
+  "chapters": [
+   "ch-10-trading-mechanics"
+  ],
+  "definition": "Your tax identification number, needed for many investment accounts and tax filings.",
+  "example": "",
+  "nepali": "स्थायी लेखा नम्बर",
+  "see_also": []
+ },
+ {
+  "id": "eps",
+  "term": "EPS",
+  "full": "Earnings per share",
+  "cat": "valuation",
+  "chapters": [
+   "ch-26-income-statement",
+   "ch-39-valuation-ratios",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Net profit belonging to ordinary shareholders ÷ the weighted average number of shares. After a bonus issue EPS falls, because the same profit is shared across more shares, so compare on the same share count.",
+  "example": "",
+  "nepali": "प्रति सेयर आम्दानी",
+  "see_also": [
+   "p-e",
+   "weighted-average-shares"
+  ]
+ },
+ {
+  "id": "weighted-average-shares",
+  "term": "Weighted average shares",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The number of shares counted only for the months they existed in the year. It is the denominator for EPS.",
+  "example": "",
+  "nepali": "भारित औसत सेयर संख्या",
+  "see_also": [
+   "eps"
+  ]
+ },
+ {
+  "id": "p-e",
+  "term": "P/E",
+  "full": "Price-to-earnings ratio",
+  "cat": "valuation",
+  "chapters": [
+   "ch-39-valuation-ratios",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Share price ÷ EPS: how many years of today's profit you pay for. Compare it with the sector median, not a fixed number; a low P/E on collapsing profit is not cheap.",
+  "example": "A share at Rs 600 earning Rs 40 a year has a P/E of 15.",
+  "nepali": "मूल्य-आम्दानी अनुपात",
+  "see_also": [
+   "p-b",
+   "sector-median",
+   "earned-discount"
+  ]
+ },
+ {
+  "id": "p-b",
+  "term": "P/B",
+  "full": "Price-to-book ratio",
+  "cat": "valuation",
+  "chapters": [
+   "ch-39-valuation-ratios",
+   "ch-49-book-value-nav",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Share price ÷ book value per share: how much you pay for each rupee of net assets. Works best for banks.",
+  "example": "A P/B of 2 means you pay Rs 2 for every Rs 1 of net assets.",
+  "nepali": "मूल्य-किताबी मूल्य अनुपात",
+  "see_also": [
+   "book-value",
+   "justified-p-b"
+  ]
+ },
+ {
+  "id": "book-value",
+  "term": "Book value",
+  "full": "Net worth per share, NAV",
+  "cat": "valuation",
+  "chapters": [
+   "ch-49-book-value-nav"
+  ],
+  "definition": "Assets minus liabilities, divided by the number of shares. A starting point for value, not a finish line.",
+  "example": "",
+  "nepali": "प्रति सेयर किताबी मूल्य",
+  "see_also": [
+   "p-b",
+   "tangible-book-value"
+  ]
+ },
+ {
+  "id": "tangible-book-value",
+  "term": "Tangible book value",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-49-book-value-nav"
+  ],
+  "definition": "Book value without goodwill and other intangible assets that would be worth nothing in a wind-up.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "goodwill",
+   "book-value"
+  ]
+ },
+ {
+  "id": "roe",
+  "term": "ROE",
+  "full": "Return on equity",
+  "cat": "valuation",
+  "chapters": [
+   "ch-40-profitability-ratios",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Yearly profit ÷ the shareholders' own money in the company. Use the average of opening and closing equity, and a three-year average. High ROE from heavy borrowing or thin provisions is not quality.",
+  "example": "Put Rs 10 lakh into a tea shop that earns Rs 1.5 lakh a year: ROE is 15%.",
+  "nepali": "इक्विटीमा प्रतिफल",
+  "see_also": [
+   "cost-of-equity",
+   "roa"
+  ]
+ },
+ {
+  "id": "roa",
+  "term": "ROA",
+  "full": "Return on assets",
+  "cat": "valuation",
+  "chapters": [
+   "ch-40-profitability-ratios"
+  ],
+  "definition": "Profit ÷ total assets. For banks it is small (around 1–2%) because they run on borrowed money; leverage lifts ROE without lifting ROA.",
+  "example": "",
+  "nepali": "सम्पत्तिमा प्रतिफल",
+  "see_also": [
+   "roe",
+   "leverage"
+  ]
+ },
+ {
+  "id": "dividend-yield",
+  "term": "Dividend yield",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-39-valuation-ratios",
+   "ch-68-dividend-income-strategy"
+  ],
+  "definition": "Cash dividend per share ÷ share price. A 20% dividend on a Rs 100 face-value share is Rs 20; at a price of Rs 500 the yield is 4%.",
+  "example": "",
+  "nepali": "लाभांश प्रतिफल",
+  "see_also": [
+   "cash-dividend",
+   "face-value"
+  ]
+ },
+ {
+  "id": "payout-ratio",
+  "term": "Payout ratio",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Cash dividends ÷ distributable profit (the Canon's definition), counting cash only. The book prefers 30–70%, a Canon preference, not a rule of finance. Bonus shares are recorded separately.",
+  "example": "",
+  "nepali": "लाभांश वितरण अनुपात",
+  "see_also": [
+   "distributable-profit",
+   "cash-dividend"
+  ]
+ },
+ {
+  "id": "leverage",
+  "term": "Leverage",
+  "full": "Debt-to-equity",
+  "cat": "valuation",
+  "chapters": [
+   "ch-41-asset-quality-ratios",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "How much a company has borrowed for every rupee of its owners' money. Chapter 64 gives 3 points under 1×, 2 at 1–2×, 1 at 2–3×, 0 at 3× or more.",
+  "example": "",
+  "nepali": "ऋण-पुँजी अनुपात",
+  "see_also": [
+   "interest-cover"
+  ]
+ },
+ {
+  "id": "interest-cover",
+  "term": "Interest cover",
+  "full": "Interest coverage",
+  "cat": "valuation",
+  "chapters": [
+   "ch-41-asset-quality-ratios",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Operating profit ÷ interest: how many times over the company could pay its interest. Chapter 64 gives 4 points at 5× or more (or no debt), 3 at 3–5×, 1 at 1.5–3×, 0 below 1.5×.",
+  "example": "",
+  "nepali": "ब्याज भुक्तानी क्षमता",
+  "see_also": [
+   "leverage",
+   "dscr"
+  ]
+ },
+ {
+  "id": "ebitda",
+  "term": "EBITDA",
+  "full": "Earnings before interest, tax, depreciation and amortisation",
+  "cat": "valuation",
+  "chapters": [
+   "ch-39-valuation-ratios",
+   "ch-47-relative-valuation-comps"
+  ],
+  "definition": "Operating profit before non-cash charges and financing costs. Useful for comparing companies with different debt levels.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "ev-ebitda"
+  ]
+ },
+ {
+  "id": "ev-ebitda",
+  "term": "EV/EBITDA",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-39-valuation-ratios",
+   "ch-47-relative-valuation-comps"
+  ],
+  "definition": "Enterprise value (market cap plus net debt) ÷ EBITDA. It compares the whole business's value with its operating earnings; not used for banks.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "ebitda"
+  ]
+ },
+ {
+  "id": "cagr",
+  "term": "CAGR",
+  "full": "Compound annual growth rate",
+  "cat": "valuation",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The steady yearly rate that takes a starting figure to an ending figure: (end ÷ start)^(1/years) − 1.",
+  "example": "Revenue from Rs 100 crore to Rs 201 crore in five years is about 14.98% a year.",
+  "nepali": "चक्रवृद्धि वार्षिक वृद्धिदर",
+  "see_also": [
+   "growth-trajectory"
+  ]
+ },
+ {
+  "id": "sector-median",
+  "term": "Sector median",
+  "full": "Median",
+  "cat": "valuation",
+  "chapters": [
+   "ch-47-relative-valuation-comps",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The middle company when all comparable companies are lined up, so one extreme company cannot drag the comparison. The Canon needs at least five peers; with fewer, the part is unverified.",
+  "example": "",
+  "nepali": "मध्यिका",
+  "see_also": [
+   "peer-group",
+   "p-e"
+  ]
+ },
+ {
+  "id": "peer-group",
+  "term": "Peer group",
+  "full": "Comparable companies",
+  "cat": "valuation",
+  "chapters": [
+   "ch-47-relative-valuation-comps",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The similar companies a share is compared with: operating hydropower plants only, life and non-life insurers kept apart, banks with banks.",
+  "example": "",
+  "nepali": "समकक्षी समूह",
+  "see_also": [
+   "sector-median",
+   "relative-valuation"
+  ]
+ },
+ {
+  "id": "relative-valuation",
+  "term": "Relative valuation",
+  "full": "Comps",
+  "cat": "valuation",
+  "chapters": [
+   "ch-47-relative-valuation-comps"
+  ],
+  "definition": "Valuing a share by comparing its ratios (P/E, P/B) with similar companies. It tells you whether a share is cheap compared with its neighbours, not what it is worth.",
+  "example": "Comparing the price of your orchard with the one next door.",
+  "nepali": "सापेक्ष मूल्याङ्कन",
+  "see_also": [
+   "intrinsic-value",
+   "sector-median"
+  ]
+ },
+ {
+  "id": "intrinsic-value",
+  "term": "Intrinsic value",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-45-philosophy-valuation",
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "What a business's future cash is worth today, as opposed to its market price.",
+  "example": "Counting the mangoes your trees will give over the years, not checking what the neighbour sold his orchard for.",
+  "nepali": "आन्तरिक मूल्य",
+  "see_also": [
+   "dcf",
+   "margin-of-safety"
+  ]
+ },
+ {
+  "id": "margin-of-safety",
+  "term": "Margin of safety",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-45-philosophy-valuation"
+  ],
+  "definition": "The gap between your estimate of value and the price you pay, as a share of the value. If value is Rs 54 and you pay Rs 40, the margin is about 26%.",
+  "example": "A bridge built to carry three times its expected load.",
+  "nepali": "सुरक्षा मार्जिन",
+  "see_also": [
+   "intrinsic-value"
+  ]
+ },
+ {
+  "id": "dcf",
+  "term": "DCF",
+  "full": "Discounted cash flow",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "Valuing a business by forecasting the cash it will produce and turning future rupees into today's rupees with a discount rate. Treat the answer as a range, never one exact price.",
+  "example": "",
+  "nepali": "छुट गरिएको नगद प्रवाह",
+  "see_also": [
+   "fcfe",
+   "terminal-value",
+   "reverse-dcf"
+  ]
+ },
+ {
+  "id": "ddm",
+  "term": "DDM",
+  "full": "Dividend discount model",
+  "cat": "valuation",
+  "chapters": [
+   "ch-48-dividend-discount-model"
+  ],
+  "definition": "Valuing a share from the dividends it is expected to pay, discounted to today. It suits steady dividend payers such as banks.",
+  "example": "",
+  "nepali": "लाभांश छुट मोडेल",
+  "see_also": [
+   "gordon-growth-model"
+  ]
+ },
+ {
+  "id": "gordon-growth-model",
+  "term": "Gordon growth model",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation",
+   "ch-48-dividend-discount-model"
+  ],
+  "definition": "A simple formula for a stream of cash growing at a steady rate forever: next year's cash ÷ (required return − growth). It only works when growth is below the required return.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "terminal-value",
+   "ddm"
+  ]
+ },
+ {
+  "id": "fcfe",
+  "term": "FCFE",
+  "full": "Free cash flow to equity",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "Cash left for owners: net profit + depreciation − capital spending − increase in working capital + new borrowing − loan repayments.",
+  "example": "Net profit 10, depreciation 4, capex 3, working capital up 1, new loans 2, repayments 5: FCFE = Rs 7 crore.",
+  "nepali": "",
+  "see_also": [
+   "fcff",
+   "dcf"
+  ]
+ },
+ {
+  "id": "fcff",
+  "term": "FCFF",
+  "full": "Free cash flow to the firm",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "Cash available to both lenders and owners, before interest and loan flows. It is discounted at WACC; never use it for banks, whose deposits are raw material, not ordinary debt.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "fcfe",
+   "wacc"
+  ]
+ },
+ {
+  "id": "free-cash-flow",
+  "term": "Free cash flow",
+  "full": "FCF",
+  "cat": "valuation",
+  "chapters": [
+   "ch-27-cash-flow-statement",
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "Cash from operations minus the capital spending needed to keep and grow the business.",
+  "example": "",
+  "nepali": "स्वतन्त्र नगद प्रवाह",
+  "see_also": [
+   "fcfe"
+  ]
+ },
+ {
+  "id": "discount-rate",
+  "term": "Discount rate",
+  "full": "Required return",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "The yearly return you need to justify a risk. It shrinks future cash to today's value: the higher the risk, the higher the rate.",
+  "example": "",
+  "nepali": "छुट दर",
+  "see_also": [
+   "cost-of-equity"
+  ]
+ },
+ {
+  "id": "cost-of-equity",
+  "term": "Cost of equity",
+  "full": "Ke",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation",
+   "ch-48-dividend-discount-model"
+  ],
+  "definition": "The yearly return shareholders need for the risk of owning a share. In Nepal it is usually in the low-to-mid teens; the book's examples use 12% for banks and 14.5% for hydropower. Compare ROE with it, not with the deposit rate.",
+  "example": "",
+  "nepali": "इक्विटीको लागत",
+  "see_also": [
+   "roe",
+   "capm"
+  ]
+ },
+ {
+  "id": "cost-of-debt",
+  "term": "Cost of debt",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "The interest rate a company pays on its borrowing, after the tax saving on interest.",
+  "example": "",
+  "nepali": "ऋणको लागत",
+  "see_also": [
+   "wacc"
+  ]
+ },
+ {
+  "id": "wacc",
+  "term": "WACC",
+  "full": "Weighted average cost of capital",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "The blended cost of a company's debt and equity, weighted by how much of each it uses. Used to discount FCFF. (Not the same as WACC for capital gains tax.)",
+  "example": "",
+  "nepali": "भारित औसत पुँजी लागत",
+  "see_also": [
+   "fcff",
+   "wacc-tax-cost-basis"
+  ]
+ },
+ {
+  "id": "risk-free-rate",
+  "term": "Risk-free rate",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-17-debentures-bonds",
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "The return on a near-riskless investment, usually a government bond or treasury bill. It is the floor for every other required return.",
+  "example": "",
+  "nepali": "जोखिमरहित दर",
+  "see_also": [
+   "equity-risk-premium"
+  ]
+ },
+ {
+  "id": "equity-risk-premium",
+  "term": "Equity risk premium",
+  "full": "ERP",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "The extra return investors need for owning shares instead of risk-free bonds. Nepal also adds a country risk premium.",
+  "example": "",
+  "nepali": "इक्विटी जोखिम प्रिमियम",
+  "see_also": [
+   "capm",
+   "country-risk-premium"
+  ]
+ },
+ {
+  "id": "country-risk-premium",
+  "term": "Country risk premium",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "Extra return investors need for the risks of investing in a particular country, such as currency, political and market-access risks.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "equity-risk-premium"
+  ]
+ },
+ {
+  "id": "beta",
+  "term": "Beta",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "How much a share tends to move with the whole market. A beta of 1.2 means it tends to rise or fall 20% more than the market.",
+  "example": "",
+  "nepali": "बिटा",
+  "see_also": [
+   "capm"
+  ]
+ },
+ {
+  "id": "capm",
+  "term": "CAPM",
+  "full": "Capital asset pricing model",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "A formula for the cost of equity: risk-free rate + beta × equity risk premium. In a thin market like NEPSE, its inputs need care.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "beta",
+   "cost-of-equity"
+  ]
+ },
+ {
+  "id": "terminal-value",
+  "term": "Terminal value",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "The value of all cash flows after the forecast years. It often makes up most of a DCF value, so a small change in the growth guess moves the answer a lot. For a limited-life asset such as a hydropower licence, value the remaining life instead of growth forever.",
+  "example": "",
+  "nepali": "अन्तिम मूल्य",
+  "see_also": [
+   "gordon-growth-model",
+   "generation-licence"
+  ]
+ },
+ {
+  "id": "reverse-dcf",
+  "term": "Reverse DCF",
+  "full": "Market-implied growth",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "Working backwards from today's price to the growth it assumes, then asking whether that growth is believable. HHPL at Rs 85 needs about 8.7% growth a year forever.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "dcf"
+  ]
+ },
+ {
+  "id": "justified-p-b",
+  "term": "Justified P/B",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-48-dividend-discount-model",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The P/B a bank's ROE can support: (ROE − g) ÷ (cost of equity − g). A 13% ROE, 5% growth and a 12% cost of equity justify about 1.1× book.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "p-b",
+   "roe"
+  ]
+ },
+ {
+  "id": "justified-p-e",
+  "term": "Justified P/E",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-48-dividend-discount-model"
+  ],
+  "definition": "The P/E that a company's payout, growth and cost of equity can support, from the dividend discount model.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "p-e",
+   "ddm"
+  ]
+ },
+ {
+  "id": "sensitivity-analysis",
+  "term": "Sensitivity analysis",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "Changing one assumption at a time (growth, discount rate) to see how much the value moves. HHPL's value ranges from about Rs 41 to Rs 83 across reasonable inputs.",
+  "example": "",
+  "nepali": "संवेदनशीलता विश्लेषण",
+  "see_also": [
+   "dcf"
+  ]
+ },
+ {
+  "id": "present-value",
+  "term": "Present value",
+  "full": "Time value of money",
+  "cat": "valuation",
+  "chapters": [
+   "ch-46-dcf-valuation"
+  ],
+  "definition": "What a future rupee is worth today. A rupee received in five years is worth less than a rupee now, because today's rupee can earn a return meanwhile.",
+  "example": "",
+  "nepali": "वर्तमान मूल्य",
+  "see_also": [
+   "discount-rate"
+  ]
+ },
+ {
+  "id": "value-trap",
+  "term": "Value trap",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-47-relative-valuation-comps",
+   "ch-80-calibrating-scoring-model"
+  ],
+  "definition": "A share that looks cheap on its ratios but stays cheap, or gets cheaper, because the business is weak.",
+  "example": "A cheap plot of land that floods every monsoon.",
+  "nepali": "",
+  "see_also": [
+   "earned-discount"
+  ]
+ },
+ {
+  "id": "market-p-e",
+  "term": "Market P/E",
+  "full": "",
+  "cat": "valuation",
+  "chapters": [
+   "ch-39-valuation-ratios",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The P/E of the whole market. NEPSE traded at about 38 times earnings on 28 October 2025, against a historical average near 31.",
+  "example": "",
+  "nepali": "बजार पी/ई",
+  "see_also": [
+   "p-e"
+  ]
+ },
+ {
+  "id": "canon-score",
+  "term": "Canon Score",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-63-canon-scoring-philosophy",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "This book's 100-point score for a NEPSE company, reported as Business Quality (75) + Share Attractiveness (25). It is a structured judgement on one date, never a price forecast and never an instruction to buy.",
+  "example": "",
+  "nepali": "क्यानन स्कोर",
+  "see_also": [
+   "business-quality",
+   "share-attractiveness",
+   "bands"
+  ]
+ },
+ {
+  "id": "business-quality",
+  "term": "Business Quality",
+  "full": "BQ, 75 points",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The part of the Canon Score that asks 'is this a good company?': Financial Strength (20) + Governance (15) + Durability (15) + Growth (15) + Dividends (10).",
+  "example": "The house itself: walls, roof, neighbourhood.",
+  "nepali": "व्यवसायको गुणस्तर",
+  "see_also": [
+   "share-attractiveness",
+   "part-score-rule"
+  ]
+ },
+ {
+  "id": "share-attractiveness",
+  "term": "Share Attractiveness",
+  "full": "SA, 25 points",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The part of the Canon Score that asks 'is the share a good buy today?': Liquidity (10) + Valuation (15).",
+  "example": "The deal: can you resell easily, and is the asking price fair?",
+  "nepali": "सेयरको आकर्षण",
+  "see_also": [
+   "business-quality",
+   "part-score-rule"
+  ]
+ },
+ {
+  "id": "hemispheres",
+  "term": "Hemispheres",
+  "full": "Old name for the score's two halves",
+  "cat": "canon",
+  "chapters": [
+   "ch-63-canon-scoring-philosophy",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Earlier versions of the book split the score into two 'hemispheres'. Since rubric 1.6 the split is Business Quality (75) and Share Attractiveness (25); use those names.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "business-quality",
+   "share-attractiveness"
+  ]
+ },
+ {
+  "id": "seven-dimensions",
+  "term": "Seven dimensions",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The seven parts of the Canon Score: Financial Strength (20), Governance (15), Liquidity (10), Valuation (15), Durability (15), Growth (15) and Dividends (10).",
+  "example": "",
+  "nepali": "सात आयाम",
+  "see_also": [
+   "canon-score"
+  ]
+ },
+ {
+  "id": "financial-strength-and-profitability",
+  "term": "Financial Strength & Profitability",
+  "full": "20 points",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "ROE (8) + capital or leverage cushion (7) + earnings quality (5).",
+  "example": "",
+  "nepali": "वित्तीय बल",
+  "see_also": [
+   "roe",
+   "car",
+   "earnings-quality"
+  ]
+ },
+ {
+  "id": "earnings-quality",
+  "term": "Earnings quality",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Chapter 64's 5-point check on whether profit is steady and real: five years of comparisons, minus a point if the cash, lender or insurer profit check fails.",
+  "example": "",
+  "nepali": "आम्दानीको गुणस्तर",
+  "see_also": [
+   "cash-conversion-ratio",
+   "write-back"
+  ]
+ },
+ {
+  "id": "governance-and-promoter-behaviour",
+  "term": "Governance & Promoter Behaviour",
+  "full": "15 points",
+  "cat": "canon",
+  "chapters": [
+   "ch-23-governance-scoring",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Promoter holding and pledging (6) + audit opinion and related-party dealings (5) + disclosure and board (4).",
+  "example": "",
+  "nepali": "सुशासन",
+  "see_also": [
+   "hard-rule-cap-at-54",
+   "pledged-shares"
+  ]
+ },
+ {
+  "id": "governance-scoring",
+  "term": "Governance scoring",
+  "full": "Chapter 23 grade",
+  "cat": "canon",
+  "chapters": [
+   "ch-23-governance-scoring"
+  ],
+  "definition": "Chapter 23's six-row scorecard gives a first reading and a grade. The Canon Score's governance dimension scores the evidence differently; never convert one into the other.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "governance-and-promoter-behaviour"
+  ]
+ },
+ {
+  "id": "liquidity-and-tradability",
+  "term": "Liquidity & Tradability",
+  "full": "10 points",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Average daily turnover over six months (5) + free float (5). A first screen of tradability, not proof you can sell your own order in a panic.",
+  "example": "",
+  "nepali": "तरलता",
+  "see_also": [
+   "average-daily-turnover",
+   "free-float",
+   "adv-rule"
+  ]
+ },
+ {
+  "id": "valuation-reasonableness",
+  "term": "Valuation Reasonableness",
+  "full": "15 points",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "P/E (8) + P/B (7), each against the sector median. A cheap share gets the top row only if the discount is earned.",
+  "example": "",
+  "nepali": "मूल्याङ्कन",
+  "see_also": [
+   "earned-discount",
+   "sector-median"
+  ]
+ },
+ {
+  "id": "durability",
+  "term": "Durability",
+  "full": "Sector & Business Model Durability, 15 points",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Moat (8) + concentration (7): will the business still matter and still earn in ten years?",
+  "example": "",
+  "nepali": "टिकाउपन",
+  "see_also": [
+   "moat",
+   "concentration"
+  ]
+ },
+ {
+  "id": "growth-trajectory",
+  "term": "Growth Trajectory",
+  "full": "15 points",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Business growth (8) + EPS growth (7). For lenders, loan growth is compared with the whole system; much faster is a warning, not a strength.",
+  "example": "A bus on a crowded highway: the safe speed is the speed of the traffic.",
+  "nepali": "वृद्धि",
+  "see_also": [
+   "cagr",
+   "credit-peak"
+  ]
+ },
+ {
+  "id": "dividend-and-capital-return-discipline",
+  "term": "Dividend & Capital Return Discipline",
+  "full": "10 points",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Dividend record (6) + source and reason (4). Only real cash dividends count as paid.",
+  "example": "",
+  "nepali": "लाभांश अनुशासन",
+  "see_also": [
+   "payout-ratio",
+   "cash-dividend"
+  ]
+ },
+ {
+  "id": "moat",
+  "term": "Moat",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Whatever keeps competitors from eating into profits. A licence alone is not a moat: it earns 5 of 8. The full 8 needs proof, such as ROE at or above the sector median in 4 of the last 5 years.",
+  "example": "The water ditch around a fort.",
+  "nepali": "सुरक्षा खाडल (moat)",
+  "see_also": [
+   "durability",
+   "single-buyer-ppa"
+  ]
+ },
+ {
+  "id": "concentration",
+  "term": "Concentration",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "How much depends on one customer, product, region or supplier; for a lender, the largest share of its loan book in one sector. 20% or less earns 7 of 7; over 60% earns 0.",
+  "example": "A farmer who grows one crop and sells to one trader.",
+  "nepali": "केन्द्रीकरण",
+  "see_also": [
+   "single-buyer-ppa"
+  ]
+ },
+ {
+  "id": "bands",
+  "term": "Bands",
+  "full": "Exceptional, Strong, Adequate, Watch list, Avoid",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score",
+   "ch-66-using-canon-score-portfolio"
+  ],
+  "definition": "The Canon Score's five bands: 85–100 Exceptional, 70–84 Strong, 55–69 Adequate, 45–54 Watch list, below 45 Avoid. 55 or more makes a company eligible for new money, never an instruction to buy.",
+  "example": "",
+  "nepali": "श्रेणी",
+  "see_also": [
+   "position-size-ceilings"
+  ]
+ },
+ {
+  "id": "hard-rule-cap-at-54",
+  "term": "Hard rule (cap at 54)",
+  "full": "Governance override and other caps",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Conditions that cap the whole score at 54, below the 55 needed for new money: governance under 5 of 15, the pledging check at 0, the audit check at 1 or less, NRB 'problematic' status, capital below the minimum in any layer, insurer solvency under 100%, or fraud. However many fire, it is one cap, and it lifts when the problem clears.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "governance-and-promoter-behaviour",
+   "qualified-opinion"
+  ]
+ },
+ {
+  "id": "part-score-rule",
+  "term": "Part-score rule",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score",
+   "ch-66-using-canon-score-portfolio"
+  ],
+  "definition": "A Strong or Exceptional total drops one band if Business Quality is under 38 of 75 or Share Attractiveness is under 13 of 25.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "bands"
+  ]
+ },
+ {
+  "id": "earned-discount",
+  "term": "Earned discount",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A share at 0.8× its sector median or less gets the top valuation row only if its ROE is at or above the sector median (and, for a lender, its NPL at or below its class average). Otherwise it scores 'in line'.",
+  "example": "Cheap is often cheap for a reason.",
+  "nepali": "",
+  "see_also": [
+   "value-trap",
+   "valuation-reasonableness"
+  ]
+ },
+ {
+  "id": "evidence-grade",
+  "term": "Evidence grade",
+  "full": "A to D",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A letter beside every score showing how many points rest on unverified or estimated figures: A none, B 1–10, C 11–20, D more than 20. Grade D means provisional.",
+  "example": "Like a weather forecast that says how sure it is.",
+  "nepali": "प्रमाण ग्रेड",
+  "see_also": [
+   "provisional-score",
+   "unverified"
+  ]
+ },
+ {
+  "id": "provisional-score",
+  "term": "Provisional score",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score",
+   "ch-66-using-canon-score-portfolio"
+  ],
+  "definition": "A score with more than 20 points unverified (grade D). It lowers the position ceiling by one band.",
+  "example": "",
+  "nepali": "अस्थायी अङ्क",
+  "see_also": [
+   "evidence-grade"
+  ]
+ },
+ {
+  "id": "unverified",
+  "term": "Unverified",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A part of the score that cannot be checked from reliable sources. It may score no higher than the middle row, and its points count toward the evidence grade.",
+  "example": "",
+  "nepali": "अपुष्ट",
+  "see_also": [
+   "evidence-grade"
+  ]
+ },
+ {
+  "id": "canon-rule",
+  "term": "Canon rule",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-63-canon-scoring-philosophy",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A rule that is this book's own reasoned choice, not a law or regulation, and not yet proven to give better returns. The book labels these separately from facts.",
+  "example": "",
+  "nepali": "क्यानन नियम",
+  "see_also": [
+   "rubric-version"
+  ]
+ },
+ {
+  "id": "rubric-version",
+  "term": "Rubric version",
+  "full": "1.6.0",
+  "cat": "canon",
+  "chapters": [
+   "ch-64-seven-dimension-score",
+   "ch-107-keeping-canon-current"
+  ],
+  "definition": "The numbered edition of the Canon Score's rules. Scores made under different versions should not be compared without re-scoring.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "model-drift"
+  ]
+ },
+ {
+  "id": "backtesting",
+  "term": "Backtesting",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-79-backtesting-mindset"
+  ],
+  "definition": "Testing a rule on past data. Results on data the rules were written after seeing (in-sample) prove much less than results on new data (out-of-sample).",
+  "example": "",
+  "nepali": "पश्चपरीक्षण",
+  "see_also": [
+   "real-time-test",
+   "model-drift"
+  ]
+ },
+ {
+  "id": "real-time-test",
+  "term": "Real-time test",
+  "full": "Out-of-sample test",
+  "cat": "canon",
+  "chapters": [
+   "ch-79-backtesting-mindset",
+   "ch-80-calibrating-scoring-model"
+  ],
+  "definition": "Applying the Canon Score from 17 November 2026 onward and checking results later, with the first review due in November 2027. It is the honest test of whether the score helps.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "backtesting"
+  ]
+ },
+ {
+  "id": "model-drift",
+  "term": "Model drift",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-82-measuring-managing-model-drift"
+  ],
+  "definition": "When a scoring model that worked in the past grows less reliable because the market underneath it has changed.",
+  "example": "",
+  "nepali": "मोडेल विचलन",
+  "see_also": [
+   "rubric-version"
+  ]
+ },
+ {
+  "id": "pre-buy-checklist",
+  "term": "Pre-buy checklist",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-101-pre-buy-checklists"
+  ],
+  "definition": "A list of yes/no checks to tick before every purchase. If one box cannot be ticked, do not buy yet.",
+  "example": "",
+  "nepali": "किन्नुअघिको जाँचसूची",
+  "see_also": [
+   "investment-memo"
+  ]
+ },
+ {
+  "id": "investment-memo",
+  "term": "Investment memo",
+  "full": "",
+  "cat": "canon",
+  "chapters": [
+   "ch-99-full-investment-memo"
+  ],
+  "definition": "A written record of why you are buying, the score and its evidence, what would prove you wrong, and what you will do then.",
+  "example": "",
+  "nepali": "लगानी टिप्पणी",
+  "see_also": [
+   "investment-thesis"
+  ]
+ },
+ {
+  "id": "sebon",
+  "term": "SEBON",
+  "full": "Securities Board of Nepal",
+  "cat": "governance",
+  "chapters": [
+   "ch-08-regulatory-architecture"
+  ],
+  "definition": "Nepal's securities regulator. It oversees NEPSE, licenses brokers and merchant bankers, and approves share issues.",
+  "example": "",
+  "nepali": "नेपाल धितोपत्र बोर्ड",
+  "see_also": [
+   "nepse",
+   "nrb"
+  ]
+ },
+ {
+  "id": "promoter",
+  "term": "Promoter",
+  "full": "Promoter shares",
+  "cat": "governance",
+  "chapters": [
+   "ch-20-promoter-behaviour"
+  ],
+  "definition": "A founder or controlling shareholder who usually holds a large block of shares and controls the board. Promoter shares are listed separately from ordinary public shares.",
+  "example": "",
+  "nepali": "संस्थापक",
+  "see_also": [
+   "pledged-shares",
+   "lock-in-period"
+  ]
+ },
+ {
+  "id": "pledged-shares",
+  "term": "Pledged shares",
+  "full": "Share pledging",
+  "cat": "governance",
+  "chapters": [
+   "ch-20-promoter-behaviour",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Shares a promoter has given as collateral for a loan. If the loan goes bad, the lender can sell them suddenly. More than 50% pledged scores 0 and caps the Canon Score at 54.",
+  "example": "A family house mortgaged to a moneylender.",
+  "nepali": "धितो राखिएका सेयर",
+  "see_also": [
+   "promoter",
+   "hard-rule-cap-at-54"
+  ]
+ },
+ {
+  "id": "related-party-transaction",
+  "term": "Related-party transaction",
+  "full": "RPT",
+  "cat": "governance",
+  "chapters": [
+   "ch-22-conglomerate-crossholdings",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A deal between the company and people or firms linked to its owners or directors: loans, contracts, purchases. Judge it by size and whether the terms were at arm's length.",
+  "example": "",
+  "nepali": "सम्बद्ध पक्ष कारोबार",
+  "see_also": [
+   "arm-s-length",
+   "audit-opinion"
+  ]
+ },
+ {
+  "id": "arm-s-length",
+  "term": "Arm's length",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "Terms the company would give a stranger. A related-party deal at arm's length is far less worrying than one on special terms.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "related-party-transaction"
+  ]
+ },
+ {
+  "id": "independent-director",
+  "term": "Independent director",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-19-governance-landscape",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "A board member with no link to the promoters or management. Banks must have at least one under BAFIA 2073; other public companies at least one on a board of up to seven.",
+  "example": "",
+  "nepali": "स्वतन्त्र सञ्चालक",
+  "see_also": [
+   "audit-committee"
+  ]
+ },
+ {
+  "id": "audit-committee",
+  "term": "Audit committee",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-19-governance-landscape",
+   "ch-23-governance-scoring"
+  ],
+  "definition": "A board committee that oversees the accounts and the auditor. It works best with an independent director on it.",
+  "example": "",
+  "nepali": "लेखापरीक्षण समिति",
+  "see_also": [
+   "independent-director"
+  ]
+ },
+ {
+  "id": "agm",
+  "term": "AGM",
+  "full": "Annual general meeting",
+  "cat": "governance",
+  "chapters": [
+   "ch-19-governance-landscape"
+  ],
+  "definition": "The yearly shareholders' meeting that approves the accounts, dividends and bonus shares. The Companies Act 2063 requires it within six months after the year ends.",
+  "example": "",
+  "nepali": "वार्षिक साधारण सभा",
+  "see_also": [
+   "book-closure"
+  ]
+ },
+ {
+  "id": "insider-trading",
+  "term": "Insider trading",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-21-insider-trading"
+  ],
+  "definition": "Trading on important information that ordinary investors do not have yet, such as a promoter selling just before bad results. It is illegal.",
+  "example": "",
+  "nepali": "भित्री कारोबार",
+  "see_also": [
+   "information-asymmetry"
+  ]
+ },
+ {
+  "id": "information-asymmetry",
+  "term": "Information asymmetry",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-21-insider-trading"
+  ],
+  "definition": "When insiders know much more than outside investors. In a small market with family-controlled companies, the gap is wide.",
+  "example": "",
+  "nepali": "सूचना असन्तुलन",
+  "see_also": [
+   "insider-trading"
+  ]
+ },
+ {
+  "id": "cross-holding",
+  "term": "Cross-holding",
+  "full": "Promoter web",
+  "cat": "governance",
+  "chapters": [
+   "ch-22-conglomerate-crossholdings"
+  ],
+  "definition": "Companies owning shares in each other, often within one business house. It can hide who really controls what and move risk around a group.",
+  "example": "",
+  "nepali": "पारस्परिक सेयर स्वामित्व",
+  "see_also": [
+   "business-house"
+  ]
+ },
+ {
+  "id": "business-house",
+  "term": "Business house",
+  "full": "Conglomerate",
+  "cat": "governance",
+  "chapters": [
+   "ch-22-conglomerate-crossholdings"
+  ],
+  "definition": "A family or group that controls several companies, often across banks, insurers and industry. Common in Nepal; watch for related-party dealings within the group.",
+  "example": "",
+  "nepali": "व्यापारिक घराना",
+  "see_also": [
+   "cross-holding"
+  ]
+ },
+ {
+  "id": "companies-act-2063",
+  "term": "Companies Act 2063",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-08-regulatory-architecture",
+   "ch-19-governance-landscape"
+  ],
+  "definition": "Nepal's main company law (2006 AD): boards, AGMs, independent directors and shareholder rights.",
+  "example": "",
+  "nepali": "कम्पनी ऐन, २०६३",
+  "see_also": [
+   "agm"
+  ]
+ },
+ {
+  "id": "securities-act-2063",
+  "term": "Securities Act 2063",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-08-regulatory-architecture"
+  ],
+  "definition": "The law governing NEPSE, SEBON, share issues and insider trading (2007 AD).",
+  "example": "",
+  "nepali": "धितोपत्र सम्बन्धी ऐन, २०६३",
+  "see_also": [
+   "sebon"
+  ]
+ },
+ {
+  "id": "bafia-2073",
+  "term": "BAFIA 2073",
+  "full": "Bank and Financial Institution Act",
+  "cat": "governance",
+  "chapters": [
+   "ch-08-regulatory-architecture",
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "The law governing banks and financial institutions, including reserve rules and board requirements.",
+  "example": "",
+  "nepali": "बैंक तथा वित्तीय संस्था सम्बन्धी ऐन, २०७३",
+  "see_also": [
+   "general-reserve"
+  ]
+ },
+ {
+  "id": "unified-directive",
+  "term": "Unified Directive",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-64-seven-dimension-score"
+  ],
+  "definition": "NRB's single rulebook for banks and financial institutions, reissued each year (Unified Directive 2082 is current in the book). Directive No. 1 covers capital.",
+  "example": "",
+  "nepali": "एकीकृत निर्देशन",
+  "see_also": [
+   "car"
+  ]
+ },
+ {
+  "id": "fit-and-proper",
+  "term": "Fit and proper",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-19-governance-landscape"
+  ],
+  "definition": "Regulators' test of whether directors and senior managers are honest and competent enough to run a regulated company.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "independent-director"
+  ]
+ },
+ {
+  "id": "minority-shareholder",
+  "term": "Minority shareholder",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-19-governance-landscape"
+  ],
+  "definition": "A shareholder without control, such as an ordinary retail investor. Good governance protects minority shareholders from the controlling group.",
+  "example": "",
+  "nepali": "अल्पसंख्यक सेयरधनी",
+  "see_also": [
+   "promoter"
+  ]
+ },
+ {
+  "id": "auditor-rotation",
+  "term": "Auditor rotation",
+  "full": "",
+  "cat": "governance",
+  "chapters": [
+   "ch-23-governance-scoring"
+  ],
+  "definition": "Changing auditors after a set number of years. Frequent unexplained changes, or 'opinion shopping' for a friendlier auditor, are red flags.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "red-flags"
+  ]
+ },
+ {
+  "id": "asset-allocation",
+  "term": "Asset allocation",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-59-asset-allocation"
+  ],
+  "definition": "How you divide your money between shares, mutual funds, fixed deposits, bonds and other assets. It matters more than which single share you pick.",
+  "example": "",
+  "nepali": "सम्पत्ति बाँडफाँड",
+  "see_also": [
+   "steady-part",
+   "active-part"
+  ]
+ },
+ {
+  "id": "steady-part",
+  "term": "Steady part",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-59-asset-allocation",
+   "ch-62-systematic-disciplined-investing"
+  ],
+  "definition": "The share money you put into a diversified mutual fund every month through a SIP, whatever the market does. This book suggests at least half while you are learning.",
+  "example": "The kitchen garden you plant every season.",
+  "nepali": "स्थिर भाग",
+  "see_also": [
+   "active-part",
+   "sip"
+  ]
+ },
+ {
+  "id": "active-part",
+  "term": "Active part",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-59-asset-allocation"
+  ],
+  "definition": "The share money you use for individual shares you choose yourself. How much you use depends on the money season.",
+  "example": "The rented fields: how many you rent depends on the monsoon.",
+  "nepali": "सक्रिय भाग",
+  "see_also": [
+   "steady-part",
+   "liquidity-regime"
+  ]
+ },
+ {
+  "id": "emergency-fund",
+  "term": "Emergency fund",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-59-asset-allocation",
+   "ch-62-systematic-disciplined-investing"
+  ],
+  "definition": "About six months of household costs kept in a bank account or fixed deposit, so you never have to sell shares in a hurry. Keep more if your income is irregular.",
+  "example": "A farmer never eats his seed rice, even in a hungry month.",
+  "nepali": "आपत्कालीन कोष",
+  "see_also": [
+   "fixed-deposit"
+  ]
+ },
+ {
+  "id": "diversification",
+  "term": "Diversification",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-60-equity-portfolio-construction",
+   "ch-61-portfolio-risk-management"
+  ],
+  "definition": "Spreading money across companies and sectors so one failure cannot sink you. In NEPSE, companies in one sector often fall together, so spread across sectors, not just names.",
+  "example": "Not planting all your land with one crop.",
+  "nepali": "विविधीकरण",
+  "see_also": [
+   "sector-ceiling",
+   "correlation"
+  ]
+ },
+ {
+  "id": "correlation",
+  "term": "Correlation",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-61-portfolio-risk-management"
+  ],
+  "definition": "How closely two shares move together. Ten banks are not ten separate bets if they all rise and fall with the same credit cycle.",
+  "example": "",
+  "nepali": "सहसम्बन्ध",
+  "see_also": [
+   "diversification"
+  ]
+ },
+ {
+  "id": "position-size-ceilings",
+  "term": "Position size ceilings",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-66-using-canon-score-portfolio"
+  ],
+  "definition": "The most you may hold in one share by band: Exceptional 6–8% (8% is the absolute maximum), Strong 4–6%, Adequate 1.5–3%, Watch list and Avoid nothing new. They are ceilings, not targets.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "bands",
+   "adv-rule",
+   "sector-ceiling"
+  ]
+ },
+ {
+  "id": "sector-ceiling",
+  "term": "Sector ceiling",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-60-equity-portfolio-construction",
+   "ch-66-using-canon-score-portfolio"
+  ],
+  "definition": "Keep any one sector to about 25–30% of your share money, counting what your mutual funds hold too.",
+  "example": "",
+  "nepali": "क्षेत्रगत सीमा",
+  "see_also": [
+   "look-through-exposure"
+  ]
+ },
+ {
+  "id": "look-through-exposure",
+  "term": "Look-through exposure",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-60-equity-portfolio-construction",
+   "ch-66-using-canon-score-portfolio"
+  ],
+  "definition": "Your real exposure to a sector or company, counting your mutual funds' holdings as well as your own shares.",
+  "example": "A fund holding 40% banks plus two banks of your own: your bank exposure is the two added together.",
+  "nepali": "",
+  "see_also": [
+   "sector-ceiling"
+  ]
+ },
+ {
+  "id": "buying-in-parts",
+  "term": "Buying in parts",
+  "full": "Tranches",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-66-using-canon-score-portfolio"
+  ],
+  "definition": "Splitting a purchase into two or three buys over a few weeks, so one day's price does not decide everything. It spreads timing risk; it does not add return.",
+  "example": "",
+  "nepali": "किस्तामा किन्नु",
+  "see_also": [
+   "limit-order"
+  ]
+ },
+ {
+  "id": "rebalancing",
+  "term": "Rebalancing",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-61-portfolio-risk-management"
+  ],
+  "definition": "Bringing your portfolio back to its planned mix after prices have moved it away, for example by trimming a sector that has grown too large.",
+  "example": "",
+  "nepali": "पुनर्सन्तुलन",
+  "see_also": [
+   "sector-ceiling"
+  ]
+ },
+ {
+  "id": "drawdown",
+  "term": "Drawdown",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-97-drawdown-loss-rules"
+  ],
+  "definition": "How far your portfolio has fallen from its recent peak, as a percentage. A 30% drawdown means it is worth 30% less than at its high.",
+  "example": "",
+  "nepali": "गिरावट",
+  "see_also": [
+   "loss-rules"
+  ]
+ },
+ {
+  "id": "loss-rules",
+  "term": "Loss rules",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-97-drawdown-loss-rules"
+  ],
+  "definition": "Pre-set portfolio-level rules for what you do after given losses, written down before you need them.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "drawdown",
+   "exit-rules"
+  ]
+ },
+ {
+  "id": "exit-rules",
+  "term": "Exit rules",
+  "full": "Sell rules",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-81-testing-refining-exit-rules"
+  ],
+  "definition": "Rules, written before buying, for when you will sell: why you bought, what would prove you wrong, and what you will do then.",
+  "example": "A farmer decides when to harvest before the season starts, so the first hailstorm does not panic him.",
+  "nepali": "बेच्ने नियम",
+  "see_also": [
+   "investment-thesis"
+  ]
+ },
+ {
+  "id": "investment-thesis",
+  "term": "Investment thesis",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-95-investment-constitution",
+   "ch-99-full-investment-memo"
+  ],
+  "definition": "One or two lines on why you are buying a share, with the evidence that would prove it wrong.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "exit-rules",
+   "investment-memo"
+  ]
+ },
+ {
+  "id": "investment-constitution",
+  "term": "Investment constitution",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-95-investment-constitution"
+  ],
+  "definition": "Your own written rulebook for investing: goals, limits, process and what you will never do.",
+  "example": "",
+  "nepali": "लगानी संविधान",
+  "see_also": [
+   "overriding-the-model"
+  ]
+ },
+ {
+  "id": "overriding-the-model",
+  "term": "Overriding the model",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-96-overriding-the-model"
+  ],
+  "definition": "Going against your score or rules. This book allows it only for a documented company event, never for a mood or a rumour.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "investment-constitution"
+  ]
+ },
+ {
+  "id": "stress-test",
+  "term": "Stress test",
+  "full": "Stressed exit",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-58-circuit-trap-exit-modelling"
+  ],
+  "definition": "Checking how long you would take to sell if turnover fell sharply, for example to a quarter of normal. If the answer is longer than you could bear, hold less.",
+  "example": "",
+  "nepali": "दबाब परीक्षण",
+  "see_also": [
+   "exit-risk",
+   "adv-rule"
+  ]
+ },
+ {
+  "id": "xirr",
+  "term": "XIRR",
+  "full": "Extended internal rate of return",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-104-performance-monitoring-tools"
+  ],
+  "definition": "A return measure that accounts for money added and withdrawn on irregular dates. It is the honest way to measure a real portfolio with IPOs, rights and top-ups.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "benchmark"
+  ]
+ },
+ {
+  "id": "benchmark",
+  "term": "Benchmark",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-104-performance-monitoring-tools"
+  ],
+  "definition": "A yardstick to compare your returns with, such as the NEPSE index or a simple mutual-fund SIP.",
+  "example": "",
+  "nepali": "मापदण्ड",
+  "see_also": [
+   "xirr",
+   "nepse-index"
+  ]
+ },
+ {
+  "id": "value-investing",
+  "term": "Value investing",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-67-long-term-value-investing"
+  ],
+  "definition": "Buying good businesses at prices below their worth, and holding patiently.",
+  "example": "",
+  "nepali": "मूल्य लगानी",
+  "see_also": [
+   "margin-of-safety",
+   "intrinsic-value"
+  ]
+ },
+ {
+  "id": "herd-behaviour",
+  "term": "Herd behaviour",
+  "full": "FOMO",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-50-why-nepali-investors-lose",
+   "ch-51-core-behavioural-biases"
+  ],
+  "definition": "Buying because everyone else is, from fear of missing out. It drove much of the 2021 NEPSE mania.",
+  "example": "",
+  "nepali": "भीडको व्यवहार",
+  "see_also": [
+   "bull-market-and-bear-market"
+  ]
+ },
+ {
+  "id": "anchoring",
+  "term": "Anchoring",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-51-core-behavioural-biases"
+  ],
+  "definition": "Fixing on a number, often the price you paid, and judging everything against it. Your purchase price is not a reason to hold.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "loss-aversion"
+  ]
+ },
+ {
+  "id": "loss-aversion",
+  "term": "Loss aversion",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-51-core-behavioural-biases"
+  ],
+  "definition": "Feeling a loss about twice as strongly as a gain of the same size, which tempts you to hold losers too long.",
+  "example": "",
+  "nepali": "नोक्सानी डर",
+  "see_also": [
+   "disposition-effect"
+  ]
+ },
+ {
+  "id": "disposition-effect",
+  "term": "Disposition effect",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-51-core-behavioural-biases"
+  ],
+  "definition": "Selling winners too early and holding losers too long.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "loss-aversion"
+  ]
+ },
+ {
+  "id": "confirmation-bias",
+  "term": "Confirmation bias",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-51-core-behavioural-biases"
+  ],
+  "definition": "Looking only for information that agrees with what you already believe.",
+  "example": "",
+  "nepali": "",
+  "see_also": [
+   "investment-thesis"
+  ]
+ },
+ {
+  "id": "overconfidence",
+  "term": "Overconfidence",
+  "full": "",
+  "cat": "portfolio",
+  "chapters": [
+   "ch-51-core-behavioural-biases"
+  ],
+  "definition": "Believing your knowledge or timing is better than it is, which leads to trading too often and holding too little in reserve.",
+  "example": "",
+  "nepali": "अति आत्मविश्वास",
+  "see_also": [
+   "herd-behaviour"
+  ]
+ }
+]
