@@ -48,7 +48,7 @@ const navToggle = document.getElementById('navToggle');
 const siteNav = document.getElementById('siteNav');
 
 if (navToggle && siteNav) {
-  const desktopQuery = window.matchMedia('(min-width: 901px)');
+  const desktopQuery = window.matchMedia('(min-width: 1100px)');
 
   const getFocusableEls = () =>
     siteNav.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
