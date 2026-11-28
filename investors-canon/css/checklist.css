@@ -22,6 +22,7 @@
 }
 .fpc-tag-gate { background: #c8102e; }
 .fpc-tag-ev { background: #935400; }
+.fpc-tag-wait { background: #1366b0; }
 @media (prefers-color-scheme: dark) { .fpc-tag-ev { background: #b86e00; } }
 
 /* sticky company bar */
@@ -80,6 +81,7 @@
 }
 .fpc-item.is-gate { border-left-color: #c8102e; }
 .fpc-item.is-ev { border-left-color: #b86e00; }
+.fpc-item.is-wait { border-left-color: #1366b0; }
 .fpc-item label {
   display: flex; gap: 12px; align-items: flex-start;
   padding: 11px 14px; cursor: pointer;
@@ -112,7 +114,8 @@
   margin: 0 0 9px; font-size: 14px;
 }
 .fpc-calc label span { grid-column: 1; font-size: 11.5px; color: var(--ink-faint); }
-.fpc-calc label input[type="number"] { grid-column: 2; grid-row: 1 / span 2; }
+.fpc-calc label input[type="number"], .fpc-calc label select { grid-column: 2; grid-row: 1 / span 2; }
+.fpc-calc select { width: 100%; font: inherit; font-size: 14px; padding: 6px; border: 1.5px solid var(--rule-strong); border-radius: 8px; background: var(--bg); color: var(--ink); }
 .fpc-calc input[type="number"] {
   width: 100%; font: inherit; font-size: 15px; padding: 6px 8px; text-align: right;
   border: 1.5px solid var(--rule-strong); border-radius: 8px; background: var(--bg); color: var(--ink);

@@ -272,7 +272,7 @@ def main():
     t = t[:a] + article + t[b:]
     t = re.sub(r'(<link rel="stylesheet" href="css/style\.css[^>]*>)', r'\1\n<link rel="stylesheet" href="css/engine.css?v=1">', t, count=1)
     t = t.replace('<script src="js/audio-reader.js" defer></script>',
-                  '<script src="js/canon-engine.js?v=1" defer></script>\n<script src="js/engine-page.js?v=1" defer></script>\n<script src="js/audio-reader.js" defer></script>', 1)
+                  '<script src="js/canon-engine.js?v=1" defer></script>\n<script src="js/engine-page.js?v=2" defer></script>\n<script src="js/audio-reader.js" defer></script>', 1)
     OUT.write_text(t, encoding="utf-8")
     print("canon-score-engine.html written")
 

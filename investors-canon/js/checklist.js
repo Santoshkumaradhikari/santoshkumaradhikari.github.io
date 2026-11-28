@@ -62,7 +62,7 @@
     calcEls.forEach(function (el) {
       var k = el.getAttribute('data-calc');
       if (el.type === 'checkbox') { el.checked = !!c.calc[k]; }
-      else if (k === 'money' || k === 'active') { el.value = db.you[k] != null ? db.you[k] : ''; }
+      else if (k === 'money' || k === 'active' || k === 'phase') { el.value = db.you[k] != null ? db.you[k] : ''; }
       else { el.value = c.calc[k] != null ? c.calc[k] : ''; }
     });
     recEls.forEach(function (el) { el.value = c.rec[el.getAttribute('data-rec')] || ''; });
@@ -72,7 +72,7 @@
 
   /* ---------- progress and gates ---------- */
   function refresh() {
-    var done = 0, openGate1 = [], openGate2 = [], openEv = [];
+    var done = 0, openGate1 = [], openGate2 = [], openEv = [], openWait = [];
     boxes.forEach(function (b) {
       var li = b.closest('.fpc-item');
       li.classList.toggle('is-checked', b.checked);
@@ -80,6 +80,7 @@
       var kind = li.getAttribute('data-kind');
       if (kind === 'gate') { (partOf(b) === '1' ? openGate1 : openGate2).push(li); }
       if (kind === 'ev') { openEv.push(li); }
+      if (kind === 'wait') { openWait.push(li); }
     });
     sections.forEach(function (s) {
       var bs = s.querySelectorAll('input[type="checkbox"]'), n = 0;
@@ -88,12 +89,12 @@
       s.classList.toggle('is-done', n === bs.length);
     });
     progress.style.width = (100 * done / boxes.length) + '%';
-    var gates = openGate1.length + openGate2.length + openEv.length;
+    var gates = openGate1.length + openGate2.length + openEv.length + openWait.length;
     status.innerHTML = done + ' of ' + boxes.length + ' checks done' +
       (current ? ' for <strong>' + esc(current) + '</strong>' : '') + ' · ' +
       (gates ? '<span class="is-bad">' + gates + ' gate' + (gates > 1 ? 's' : '') + ' still open</span>' : 'all gates passed');
     var calc = calculate();
-    suggest(done, openGate1, openGate2, openEv, calc);
+    suggest(done, openGate1, openGate2, openEv, openWait, calc);
   }
 
   /* ---------- calculator (Chapter 64 and 66 rules) ---------- */
@@ -125,6 +126,10 @@
       result.innerHTML = '<p>Enter the seven scores to see the total, band and ceilings.</p>';
       return null;
     }
+    if (num('unv') === null) {
+      result.innerHTML = '<p>Enter the unverified or estimated points too (0 if every part was checked). A blank is not treated as zero.</p>';
+      return null;
+    }
     if (bad.length) {
       result.innerHTML = '<p><strong>Check your entries:</strong> a score is above its maximum or below zero.</p>';
       return null;
@@ -141,7 +146,18 @@
     if (bi <= 1 && (bq < 38 || sa < 13)) { drop = true; notes.push((bq < 38 ? 'Business Quality is under 38' : 'Share Attractiveness is under 13') + ', so the ceiling comes from the band below.'); }
     if (grade === 'D') { drop = true; notes.push('More than 20 points are unverified (grade D): the score is provisional and the ceiling comes from the band below.'); }
     if (drop) { ci = Math.min(bi + 1, 4); }
-    var band = BANDS[bi], cb = BANDS[ci];
+    var band = BANDS[bi], cb = { name: BANDS[ci].name, lo: BANDS[ci].lo, hi: BANDS[ci].hi };
+    var hot = !!page.querySelector('[data-calc="hot"]').checked;
+    if (hot && cb.hi > 3) { cb.lo = 1.5; cb.hi = 3; notes.push('The sector is overheated: no position larger than a small side position (1.5–3%), whatever the score.'); }
+    var phaseEl = page.querySelector('[data-calc="phase"]'), phase = phaseEl ? phaseEl.value : '';
+    var seasonBlock = phase === '2' || (phase === '3' && shown < 70);
+    if (phase === '2') { notes.push('Phase 2: the active part buys nothing new, however good the score.'); }
+    if (phase === '3' && shown < 70) { notes.push('Phase 3: only scores of 70 or more, at low prices.'); }
+    var value = num('value'), price = num('price'), mos = null;
+    if (value !== null && price !== null && value > 0) {
+      mos = (value - price) / value;
+      notes.push('Margin of safety: (' + value + ' − ' + price + ') ÷ ' + value + ' = ' + Math.round(mos * 1000) / 10 + '%. The most you pay at a 35% margin is Rs ' + (Math.round(value * 0.65 * 100) / 100) + '.' + (mos >= 0.35 ? ' Passes.' : ' Fails: Wait.'));
+    }
     var money = num('money'), active = num('active'), adv = num('adv'), sector = num('sector');
     var secpct = num('secpct'); if (secpct === null) { secpct = 25; }
     var limits = [], max = null;
@@ -151,6 +167,7 @@
       if (adv !== null) { limits.push('Limit 2, liquidity: half a day\'s turnover = ' + rs(adv / 2)); max = Math.min(max, adv / 2); }
       if (sector !== null) { var room = Math.max(0, money * secpct / 100 - sector); limits.push('Limit 3, sector room at ' + secpct + '%: ' + rs(room)); max = Math.min(max, room); }
       if (active !== null) { limits.push('Season allowance from Step 2: ' + rs(active)); max = Math.min(max, active); }
+      if (seasonBlock) { limits.push('Season check: no new buying now'); max = 0; }
     }
     var html = '<p class="fpc-big">Total ' + shown + ' of 100 · ' + band.name + ' · grade ' + grade + '</p>' +
       '<p>Business Quality ' + bq + ' of 75 · Share Attractiveness ' + sa + ' of 25' +
@@ -163,11 +180,11 @@
       html += '<p>Add your share money (and turnover, sector holdings, season allowance) to see the rupee limits.</p>';
     }
     result.innerHTML = html;
-    return { total: shown, eligible: shown >= 55, grade: grade, max: max, band: band.name };
+    return { total: shown, eligible: shown >= 55, grade: grade, max: max, band: band.name, phase: phase, seasonBlock: seasonBlock, value: value, price: price, mos: mos };
   }
 
   /* ---------- suggested answer ---------- */
-  function suggest(done, g1, g2, ev, calc) {
+  function suggest(done, g1, g2, ev, wt, calc) {
     var cls = '', msg = '';
     if (g1.length) {
       cls = 'a-stop'; msg = '<strong>Stop: Part 1 is not finished.</strong> ' + g1.length + ' readiness or season gate' + (g1.length > 1 ? 's are' : ' is') + ' still open. Fix that before studying any company.';
@@ -179,10 +196,20 @@
       cls = ''; msg = done ? '<strong>Enter the seven scores in the calculator</strong> to finish the decision.' : '';
     } else if (!calc.eligible) {
       cls = 'a-wait'; msg = '<strong>Wait or Reject.</strong> The total (' + calc.total + ') is under 55, so no new money. Wait if only the price is wrong; Reject if the business is weak or capped.';
+    } else if (!calc.phase) {
+      cls = ''; msg = '<strong>Choose the season</strong> (Step 2) in the calculator to finish the decision.';
+    } else if (calc.seasonBlock) {
+      cls = 'a-wait'; msg = '<strong>Wait.</strong> The season check fails: ' + (calc.phase === '2' ? 'in Phase 2 the active part buys nothing new.' : 'in Phase 3 only scores of 70 or more are bought.');
+    } else if (calc.value === null || calc.price === null) {
+      cls = 'a-ev'; msg = '<strong>Not enough evidence yet.</strong> The price check needs your own value estimate and today\'s price. Enter both in the calculator.';
+    } else if (calc.mos < 0.35) {
+      cls = 'a-wait'; msg = '<strong>Wait.</strong> The price check fails: the margin of safety is ' + Math.round(calc.mos * 1000) / 10 + '%, below the 35% needed. A price of Rs ' + (Math.round(calc.value * 0.65 * 100) / 100) + ' or less would pass, if your value estimate still holds.';
+    } else if (wt.length) {
+      cls = 'a-wait'; msg = '<strong>Wait:</strong> ' + wt.length + ' price or season check' + (wt.length > 1 ? 's are' : ' is') + ' not ticked.';
     } else if (done < boxes.length) {
       cls = 'a-wait'; msg = '<strong>Almost:</strong> every gate is passed and the total is ' + calc.total + ' (' + calc.band + '), but ' + (boxes.length - done) + ' checks are not ticked yet. Finish them, especially the sell rules, before you buy.';
     } else {
-      cls = 'a-buy'; msg = '<strong>Buy is allowed' + (calc.max !== null ? ', up to ' + rs(calc.max) : '') + '.</strong> Every check is ticked and every gate passed. Buying is still your choice: Wait is right if the price is only fair.';
+      cls = 'a-buy'; msg = '<strong>Buy is allowed' + (calc.max !== null ? ', up to ' + rs(calc.max) : '') + '.</strong> Every check is ticked and every gate passed. Buying is still your choice, and buying less than the limit is often wiser.';
     }
     answerBox.className = 'fpc-answer ' + cls;
     answerBox.innerHTML = msg ? '<span class="fpc-tag" style="background:#1b1a17">Suggested answer</span> ' + msg : '';
@@ -200,7 +227,7 @@
     el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', function () {
       var k = el.getAttribute('data-calc');
       var val = el.type === 'checkbox' ? el.checked : el.value;
-      if (k === 'money' || k === 'active') { db.you[k] = val; } else { comp().calc[k] = val; }
+      if (k === 'money' || k === 'active' || k === 'phase') { db.you[k] = val; } else { comp().calc[k] = val; }
       store(db); refresh();
     });
   });

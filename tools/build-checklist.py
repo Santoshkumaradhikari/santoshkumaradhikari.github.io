@@ -30,7 +30,7 @@ PART1 = [
   ("a11", "", "My share money is split into a steady part (a monthly mutual-fund SIP) and an active part (shares I choose), with at least half in the steady part while I am learning.", "Canon rule, Lesson 59.7."),
   ("a12", "", "I chose the fund after checking what it holds (banks, hydropower), its yearly fees, how much it overlaps with shares I will buy, and how I get out (open-ended buys units back; closed-end must be sold on NEPSE, often below NAV).", "Chapter 16."),
   ("a13", "", "If no suitably diversified fund exists, I keep the steady part in fixed deposits or government savings bonds until one does.", "The guide's suggestion."),
-  ("a14", "", "My monthly SIP is running.", ""),
+  ("a14", "", "My steady part is running: a monthly SIP into the fund, or, if no suitable fund exists, fixed deposits or government savings bonds.", ""),
   ("a15", "", "I have written: \"I have Rs ___ for shares: Rs ___ steady, Rs ___ active, and I will not need it for five years.\"", "Step 1 check."),
  ]),
  ("b", "Step 2 — What season is the market in?", "step-2", "Once a quarter. It decides how much of the active part you may use, not which share.", [
@@ -48,7 +48,7 @@ PART2 = [
   ("c1", "gate", "I can say in one simple sentence how this company earns money.", "If not, leave the sector for later. It is not banned, just not for now."),
   ("c2", "gate", "It is listed and trades on NEPSE.", "An IPO is a separate decision (Chapter 77)."),
   ("c3", "gate", "Its average daily turnover over six months is at least Rs 2 lakh.", "Scores: Rs 50 lakh+ = 5; Rs 10–50 lakh = 3; Rs 2–10 lakh = 1; under Rs 2 lakh = 0 and remove."),
-  ("c4", "", "I also checked the 20-day average and the median day, so a few frantic days do not mislead me.", ""),
+  ("c4", "", "I measured turnover the Chapter 64 way: days with no trade counted, identifiable negotiated and block deals left out; if it traded on fewer than half the days, turnover scores at most 1; if the average is more than twice the median day, I scored from the median (\"block-trade adjusted\").", "The six-month figure scores the company. Your own order is checked separately with the 20-day figure and a stressed week."),
   ("c5", "gate", "My planned holding is no more than about half of one day's 20-day average turnover.", "Chapter 56: sell within 5 trading days at 10% of each day's trading."),
   ("c6", "", "I worked out how many days I would need to sell at normal, half and a quarter of normal turnover, and I could bear the slowest answer.", "Exit days = position ÷ (daily turnover × 10%)."),
   ("c7", "", "I know no turnover formula guarantees an exit: on lower-circuit days sell orders queue and many are never filled. I looked at how it traded on the market's worst days.", "Chapter 58."),
@@ -73,8 +73,8 @@ PART2 = [
  ("e", "Step 5 — Are the numbers healthy?", "step-5", "Financial Strength: 20 points in three parts.", [
   ("e1", "", "ROE: three-year average, each year as profit ÷ average of opening and closing equity. 15%+ with no year below 10% = 8; 10–15% = 6; 7–10% = 4; under 7% or any loss = 1.", "Part A."),
   ("e2", "", "I compared ROE with the cost of equity (low-to-mid teens in Nepal; the book uses 12% for banks, 14.5% for hydropower), not with the deposit rate, and did not count high ROE from heavy borrowing or thin provisions as quality.", ""),
-  ("e3", "", "I used the right cushion test. Bank: CAR in all three layers (11% total, 8.5% Tier 1, 7% common equity); 13%+ = 7, 11.5–13% = 5, 11–11.5% = 3. Microfinance: CAR against 8%. Insurer: solvency ratio on NIA's ladder (200%+ = 7, 130–200% = 5, 100–130% = 3). Others: debt-to-equity (3 points) plus interest cover (4 points), counting capitalised interest.", "Part B."),
-  ("e4", "", "For a bank: no quarter-end below the requirement in the last 3 years (otherwise at most 3 points). If I found only the total CAR, I marked the capital part unverified.", ""),
+  ("e3", "", "I identified the lender's class and used its own minimum in every layer: commercial banks and national-level development banks 11% total, 8.5% Tier 1, 7% common equity; other development banks and finance companies 10% total, 6% core; microfinance 8% capital fund, 4% core. Points: 2+ points above the class's total minimum 7; 0.5–2 above 5; 0–0.5 above 3. Insurer: solvency ratio on NIA's ladder (200%+ = 7, 130–200% = 5, 100–130% = 3). Others: debt-to-equity (3 points) plus interest cover (4 points), counting capitalised interest.", "Part B. Chapter 64, from NRB's Unified Directive 2082."),
+  ("e4", "", "For a lender: no quarter-end below the requirement in the last 3 years (otherwise at most 3 points). If I found only the total CAR, I did not give full points: I marked the capital part unverified.", ""),
   ("e5", "", "For an insurer: if the report gives two ratios (with and without transitional provisions), I used the lower. I noted that below 130% NIA restricts cash dividends.", "NIA Risk Based Capital and Solvency Directive 2026."),
   ("e6", "", "For hydropower: I wrote down the DSCR (cash available for lenders ÷ principal and interest due).", ""),
   ("e7", "gate", "No financial hard limit: a lender's capital is not below its minimum in any layer, an insurer's solvency is at least 100%, there is no NRB \"problematic\" status and no fraud.", "Any one caps the score at 54."),
@@ -93,28 +93,37 @@ PART2 = [
   ("f6", "", "Liquidity: turnover points (5/3/1/0) plus free float (40%+ 5; 25–40% 3; 10–25% 1; under 10% 0).", ""),
   ("f7", "", "I wrote Business Quality out of 75 and Liquidity out of 10, and I can point to the table row behind every number.", "Step 6 check."),
   ("f8", "", "Evidence grade: I listed each of the sixteen parts that rests on unavailable, unverified or estimated figures, counted each part's full points once, and wrote the grade (A none; B 1–10; C 11–20; D over 20).", ""),
-  ("f9", "ev", "No more than 20 points rest on unverified figures, and I could test every gate.", "If not, the answer is \"Not enough evidence\", or at least a provisional score with a ceiling one band lower."),
+  ("f9", "ev", "No more than 20 points rest on unverified figures (grade A, B or C), and I could test every gate.", "If more than 20 (grade D) or a gate cannot be tested, the answer is Not enough evidence. Chapter 66 would let an experienced investor hold a grade D score at a ceiling one band lower; for a first purchase this checklist is stricter. A failed gate is Reject; an untestable one is Not enough evidence."),
   ("f10", "", "For hydropower and insurers I compared only with the same sector, and I remember that some points share the same evidence.", ""),
  ]),
  ("g", "Step 7 — Is today's price sensible?", "step-7", "Valuation: 15 points, which completes the Canon Score.", [
-  ("g1", "", "Peer group by business model (operating hydropower apart from projects being built; life apart from non-life; commercial banks apart from development banks and finance companies; microfinance on its own), on one price date, with the latest four quarters of profit and at least five peers.", "Fewer than five peers: mark unverified and score in the \"in line\" row."),
-  ("g2", "", "P/E ratio ÷ sector median, unrounded: 0.8 or less 8 (if earned); to 1.1 6; to 1.5 3; over 1.5 1; loss 0. A hydropower plant not yet producing: P/E not applicable.", ""),
+  ("g1", "", "Peer group by business model (operating hydropower apart from projects being built; life apart from non-life; commercial banks apart from development banks and finance companies; microfinance on its own), on one price date, same accounting basis, latest published quarter.", ""),
+  ("g1b", "", "I built the two medians separately: the P/E median leaves out loss-makers; the P/B median keeps loss-makers with positive book value and leaves out only zero or negative book. Each median has at least five companies of its own.", "Fewer than five for one median: mark that part unverified and score it in the \"in line\" row. One can be verified while the other is not."),
+  ("g2", "", "P/E ratio ÷ sector median, unrounded: 0.8 or less 8 (if earned); to 1.1 6; to 1.5 3; over 1.5 1; loss 0.", ""),
+  ("g2b", "", "For a hydropower plant not yet producing: P/E is not applicable, and valuation = P/B points ÷ 7 × 15, rounded, labelled \"one measure only\" (at most 11).", "Chapter 64."),
   ("g3", "", "P/B ratio ÷ sector median: 0.8 or less 7 (if earned); to 1.1 5; to 1.5 3; over 1.5 1; zero or negative book 0.", ""),
   ("g4", "", "If it looks cheap, the discount is earned: ROE at or above the sector median and, for a bank, NPL at or below its class figure. Otherwise I scored the \"in line\" row.", ""),
   ("g5", "", "Beside each ratio I wrote the price and its date, the earnings period, the book-value period and the source of each figure.", ""),
   ("g6", "", "I asked the four questions: will today's profits last? Is ROE above the cost of equity? What growth does the price assume? What could permanently cut what it earns?", ""),
   ("g7", "", "Plain-number check: the sector itself is not so expensive that \"cheap for the sector\" is still dear.", ""),
   ("g8", "", "For a bank: justified P/B = (ROE − g) ÷ (cost of equity − g), compared with the actual P/B.", ""),
-  ("g9", "", "Price versus value: today's price does not need heroic growth (reverse DCF, or justified P/B). If I built a DCF, I used FCFE, a finite life for hydropower, a range rather than one number, and a margin of safety.", "Not scored; it should change your Step 8 decision."),
+  ("g9", "ev", "I have my own intrinsic-value estimate by a method that suits the sector: justified P/B × book value for a bank; a finite-life cash-flow model for hydropower; embedded value for a life insurer; a simple FCFE or dividend model for others. I wrote a bear, base and bull value.", "Not scored, but Step 8's price check needs it. No estimate you can defend means Not enough evidence."),
   ("g10", "", "Total = Business Quality + Share Attractiveness, with any cap applied after adding; band found; and I checked the ceiling rules (Business Quality under 38 or Share Attractiveness under 13 with a total of 70+, or a provisional score, takes the ceiling of the band below, one band at most).", ""),
   ("g11", "gate", "The total, after any cap, is 55 or more.", "55+ makes it eligible for new money. It is never an instruction to buy."),
+ ]),
+ ("p", "Step 8 — Three checks before any purchase", "step-8", "Chapter 66: none of them is part of the score, and none can be skipped.", [
+  ("p1", "wait", "The price is at least 35% below my own intrinsic-value estimate (most I pay = 65% of my value).", "Canon rule, Chapters 66 and 67. If it fails, the answer is Wait."),
+  ("p2", "", "I compared the earnings yield (EPS ÷ price × 100) with the current one-year fixed-deposit rate, and if it is lower I wrote down why I accept that.", "A hydropower company valued on project cash flows is a legitimate reason; \"everyone is buying\" is not."),
+  ("p3", "", "The sector is not overheated (its median P/E is not more than 1.5 times its own five-year median), or my position is no larger than a small side position (1.5–3%).", ""),
+  ("p4", "gate", "My own order passes the Chapter 56 liquidity rule, including a stressed week.", ""),
+  ("p5", "wait", "The season allows buying: two checks agree on a phase other than Phase 2, and in Phase 3 the score is 70 or more.", "In Phase 2 the active part buys nothing new, however good the score."),
  ]),
  ("h", "Step 8, part A — How much?", "step-8", "The most you may hold is the smallest of three limits. You may buy less.", [
   ("h1", "", "Limit 1, the band's ceiling, as a share of my whole share money (steady plus active): Exceptional 6–8% (8% is the absolute maximum); Strong 4–6%; Adequate 1.5–3%; Watch list and Avoid nothing new.", "Chapter 66."),
   ("h2", "", "Limit 2, liquidity: no more than about half of one day's average turnover.", "Chapter 56."),
   ("h3", "", "Limit 3, sector: no more than about 25–30% in one sector, counting my mutual fund's holdings (look-through) and company-by-company overlap.", "Chapters 60, 61 and 66."),
   ("h4", "", "My amount is no more than the smallest of the three, and less if the price is only fair, the company is new to me, or it would be hard to sell. More debt, thinner trading or more overlap means a smaller amount.", ""),
-  ("h5", "", "It fits within what the season allows me to use from the active part (Step 2).", ""),
+  ("h5", "", "It fits within what the season allows me to use from the active part (Step 2), and within my available cash.", ""),
   ("h6", "", "I worked out the round-trip cost: commission (0.36% up to Rs 50,000, minimum Rs 10; lower for larger trades), SEBON fee 0.015% each way, DP charge about Rs 25 per company per selling day, and capital gains tax (3.75% if held over 365 days, 5% otherwise, for resident individuals). It is a small share of the amount.", "Rates as of November 2026; check your broker's schedule."),
   ("h7", "", "If the amount is large enough, I will buy in two or three parts, and I wrote what allows the later parts (a better price, or results that confirm my reason).", ""),
  ]),
@@ -123,7 +132,7 @@ PART2 = [
   ("i2", "", "What would prove me wrong: specific signs I can check.", ""),
   ("i3", "", "What I will do then: sell, reduce, or hold without adding.", ""),
   ("i4", "", "I know the seven reasons to sell or reduce: reason proven wrong; governance worse; business weaker (score 45–54 stop adding, below 45 a candidate to sell); price far ahead of value; hard to sell; one share over 8% or a sector over 25–30%; my own needs change.", ""),
-  ("i5", "", "I know a 10–15% fall alone is not proof I was wrong, and a 30% rise alone is not a reason to sell.", ""),
+  ("i5", "", "I know a 10–15% fall alone is not proof I was wrong, and a 30% rise alone is not a reason to sell. A falling score starts a structured review (re-score, then decide whether the business, the price or my portfolio changed), never an automatic sell order.", ""),
   ("i6", "", "My next re-score date (after the next quarterly results) is in my calendar, and I will re-score at once after fraud news, an NRB or SEBON action, an audit qualification, a lender selling pledged shares, a disaster at a plant, or a large rights issue.", ""),
   ("i7", "", "I will never add to a company whose score is falling just because it is cheaper, and I will cut the active part to about half if two checks agree on Phase 2.", ""),
   ("i8", "", "I noted known future dates (royalty step-up, tax holiday ending, lock-in expiry, PPA end).", ""),
@@ -140,18 +149,24 @@ PART2 = [
  ]),
 ]
 
-RECORD = ["Company and symbol", "Price and its date", "Business Quality + Share Attractiveness = total; band; evidence grade",
-          "Value range (or justified P/B) and margin of safety", "Answer: Buy / Wait / Reject / Not enough evidence",
-          "Amount, and which limit binds", "Main reason to buy", "Main way this could fail", "What would prove me wrong", "Review date"]
+RECORD = ["Company and symbol", "Price and its date", "Score before any cap, and every hard rule that fired",
+          "Business Quality + Share Attractiveness = total; band; evidence grade",
+          "Value method, bear / base / bull values, and margin of safety at today's price (35% needed)",
+          "Earnings yield against the one-year deposit rate; sector overheating test",
+          "Days to sell at normal and stressed turnover", "Sector exposure before and after, counting funds",
+          "Round-trip cost and expected holding period", "Answer: Buy / Wait / Reject / Not enough evidence",
+          "Amount, and which limit binds", "Main reason to buy", "Main way this could fail", "What would prove me wrong",
+          "Why not the other companies I studied", "Sources, and the date I checked them", "Review date"]
 
 
 def section(sec, part):
     sid, title, anchor, intro, items = sec
     lis = []
     for iid, kind, text, hint in items:
-        cls = "fpc-item" + (" is-gate" if kind == "gate" else " is-ev" if kind == "ev" else "")
+        cls = "fpc-item" + (" is-gate" if kind == "gate" else " is-ev" if kind == "ev" else " is-wait" if kind == "wait" else "")
         tag = ('<span class="fpc-tag fpc-tag-gate">Gate</span> ' if kind == "gate" else
-               '<span class="fpc-tag fpc-tag-ev">Evidence gate</span> ' if kind == "ev" else "")
+               '<span class="fpc-tag fpc-tag-ev">Evidence gate</span> ' if kind == "ev" else
+               '<span class="fpc-tag fpc-tag-wait">Wait gate</span> ' if kind == "wait" else "")
         h = f'\n        <span class="fpc-hint">{e(hint)}</span>' if hint else ""
         lis.append(f'''    <li class="{cls}" data-id="{iid}" data-kind="{kind}">
       <label><input type="checkbox" data-id="{iid}"> <span class="fpc-body">{tag}<span class="fpc-text">{e(text)}</span>{h}</span></label>
@@ -167,7 +182,7 @@ def section(sec, part):
 
 def main():
     n_items = sum(len(s[4]) for s in PART1 + PART2)
-    n_gates = sum(1 for s in PART1 + PART2 for i in s[4] if i[1] in ("gate", "ev"))
+    n_gates = sum(1 for s in PART1 + PART2 for i in s[4] if i[1] in ("gate", "ev", "wait"))
     rec = "\n".join(f'      <tr><th scope="row">{e(r)}</th><td><textarea rows="2" data-rec="{i}" aria-label="{e(r)}"></textarea></td></tr>'
                     for i, r in enumerate(RECORD))
     article = f'''<article class="chapter fpc-page">
@@ -178,6 +193,7 @@ def main():
   <div class="fpc-legend">
     <p><span class="fpc-tag fpc-tag-gate">Gate</span> Failing a gate ends the study, however good the rest looks. Part 1 gates mean <strong>stop and fix it first</strong>; company gates mean <strong>Reject</strong>.</p>
     <p><span class="fpc-tag fpc-tag-ev">Evidence gate</span> Failing it means <strong>Not enough evidence</strong>: do not buy until the figures can be checked.</p>
+    <p><span class="fpc-tag fpc-tag-wait">Wait gate</span> Failing it means <strong>Wait</strong>: the business may be fine, but the price or the season is not.</p>
     <p>Four possible answers for every company: <strong>Buy</strong>, <strong>Wait</strong>, <strong>Reject</strong>, <strong>Not enough evidence</strong>. Deciding not to buy is a valid decision.</p>
   </div>
 
@@ -217,7 +233,7 @@ def main():
       <legend>Share Attractiveness (25)</legend>
       <label>Liquidity <span>of 10</span><input type="number" min="0" max="10" step="1" data-calc="liq"></label>
       <label>Valuation <span>of 15</span><input type="number" min="0" max="15" step="1" data-calc="val"></label>
-      <label>Unverified or estimated parts <span>full points</span><input type="number" min="0" max="100" step="1" data-calc="unv"></label>
+      <label>Unverified or estimated parts <span>full points; enter 0 if none</span><input type="number" min="0" max="100" step="1" data-calc="unv"></label>
       <label class="fpc-check"><input type="checkbox" data-calc="cap"> A hard rule fires (cap at 54)</label>
     </fieldset>
     <fieldset>
@@ -227,6 +243,13 @@ def main():
       <label>20-day average daily turnover <span>Rs</span><input type="number" min="0" step="10000" data-calc="adv"></label>
       <label>Already in this sector, counting funds <span>Rs</span><input type="number" min="0" step="1000" data-calc="sector"></label>
       <label>Sector ceiling <span>%</span><input type="number" min="0" max="100" step="1" data-calc="secpct" placeholder="25"></label>
+    </fieldset>
+    <fieldset>
+      <legend>Three purchase checks</legend>
+      <label>Season (Step 2) <span>two checks agree</span><select data-calc="phase"><option value="">Choose</option><option value="1">Phase 1</option><option value="2">Phase 2</option><option value="3">Phase 3</option><option value="4">Phase 4</option></select></label>
+      <label>Your value estimate <span>Rs a share</span><input type="number" min="0" step="any" data-calc="value"></label>
+      <label>Today's price <span>Rs a share</span><input type="number" min="0" step="any" data-calc="price"></label>
+      <label class="fpc-check"><input type="checkbox" data-calc="hot"> Sector overheated (median P/E over 1.5× its five-year median)</label>
     </fieldset>
     <output class="fpc-result" aria-live="polite"><p>Enter the seven scores to see the total, band and ceilings.</p></output>
   </div>
@@ -263,10 +286,10 @@ def main():
     a = t.index('<article class="chapter'); b = t.index("</article>", a) + len("</article>")
     t = t[:a] + article + t[b:]
     if "css/checklist.css" not in t:
-        t = re.sub(r'(<link rel="stylesheet" href="css/style\.css[^>]*>)', r'\1\n<link rel="stylesheet" href="css/checklist.css?v=1">', t, count=1)
+        t = re.sub(r'(<link rel="stylesheet" href="css/style\.css[^>]*>)', r'\1\n<link rel="stylesheet" href="css/checklist.css?v=2">', t, count=1)
     if "js/checklist.js" not in t:
         t = t.replace('<script src="js/audio-reader.js" defer></script>',
-                      '<script src="js/checklist.js?v=1" defer></script>\n<script src="js/audio-reader.js" defer></script>', 1)
+                      '<script src="js/checklist.js?v=2" defer></script>\n<script src="js/audio-reader.js" defer></script>', 1)
     OUT.write_text(t, encoding="utf-8")
     print(f"first-purchase-checklist.html: {n_items} checks, {n_gates} gates")
 

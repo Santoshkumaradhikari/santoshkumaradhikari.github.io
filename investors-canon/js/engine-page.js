@@ -172,7 +172,7 @@
     else if (!r.complete) { cls = 'a-wait'; msg = '<strong>Not finished.</strong> ' + r.missingParts.length + ' of ' + r.parts.length + ' parts still need figures. Until they are filled in or marked "Not available", there is no answer.'; }
     else if (r.grade === 'D' || r.restated) { cls = 'a-ev'; msg = '<strong>Not enough evidence.</strong> More than 20 points rest on figures you could not check' + (r.restated ? ', or the accounts were restated' : '') + '. Do not buy until they can be checked.'; }
     else if (r.total < 55) { cls = r.capReasons.length ? 'a-reject' : 'a-wait'; msg = '<strong>' + (r.capReasons.length ? 'Reject for now' : 'Wait or Reject') + '.</strong> The total is ' + r.total + ', under 55, so no new money.' + (r.capReasons.length ? ' A hard rule caps it; look again only when the problem is cleared.' : ' Wait if only the price is wrong; Reject if the business is weak.'); }
-    else { cls = 'a-buy'; msg = '<strong>Eligible for new money' + (max !== null ? ', up to ' + rs(max) : '') + '.</strong> Eligible is not an instruction to buy: check price against value, your readiness, the season and your sell rules in the checklist first. Wait is right if the price is only fair.'; }
+    else { cls = 'a-buy'; msg = '<strong>Eligible for new money' + (max !== null ? ', up to ' + rs(max) : '') + '.</strong> Eligible is not an instruction to buy. Before any order, Chapter 66\'s three checks must pass: the price at least 35% below your own value estimate, your own order passing the liquidity rule, and a season that allows buying. The <a href="first-purchase-checklist.html">checklist</a> runs them.'; }
     answerBox.className = 'ce-answer ' + cls;
     answerBox.innerHTML = msg;
   }
