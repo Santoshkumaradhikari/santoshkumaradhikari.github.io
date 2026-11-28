@@ -2317,3 +2317,7 @@ a.feature-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md)
 .buy-check input { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 4px; accent-color: var(--np-crimson); }
 .buy-check input:checked + span { color: var(--ink-faint); }
 @media print { .buy-check input { -webkit-appearance: none; appearance: none; border: 1.5px solid #000; border-radius: 3px; } }
+/* Header with "First Purchase": tighter gaps; wrap instead of hiding on mid widths; wider row on big screens */
+@media (min-width: 641px) { .header-links { gap: 10px; } }
+@media (min-width: 641px) and (max-width: 1179px) { .header-links { flex-wrap: wrap; row-gap: 8px; overflow: visible; } }
+@media (min-width: 1280px) { .site-header .wrap { max-width: 1200px; } }

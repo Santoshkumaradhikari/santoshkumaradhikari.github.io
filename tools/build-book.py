@@ -240,6 +240,7 @@ TEMPLATE = """<!DOCTYPE html>
       <a href="index.html">Contents</a>
       <a href="framework.html">Framework</a>
       <a href="study-guide.html">Study Guide</a>
+      <a href="first-purchase.html" title="Your first share purchase: an 8-step buying guide">First Purchase</a>
       <a href="glossary.html">Glossary</a>
       <a href="explore.html" class="is-explore">Explore</a>
       <a href="{domain}/">Santosh Adhikari &rarr;</a>
