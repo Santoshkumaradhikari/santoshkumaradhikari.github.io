@@ -2321,3 +2321,7 @@ a.feature-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md)
 @media (min-width: 641px) { .header-links { gap: 10px; } }
 @media (min-width: 641px) and (max-width: 1179px) { .header-links { flex-wrap: wrap; row-gap: 8px; overflow: visible; } }
 @media (min-width: 1280px) { .site-header .wrap { max-width: 1200px; } }
+
+/* First Purchase: printable decision record (empty cells to write in) */
+table.figures.decision-record td:first-child { width: 45%; font-weight: 600; }
+table.figures.decision-record td:last-child { height: 2.6em; border-bottom: 1px dashed var(--rule-strong); }
