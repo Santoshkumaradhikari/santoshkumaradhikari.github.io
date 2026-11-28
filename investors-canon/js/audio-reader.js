@@ -138,7 +138,7 @@
     var root = document.querySelector('.chapter, .framework-page');
     var container = (root || document.body).cloneNode(true);
     var stripSelector = root
-      ? '.chapter-nav, .print-bar, .audio-bar, .audio-player-bar, script, .fw-ladder, .fw-jump, details > summary, .gl-search, .gl-filters, .gl-today, .gl-empty, .gl-start'
+      ? '.chapter-nav, .print-bar, .audio-bar, .audio-player-bar, script, .fw-ladder, .fw-jump, details > summary, .gl-search, .gl-filters, .gl-today, .gl-empty, .gl-start, .fpc-bar, .fpc-calc, .fpc-answer, .fpc-record'
       : '.site-header, .site-footer, .reading-progress-container, .print-bar, .audio-bar, .audio-player-bar, script';
     var strip = container.querySelectorAll(stripSelector);
     for (var i = 0; i < strip.length; i++) { strip[i].parentNode.removeChild(strip[i]); }
