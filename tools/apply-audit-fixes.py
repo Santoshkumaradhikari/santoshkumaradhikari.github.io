@@ -76,9 +76,9 @@ def slugify(text):
 # --------------------------------------------------------------------------
 
 HEAD_ICONS = (
-    '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n'
-    '<link rel="apple-touch-icon" href="/apple-touch-icon.png">\n'
-    '<meta name="theme-color" content="#16233d">\n'
+    '<link rel="icon" href="/favicon.svg?v=2" type="image/svg+xml">\n'
+    '<link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2">\n'
+    '<meta name="theme-color" content="#c8102e">\n'
 )
 
 def og_image_block():
