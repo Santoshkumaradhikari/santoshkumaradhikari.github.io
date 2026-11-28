@@ -32,7 +32,7 @@ import sys
 
 CANON = "investors-canon"
 DOMAIN = "https://santoshkumaradhikari.com.np"
-OG_IMAGE = DOMAIN + "/og-image.png"
+OG_IMAGE = DOMAIN + "/og-image.png?v=2"
 
 MONTHS = ["", "Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
