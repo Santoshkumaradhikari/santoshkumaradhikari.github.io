@@ -138,7 +138,7 @@
     var root = document.querySelector('.chapter, .framework-page');
     var container = (root || document.body).cloneNode(true);
     var stripSelector = root
-      ? '.chapter-nav, .print-bar, .audio-bar, .audio-player-bar, script'
+      ? '.chapter-nav, .print-bar, .audio-bar, .audio-player-bar, script, .fw-ladder, .fw-jump, details > summary'
       : '.site-header, .site-footer, .reading-progress-container, .print-bar, .audio-bar, .audio-player-bar, script';
     var strip = container.querySelectorAll(stripSelector);
     for (var i = 0; i < strip.length; i++) { strip[i].parentNode.removeChild(strip[i]); }
@@ -146,6 +146,8 @@
     var nodes = container.querySelectorAll('h1, h2, h3, h4, p, li, blockquote');
     var out = [];
     for (var j = 0; j < nodes.length; j++) {
+      // on the framework page, read only innermost blocks so nested lists are not read twice
+      if (root && root.classList.contains('framework-page') && nodes[j].querySelector('h1, h2, h3, h4, p, li, blockquote')) { continue; }
       var t = (nodes[j].textContent || '').replace(/\s+/g, ' ').trim();
       if (t) { out.push(speechify(t)); }
     }
