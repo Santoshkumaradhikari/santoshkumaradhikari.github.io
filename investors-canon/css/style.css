@@ -2305,3 +2305,15 @@ a.feature-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md)
 @media (min-width: 1180px) { .site-header .wrap { max-width: 1120px; } }
 @media (min-width: 960px) and (max-width: 1179px) { .site-header .wrap { max-width: 1040px; } }
 @media (min-width: 641px) and (max-width: 959px) { .header-links { flex-wrap: wrap; row-gap: 8px; overflow: visible; } }
+
+/* ---------- First Purchase guide ---------- */
+.first-purchase h2 { scroll-margin-top: 96px; }
+.first-purchase .fp-lead { font-size: 18px; line-height: 1.6; color: var(--ink-soft); margin: 0 0 18px; }
+.first-purchase .fw-jump { flex-wrap: wrap; row-gap: 6px; }
+.chapter.first-purchase .callout.callout-check { --c: var(--np-green); }
+.buy-checklist { list-style: none; padding-left: 0; margin: 10px 0 22px; }
+.buy-check { margin: 0 0 8px; }
+.buy-check label { display: flex; gap: 10px; align-items: flex-start; cursor: pointer; line-height: 1.5; }
+.buy-check input { flex: 0 0 auto; width: 18px; height: 18px; margin-top: 4px; accent-color: var(--np-crimson); }
+.buy-check input:checked + span { color: var(--ink-faint); }
+@media print { .buy-check input { -webkit-appearance: none; appearance: none; border: 1.5px solid #000; border-radius: 3px; } }
